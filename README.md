@@ -64,7 +64,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://gist.github.com/bgoonz) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -72,7 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Bryan Guner** - *Initial work* - [bgoonz](https://github.com/bgoonz)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
