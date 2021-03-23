@@ -15,8 +15,16 @@
   <!-- TOC -->
   **TOC**  
   [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
   <!-- SUMMARY -->
   A 1-5 sentence summary of what the app is.  
@@ -41,8 +49,16 @@
 ---
 
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
 
 
@@ -109,8 +125,16 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
 
 
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
   
   
@@ -139,8 +163,16 @@ An optional *brief* note describing scheduling or other planning details.
 
 
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
 
 
@@ -262,8 +294,16 @@ Change the `production` entry to look like this:
 5. Push changes to Heroku with `git push Heroku`.
 6. You should see a successful build image.
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
   
   
@@ -301,8 +341,16 @@ heroku run npx sequelize-cli db:migrate
 heroku run npx sequelize-cli db:seed:all
 ```
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
 
 
@@ -344,8 +392,16 @@ heroku run npx sequelize-cli db:seed:all
 
 
 
-  <div align="center">
+  
+
+<div align="center">
+
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
 <div>
   
   
