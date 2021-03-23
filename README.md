@@ -17,15 +17,13 @@
   [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
   <!-- SUMMARY -->
   A 1-5 sentence summary of what the app is.  
   1-3 sentences ideal.  
@@ -51,15 +49,13 @@
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
 
 
 <!-- ABOUT -->
@@ -127,15 +123,13 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
   
   
   
@@ -165,15 +159,13 @@ An optional *brief* note describing scheduling or other planning details.
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
 
 
 <!-- INSTRUCTIONS -->
@@ -296,15 +288,13 @@ Change the `production` entry to look like this:
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
   
   
 # 
@@ -343,15 +333,13 @@ heroku run npx sequelize-cli db:seed:all
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
 
 
 <div align="center">
@@ -394,15 +382,13 @@ heroku run npx sequelize-cli db:seed:all
 
   
 
-<div align="center">
+  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
-
-<div>
   
   
 ## ➤Contact
