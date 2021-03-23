@@ -15,6 +15,8 @@
   <!-- TOC -->
   **TOC**  
   [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
+  
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
   <!-- SUMMARY -->
   A 1-5 sentence summary of what the app is.  
@@ -37,6 +39,7 @@
 </div>
 
 ---
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 <!-- ABOUT -->
 <div align="center">
@@ -98,6 +101,7 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
     height="500px">
 </div>
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 <!-- FEATURES -->
 <div align="center">
@@ -118,6 +122,8 @@ An optional *brief* note describing scheduling or other planning details.
 * **Major** A major feature
 * **Minor** *(low priority)* A minor feature
 * **Maybe** Undecided ideas or brainstorming
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 <!-- INSTRUCTIONS -->
@@ -237,14 +243,15 @@ Change the `production` entry to look like this:
 4. Commit changes with `git commit -m "<<Add message here>>"`. (Optionally, `git commit -am` Adds and commits in one command.)
 5. Push changes to Heroku with `git push Heroku`.
 6. You should see a successful build image.
-``` bash
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#)
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
-# ➤ ➤ ...
+# ➤
+``` bash
+
+
 remote: -----> Launching...
 remote:        Released v5
 remote:        https://«your-app-name».herokuapp.com/ deployed to Heroku
@@ -274,6 +281,9 @@ heroku run npx sequelize-cli db:migrate:undo:all
 heroku run npx sequelize-cli db:migrate
 heroku run npx sequelize-cli db:seed:all
 ```
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 
 
 <div align="center">
@@ -313,12 +323,10 @@ heroku run npx sequelize-cli db:seed:all
 <div align="center">
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contact)
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-contact)
 
-## ➤ ➤ Contact
+## ➤Contact
 
 Thank you very much for your interest in this project.  
 Feel free to reach out to provide feedback, bug reports, or anything else :) .  
