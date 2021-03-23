@@ -15,9 +15,9 @@
   <!-- TOC -->
   **TOC**  
   [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
-  
+  <div align="center">
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
-
+<div>
   <!-- SUMMARY -->
   A 1-5 sentence summary of what the app is.  
   1-3 sentences ideal.  
@@ -39,7 +39,12 @@
 </div>
 
 ---
+
+
+  <div align="center">
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+<div>
+
 
 <!-- ABOUT -->
 <div align="center">
@@ -101,8 +106,17 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
     height="500px">
 </div>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
+
+
+  <div align="center">
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+<div>
+  
+  
+  
+  
+  
 <!-- FEATURES -->
 <div align="center">
 
@@ -123,7 +137,11 @@ An optional *brief* note describing scheduling or other planning details.
 * **Minor** *(low priority)* A minor feature
 * **Maybe** Undecided ideas or brainstorming
 
+
+
+  <div align="center">
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+<div>
 
 
 <!-- INSTRUCTIONS -->
@@ -236,7 +254,7 @@ Change the `production` entry to look like this:
 }
 ```
 
-##Push to Heroku
+## ➤  Push to Heroku
 1. In the root of the app's repo directory, log into Heroku with `heroku login`.
 2. Add a new remote to GitHub configuration with `heroku git:remote -a <<app-name-here>>`.
 3. Add all changes with `git add .`.
@@ -244,11 +262,12 @@ Change the `production` entry to look like this:
 5. Push changes to Heroku with `git push Heroku`.
 6. You should see a successful build image.
 
-
-
+  <div align="center">
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
-
-# ➤
+<div>
+  
+  
+# 
 ``` bash
 
 
@@ -260,7 +279,7 @@ remote: Verifying deploy... done.
 To https://git.heroku.com/«app-name-here».git
 ```
 
-##Run migrations on Heroku
+## ➤ Run migrations on Heroku
 1. To migrate your Heroku Postgres database, run the migration command prefaced with `heroku run` inside the repo. 
 
 ``` bash
@@ -282,13 +301,14 @@ heroku run npx sequelize-cli db:migrate
 heroku run npx sequelize-cli db:seed:all
 ```
 
+  <div align="center">
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
-
+<div>
 
 
 <div align="center">
 
-  ## Development
+  ## ➤ Development
 
   **DEV TOC**  
   [Technologies](docs/development.md#technologies) ● [Concept](docs/development.md#concept) ● [Models](docs/development.md#models) ● [Routes](docs/development.md#routes) ● [Wireframes](docs/development.md#wireframes) ● [Code Highlights](#code-highlights) ● [Dev Snapshots](docs/development.md#development-snapshots)
@@ -324,8 +344,11 @@ heroku run npx sequelize-cli db:seed:all
 
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-contact)
-
+  <div align="center">
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+<div>
+  
+  
 ## ➤Contact
 
 Thank you very much for your interest in this project.  
