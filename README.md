@@ -21,11 +21,11 @@
 │   ├── markdown-snippets
 │   │   ├── Footer
 │   │   │   ├── footnotes.html
-│   │   │   ├── right.html
+│   │   │   │
 │   │   │   └── social-links.html
 │   │   ├── Header
 │   │   │   ├── navigation-bar-1.html
-│   │   │   ├── right.html
+│   │   │   │
 │   │   │   └── table-of-content.html
 │   │   ├── License-badges
 │   │   │   ├── Apache_2.0.html
@@ -42,10 +42,10 @@
 │   │   ├── emojis
 │   │   │   ├── emojis.html
 │   │   │   └── right.html
-│   │   ├── right.html
+│   │   │
 │   │   └── xtrasInline-html
 │   │       ├── keyboard.html
-│   │       ├── right.html
+│   │       │
 │   │       ├── superscript.html
 │   │       └── top-right.html
 │   ├── notes-template.html
@@ -53,7 +53,7 @@
 │   └── right.html
 ├── images
 │   ├── logo.png
-│   ├── right.html
+│   │
 │   └── screenshot.png
 ├── index.html
 ├── issue-template.md
@@ -61,11 +61,11 @@
 ├── markdown-snippets
 │   ├── Footer
 │   │   ├── footnotes.md
-│   │   ├── right.html
+│   │   │
 │   │   └── social-links.md
 │   ├── Header
 │   │   ├── navigation-bar-1.md
-│   │   ├── right.html
+│   │   │
 │   │   └── table-of-content.md
 │   ├── License-badges
 │   │   ├── Apache_2.0.md
@@ -82,15 +82,15 @@
 │   ├── emojis
 │   │   ├── emojis.md
 │   │   └── right.html
-│   ├── right.html
+│   │
 │   └── xtrasInline-html
 │       ├── keyboard.md
-│       ├── right.html
+│       │
 │       ├── superscript.md
 │       └── top-right.md
 ├── notes-template.md
 ├── readme-alt-2.md
-├── right.html
+│
 └── tree.md
 
 14 directories, 77 files
