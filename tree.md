@@ -1,3 +1,10 @@
+# ```sudo apt install tree```
+# ```tree > './tree.md'```
+
+---
+---
+
+```
 .
 ├── BLANK_README.md
 ├── MAIN-README.md
@@ -92,3 +99,4 @@
 └── tree.md
 
 14 directories, 77 files
+```
