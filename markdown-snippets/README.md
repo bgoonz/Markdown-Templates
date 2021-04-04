@@ -6,16 +6,16 @@
 <img src="https://img.shields.io/badge/license-Unlicense-blue.svg" alt="License: Unlicense">
 </a>
 
-<a href="https://github.com/markdown-templates/markdown-snippets/issues">
-<img src="https://img.shields.io/github/issues/markdown-templates/markdown-snippets.svg" alt="Issues">
+<a href="https://github.com/bgoonz/Markdown-Templates/issues">
+<img src="https://img.shields.io/github/issues/bgoonz/Markdown-Templates.svg" alt="Issues">
 </a>
 
-<a href="https://github.com/markdown-templates/markdown-snippets/fork">
-<img src="https://img.shields.io/github/forks/markdown-templates/markdown-snippets.svg" alt="Forks">
+<a href="https://github.com/bgoonz/Markdown-Templates/fork">
+<img src="https://img.shields.io/github/forks/bgoonz/Markdown-Templates.svg" alt="Forks">
 </a>
 
-<a href="https://github.com/markdown-templates/markdown-snippets/stargazers">
-<img src="https://img.shields.io/github/stars/markdown-templates/markdown-snippets.svg" alt="Stars">
+<a href="https://github.com/bgoonz/Markdown-Templates/stargazers">
+<img src="https://img.shields.io/github/stars/bgoonz/Markdown-Templates.svg" alt="Stars">
 </a>
 
 </p>
@@ -34,7 +34,7 @@
 
 <h2 align="center"> :two_hearts: Contribute </h2>
 
-<p align="center">Feel free to add your own templates via <a href="https://github.com/markdown-templates/markdown-snippets/pulls"> pull request</a> :+1:</p>
+<p align="center">Feel free to add your own templates via <a href="https://github.com/bgoonz/Markdown-Templates/pulls"> pull request</a> :+1:</p>
 
 <p align="center">We will take care about the documentation! :wrench:</p>
 
@@ -130,7 +130,9 @@
 </details><details> <summary>02.00-footer/</summary>
 
 ### [02.00-footer/footnotes.md](02.00-footer/footnotes.md)
----
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 
 <sup>[1]: Hello World</sup>  
 <sup>[2]: Hello Internet</sup>
@@ -141,7 +143,7 @@
 
 ### [02.00-footer/social-links.md](02.00-footer/social-links.md)
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 > [MyWebsite](https://www.example.com) &nbsp;&middot;&nbsp;
 > GitHub [@MyGitHub](https://github.com/MyGitHub) &nbsp;&middot;&nbsp;
@@ -485,7 +487,7 @@
 This is a text with <sup>SuperScript</sup>  
 You can use it for footnotes<sup>1</sup>
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 <sup>[1]: See [footnotes](../02-footer/footnotes)</sup>
 

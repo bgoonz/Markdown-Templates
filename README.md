@@ -43,15 +43,11 @@
 
 </div>
 
----
-
-
-  
-
-  
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
 
 
 
@@ -371,7 +367,7 @@ heroku run npx sequelize-cli db:seed:all
 
 </div>
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 <!-- CONTACT -->
@@ -420,7 +416,9 @@ Feel free to reach out to provide feedback, bug reports, or anything else :) .
 
 <br clear="both">
 
----
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 <!--end-->
 
 

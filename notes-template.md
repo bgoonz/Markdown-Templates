@@ -1,5 +1,7 @@
 # Title
----
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 * Description:
 > /* Description here */
 
@@ -8,7 +10,9 @@
 
 
 
----
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 ## ToC:
 - [H1](#h1)
   - [H2](#h2)
@@ -34,7 +38,7 @@
 
 
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 ## Main Notes:
@@ -47,7 +51,9 @@
 
 
 ```
----
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 ```js
 
 
@@ -56,7 +62,7 @@
 
 ```
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
@@ -65,22 +71,14 @@
 
 
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
 
 
 
----
-
-
-
-
-
-
-
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
@@ -88,11 +86,7 @@
 
 
 
-
-
-
-
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
@@ -104,20 +98,34 @@
 
 
 
-
-
-
-
-
----
-
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
 
 
 
----
+
+
+
+
+
+
+
+
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
+
+
+
+
+
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
+
 ## Resource Links:
 
 1. []()
@@ -151,7 +159,7 @@
 
 
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 
 
@@ -524,36 +532,36 @@ Tables aren't part of the core Markdown spec, but they are part of GFM and *Mark
 ```no-highlight
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the 
 raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| *Still*  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 ```
 
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| *Still*  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 <a name="blockquotes"/>
 
@@ -606,7 +614,7 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 ```
 Three or more...
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 Hyphens
 
@@ -621,7 +629,7 @@ Underscores
 
 Three or more...
 
----
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 Hyphens
 
