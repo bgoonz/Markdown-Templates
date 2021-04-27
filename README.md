@@ -507,7 +507,7 @@ Feel free to reach out to provide feedback, bug reports, or anything else :) .
     align="left">
 </div>
 
-##Bryan Guner
+## Bryan Guner
 *(Full-stack software developer)*  
 
 [![Portfolio](https://img.shields.io/badge/-❤_Portfolio-f58?style=flat-square&logo=a&logoColor=white&link=https://bgoonz.github.io/)](https://bgoonz.github.io) 
