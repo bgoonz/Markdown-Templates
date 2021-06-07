@@ -58,9 +58,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+- [Maven](https://maven.apache.org/) - Dependency Management
+- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -68,11 +68,11 @@ Please read [CONTRIBUTING.md](https://gist.github.com/bgoonz) for details on our
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
-* **Bryan Guner** - *Initial work* - [bgoonz](https://github.com/bgoonz)
+- **Bryan Guner** - _Initial work_ - [bgoonz](https://github.com/bgoonz)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -82,6 +82,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc

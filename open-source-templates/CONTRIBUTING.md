@@ -6,8 +6,8 @@ Please read [Auth0's contribution guidelines](https://github.com/auth0/open-sour
 
 - PR for docs site update, if needed
 - Code-level documentation expectations
-	- 100% documentation coverage for PRs
-	- Include links to relevant Auth0 doc pages
+  - 100% documentation coverage for PRs
+  - Include links to relevant Auth0 doc pages
 
 ## Assets compilation
 
@@ -18,7 +18,6 @@ Information about compiling CSS, JS, SVG, etc.
 Link to [README installation](README.md#installation) steps and include anything additional needed to contribute to the project.
 
 ## Testing
-
 
 ### Adding tests
 

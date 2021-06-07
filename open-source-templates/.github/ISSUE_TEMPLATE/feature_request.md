@@ -1,11 +1,11 @@
 ---
 name: Feature request
 about: Suggest new functionality for this project.
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
+
 **Please do not report security vulnerabilities here**. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
 **Thank you in advance for helping us to improve this library!** Your attention to detail here is greatly appreciated and will help us respond as quickly as possible. For general support or usage questions, use the [Auth0 Community](https://community.auth0.com/) or [Auth0 Support](https://support.auth0.com/). Finally, to avoid duplicates, please search existing Issues before submitting one here.
