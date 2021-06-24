@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Netlify search plugin example</title>
+  <meta name="description" content="An example website featuring Netlify search plugin">
+  <meta name="author" content="hypervillain">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="module" src="./components/Search.js"></script>
+  <script type="module">
+    import { render, html } from 'https://unpkg.com/uhtml?module';
+    render(
+      document.body,
+      html`
+        <main>
+          <div class="search"></div>
+        </main>
+        <style>
+          body {
+            height: 100%;
+            color: hsl(10, 20%, 20%);
+            background-color: 1FFF;
+            font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+          }
+          .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 2em;
+          }
+          .splash {
+            background: #F7F7F7;
+          }
+          h1, p {
+            max-width: 580px;
+            margin-bottom: 24px;
+          }
+        </style>
+      `
+    );
+  </script>
+</body>
+</html>

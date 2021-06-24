@@ -18,5 +18,8 @@
   "homepage": "https://github.com/bgoonz/Markdown-Templates#readme",
   "devDependencies": {
     "@netlify/plugin-sitemap": "^0.8.1"
+  },
+  "dependencies": {
+    "netlify-plugin-search-index": "^0.1.6"
   }
 }
