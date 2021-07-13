@@ -20,6 +20,7 @@
     "@netlify/plugin-sitemap": "^0.8.1"
   },
   "dependencies": {
+    "@bgoonz11/repoutils": "^1.0.5",
     "netlify-plugin-search-index": "^0.1.6"
   }
 }

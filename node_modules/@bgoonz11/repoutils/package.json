@@ -1,0 +1,57 @@
+{
+  "_from": "@bgoonz11/repoutils",
+  "_id": "@bgoonz11/repoutils@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-hQJh6ayZAGVfP9h1wZYzcQ0PuYe6JpV5ZHcPRG63r6R0beUhua0vkfTFyzciiWy/79I6K/bjQHMKpy4MqLSeXg==",
+  "_location": "/@bgoonz11/repoutils",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@bgoonz11/repoutils",
+    "name": "@bgoonz11/repoutils",
+    "escapedName": "@bgoonz11%2frepoutils",
+    "scope": "@bgoonz11",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@bgoonz11/repoutils/-/repoutils-1.0.5.tgz",
+  "_shasum": "28c5307832bce45e530d5225193d42fec320738a",
+  "_spec": "@bgoonz11/repoutils",
+  "_where": "/workspace/Markdown-Templates",
+  "author": {
+    "name": "Bryan Guner"
+  },
+  "bugs": {
+    "url": "https://github.com/bgoonz/repo-utils/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lebab": "^3.1.1",
+    "loadash": "^1.0.0",
+    "prettier": "^2.3.1",
+    "python-format": "^1.0.2",
+    "python-format-js": "^1.3.8",
+    "web-dev-utils": "^1.0.4"
+  },
+  "deprecated": false,
+  "description": "---",
+  "homepage": "https://github.com/bgoonz/repo-utils#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@bgoonz11/repoutils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgoonz/repo-utils.git"
+  },
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,py,md,html,css,sh}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

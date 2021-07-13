@@ -1,0 +1,53 @@
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
+html {
+  --text-color-normal: #0a244d;
+  --text-color-light: #8cabd9;
+}
+
+html[data-theme='dark'] {
+  --text-color-normal: hsl(210, 10%, 62%);
+  --text-color-light: hsl(210, 15%, 35%);
+  --text-color-richer: hsl(210, 50%, 72%);
+  --text-color-highlight: hsl(25, 70%, 45%);
+}
+body {
+  background-color: black;
+  color: white;
+}
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
+:root {
+  --body-bg: #fafafa;
+  --body-color: #555;
+  --link-color: #222;
+  --link-color-hover: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #212529;
+    --body-color: #6c757d;
+    --link-color: #dee2e6;
+    --link-color-hover: #fff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}

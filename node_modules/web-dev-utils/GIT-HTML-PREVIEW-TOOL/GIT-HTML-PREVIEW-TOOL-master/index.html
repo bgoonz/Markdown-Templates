@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GIT HTML PREVIEW TOOL</title>
+  <link rel="stylesheet" href="./gradient.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </script>
+  <script async defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+  
+  <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
+	<style>
+   code,
+   pre {
+   position: relative;
+   }
+
+   code,
+   pre {
+   display: block;
+   padding: 20px;
+      background: linear-gradient(-45deg, #da0000, #0008ffe5, #23d5a2d8, #2f2fbce5);
+      background-size: 400% 400%;
+      -webkit-animation: gradient 15s ease infinite;
+      animation: gradient 15s ease infinite;
+      
+   }
+
+   span.command-copy {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   opacity: .6;
+   font-size: 20px;
+   color: #555755;
+   }
+
+   span.command-copy:hover {
+   cursor: pointer;
+   }
+    .userInfoForm {
+    width: 80%;
+    padding: 5px 5px;
+    margin: 0 auto;
+    background: #FF6700;
+    border-radius: 25px;
+      background: linear-gradient(-45deg, #da0000, #0008ffe5, #23d5a2d8, #2f2fbce5);
+      background-size: 400% 400%;
+      -webkit-animation: gradient 15s ease infinite;
+      animation: gradient 15s ease infinite;
+    }
+
+    .userInfoForm input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 25px;
+    }
+	body {
+		font: 12px 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
+		color: #333;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	a {
+		color: #666;
+	}
+	.previewform {
+		display: none;
+		padding: 20px; 
+		text-align: center;
+	}
+	strong {
+		color: #333;
+		background-color: #FAFFA6;
+		padding: 0.1em;
+	}
+	.footer {
+		margin: 20px 0;
+		font-size: 10px;
+		color: #666;
+	}
+
+
+    a {
+    color: black !important;
+    font-size: 11;
+    white-space: normal;
+    }
+
+    li {
+    top: 0px;
+    list-style-type: none;
+    overflow: visible;
+    /* margin: top; */
+    font-size: 20px;
+    letter-spacing: 0px;
+font-weight: 700;;
+    cursor: pointer;
+    white-space: normal;
+    color: rgb(243, 211, 31) !important;
+    word-wrap: break-word;
+    height: 30px;
+    text-align:center;
+    padding: 0.5em 1em 0;
+    box-shadow: 0 0 5px;
+    margin: 0.2em;
+    /* display: grid; */
+    /* -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px; */
+    }
+	</style>
+</head>
+<body>
+	<form id="previewform" class="userInfoForm"  onsubmit="location.href='/?'+this.file.value;return false">
+		<h1>GIT HTML PREVIEW TOOL</h1>
+		<p>
+			Enter URL of the HTML file to preview:
+			<input type="url" id="file" class="userInfoForm" value="" placeholder="e.g. https://github.com/user/repo/blob/master/index.html" size="60" autofocus>
+			<input type="submit" value="Preview">
+		</p>
+    
+    <p>try </p>
+   <pre><code>  <ul>
+<a href="https://github.com/bgoonz/GIT-HTML-PREVIEW-TOOL/blob/master/readme.html">
+<li></a>
+
+  https://github.com/bgoonz/GIT-HTML-PREVIEW-TOOL/blob/master/readme.html
+  </li>
+</ul>
+</code></pre>
+<p>as an example</a></p>
+	</form>
+	<script src="/htmlpreview.js"></script>
+  <script async defer>
+    $(document).ready(function() {
+    $('code, pre').append('<span class="command-copy"><i class="fa fa-clipboard" aria-hidden="true"></i></span>');
+
+    $('code span.command-copy').click(function(e) {
+    var text = $(this).parent().text().trim(); //.text();
+    var copyHex = document.createElement('input');
+    copyHex.value = text
+    document.body.appendChild(copyHex);
+    copyHex.select();
+    document.execCommand('copy');
+    console.log(copyHex.value)
+    document.body.removeChild(copyHex);
+    });
+
+
+    $('pre span.command-copy').click(function(e) {
+    var text = $(this).parent().text().trim();
+    var copyHex = document.createElement('input');
+    copyHex.value = text
+    document.body.appendChild(copyHex);
+    copyHex.select();
+    document.execCommand('copy');
+    console.log(copyHex.value)
+    document.body.removeChild(copyHex);
+    });
+    })
+  </script>
+</body>
+</html>

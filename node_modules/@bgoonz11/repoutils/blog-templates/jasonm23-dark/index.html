@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Strongly connected graph</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> nk type="text/css" rel="stylesheet"
+    href="assets/hljs-github.min.css" />
+
+
+    <h1 i graph</h1>
+        <p>In the mathematical theory of <a href="http://en.wikipedia.org/wiki/Directed_graph">directed graphs</a>, a
+            graph
+            href="http://en.wikipedia.org/wiki/Reachable">reachable</a> from every other vertex. The <strong>strongly
+                connected components</strong> of an arbitrary directed graph form a <a
+                href="http://en.wikipedia.org/wiki/Partition">partition</a> into subgraphs that are themselves strongly
+            connected. It is possible to test the strong connectivity of a graph, or to find its strongly connected
+        <h2 i <p>A <a href="http:/            connected</strong> if there is a <a href=" between each pair of vertices
+                of the graph. In a directed graph <em>G</em> that may not itself be strongly
+                connected, a pair of is a path in each direction between them.</p>
+                <p>The <a href="http://en.wikipedia.org/wiki/Binary_relation">binary relation</a> of being strongly
+                    connected is an
+                    href="http://en.wikipedia.org/wiki/Induced_subgraph">induced subgraphs
+            </a> of its <a connected components</strong>. Equivalently, a <strong>strongly connected component</strong>
+                of a directed
+                edges or vertices
+                connected. The
+                collection of strongly connected components forms a <a href="http://google.com/"
+                    title="Google">partition</a> of
+                href="http://en.wikipedia.org/wiki/Contracted">contracted</a> to a
+            single vertex, the resulting graph is a <a href="http://en.wikipedia.org/wiki/DAG">directed
+                acyclic graph</a>,
+            the connected and <p>Several algorithms can compute strongly connected components in <a href="http://en.wi            time</a>.</p>
+    <ul class=" list">
+                    <li><a href="http://en.wikipedia.org/wiki/DAG">Kosaraju&#39;s algorithm</a> uses two
+                        passes of <a href=used to choose the order in which the outer loop of the second depth first
+                            search tests vertices for having been visited already and recursively explores them if not.
+                            The second depth first search is on the <a href="http://en.wikipedia.org/wiki/DAG">transpose
+                            graph</a>
+                        1978; <a href="http://en.wikipedia.org/wiki/DAG">Micha Sharir</a> later published it
+                        in
+                        1981.
+                    </li>
+                    <li><a href="http://en.wikipedia.org/wiki/DAG">Tarjan&#39;s strongly connected
+                            components
+                            algorithm</a>,
+                        depth first search. It maintains a <a hre have been explored by the search but not yet assigned
+                            to a component, and calculates "low numbers" of each vertex (an index number of the highest
+                            ancestor reachable in one step from a descendant of the vertex) which it uses to determine
+                            when a set of vertices should be popped off the stack into a new component.</li>
+                    <li>The <a href="http:/                vertices not yet assigned to components, while the other keeps track of the current path in the depth first
+            search tree. The first linear time version of this algorithm was published by <a
+                href=" http://en.wikipedia.org/wiki/DAG">Edsger W. Dijkstra</a> in 1976.</li>
+                    </ul>
+                    path-based algorithm are favoured in practice since they require only
+                    "applications"><a class="header-link" href="#applications"></a>Applications
+        </h2>
+        <p>Algorithms for finding strongly connected components may be used to
+            solve <a href="http://en.wikipedia.org/wiki/DAG">2-satisfiability</a> problems (systems of
+            with constrain is a variable <em>v</em> such that <em>v</em> and its complement are both
+            contained in the same strongly
+            connected component of the <a href="http://en.wikipedia.org/wiki/DAG">implication graph</a> of
+            the instance.</p>
+        href="http://en.wikipedia.org/wiki/DAG">Dulmage–Mendelsohn decomposition
+        </a>, a classification of the edges
+        of a <a href="http://en.wikipedia.org/wiki/DAG">bipartite graph</a>, according to whether or not they
+        can be
+        part of a <a href="http://en.wikipedia.org/wiki/DAG">perfect matching</a> in the graph.</p>
+        <h2 id="related-results"><a class="header-link" href="#related-results"></a>Related results</h2>
+        href="http://en.wikipedia.org/wiki/DAG">ear
+        subgraph in the sequence is a cycle, and each subsequent subgraph is either a cycle sharing one
+        vertex with
+        href="http://en.wikipedia.org/wiki/Linear_time">oriented</a> in such a way that it becomes strongly
+        ve this result is to find an ear decomposition of the underlying undirected graph and then orient each ear
+        consistently.</p>
+        <h2 i <ul class="list">
+            <li><a href="http://en.wikipedia.org/wiki/DAG">Connected component</a></li>
+            </ul <h2 lists</h2>
+            <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
+            <li>Red Apples</li>
+            <li>Green Kiwifruits</li>
+            </ul>
+            <p>Let&#39;s get crazy:</p>
+            <ol class="list">
+                < <p>This is a list item with two paragraphs. Lorem ipsum dolor
+                    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+                    mi posuere lectus.</p>
+                    <p>Vestibulum enim wisi, viverra nec, fr vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+                        sit amet velit.</p>
+                    </li>
+                    < <p>Suspendisse id sem consectetuer libero luctus adipiscing.</p>
+                        </li>
+            </ol>
+            <p>What about some code <strong>in</strong> a list? That&#39;s insane, right?</p>
+            <ol class="list">
+                <li>In Ruby you can map like this:</li>
+            </ol>
+            <pre
+                class="hljs"><code>[<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>].map { |x| x.uppercase }</code></pre>
+            <ol class="list">
+                <li>In Rails, you can do a shortcut:</li>
+            </ol>
+            <pre class="hljs"><code>[<span c    ome people seem to like definition lists</p>
+    <dl>
+        <dt>Lower cost</dt>
+        <dd>new version of this product costs significantly less than the previous one!</dd>
+        <dt>Easier to use</dt>
+        <dd>We&#39;ve changed the product so that it&#39;s much easier to use!</dd>
+    </dl>
+
+    <h2 id="i-am-a-robot"><a class="header-link" href="#i-am-a-robot"></a>I am a robot</h2>
+    <p>Ma
+    <pre class="hljs"><code><s  has_many <span class="hljs-symbol">:wheels</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">'Wheel'</span>, <span class="hljs-symbol">foreign_key:</span> <span class="hljs-string">'car_id'</span>
+     <span class="hljs-keyword">end</span></code></pre>
+            <p>You see, that was formatted as code because it&#39;s been indented by four spaces.</p>
+            <p>Ho
+            <pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer"</span>&gt;</span>
+    &amp;copy; 2004 Foo Corporation
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+            <p>CS
+            <pre class="hljs"><code>Year,Make,Model,Length
+<span class="hljs-number">2</span><span class="hljs-regexp">/5/</span><span class="hljs-number">08</span>,Ford,E350,<span class="hljs-number">2.34</span>
+<span cla <p>Preformatted blocks are useful for ASCII art:</p>
+    <pre>
+             ,-.
+    ,     ,-.   ,-.
+   / \   (   )-(   )
+   \ |  ,.>-(   )-<
+    \|,' (   )-(   )
+     Y ___`-'   `-'
+     |/_ _ |
+     |
+     | ___|_____________
+</pre>
+
+            <h2 id="playing-the-blame-game"><a class="header-link" href="#playing-the-blame-game"></a>Playing the blame
+                game
+            </h2>
+            <p>If you need to blame someone, the best way to do so is by quoting them:</p>
+            <p>I, at any rate, am convinced that He does not throw dice.</p>
+            </blockquote>
+            <p>Or
+            <blockquote>
+                <p>I wish you&#39;d have given me this written question ahead of time so I
+                    could plan for it... I&#39;m sure something will pop into my head here in
+                    the midst of this press conference, with all the pressure of trying to
+                    come up with answer, but it hadn&#39;t yet...</p>
+                I have made no mistakes. I&#39;m confident I have. I just haven&#39;t - you
+                just put me under the spot here, and maybe I&#39;m not as quick on my feet
+                as I should be in coming up with one.</p>
+                < <table>
+                    < <th>ID</th>
+                        <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Awesome</td>
+                        </tr>
+                        <tr>
+                            <td>Nearly as awesome</td>
+                        </tr>
+                        </table>
+                        <h2 id="crazy-linking-action"><a class="header-link" href="#crazy-linking-action"></a>Crazy
+                            linking action</h2>
+                        <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than
+                            from
+                            <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a
+                                href="http://search.msn.com/" title="MSN Search">MSN</a>.
+                        </p>
+                        </body>
+
+</html>

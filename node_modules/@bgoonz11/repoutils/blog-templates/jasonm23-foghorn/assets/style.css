@@ -1,0 +1,139 @@
+@import url(//fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+
+html,
+body {
+    padding: 1em;
+    margin: auto;
+    max-width: 42em;
+    background: #fefefe;
+}
+
+body {
+    font: 1.3em "Vollkorn", Palatino, Times;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+header,
+narticle,
+footer {
+    width: 700px;
+    margin: 0 auto;
+}
+
+article {
+    margin-top: 4em;
+    min-h
+}
+
+footer {
+    margin-bottom: 50px;
+}
+
+video {
+    margin: 2em 0;
+}
+
+nav {
+    font- border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+}
+
+n margin: 0;
+}
+
+/-------------------------------------------------------- */ h1 {}
+
+h2 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+    margin-top: 3em;
+}
+
+p {
+    -webkit-hypens: auto;
+    -moz-hypens: auto;
+    hyphens: auto;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ol {
+    padding-left: 1.2em;
+}
+
+blockquote {
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+code {
+    font-size: .9em;
+}
+
+a {
+    color: #2484c1;
+    text-decoration: none;
+}
+
+a:hover text-decoration: underline;
+}
+
+a border: none;
+}
+
+hh1 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+hr {
+    height: 1px;
+    border-top: solid 1px #ddd;
+    border-bottom: none;
+    border-left: 0;
+
+    p#heart {
+        font-size: 2em;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .red {
+        color: #B50000;
+
+        /* Home Page
+-
+body  margin-bottom: 1em;
+  }
+
+    
+/* iPad
+-    @media only screen and (max-device-width: 1024px) {
+        body {
+            font-size: 120%;
+            lin
+     }
+
+    /* @iPad */
+
+        /* iPhone-------------------------------------------------------- */
+        @media only screen and (max-device-width: 480px) {
+            body {}
+
+            article,
+            footer {
+                width:
+            }
+
+            article {
+                padding: 0 10px;
+            }
+        }
+
+        /* @iPhone */
