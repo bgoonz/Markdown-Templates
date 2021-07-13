@@ -1,4 +1,4 @@
-name: 'articles-generator'
+name: "articles-generator"
 
 inputs:
   - name: folder
