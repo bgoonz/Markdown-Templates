@@ -3,4 +3,4 @@ PyYAML==3.13
 requests==2.26.0
 
 wheel==0.24.0
-lxml==4.6.3
+lxml==4.6.4
