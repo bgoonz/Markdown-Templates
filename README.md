@@ -13,36 +13,36 @@
 
 ## Blank Samples:
 
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-README-html-2021-11-23-20_14_10.png?raw=true)
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-README-html-2021-11-23-20_14_10.png?raw=true)
 
 ---
 
 
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-Standard-Project-README-html-2021-11-23-20_15_30.png?raw=true)
-
----
-
-
-
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-contributing-template-html-2021-11-23-20_14_26.png?raw=true)
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-Standard-Project-README-html-2021-11-23-20_15_30.png?raw=true)
 
 ---
 
 
 
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-alt-README-html-2021-11-23-20_14_50.png?raw=true)
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-contributing-template-html-2021-11-23-20_14_26.png?raw=true)
 
 ---
 
 
 
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-readme-alt-2-html-2021-11-23-20_14_39.png?raw=true)
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-alt-README-html-2021-11-23-20_14_50.png?raw=true)
 
 ---
 
 
 
--[img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-notes-template-html-2021-11-23-20_15_17.png?raw=true)
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-readme-alt-2-html-2021-11-23-20_14_39.png?raw=true)
+
+---
+
+
+
+![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-notes-template-html-2021-11-23-20_15_17.png?raw=true)
 
 ---
 
