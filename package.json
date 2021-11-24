@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/bgoonz/Markdown-Templates#readme",
   "devDependencies": {
-    "@netlify/plugin-sitemap": "^0.8.1"
+    "@netlify/plugin-sitemap": "0.8.1"
   },
   "dependencies": {
     "@bgoonz11/repoutils": "^1.0.5",
