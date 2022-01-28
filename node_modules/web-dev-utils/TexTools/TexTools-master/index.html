@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TexTools Tools</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+<link href="./main-style.css" rel="stylesheet"></head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">TexTools Tools </div>
+      <div class="list-group list-group-flush">
+        <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+        <a href="duplicate-text-line-remover.html" class="list-group-item list-group-item-action bg-light">Duplicate Text Line Remover</a>
+        <a href="find-replace-text.html" class="list-group-item list-group-item-action bg-light">Find and Replace Text</a>
+        <a href="compare-text-files.html" class="list-group-item list-group-item-action bg-light">Compare Text Files (Remove Dupes)</a>
+        <a href="prefix-suffix-lines.html" class="list-group-item list-group-item-action bg-light">Add Prefix/Suffix to Lines</a>
+        <a href="whitespace-remover.html" class="list-group-item list-group-item-action bg-light">WhiteSpace Remover</a>
+        <a href="sort-text-lines.html" class="list-group-item list-group-item-action bg-light">Sort Text Lines</a>
+        <a href="replace-line-breaks.html" class="list-group-item list-group-item-action bg-light">Replace Line Breaks</a>
+        <a href="letter-case-converter.html" class="list-group-item list-group-item-action bg-light">Letter Case Converter</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+
+      <div class="container-fluid">
+        <h1 class="mt-4 text-center">TexTools Tools</h1>
+        <p class="text-center">You need Javascript enabled in your web-browser to use this website.
+          <p class="text-center">You can choose the appropriate tool from below and use it.</p>
+
+      </div>
+
+      <!--Row Start-->
+      <div class="row mt-5 m-5">
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="duplicate-text-line-remover.html">
+            <h5>Duplicate Text Line Remover</h5>
+          </a>
+          <p>Removes Duplicate Lines from your file.</p>
+          <p>
+            <strong>Please Note:</strong> Make sure that your data is on seperate lines.</p>
+        </div>
+
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="find-replace-text.html">
+            <h5>Find and Replace</h5>
+          </a>
+          <p>Find and replace Words in your text.</p>
+        </div>
+
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="compare-text-files.html">
+            <h5>Compare Text Files (Remove Dupes)</h5>
+          </a>
+          <p>Compare files and remove duplicates of one file from the other.</p>
+        </div>
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="prefix-suffix-lines.html">
+            <h5>Add Prefix/Suffix to Lines</h5>
+          </a>
+          <p>Add text before or at the end of each line. </p>
+        </div>
+      </div>
+      <!--Row Ends-->
+
+
+      <!--Row Start-->
+      <div class="row mt-5 m-5">
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="whitespace-remover.html">
+            <h5>WhiteSpace Remover</h5>
+          </a>
+          <p>Removes all the whitespace in your text including space.</p>
+        </div>
+
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="sort-text-lines.html">
+            <h5>Sort Text Lines</h5>
+          </a>
+          <p>Sorts data lines in ascending or descending order.</p>
+        </div>
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="replace-line-breaks.html">
+            <h5>Replace Line Breaks</h5>
+          </a>
+          <p>Replace line breaks with anything text, for example a comma (,).</p>
+        </div>
+
+        <div class="col-md-3 border border-white shadow-sm">
+          <a href="letter-case-converter.html">
+            <h5>Letter Case Converter</h5>
+          </a>
+          <p>Convert Letter Cases of your text.</p>
+        </div>
+
+      </div>
+      <!--Row End-->
+      <!--Credits-->
+
+      <footer>
+        <p class="text-center">
+          <a href="https://startbootstrap.com/templates/simple-sidebar/"></a>Made by 
+          <a href="https://github.com/toorhamza">Bryan Guner</a>
+        </p>
+      </footer>
+
+      <!--Credits-->
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/textmani.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+"use strict";
+// automatically generated, do not edit!
+// run `node build` instead
+exports.__esModule = true;
+var after_1 = require("./function/after");
+exports.after = after_1["default"];
+var awaitDelay_1 = require("./function/awaitDelay");
+exports.awaitDelay = awaitDelay_1["default"];
+var bind_1 = require("./function/bind");
+exports.bind = bind_1["default"];
+var compose_1 = require("./function/compose");
+exports.compose = compose_1["default"];
+var constant_1 = require("./function/constant");
+exports.constant = constant_1["default"];
+var debounce_1 = require("./function/debounce");
+exports.debounce = debounce_1["default"];
+var func_1 = require("./function/func");
+exports.func = func_1["default"];
+var identity_1 = require("./function/identity");
+exports.identity = identity_1["default"];
+var makeIterator_1 = require("./function/makeIterator_");
+exports.makeIterator_ = makeIterator_1["default"];
+var memoize_1 = require("./function/memoize");
+exports.memoize = memoize_1["default"];
+var partial_1 = require("./function/partial");
+exports.partial = partial_1["default"];
+var prop_1 = require("./function/prop");
+exports.prop = prop_1["default"];
+var series_1 = require("./function/series");
+exports.series = series_1["default"];
+var throttle_1 = require("./function/throttle");
+exports.throttle = throttle_1["default"];
+var timeout_1 = require("./function/timeout");
+exports.timeout = timeout_1["default"];
+var times_1 = require("./function/times");
+exports.times = times_1["default"];
+var wrap_1 = require("./function/wrap");
+exports.wrap = wrap_1["default"];

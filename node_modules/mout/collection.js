@@ -1,0 +1,32 @@
+"use strict";
+// automatically generated, do not edit!
+// run `node build` instead
+exports.__esModule = true;
+var contains_1 = require("./collection/contains");
+exports.contains = contains_1["default"];
+var every_1 = require("./collection/every");
+exports.every = every_1["default"];
+var filter_1 = require("./collection/filter");
+exports.filter = filter_1["default"];
+var find_1 = require("./collection/find");
+exports.find = find_1["default"];
+var forEach_1 = require("./collection/forEach");
+exports.forEach = forEach_1["default"];
+var make_1 = require("./collection/make_");
+exports.make_ = make_1["default"];
+var map_1 = require("./collection/map");
+exports.map = map_1["default"];
+var max_1 = require("./collection/max");
+exports.max = max_1["default"];
+var min_1 = require("./collection/min");
+exports.min = min_1["default"];
+var pluck_1 = require("./collection/pluck");
+exports.pluck = pluck_1["default"];
+var reduce_1 = require("./collection/reduce");
+exports.reduce = reduce_1["default"];
+var reject_1 = require("./collection/reject");
+exports.reject = reject_1["default"];
+var size_1 = require("./collection/size");
+exports.size = size_1["default"];
+var some_1 = require("./collection/some");
+exports.some = some_1["default"];

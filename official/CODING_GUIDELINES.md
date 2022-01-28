@@ -4,11 +4,13 @@
 - Tabs, no spaces
 - End of line should should be Unix style (`\n`), not Windows style (`\r\n`)
 - Opening brackets goes in the same line as the last statement
+
 ```
     if (condition) {
         stuff;
     }
 ```
+
 - A space between keywords and parenthesis for: `if`, `else`, `while`, `switch`, `catch`, `function`
 - Function calls have no space before the parentheses
 - No spaces are left inside the parentheses

@@ -7,4 +7,3 @@
 - [ ] Make a minimal IoT template.
 - [ ] Add a COMMIT_MESSAGE_GUIDELINES.md file.
 - [ ] Translate the [templates](https://github.com/kylelobo/The-Documentation-Compendium#templates) into different languages - Chinese, French, German, Hindi, Italian, Japanese, Korean, Portuguese, Russian, Spanish, etc.
-

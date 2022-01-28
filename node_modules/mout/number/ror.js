@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+/**
+ * Bitwise circular shift right
+ * http://en.wikipedia.org/wiki/Circular_shift
+ */
+function ror(val, shift) {
+    return (val >> shift) | (val << (32 - shift));
+}
+exports["default"] = ror;
