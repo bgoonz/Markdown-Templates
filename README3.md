@@ -54,8 +54,8 @@ Check also the [list of contributors](CONTRIBUTORS.md) who helped on this projec
 
 > **[?]** Reference someone's code you used, insert an external link or thank people, i.e.:
 
-* [Shields.io](http://shields.io/). Definitely a must-have.
-* [Travis-CI](travis-ci.org). Another must-have. _Test and Deploy with Confidence_.
+- [Shields.io](http://shields.io/). Definitely a must-have.
+- [Travis-CI](travis-ci.org). Another must-have. _Test and Deploy with Confidence_.
 
 ## To-Do :man:
 

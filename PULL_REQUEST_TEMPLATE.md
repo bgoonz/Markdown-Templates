@@ -1,5 +1,5 @@
 > ## ProTips:
-> 
+>
 > One of the key jobs of validating a pull request is running a series of tests to check that it won't break any existing work when merging in, and that the work that is does add actually... works. We can check this using a CI service like [Travis](https://travis-ci.org/getting_started). It allows people to know without having to wait for a team member to see if they have made any functional error in their code.
 
 # Pull Request Process
