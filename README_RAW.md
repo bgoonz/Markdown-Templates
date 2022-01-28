@@ -116,23 +116,23 @@
 
   <!-- TOC -->
 
-**TOC**  
+**TOC**
  [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
   <!-- SUMMARY -->
 
-A 1-5 sentence summary of what the app is.  
- 1-3 sentences ideal.  
+A 1-5 sentence summary of what the app is.
+ 1-3 sentences ideal.
  Markdown tip: Add two spaces at the end of a line to create a line break.
 
   <!-- SPLASHY IMAGE -->
 
-<img 
-    src="docs/images/splash.png" 
-    alt="Splashy 100%-width image" 
-    title="" 
+<img
+    src="docs/images/splash.png"
+    alt="Splashy 100%-width image"
+    title=""
     width="100%">
 
   <!-- WEBSITE LINK -->
@@ -152,13 +152,13 @@ A 1-5 sentence summary of what the app is.
 
 ## About
 
-[● See Website ●]()  
+[● See Website ●]()
  _(Inspired by [app name]())_
 
 </div>
 
-<img src="" 
-  alt="Animated gif example of app in action, or interesting detail, etc." 
+<img src=""
+  alt="Animated gif example of app in action, or interesting detail, etc."
   title=""
   width="50%"
   align="left">
@@ -182,29 +182,29 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
 
 <!-- Option 2: Multiple images in a row, 'width' attribute set to evenly split the x-axis space. Ensure matching canvas ratios for the best appearance. Two rows combined can make a nice 'square' collage. May be food for a 'full-screen screenshots' gallery. -->
 <div align="center">
-  <img 
-    src="" 
-    alt="Image 1" 
-    title="" 
+  <img
+    src=""
+    alt="Image 1"
+    title=""
     width="48%">
-  <img 
-    src="" 
-    alt="Image 2" 
-    title="" 
+  <img
+    src=""
+    alt="Image 2"
+    title=""
     width="48%">
 </div>
 
 <!-- Option 3: Multiple images in a row, 'height' attribute set to hard values to ensure matching heights. Good for images with different aspect ratios. -->
 <div align="center">
-  <img 
-    src="" 
-    alt="Image 1" 
-    title="" 
+  <img
+    src=""
+    alt="Image 1"
+    title=""
     height="500px">
-  <img 
-    src="" 
-    alt="Image 2" 
-    title="" 
+  <img
+    src=""
+    alt="Image 2"
+    title=""
     height="500px">
 </div>
 
@@ -237,18 +237,18 @@ An optional _brief_ note describing scheduling or other planning details.
 
 ## How It Works
 
-[1. Step One](#1-step-one)  
- [How to Use Cool Feature ABC!](#how-to-use-feature-abc)  
+[1. Step One](#1-step-one)
+ [How to Use Cool Feature ABC!](#how-to-use-feature-abc)
  [Troubleshooting Z](#troubleshooting-z)
 
 </div>
 
 ##1. Step One
 
-<img 
-  src="" 
-  alt="Screenshot, animated gif, diagram, etc illustrating this step" 
-  title="" 
+<img
+  src=""
+  alt="Screenshot, animated gif, diagram, etc illustrating this step"
+  title=""
   width="50%"
   align="right">
 
@@ -259,7 +259,7 @@ An optional _brief_ note describing scheduling or other planning details.
 
 <br clear="both">
 
-> **Optional Special Section!**  
+> **Optional Special Section!**
 > For any additional asides. Maybe illustrating a specific example, a table of information, a code snippet, or 'fun facts' or quotes!
 >
 > 1. A list
@@ -271,10 +271,10 @@ An optional _brief_ note describing scheduling or other planning details.
 > | A        | B        |
 
 <div align="center">
-  <img 
-    src="" 
-    alt="Optional extra image(s)" 
-    title="" 
+  <img
+    src=""
+    alt="Optional extra image(s)"
+    title=""
     width="100%">
 </div>
 
@@ -397,26 +397,26 @@ heroku run npx sequelize-cli db:seed:all
 
 ## ➤ Development
 
-**DEV TOC**  
+**DEV TOC**
  [Technologies](docs/development.md#technologies) ● [Concept](docs/development.md#concept) ● [Models](docs/development.md#models) ● [Routes](docs/development.md#routes) ● [Wireframes](docs/development.md#wireframes) ● [Code Highlights](#code-highlights) ● [Dev Snapshots](docs/development.md#development-snapshots)
 
-[[See full dev notes HERE]](readme/development.md)  
- The full notes on this project's development are kept in a separate document linked above.  
- It details the technical aspects of this project's development.  
+[[See full dev notes HERE]](readme/development.md)
+ The full notes on this project's development are kept in a separate document linked above.
+ It details the technical aspects of this project's development.
  A few sample snapshots are below from the development process.
 
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 1"
     title=""
     height="250px">
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 2"
     title=""
     height="250px">
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 3"
     title=""
     height="250px">
@@ -432,15 +432,15 @@ heroku run npx sequelize-cli db:seed:all
 
 ## ➤Contact
 
-Thank you very much for your interest in this project.  
+Thank you very much for your interest in this project.
 Feel free to reach out to provide feedback, bug reports, or anything else :) .
 
 <!-- CONTRIBUTOR PROFILE -->
 <!-- Include: Name, title, job/search status, (opt) photo, (opt) summary of contributions, (opt) a few words or a quote, socials badges (github follow, linkedin, angellist, email, resume, portfolio, twitter, etc.), (opt) team/contact page from app's site -->
 
-<img 
-    src="[docs/images/portrait.png](https://avatars.githubusercontent.com/u/66654881?s=460&u=fa9d2cc45bc228dd9b7d3dee6d4653f940fab35a&v=4)" 
-    alt="Bryan Gimer" 
+<img
+    src="[docs/images/portrait.png](https://avatars.githubusercontent.com/u/66654881?s=460&u=fa9d2cc45bc228dd9b7d3dee6d4653f940fab35a&v=4)"
+    alt="Bryan Gimer"
     height="100px"
     align="left">
 

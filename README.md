@@ -1,20 +1,9 @@
 <center><div align="center">
- 
+
 # _[Deployment](https://bgoonz.github.io/Markdown-Templates/)_
- 
+
  </div>
 </center>
-
-
-
-
-
-
-
-
-
-
-
 
 ## Blank Samples:
 
@@ -22,38 +11,25 @@
 
 ---
 
-
 ![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-Standard-Project-README-html-2021-11-23-20_15_30.png?raw=true)
 
 ---
-
-
 
 ![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-contributing-template-html-2021-11-23-20_14_26.png?raw=true)
 
 ---
 
-
-
 ![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-alt-README-html-2021-11-23-20_14_50.png?raw=true)
 
 ---
-
-
 
 ![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-readme-alt-2-html-2021-11-23-20_14_39.png?raw=true)
 
 ---
 
-
-
 ![img](https://github.com/bgoonz/Markdown-Templates/blob/master/images/screencapture-bgoonz-github-io-Markdown-Templates-html-versions-notes-template-html-2021-11-23-20_15_17.png?raw=true)
 
 ---
-
-
-
-
 
 ```
 .
@@ -171,23 +147,23 @@
 
   <!-- TOC -->
 
-**TOC**  
+**TOC**
  [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
   <!-- SUMMARY -->
 
-A 1-5 sentence summary of what the app is.  
- 1-3 sentences ideal.  
+A 1-5 sentence summary of what the app is.
+ 1-3 sentences ideal.
  Markdown tip: Add two spaces at the end of a line to create a line break.
 
   <!-- SPLASHY IMAGE -->
 
-<img 
-    src="docs/images/splash.png" 
-    alt="Splashy 100%-width image" 
-    title="" 
+<img
+    src="docs/images/splash.png"
+    alt="Splashy 100%-width image"
+    title=""
     width="100%">
 
   <!-- WEBSITE LINK -->
@@ -207,13 +183,13 @@ A 1-5 sentence summary of what the app is.
 
 ## About
 
-[● See Website ●]()  
+[● See Website ●]()
  _(Inspired by [app name]())_
 
 </div>
 
-<img src="" 
-  alt="Animated gif example of app in action, or interesting detail, etc." 
+<img src=""
+  alt="Animated gif example of app in action, or interesting detail, etc."
   title=""
   width="50%"
   align="left">
@@ -237,29 +213,29 @@ Describe overview of app, themes and philosophy, inspiration, audience, or whate
 
 <!-- Option 2: Multiple images in a row, 'width' attribute set to evenly split the x-axis space. Ensure matching canvas ratios for the best appearance. Two rows combined can make a nice 'square' collage. May be food for a 'full-screen screenshots' gallery. -->
 <div align="center">
-  <img 
-    src="" 
-    alt="Image 1" 
-    title="" 
+  <img
+    src=""
+    alt="Image 1"
+    title=""
     width="48%">
-  <img 
-    src="" 
-    alt="Image 2" 
-    title="" 
+  <img
+    src=""
+    alt="Image 2"
+    title=""
     width="48%">
 </div>
 
 <!-- Option 3: Multiple images in a row, 'height' attribute set to hard values to ensure matching heights. Good for images with different aspect ratios. -->
 <div align="center">
-  <img 
-    src="" 
-    alt="Image 1" 
-    title="" 
+  <img
+    src=""
+    alt="Image 1"
+    title=""
     height="500px">
-  <img 
-    src="" 
-    alt="Image 2" 
-    title="" 
+  <img
+    src=""
+    alt="Image 2"
+    title=""
     height="500px">
 </div>
 
@@ -292,18 +268,18 @@ An optional _brief_ note describing scheduling or other planning details.
 
 ## How It Works
 
-[1. Step One](#1-step-one)  
- [How to Use Cool Feature ABC!](#how-to-use-feature-abc)  
+[1. Step One](#1-step-one)
+ [How to Use Cool Feature ABC!](#how-to-use-feature-abc)
  [Troubleshooting Z](#troubleshooting-z)
 
 </div>
 
 ##1. Step One
 
-<img 
-  src="" 
-  alt="Screenshot, animated gif, diagram, etc illustrating this step" 
-  title="" 
+<img
+  src=""
+  alt="Screenshot, animated gif, diagram, etc illustrating this step"
+  title=""
   width="50%"
   align="right">
 
@@ -314,7 +290,7 @@ An optional _brief_ note describing scheduling or other planning details.
 
 <br clear="both">
 
-> **Optional Special Section!**  
+> **Optional Special Section!**
 > For any additional asides. Maybe illustrating a specific example, a table of information, a code snippet, or 'fun facts' or quotes!
 >
 > 1. A list
@@ -326,10 +302,10 @@ An optional _brief_ note describing scheduling or other planning details.
 > | A        | B        |
 
 <div align="center">
-  <img 
-    src="" 
-    alt="Optional extra image(s)" 
-    title="" 
+  <img
+    src=""
+    alt="Optional extra image(s)"
+    title=""
     width="100%">
 </div>
 
@@ -452,26 +428,26 @@ heroku run npx sequelize-cli db:seed:all
 
 ## ➤ Development
 
-**DEV TOC**  
+**DEV TOC**
  [Technologies](docs/development.md#technologies) ● [Concept](docs/development.md#concept) ● [Models](docs/development.md#models) ● [Routes](docs/development.md#routes) ● [Wireframes](docs/development.md#wireframes) ● [Code Highlights](#code-highlights) ● [Dev Snapshots](docs/development.md#development-snapshots)
 
-[[See full dev notes HERE]](readme/development.md)  
- The full notes on this project's development are kept in a separate document linked above.  
- It details the technical aspects of this project's development.  
+[[See full dev notes HERE]](readme/development.md)
+ The full notes on this project's development are kept in a separate document linked above.
+ It details the technical aspects of this project's development.
  A few sample snapshots are below from the development process.
 
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 1"
     title=""
     height="250px">
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 2"
     title=""
     height="250px">
-<img 
-    src="" 
+<img
+    src=""
     alt="Snapshot 3"
     title=""
     height="250px">
@@ -487,15 +463,15 @@ heroku run npx sequelize-cli db:seed:all
 
 ## ➤Contact
 
-Thank you very much for your interest in this project.  
+Thank you very much for your interest in this project.
 Feel free to reach out to provide feedback, bug reports, or anything else :) .
 
 <!-- CONTRIBUTOR PROFILE -->
 <!-- Include: Name, title, job/search status, (opt) photo, (opt) summary of contributions, (opt) a few words or a quote, socials badges (github follow, linkedin, angellist, email, resume, portfolio, twitter, etc.), (opt) team/contact page from app's site -->
 
-<img 
-    src="[docs/images/portrait.png](https://avatars.githubusercontent.com/u/66654881?s=460&u=fa9d2cc45bc228dd9b7d3dee6d4653f940fab35a&v=4)" 
-    alt="Bryan Gimer" 
+<img
+    src="[docs/images/portrait.png](https://avatars.githubusercontent.com/u/66654881?s=460&u=fa9d2cc45bc228dd9b7d3dee6d4653f940fab35a&v=4)"
+    alt="Bryan Gimer"
     height="100px"
     align="left">
 
@@ -521,12 +497,12 @@ _(Full-stack software developer)_
 
 <!--end-->
 
-
-----
+---
 
 </details><details> <summary>gitignore-templates/</summary>
 
 ### [gitignore-templates/CONTRIBUTING.md](gitignore-templates/CONTRIBUTING.md)
+
 # Contributing guidelines
 
 We’d love you to help us improve this project. To help us keep this collection
@@ -567,13 +543,10 @@ Our aim is to curate a collection of the _most common and helpful_ templates,
 not to make sure we cover every project possible. If we choose not to
 include your language, tool, or project, it’s not because it’s not awesome.
 
-
-
-
-
 </details><details> <summary>gitignore-templates/Global/</summary>
 
 ### [gitignore-templates/Global/README.md](gitignore-templates/Global/README.md)
+
 ## Globally Useful gitignores
 
 This directory contains globally useful gitignores,
@@ -585,13 +558,10 @@ For more on global gitignores:
 And a good blog post about 'em:
 <http://augustl.com/blog/2009/global_gitignores>
 
-
-
-
-
 </details><details> <summary>gitignore-templates/</summary>
 
 ### [gitignore-templates/README.md](gitignore-templates/README.md)
+
 # A collection of `.gitignore` templates
 
 This is GitHub’s collection of [`.gitignore`][man] file templates.
@@ -748,17 +718,16 @@ by automatically forking the project and prompting to send a pull request too.
 
 [CC0-1.0](./LICENSE).
 
-
-
-
-
 </details><details> <summary>markdown-components/</summary>
 
-### [markdown-components/_index (2).md](markdown-components/_index (2).md)
+### [markdown-components/_index (2).md](markdown-components/\_index (2).md)
+
 ---
+
 title: Buttons - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the button elements
+
 ---
 
 # Buttons
@@ -787,16 +756,14 @@ description: Example style and use of the button elements
 - <div class="dark"><button class="button light">Light Button</button></div>
   {.button-gallery}
 
-
-
-
-
 ### [markdown-components/ghost-button.md](markdown-components/ghost-button.md)
 
 ---
+
 title: Buttons - Ghost button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the ghost button element
+
 ---
 
 # Ghost button
@@ -813,13 +780,14 @@ The ghost button is used when a button element is required semantically, but sho
 <button class="ghost">Ghost Button</button>
 ```
 
-
 ### [markdown-components/icon-button.md](markdown-components/icon-button.md)
 
 ---
+
 title: Buttons - Icon button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the icon button element
+
 ---
 
 # Icon button
@@ -893,13 +861,14 @@ If you need the icon to be aligned on the right-hand side of the button add the 
 </button>
 ```
 
-
 ### [markdown-components/inactive-button.md](markdown-components/inactive-button.md)
 
 ---
+
 title: Buttons - Inactive button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the inactive button element
+
 ---
 
 # Inactive button
@@ -916,13 +885,14 @@ As the name suggests, this is the style used when a button is inactive.
 <button class="button inactive">Inactive Button</button>
 ```
 
-
 ### [markdown-components/index (2).md](markdown-components/index (2).md)
 
 ---
+
 title: callout - MDN Minimalist
 keywords: callout, callout component, mdn minimalist, mdn, sass, library
 description: Example style and use of the callout component
+
 ---
 
 # Callout
@@ -957,13 +927,14 @@ A callout commonly consists of a heading, short lead paragrap and a call to acti
 </div>
 ```
 
-
 ### [markdown-components/index (3).md](markdown-components/index (3).md)
 
 ---
+
 title: Color Palette - MDN Minimalist
 keywords: color, color palette, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs color palette
+
 ---
 
 # Color Palette
@@ -1061,13 +1032,14 @@ Orange is a problematic color in terms of color contrast both when used as a for
     <li class="swatch mdn-orange900"><code>$mdn-orange900</code></li>
 </ul>
 
-
 ### [markdown-components/index (4).md](markdown-components/index (4).md)
 
 ---
+
 title: Tables - MDN Minimalist
 keywords: tables, table element, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs table element styles
+
 ---
 
 # Tables
@@ -1248,13 +1220,14 @@ Property tables is most commonly used for technical summaries such as [the table
 </table>
 ```
 
-
 ### [markdown-components/index.md](markdown-components/index.md)
 
 ---
+
 title: blockquote - MDN Minimalist
 keywords: blockquote, mdn minimalist, mdn, sass, library
 description: Example style and use of the blockquote elements
+
 ---
 
 # The blockquote element
@@ -1274,13 +1247,14 @@ Below is an example of a common use of the blockquote element and the style that
 </blockquote>
 ```
 
-
 ### [markdown-components/input.md](markdown-components/input.md)
 
 ---
+
 title: Forms - Input - MDN Minimalist
 keywords: forms, input elements, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs input element styles
+
 ---
 
 # Input fields
@@ -1311,13 +1285,14 @@ With input fields, note that the `label` element is _always_ associated with its
 <input type="email" id="email" name="email" placeholder="me@example.com" />
 ```
 
-
 ### [markdown-components/label.md](markdown-components/label.md)
 
 ---
+
 title: Forms - Label - MDN Minimalist
 keywords: forms, label, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs label element styles
+
 ---
 
 # Label
@@ -1344,13 +1319,14 @@ description: The MDN Web Docs label element styles
 <label class="inline">Inline label</label>
 ```
 
-
 ### [markdown-components/legend.md](markdown-components/legend.md)
 
 ---
+
 title: Forms - Legend - MDN Minimalist
 keywords: forms, legend, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs legend element styles
+
 ---
 
 # Legend
@@ -1464,13 +1440,14 @@ In some instances one might, from a design perspective, wish to not visually sho
 </fieldset>
 ```
 
-
 ### [markdown-components/light-button.md](markdown-components/light-button.md)
 
 ---
+
 title: Buttons - Light button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the light button element
+
 ---
 
 # Light button
@@ -1489,13 +1466,14 @@ When using a button on a dark background opt for the `light` button variant.
 <button class="button light">Light Button</button>
 ```
 
-
 ### [markdown-components/minimal-button.md](markdown-components/minimal-button.md)
 
 ---
+
 title: Buttons - Minimal button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the minimal button element
+
 ---
 
 # Minimal button
@@ -1512,13 +1490,14 @@ In some instances the standard buttons might be simply to large. In those cases 
 <button class="button minimal">Minimal Button</button>
 ```
 
-
 ### [markdown-components/positive-button.md](markdown-components/positive-button.md)
 
 ---
+
 title: Buttons - Positive button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the positive button element
+
 ---
 
 # Positive button
@@ -1535,13 +1514,14 @@ For general form submission using the `positive` button.
 <button class="button positive">Positive Button</button>
 ```
 
-
 ### [markdown-components/primary-button.md](markdown-components/primary-button.md)
 
 ---
+
 title: Buttons - Primary button - MDN Minimalist
 keywords: buttons, button styles, mdn minimalist, mdn, sass, library
 description: Example style and use of the primary button element
+
 ---
 
 # Primary button
@@ -1558,13 +1538,14 @@ The primary button is primarily used for call to action items.
 <button class="button">Primary Button</button>
 ```
 
-
 ### [markdown-components/radio-buttons.md](markdown-components/radio-buttons.md)
 
 ---
+
 title: Forms - Radio buttons - MDN Minimalist
 keywords: forms, radio buttons, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs radio button element styles
+
 ---
 
 # Radio buttons
@@ -1591,13 +1572,14 @@ description: The MDN Web Docs radio button element styles
 </label>
 ```
 
-
 ### [markdown-components/select.md](markdown-components/select.md)
 
 ---
+
 title: Forms - Select - MDN Minimalist
 keywords: forms, select, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs select element styles
+
 ---
 
 # Select element
@@ -1624,13 +1606,14 @@ description: The MDN Web Docs select element styles
 </select>
 ```
 
-
 ### [markdown-components/states.md](markdown-components/states.md)
 
 ---
+
 title: Forms - Label - MDN Minimalist
 keywords: forms, label, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs label element styles
+
 ---
 
 # Input field states
@@ -1686,13 +1669,14 @@ To indicate that a field is in a valid state, we can visually indicate this by a
 />
 ```
 
-
 ### [markdown-components/textarea.md](markdown-components/textarea.md)
 
 ---
+
 title: Forms - Textarea - MDN Minimalist
 keywords: forms, textarea, mdn minimalist, mdn, sass, library
 description: The MDN Web Docs textarea element styles
+
 ---
 
 # Textarea
@@ -1711,10 +1695,10 @@ description: The MDN Web Docs textarea element styles
 <textarea id="comment"></textarea>
 ```
 
-
 </details><details> <summary>markdown-snippets/emojis/</summary>
 
 ### [markdown-snippets/emojis/emojis.md](markdown-snippets/emojis/emojis.md)
+
 # People
 
 |                       :bowtie: `:bowtie:`                       |                        :smile: `:smile:`                        |           :laughing: `:laughing:`           |
@@ -2029,21 +2013,14 @@ description: The MDN Web Docs textarea element styles
 
 <sup>Source: [https://gist.github.com/rxaviers/7360908](https://gist.github.com/rxaviers/7360908)</sup>
 
-
-
-
-
 </details><details> <summary>markdown-snippets/Footer/</summary>
 
 ### [markdown-snippets/Footer/footnotes.md](markdown-snippets/Footer/footnotes.md)
+
 ---
 
-<sup>[1]: Hello World</sup>  
+<sup>[1]: Hello World</sup>
 <sup>[2]: Hello Internet</sup>
-
-
-
-
 
 ### [markdown-snippets/Footer/social-links.md](markdown-snippets/Footer/social-links.md)
 
@@ -2053,11 +2030,12 @@ description: The MDN Web Docs textarea element styles
 > GitHub [@MyGitHub](https://github.com/MyGitHub) &nbsp;&middot;&nbsp;
 > Other [MyProfilename](https://othersocialmedia.com/MyProfile)
 
-
 </details><details> <summary>markdown-snippets/Header/</summary>
 
 ### [markdown-snippets/Header/navigation-bar-1.md](markdown-snippets/Header/navigation-bar-1.md)
+
 ---
+
 <p align="center">
 <strong><a href="#link1">Link 1</a></strong>
 |
@@ -2071,10 +2049,6 @@ description: The MDN Web Docs textarea element styles
 </p>
 ---
 
-
-
-
-
 ### [markdown-snippets/Header/table-of-content.md](markdown-snippets/Header/table-of-content.md)
 
 - [Installation](#installation)
@@ -2086,59 +2060,48 @@ description: The MDN Web Docs textarea element styles
 - [License](#license)
 - [Links](#links)
 
-
 </details><details> <summary>markdown-snippets/License-badges/</summary>
 
 ### [markdown-snippets/License-badges/Apache_2.0.md](markdown-snippets/License-badges/Apache_2.0.md)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-
-
-
-
-### [markdown-snippets/License-badges/Attribution_License_(BY).md](markdown-snippets/License-badges/Attribution_License_(BY).md)
+### [markdown-snippets/License-badges/Attribution*License*(BY).md](<markdown-snippets/License-badges/Attribution_License_(BY).md>)
 
 [![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)
-
 
 ### [markdown-snippets/License-badges/BSD_2-clause_license.md](markdown-snippets/License-badges/BSD_2-clause_license.md)
 
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
-
 ### [markdown-snippets/License-badges/BSD_3-clause_license.md](markdown-snippets/License-badges/BSD_3-clause_license.md)
 
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-
 
 ### [markdown-snippets/License-badges/GNU_GPL_v2.md](markdown-snippets/License-badges/GNU_GPL_v2.md)
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-
 ### [markdown-snippets/License-badges/GNU_GPL_v3.md](markdown-snippets/License-badges/GNU_GPL_v3.md)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 
 ### [markdown-snippets/License-badges/MIT.md](markdown-snippets/License-badges/MIT.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 ### [markdown-snippets/License-badges/Mozilla_Public_License_2.0.md](markdown-snippets/License-badges/Mozilla_Public_License_2.0.md)
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-
 
 ### [markdown-snippets/License-badges/The_Unlicense.md](markdown-snippets/License-badges/The_Unlicense.md)
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-
 </details><details> <summary>markdown-snippets/</summary>
 
 ### [markdown-snippets/README.md](markdown-snippets/README.md)
+
 <h1 align="center"> :clipboard: Markdown snippets </h1>
 
 <p align="center">
@@ -2258,7 +2221,7 @@ description: The MDN Web Docs textarea element styles
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
-<sup>[1]: Hello World</sup>  
+<sup>[1]: Hello World</sup>
 <sup>[2]: Hello Internet</sup>
 
 ### [02.00-footer/social-links.md](02.00-footer/social-links.md)
@@ -2591,13 +2554,13 @@ description: The MDN Web Docs textarea element styles
 
 ### [xtras-01-inline-html/keyboard.md](xtras-01-inline-html/keyboard.md)
 
-<kbd>Strg+X</kbd>  
-<kbd>Strg</kbd> + <kbd>X</kbd>  
+<kbd>Strg+X</kbd>
+<kbd>Strg</kbd> + <kbd>X</kbd>
 <kbd>Or any other text</kbd>
 
 ### [xtras-01-inline-html/superscript.md](xtras-01-inline-html/superscript.md)
 
-This is a text with <sup>SuperScript</sup>  
+This is a text with <sup>SuperScript</sup>
 You can use it for footnotes<sup>1</sup>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
@@ -2609,40 +2572,32 @@ You can use it for footnotes<sup>1</sup>
 <p align="right">01/01/2000</p>
 Text on the top right corner
 
-
-
-
-
 </details><details> <summary>markdown-snippets/xtrasInline-html/</summary>
 
 ### [markdown-snippets/xtrasInline-html/keyboard.md](markdown-snippets/xtrasInline-html/keyboard.md)
-<kbd>Strg+X</kbd>  
-<kbd>Strg</kbd> + <kbd>X</kbd>  
+
+<kbd>Strg+X</kbd>
+<kbd>Strg</kbd> + <kbd>X</kbd>
 <kbd>Or any other text</kbd>
-
-
-
-
 
 ### [markdown-snippets/xtrasInline-html/superscript.md](markdown-snippets/xtrasInline-html/superscript.md)
 
-This is a text with <sup>SuperScript</sup>  
+This is a text with <sup>SuperScript</sup>
 You can use it for footnotes<sup>1</sup>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
 <sup>[1]: See [footnotes](../02-footer/footnotes)</sup>
 
-
 ### [markdown-snippets/xtrasInline-html/top-right.md](markdown-snippets/xtrasInline-html/top-right.md)
 
 <p align="right">01/01/2000</p>
 Text on the top right corner
 
-
 </details><details> <summary>official/</summary>
 
 ### [official/CHANGELOG.md](official/CHANGELOG.md)
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -2695,10 +2650,6 @@ Here we would have the update steps for 1.2.4 for people to follow.
   MINOR Fix module foo tests
 - [PROJECTNAME-RRRR](http://tickets.projectname.com/browse/PROJECTNAME-RRRR)
   MAJOR Module foo's timeline uses the browser timezone for date resolution
-
-
-
-
 
 ### [official/CODE_OF_CONDUCT.md](official/CODE_OF_CONDUCT.md)
 
@@ -2779,7 +2730,6 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 For answers to common questions about this code of conduct, see
 https://www.contributor-covenant.org/faq
 
-
 ### [official/CODEBASE_STRUCTURE.md](official/CODEBASE_STRUCTURE.md)
 
 These are the directories that we are actively using in the development:
@@ -2829,7 +2779,6 @@ The _dao_ folder contains the classes for the data access layer. It has 2 things
 
 The controllers are where the decisions are made. The controller uses the dao's and vo's to make decisions, and never call the database directly. This way, we avoid having separate controllers for each module of the project.
 
-
 ### [official/CODING_GUIDELINES.md](official/CODING_GUIDELINES.md)
 
 # Coding Guidelines
@@ -2856,7 +2805,6 @@ The controllers are where the decisions are made. The controller uses the dao's 
 - Changes in functionality must be accompanied by their respective new / modified tests
 - Exceptions must be used to report erroneous states. The use of functions that return true / false is allowed when they are expected values
 - Use [RAII] (http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization) when appropriate, mainly in the administration of resources (files, etc ...)
-
 
 ### [official/CONTRIBUTING.md](official/CONTRIBUTING.md)
 
@@ -2902,16 +2850,18 @@ The controllers are where the decisions are made. The controller uses the dao's 
 
 If you follow these instructions, your PR will land pretty safely in the main repo!
 
-
 </details><details> <summary>official/ISSUE_TEMPLATES/</summary>
 
 ### [official/ISSUE_TEMPLATES/bug_report.md](official/ISSUE_TEMPLATES/bug_report.md)
+
 ---
+
 name: Bug report
 about: Create a report to help us improve
 title: ""
 labels: ""
 assignees: ""
+
 ---
 
 **Describe the bug**
@@ -2947,29 +2897,28 @@ If applicable, add screenshots to help explain your problem.
 **Additional context**
 Add any other context about the problem here.
 
-
-
-
-
 ### [official/ISSUE_TEMPLATES/custom.md](official/ISSUE_TEMPLATES/custom.md)
 
 ---
+
 name: Custom issue template
 about: Describe this issue template's purpose here.
 title: ""
 labels: ""
 assignees: ""
----
 
+---
 
 ### [official/ISSUE_TEMPLATES/feature_request.md](official/ISSUE_TEMPLATES/feature_request.md)
 
 ---
+
 name: Feature request
 about: Suggest an idea for this project
 title: ""
 labels: ""
 assignees: ""
+
 ---
 
 **Is your feature request related to a problem? Please describe.**
@@ -2984,10 +2933,10 @@ A clear and concise description of any alternative solutions or features you've 
 **Additional context**
 Add any other context or screenshots about the feature request here.
 
-
 </details><details> <summary>official/</summary>
 
 ### [official/PULL_REQUEST_TEMPLATE.md](official/PULL_REQUEST_TEMPLATE.md)
+
 ### Your checklist for this pull request
 
 🚨 Please review the [guidelines for contributing](./CONTRIBUTING.md) to this repository.
@@ -3003,13 +2952,10 @@ Please describe your pull request.
 
 ❤️ Thank you!
 
-
-
-
-
 </details><details> <summary>official/README_TEMPLATES/</summary>
 
 ### [official/README_TEMPLATES/Bot.md](official/README_TEMPLATES/Bot.md)
+
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/FxL5qM0.jpg" alt="Bot logo"></a>
@@ -3030,7 +2976,7 @@ Please describe your pull request.
 ---
 
 <p align="center"> 🤖 Few lines describing what your bot does.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Table of Contents
@@ -3153,10 +3099,6 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Inspiration
 - References
 
-
-
-
-
 ### [official/README_TEMPLATES/Hackathon.md](official/README_TEMPLATES/Hackathon.md)
 
 <p align="center">
@@ -3178,7 +3120,7 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 ---
 
 <p align="center"> Few lines describing your project.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Table of Contents
@@ -3283,11 +3225,9 @@ who participated in this project.
 - Inspiration
 - References
 
-
 ### [official/README_TEMPLATES/IoT.md](official/README_TEMPLATES/IoT.md)
 
 TODO
-
 
 ### [official/README_TEMPLATES/Minimal.md](official/README_TEMPLATES/Minimal.md)
 
@@ -3338,7 +3278,6 @@ End with an example of getting some data out of the system or using it for a lit
 
 Add notes about how to use the system.
 
-
 ### [official/README_TEMPLATES/README.md](official/README_TEMPLATES/README.md)
 
 ### This folder contains various README Templates that one can use based on the type of project.
@@ -3350,7 +3289,6 @@ Add notes about how to use the system.
    README that leaves a lasting impression on the judges? This is the template for you!
 4. [Bot.md](./Bot.md) - If you have an awesome Bot that you want to share with others.
 5. [IoT.md](./IoT.md) - This repo nails down the nitty-gritties that go into documenting an IoT project.
-
 
 ### [official/README_TEMPLATES/Standard.md](official/README_TEMPLATES/Standard.md)
 
@@ -3373,7 +3311,7 @@ Add notes about how to use the system.
 ---
 
 <p align="center"> Few lines describing your project.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Table of Contents
@@ -3469,10 +3407,10 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Inspiration
 - References
 
-
 </details><details> <summary>official/</summary>
 
 ### [official/TODO.md](official/TODO.md)
+
 ### TODO
 
 ---
@@ -3483,13 +3421,10 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - [ ] Add a COMMIT_MESSAGE_GUIDELINES.md file.
 - [ ] Translate the [templates](https://github.com/kylelobo/The-Documentation-Compendium#templates) into different languages - Chinese, French, German, Hindi, Italian, Japanese, Korean, Portuguese, Russian, Spanish, etc.
 
-
-
-
-
 </details><details> <summary>open-source-templates/</summary>
 
 ### [open-source-templates/CHANGELOG.md](open-source-templates/CHANGELOG.md)
+
 # Change Log
 
 Resources for generating a changelog:
@@ -3499,10 +3434,6 @@ Resources for generating a changelog:
 [hzalaz/wt-oss-milestone-changelog](https://github.com/hzalaz/wt-oss-milestone-changelog) - generates a snippet of Markdown that can be added to a CHANGELOG.md.
 
 [conventional-changelog/conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli) - generates a full changelog based on commit history with the option to append to an existing changelog.
-
-
-
-
 
 ### [open-source-templates/CODE-OF-CONDUCT.md](open-source-templates/CODE-OF-CONDUCT.md)
 
@@ -3558,7 +3489,6 @@ If you are unsure whether an incident is a violation, or whether the space where
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-
 ### [open-source-templates/CONTRIBUTING.md](open-source-templates/CONTRIBUTING.md)
 
 # Contribution
@@ -3608,7 +3538,6 @@ What CI checks for and how to pass.
 ## Repo-specific PR guidelines
 
 Anything not covered in the general guidelines linked above.
-
 
 ### [open-source-templates/GENERAL-CONTRIBUTING.md](open-source-templates/GENERAL-CONTRIBUTING.md)
 
@@ -3671,10 +3600,10 @@ In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susa
 
 Join us in the [Auth0 Community](https://community.auth0.com) and post your question there in the correct category with a descriptive tag.
 
-
 </details><details> <summary>open-source-templates/javascript/</summary>
 
 ### [open-source-templates/javascript/BADGES.md](open-source-templates/javascript/BADGES.md)
+
 # JavaScript repo badges
 
 [![NPM version](https://img.shields.io/npm/v/open-source-template.svg?style=flat-square)](https://npmjs.org/package/open-source-template)
@@ -3683,13 +3612,10 @@ Join us in the [Auth0 Community](https://community.auth0.com) and post your ques
 
 [![Downloads](https://img.shields.io/npm/dm/auth0-open-source-template.svg?style=flat-square)](https://npmjs.org/package/auth0-open-source-template)
 
-
-
-
-
 </details><details> <summary>open-source-templates/php/</summary>
 
 ### [open-source-templates/php/BADGES.md](open-source-templates/php/BADGES.md)
+
 # PHP Badges
 
 [![License](https://poser.pugx.org/auth0/open-source-template/license)](https://packagist.org/packages/auth0/open-source-template)
@@ -3708,24 +3634,18 @@ Join us in the [Auth0 Community](https://community.auth0.com) and post your ques
 
 [![WordPress version](https://img.shields.io/wordpress/v/auth0-open-source-template.svg)](https://wordpress.org/plugins/auth0-open-source-template/)
 
-
-
-
-
 </details><details> <summary>open-source-templates/python/</summary>
 
 ### [open-source-templates/python/BADGES.md](open-source-templates/python/BADGES.md)
+
 # Python Badges
 
 [![PyPI](https://img.shields.io/pypi/v/auth0-open-source-template.svg)](https://pypi.org/project/auth0-open-source-template/)
 
-
-
-
-
 </details><details> <summary>open-source-templates/</summary>
 
 ### [open-source-templates/README-sample.md](open-source-templates/README-sample.md)
+
 # Project Name
 
 The section after the title is where we say what this library, sample, or SDK does in a few sentences. Consider adding:
@@ -3859,10 +3779,6 @@ Information on the dependencies used, if desired.
 
 Link to [LICENSE](LICENSE) doc. Typically MIT but can be different for a specific platform.
 
-
-
-
-
 ### [open-source-templates/README.md](open-source-templates/README.md)
 
 # Auth0 Open Source Template
@@ -3940,17 +3856,12 @@ A big thank you to all of our sources of inspiration!
 
 This repo is covered under [The MIT License](LICENSE).
 
-
 </details><details> <summary>open-source-templates/ruby/</summary>
 
 ### [open-source-templates/ruby/BADGES.md](open-source-templates/ruby/BADGES.md)
+
 # Ruby and Rails Badges
 
 [![Gem Version](https://badge.fury.io/rb/auth0-open-source-template.svg)](http://badge.fury.io/rb/auth0-open-source-template)
 
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/github/auth0/open-source-template/master/frames)
-
-
-
-
-
