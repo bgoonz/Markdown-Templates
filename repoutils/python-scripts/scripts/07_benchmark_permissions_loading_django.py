@@ -34,9 +34,7 @@ def load_new_perms():
 
 
 if __name__ == "__main__":
-    n = 0
-    all_times = list()
-    while n < 10:
+    all_times = []
+    for _ in range(10):
         create_new_db()
         load_new_perms()
-        n += 1

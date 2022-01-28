@@ -57,11 +57,8 @@ KEYS_TO_USE = ['id','all_artists','title',
 def get_record_from_file(file_path, keys_to_use):
     with open(file_path) as artwork_file:
         content = json.load(artwork_file)
-        
-    record = []
-    for field in keys_to_use:
-        record.append(content[field])
-        
+
+    record = [content[field] for field in keys_to_use]
     return tuple(record)
 
 #Single file processing function demo
@@ -80,11 +77,10 @@ def read_artworks_from_json(keys_to_use):
                                              keys_to_use)
                 artworks.append(record)
             break # only first file in each directory to safe time
-            
-    df = pd.DataFrame.from_records(artworks,
+
+    return pd.DataFrame.from_records(artworks,
                                    columns=keys_to_use,
                                    index="id")
-    return df
     
 df2 = read_artworks_from_json(KEYS_TO_USE)
 
@@ -160,8 +156,7 @@ def fill_values(series):
     if values_counted.empty: #why is this a property instead of a method?
         return series
     most_frequent = values_counted.index[0]
-    filled_medium = series.fillna(most_frequent)
-    return filled_medium
+    return series.fillna(most_frequent)
 
 def transform_df(source_df):
     results = []
@@ -169,9 +164,8 @@ def transform_df(source_df):
         filled_df = group_df.copy()
         filled_df.loc[:, 'medium'] = fill_values(group_df['medium'])
         results.append(filled_df)
-        
-    new_df = pd.concat(results)
-    return new_df
+
+    return pd.concat(results)
 
 #check results
 filled_df = transform_df(small_df)

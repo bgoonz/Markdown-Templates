@@ -28,19 +28,15 @@ def get_arguments():
             'media': sys.argv[1],
             'user_info': sys.argv[2]
         }
-    else:
-        print('Specify at least 1 argument')
-        sys.exit()
+    print('Specify at least 1 argument')
+    sys.exit()
 
 
 def call_api(contact):
     url = BASE_URL + '?{0}={1}&apiKey={2}'.format(
         contact['media'], contact['user_info'], API_KEY)
     r = requests.get(url)
-    if r.status_code == 200:
-        return r.text
-    else:
-        return "Sorry, no results found."
+    return r.text if r.status_code == 200 else "Sorry, no results found."
 
 
 # main

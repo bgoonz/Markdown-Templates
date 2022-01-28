@@ -6,8 +6,8 @@ import requests
 def get_total_repos(group, name):
     repo_urls = []
     page = 1
+    url = 'https://api.github.com/{0}/{1}/repos?per_page=100&page={2}'
     while True:
-        url = 'https://api.github.com/{0}/{1}/repos?per_page=100&page={2}'
         r = requests.get(url.format(group, name, page))
         if r.status_code == 200:
             rdata = r.json()
@@ -25,17 +25,14 @@ def get_total_repos(group, name):
 
 
 def clone_repos(all_repos):
-    count = 1
     print('Cloning...')
-    for repo in all_repos:
+    for count, repo in enumerate(all_repos, start=1):
         os.system('Git clone ' + repo)
         print('Completed repo #{0} of {1}'.format(count, len(all_repos)))
-        count += 1
 
 if __name__ == '__main__':
     if len(sys.argv) > 2:
-        total = get_total_repos(sys.argv[1], sys.argv[2])
-        if total:
+        if total := get_total_repos(sys.argv[1], sys.argv[2]):
             clone_repos(total)
 
     else:

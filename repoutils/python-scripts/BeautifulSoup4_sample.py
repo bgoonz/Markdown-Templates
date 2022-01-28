@@ -11,9 +11,8 @@ for link in soup.find_all('a'):
     print(web_links)
     link_set.add(web_links)
 
-csvfile = open('code_python.csv', 'w+', newline='')
-writer = csv.writer(csvfile)
-writer.writerow(['Links'])
-for link in link_set:
-    writer.writerow([link])
-csvfile.close()
+with open('code_python.csv', 'w+', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Links'])
+    for link in link_set:
+        writer.writerow([link])

@@ -7,8 +7,8 @@ PATTERN = '*.md'
 
 
 def get_file_names(filepath, pattern):
-    matches = []
     if os.path.exists(filepath):
+        matches = []
         for root, dirnames, filenames in os.walk(filepath):
             for filename in fnmatch.filter(filenames, pattern):
                 # matches.append(os.path.join(root, filename))  # full path
