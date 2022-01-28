@@ -64,9 +64,7 @@ def is_valid_csv(parser, file_name, row_limit):
     Ensure that the # of rows in the input_file
     is greater than the row_limit.
     """
-    row_count = 0
-    for row in csv.reader(open(file_name)):
-        row_count += 1
+    row_count = sum(1 for _ in csv.reader(open(file_name)))
     # Note: You could also use a generator expression
     # and the sum() function to count the rows:
     # row_count = sum(1 for row in csv.reader(open(file_name)))
@@ -91,16 +89,11 @@ def parse_file(arguments):
     # Read CSV, split into list of lists
     with open(input_file, 'r') as input_csv:
         datareader = csv.reader(input_csv)
-        all_rows = []
-        for row in datareader:
-            all_rows.append(row)
-
+        all_rows = list(datareader)
         # Remove header
         header = all_rows.pop(0)
 
-        # Split list of list into chunks
-        current_chunk = 1
-        for i in range(0, len(all_rows), row_limit):  # Loop through list
+        for current_chunk, i in enumerate(range(0, len(all_rows), row_limit), start=1):  # Loop through list
             chunk = all_rows[i:i + row_limit]  # Create single chunk
 
             current_output = os.path.join(  # Create new output file
@@ -121,9 +114,6 @@ def parse_file(arguments):
             print("Chunk # {}:".format(current_chunk))
             print("Filepath: {}".format(current_output))
             print("# of rows: {}".format(len(chunk)))
-
-            # Create new chunk
-            current_chunk += 1
 
 
 if __name__ == "__main__":

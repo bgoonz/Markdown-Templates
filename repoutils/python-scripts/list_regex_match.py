@@ -4,6 +4,7 @@ Created on Fri Jan 12 18:08:44 2018
 
 @author: fgrimps
 """
+
 import re
 
 text = {
@@ -62,7 +63,7 @@ Keywords = [
     '-104.99875',
     ]
 
-for key, values1 in text.items():
+for values1 in text.values():
     for x in Keywords:
         pattern = ".*"+str(x)+".*"
         if re.findall(pattern, str(values1), re.M):

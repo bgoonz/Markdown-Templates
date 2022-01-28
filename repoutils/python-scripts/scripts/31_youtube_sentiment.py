@@ -12,9 +12,8 @@ $ python 31_youtube_sentiment.py https://www.youtube.com/watch?v=_vrAjAHhUsA
 def get_arguments():
     if len(sys.argv) is 2:
         return sys.argv[1]
-    else:
-        print('Specify at least 1 argument')
-        sys.exit()
+    print('Specify at least 1 argument')
+    sys.exit()
 
 
 def get_comments(url):
@@ -37,18 +36,16 @@ def calculate_sentiment(comments):
     for comment in comments:
         if comment is None:
             continue
-        else:
-            for word in comment.split(' '):
-                if word in negative_words:
-                    negative += 1
-                if word in positive_words:
-                    positive += 1
+        for word in comment.split(' '):
+            if word in negative_words:
+                negative += 1
+            if word in positive_words:
+                positive += 1
     return {'positive': positive, 'negative': negative}
 
 
 def main():
-    url = get_arguments()
-    if url:
+    if url := get_arguments():
         comments = get_comments(url)
         if len(comments) <= 0:
             print('This video has no comments.')

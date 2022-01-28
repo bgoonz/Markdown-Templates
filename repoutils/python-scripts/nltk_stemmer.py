@@ -5,6 +5,7 @@ SO Stemmer Q?
 @author: me
 """
 
+
 import warnings
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 from nltk.tokenize import RegexpTokenizer
@@ -101,7 +102,7 @@ for i in doc_set:
     raw = i.lower()
     tokens = tokenizer.tokenize(raw)
 
-    stopped_tokens = [i for i in tokens if not i in en_stop]
+    stopped_tokens = [i for i in tokens if i not in en_stop]
 
     stemmed_tokens = [p_stemmer.stem(i) for i in stopped_tokens]
 
