@@ -117,7 +117,7 @@
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
-<sup>[1]: Hello World</sup>  
+<sup>[1]: Hello World</sup>
 <sup>[2]: Hello Internet</sup>
 
 ### [02.00-footer/social-links.md](02.00-footer/social-links.md)
@@ -450,13 +450,13 @@
 
 ### [xtras-01-inline-html/keyboard.md](xtras-01-inline-html/keyboard.md)
 
-<kbd>Strg+X</kbd>  
-<kbd>Strg</kbd> + <kbd>X</kbd>  
+<kbd>Strg+X</kbd>
+<kbd>Strg</kbd> + <kbd>X</kbd>
 <kbd>Or any other text</kbd>
 
 ### [xtras-01-inline-html/superscript.md](xtras-01-inline-html/superscript.md)
 
-This is a text with <sup>SuperScript</sup>  
+This is a text with <sup>SuperScript</sup>
 You can use it for footnotes<sup>1</sup>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
