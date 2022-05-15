@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "dotenv": "14.3.2",
+    "dotenv": "16.0.1",
     "newsapi": "2.4.0",
     "rehype-document": "4.0.0",
     "rehype-meta": "3.2.1",
