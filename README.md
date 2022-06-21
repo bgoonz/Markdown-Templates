@@ -148,15 +148,15 @@
   <!-- TOC -->
 
 **TOC**
- [About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
+[About](#about) ● [Features](#features) ● [How It Works](#how-it-works) ● [Installation](#installation) ● [Development](#development) ● [Contact](#contact)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-)
 
   <!-- SUMMARY -->
 
 A 1-5 sentence summary of what the app is.
- 1-3 sentences ideal.
- Markdown tip: Add two spaces at the end of a line to create a line break.
+1-3 sentences ideal.
+Markdown tip: Add two spaces at the end of a line to create a line break.
 
   <!-- SPLASHY IMAGE -->
 
@@ -184,7 +184,7 @@ A 1-5 sentence summary of what the app is.
 ## About
 
 [● See Website ●]()
- _(Inspired by [app name]())_
+_(Inspired by [app name]())_
 
 </div>
 
@@ -269,8 +269,8 @@ An optional _brief_ note describing scheduling or other planning details.
 ## How It Works
 
 [1. Step One](#1-step-one)
- [How to Use Cool Feature ABC!](#how-to-use-feature-abc)
- [Troubleshooting Z](#troubleshooting-z)
+[How to Use Cool Feature ABC!](#how-to-use-feature-abc)
+[Troubleshooting Z](#troubleshooting-z)
 
 </div>
 
@@ -429,12 +429,12 @@ heroku run npx sequelize-cli db:seed:all
 ## ➤ Development
 
 **DEV TOC**
- [Technologies](docs/development.md#technologies) ● [Concept](docs/development.md#concept) ● [Models](docs/development.md#models) ● [Routes](docs/development.md#routes) ● [Wireframes](docs/development.md#wireframes) ● [Code Highlights](#code-highlights) ● [Dev Snapshots](docs/development.md#development-snapshots)
+[Technologies](docs/development.md#technologies) ● [Concept](docs/development.md#concept) ● [Models](docs/development.md#models) ● [Routes](docs/development.md#routes) ● [Wireframes](docs/development.md#wireframes) ● [Code Highlights](#code-highlights) ● [Dev Snapshots](docs/development.md#development-snapshots)
 
 [[See full dev notes HERE]](readme/development.md)
- The full notes on this project's development are kept in a separate document linked above.
- It details the technical aspects of this project's development.
- A few sample snapshots are below from the development process.
+The full notes on this project's development are kept in a separate document linked above.
+It details the technical aspects of this project's development.
+A few sample snapshots are below from the development process.
 
 <img
     src=""

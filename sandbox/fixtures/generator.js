@@ -8,7 +8,7 @@ const path = require("path");
 const slugify = require("slugify");
 const NewsAPI = require("newsapi");
 
-const newsapi = new NewsAPI('01cfd6d4dd444701b18c095ec5c354d1');
+const newsapi = new NewsAPI("01cfd6d4dd444701b18c095ec5c354d1");
 
 const vfile = require("vfile");
 const unified = require("unified");

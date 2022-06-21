@@ -60,11 +60,13 @@ npm install axe-cli -g
 #yarn
 yarn install axe-cli -g
 ```
+
 ### Test a website with its URL
 
 ```sh
 axe https://bolajiayodeji.com
 ```
+
 ### Test with specific rules
 
 ```sh
@@ -82,41 +84,45 @@ npm install --save-dev react-axe
 #yarn
 yarn install --save-dev react-axe
 ```
+
 ### Initialize the module
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-if (process.env.NODE_ENV !== 'production') {
-  let axe = require('react-axe');
+if (process.env.NODE_ENV !== "production") {
+  let axe = require("react-axe");
   axe(React, ReactDOM, 1000);
 } else {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(<App />, document.getElementById("root"));
 }
 ```
+
 ### Add configuration rules
 
 ```js
 let config = {
   rules: [
-    { id: 'heading-order', enabled: true },
-    { id: 'label-title-only', enabled: true },
-    { id: 'link-in-text-block', enabled: true },
-    { id: 'region', enabled: true },
-    { id: 'skip-link', enabled: true }
-  ]
+    { id: "heading-order", enabled: true },
+    { id: "label-title-only", enabled: true },
+    { id: "link-in-text-block", enabled: true },
+    { id: "region", enabled: true },
+    { id: "skip-link", enabled: true },
+  ],
 };
 
 axe(React, ReactDOM, 1000, config);
 ```
+
 ### Check the available Axe core configuration rules [here](https://github.com/dequelabs/axe-core/blob/master/doc/API.md#api-name-axeconfigure) and add based on your needs.
 
 The errors are logged with priority levels
-  - Minor
-  - Moderate
-  - Serious
-  - Critical
+
+- Minor
+- Moderate
+- Serious
+- Critical
 
 > **react-axe** uses advanced console logging features and works best in the Chrome browser, with limited functionality in Safari and Firefox.
 
@@ -131,23 +137,24 @@ npm install -D vue-axe
 #yarn
 yarn add -D vue-axe
 ```
+
 ### Initialize the module
 
 ```js
-import Vue from 'vue'
+import Vue from "vue";
 
-if (process.env.NODE_ENV !== 'production') {
-  const VueAxe = require('vue-axe')
+if (process.env.NODE_ENV !== "production") {
+  const VueAxe = require("vue-axe");
   Vue.use(VueAxe, {
     config: {
       // ...
       rules: [
-        { id: 'heading-order', enabled: true },
-        { id: 'label-title-only', enabled: true },
+        { id: "heading-order", enabled: true },
+        { id: "label-title-only", enabled: true },
         // and more
-      ]
-    }
-  })
+      ],
+    },
+  });
 }
 ```
 
@@ -187,7 +194,7 @@ yarn add eslint-plugin-jsx-a11y --dev
 }
 ```
 
-### Include all the recommended rules by the plugin 
+### Include all the recommended rules by the plugin
 
 ```
 {
@@ -206,6 +213,7 @@ yarn add eslint-plugin-jsx-a11y --dev
   ]
 }
 ```
+
 See the difference between 'recommended' and 'strict' mode [here](https://github.com/evcohen/eslint-plugin-jsx-a11y#difference-between-recommended-and-strict-mode)
 
 ![eslint_demo.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1575578691938/XcsL_SYl2.png)

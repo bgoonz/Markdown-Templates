@@ -1,11 +1,10 @@
-
 <details> <summary>fixtures/node_modules/@babel/polyfill/</summary>
 
 ### [fixtures/node_modules/@babel/polyfill/README.md](fixtures/node_modules/@babel/polyfill/README.md)
+
 # @babel/polyfill
 
 > Provides polyfills necessary for a full ES2015+ environment
-
 
 **This package has been deprecated in favor of separate inclusion of required parts of [`core-js`](https://github.com/zloirock/core-js) and [`regenerator-runtime`](https://www.npmjs.com/package/regenerator-runtime). See our website [@babel/polyfill](https://babeljs.io/docs/en/next/babel-polyfill.html) for more information.**
 
@@ -22,39 +21,39 @@ npm install --save @babel/polyfill
 or using yarn:
 
 ```sh
-yarn add @babel/polyfill 
+yarn add @babel/polyfill
 ```
-
-
-
 
 </details><details> <summary>fixtures/node_modules/@types/unist/</summary>
 
 ### [fixtures/node_modules/@types/unist/README.md](fixtures/node_modules/@types/unist/README.md)
+
 # Installation
+
 > `npm install --save @types/unist`
 
 # Summary
+
 This package contains type definitions for non-npm package Unist ( https://github.com/syntax-tree/unist ).
 
 # Details
+
 Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/unist
 
 Additional Details
- * Last updated: Thu, 14 Feb 2019 18:10:46 GMT
- * Dependencies: none
- * Global values: none
+
+- Last updated: Thu, 14 Feb 2019 18:10:46 GMT
+- Dependencies: none
+- Global values: none
 
 # Credits
+
 These definitions were written by bizen241 <https://github.com/bizen241>, Jun Lu <https://github.com/lujun2>, Hernan Rajchert <https://github.com/hrajchert>, Titus Wormer <https://github.com/wooorm>, Junyoung Choi <https://github.com/rokt33r>.
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/balanced-match/</summary>
 
 ### [fixtures/node_modules/balanced-match/LICENSE.md](fixtures/node_modules/balanced-match/LICENSE.md)
+
 (MIT)
 
 Copyright (c) 2013 Julian Gruber &lt;julian@juliangruber.com&gt;
@@ -77,10 +76,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-
-
-
 ### [fixtures/node_modules/balanced-match/README.md](fixtures/node_modules/balanced-match/README.md)
 
 # balanced-match
@@ -97,11 +92,11 @@ Match balanced string pairs, like `{` and `}` or `<b>` and `</b>`. Supports regu
 Get the first matching pair of braces:
 
 ```js
-var balanced = require('balanced-match');
+var balanced = require("balanced-match");
 
-console.log(balanced('{', '}', 'pre{in{nested}}post'));
-console.log(balanced('{', '}', 'pre{first}between{second}post'));
-console.log(balanced(/\s+\{\s+/, /\s+\}\s+/, 'pre  {   in{nest}   }  post'));
+console.log(balanced("{", "}", "pre{in{nested}}post"));
+console.log(balanced("{", "}", "pre{first}between{second}post"));
+console.log(balanced(/\s+\{\s+/, /\s+\}\s+/, "pre  {   in{nest}   }  post"));
 ```
 
 The matches are:
@@ -124,11 +119,11 @@ $ node example.js
 For the first non-nested matching pair of `a` and `b` in `str`, return an
 object with those keys:
 
-* **start** the index of the first match of `a`
-* **end** the index of the matching `b`
-* **pre** the preamble, `a` and `b` not included
-* **body** the match, `a` and `b` not included
-* **post** the postscript, `a` and `b` not included
+- **start** the index of the first match of `a`
+- **end** the index of the matching `b`
+- **pre** the preamble, `a` and `b` not included
+- **body** the match, `a` and `b` not included
+- **post** the postscript, `a` and `b` not included
 
 If there's no match, `undefined` will be returned.
 
@@ -175,10 +170,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 </details><details> <summary>fixtures/node_modules/bcp-47-match/</summary>
 
 ### [fixtures/node_modules/bcp-47-match/readme.md](fixtures/node_modules/bcp-47-match/readme.md)
+
 <!--lint disable no-html-->
 
 # bcp-47-match
@@ -196,13 +191,13 @@ Related to [`bcp-47`][bcp47].
 
 ## Contents
 
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-    *   [`match.basicFilter(tags[, ranges])`](#matchbasicfiltertags-ranges)
-    *   [`match.extendedFilter(tags[, ranges])`](#matchextendedfiltertags-ranges)
-    *   [`match.lookup(tags, ranges)`](#matchlookuptags-ranges)
-*   [License](#license)
+- [Install](#install)
+- [Use](#use)
+- [API](#api)
+  - [`match.basicFilter(tags[, ranges])`](#matchbasicfiltertags-ranges)
+  - [`match.extendedFilter(tags[, ranges])`](#matchextendedfiltertags-ranges)
+  - [`match.lookup(tags, ranges)`](#matchlookuptags-ranges)
+- [License](#license)
 
 ## Install
 
@@ -215,32 +210,32 @@ npm install bcp-47-match
 ## Use
 
 ```js
-var match = require('bcp-47-match')
+var match = require("bcp-47-match");
 
-var basic = match.basicFilter
-var extended = match.extendedFilter
-var lookup = match.lookup
+var basic = match.basicFilter;
+var extended = match.extendedFilter;
+var lookup = match.lookup;
 
-var tags = ['en-GB', 'de-CH', 'en', 'de']
+var tags = ["en-GB", "de-CH", "en", "de"];
 
-console.log(basic(tags, '*')) // => [ 'en-GB', 'de-CH', 'en', 'de' ]
-console.log(basic(tags, 'en')) // => [ 'en-GB', 'en' ]
-console.log(basic(tags, 'en-GB')) // => [ 'en-GB' ]
-console.log(basic(tags, ['en-GB', 'en'])) // => [ 'en-GB', 'en' ]
-console.log(basic(tags, 'jp')) // => []
+console.log(basic(tags, "*")); // => [ 'en-GB', 'de-CH', 'en', 'de' ]
+console.log(basic(tags, "en")); // => [ 'en-GB', 'en' ]
+console.log(basic(tags, "en-GB")); // => [ 'en-GB' ]
+console.log(basic(tags, ["en-GB", "en"])); // => [ 'en-GB', 'en' ]
+console.log(basic(tags, "jp")); // => []
 
-console.log(extended(tags, '*')) // => [ 'en-GB', 'de-CH', 'en', 'de' ]
-console.log(extended(tags, 'en')) // => [ 'en-GB', 'en' ]
-console.log(extended(tags, 'en-GB')) // => [ 'en-GB' ]
-console.log(extended(tags, '*-GB')) // => [ 'en-GB' ]
-console.log(extended(tags, ['en-GB', 'en'])) // => [ 'en-GB', 'en' ]
-console.log(extended(tags, 'jp')) // => []
+console.log(extended(tags, "*")); // => [ 'en-GB', 'de-CH', 'en', 'de' ]
+console.log(extended(tags, "en")); // => [ 'en-GB', 'en' ]
+console.log(extended(tags, "en-GB")); // => [ 'en-GB' ]
+console.log(extended(tags, "*-GB")); // => [ 'en-GB' ]
+console.log(extended(tags, ["en-GB", "en"])); // => [ 'en-GB', 'en' ]
+console.log(extended(tags, "jp")); // => []
 
-console.log(lookup(tags, 'en')) // => 'en'
-console.log(lookup(tags, 'en-GB')) // => 'en-GB'
-console.log(lookup(tags, ['en-GB', 'en'])) // => 'en-GB'
-console.log(lookup(tags, ['en', 'en-GB'])) // => 'en'
-console.log(lookup(tags, 'jp')) // => undefined
+console.log(lookup(tags, "en")); // => 'en'
+console.log(lookup(tags, "en-GB")); // => 'en-GB'
+console.log(lookup(tags, ["en-GB", "en"])); // => 'en-GB'
+console.log(lookup(tags, ["en", "en-GB"])); // => 'en'
+console.log(lookup(tags, "jp")); // => undefined
 ```
 
 ## API
@@ -256,34 +251,34 @@ Returns a list of matching tags in the order they matched.
 
 <details><summary>View matching table</summary>
 
-| Basic Filter | \* | de | de-CH | de-DE | de-\*-DE | \*-CH |
-| ------------ | --- | --- | ----- | ----- | -------- | ----- |
-| de | ✔︎ | ✔︎ |  |  |  |  |
-| de-CH | ✔︎ | ✔︎ | ✔︎ |  |  |  |
-| de-CH-1996 | ✔︎ | ✔︎ | ✔︎ |  |  |  |
-| de-DE | ✔︎ | ✔︎ |  | ✔︎ |  |  |
-| de-DE-1996 | ✔︎ | ✔︎ |  | ✔︎ |  |  |
-| de-DE-x-goethe | ✔︎ | ✔︎ |  | ✔︎ |  |  |
-| de-Deva | ✔︎ | ✔︎ |  |  |  |  |
-| de-Deva-DE | ✔︎ | ✔︎ |  |  |  |  |
-| de-Latf-DE | ✔︎ | ✔︎ |  |  |  |  |
-| de-Latn-DE | ✔︎ | ✔︎ |  |  |  |  |
-| de-Latn-DE-1996 | ✔︎ | ✔︎ |  |  |  |  |
-| de-x-DE | ✔︎ | ✔︎ |  |  |  |  |
-| en | ✔︎ |  |  |  |  |  |
-| en-GB | ✔︎ |  |  |  |  |  |
-| zh | ✔︎ |  |  |  |  |  |
-| zh-Hans | ✔︎ |  |  |  |  |  |
-| zh-Hant | ✔︎ |  |  |  |  |  |
+| Basic Filter    | \*  | de  | de-CH | de-DE | de-\*-DE | \*-CH |
+| --------------- | --- | --- | ----- | ----- | -------- | ----- |
+| de              | ✔︎  | ✔︎  |       |       |          |       |
+| de-CH           | ✔︎  | ✔︎  | ✔︎    |       |          |       |
+| de-CH-1996      | ✔︎  | ✔︎  | ✔︎    |       |          |       |
+| de-DE           | ✔︎  | ✔︎  |       | ✔︎    |          |       |
+| de-DE-1996      | ✔︎  | ✔︎  |       | ✔︎    |          |       |
+| de-DE-x-goethe  | ✔︎  | ✔︎  |       | ✔︎    |          |       |
+| de-Deva         | ✔︎  | ✔︎  |       |       |          |       |
+| de-Deva-DE      | ✔︎  | ✔︎  |       |       |          |       |
+| de-Latf-DE      | ✔︎  | ✔︎  |       |       |          |       |
+| de-Latn-DE      | ✔︎  | ✔︎  |       |       |          |       |
+| de-Latn-DE-1996 | ✔︎  | ✔︎  |       |       |          |       |
+| de-x-DE         | ✔︎  | ✔︎  |       |       |          |       |
+| en              | ✔︎  |     |       |       |          |       |
+| en-GB           | ✔︎  |     |       |       |          |       |
+| zh              | ✔︎  |     |       |       |          |       |
+| zh-Hans         | ✔︎  |     |       |       |          |       |
+| zh-Hant         | ✔︎  |     |       |       |          |       |
 
 </details>
 
 ###### Parameters
 
-*   `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
-*   `ranges` (`string` or `Array.<string>`) — List of RFC 4647
-    [basic ranges][basic-range]
-    (aka, matching `/^(\*|[a-z]{1,8}(-[a-z0-9]{1,8})*)$/i`)
+- `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
+- `ranges` (`string` or `Array.<string>`) — List of RFC 4647
+  [basic ranges][basic-range]
+  (aka, matching `/^(\*|[a-z]{1,8}(-[a-z0-9]{1,8})*)$/i`)
 
 ###### Returns
 
@@ -300,34 +295,34 @@ with further ranges.
 
 <details><summary>View matching table</summary>
 
-| Extended Filter | \* | de | de-CH | de-DE | de-\*-DE | \*-CH |
+| Extended Filter | \*  | de  | de-CH | de-DE | de-\*-DE | \*-CH |
 | --------------- | --- | --- | ----- | ----- | -------- | ----- |
-| de | ✔︎ | ✔︎ |  |  |  |  |
-| de-CH | ✔︎ | ✔︎ | ✔︎ |  |  | ✔︎ |
-| de-CH-1996 | ✔︎ | ✔︎ | ✔︎ |  |  | ✔︎ |
-| de-DE | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-DE-1996 | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-DE-x-goethe | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-Deva | ✔︎ | ✔︎ |  |  |  |  |
-| de-Deva-DE | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-Latf-DE | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-Latn-DE | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-Latn-DE-1996 | ✔︎ | ✔︎ |  | ✔︎ | ✔︎ |  |
-| de-x-DE | ✔︎ | ✔︎ |  |  |  |  |
-| en | ✔︎ |  |  |  |  |  |
-| en-GB | ✔︎ |  |  |  |  |  |
-| zh | ✔︎ |  |  |  |  |  |
-| zh-Hans | ✔︎ |  |  |  |  |  |
-| zh-Hant | ✔︎ |  |  |  |  |  |
+| de              | ✔︎  | ✔︎  |       |       |          |       |
+| de-CH           | ✔︎  | ✔︎  | ✔︎    |       |          | ✔︎    |
+| de-CH-1996      | ✔︎  | ✔︎  | ✔︎    |       |          | ✔︎    |
+| de-DE           | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-DE-1996      | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-DE-x-goethe  | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-Deva         | ✔︎  | ✔︎  |       |       |          |       |
+| de-Deva-DE      | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-Latf-DE      | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-Latn-DE      | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-Latn-DE-1996 | ✔︎  | ✔︎  |       | ✔︎    | ✔︎       |       |
+| de-x-DE         | ✔︎  | ✔︎  |       |       |          |       |
+| en              | ✔︎  |     |       |       |          |       |
+| en-GB           | ✔︎  |     |       |       |          |       |
+| zh              | ✔︎  |     |       |       |          |       |
+| zh-Hans         | ✔︎  |     |       |       |          |       |
+| zh-Hant         | ✔︎  |     |       |       |          |       |
 
 </details>
 
 ###### Parameters
 
-*   `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
-*   `ranges` (`string` or `Array.<string>`) — List of RFC 4647
-    [extended ranges][extended-range]
-    (aka, matching `/^(\*|[a-z]{1,8})(-(\*|[a-z0-9]{1,8}))*$/i`)
+- `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
+- `ranges` (`string` or `Array.<string>`) — List of RFC 4647
+  [extended ranges][extended-range]
+  (aka, matching `/^(\*|[a-z]{1,8})(-(\*|[a-z0-9]{1,8}))*$/i`)
 
 ###### Returns
 
@@ -345,33 +340,33 @@ Returns the first match, if any.
 
 <details><summary>View matching table</summary>
 
-| Lookup | \* | de | de-CH | de-DE | de-\*-DE | \*-CH |
-| ------ | --- | --- | ----- | ----- | -------- | ----- |
-| de |  | ✔︎︎ | ✔︎︎ | ✔︎ | ✔︎ | ✔︎ |
-| de-CH |  |  | ✔︎ |  |  | ✔︎ |
-| de-CH-1996 |  |  |  |  |  | ✔︎ |
-| de-DE |  |  |  | ✔︎ |  | ✔︎ |
-| de-DE-1996 |  |  |  |  |  | ✔︎ |
-| de-DE-x-goethe |  |  |  |  |  | ✔︎ |
-| de-Deva |  |  |  |  |  | ✔︎ |
-| de-Deva-DE |  |  |  |  |  | ✔︎ |
-| de-Latf-DE |  |  |  |  |  | ✔︎ |
-| de-Latn-DE |  |  |  |  |  | ✔︎ |
-| de-Latn-DE-1996 |  |  |  |  |  | ✔︎ |
-| de-x-DE |  |  |  |  |  | ✔︎ |
-| en |  |  |  |  |  | ✔︎ |
-| en-GB |  |  |  |  |  | ✔︎ |
-| zh |  |  |  |  |  | ✔︎ |
-| zh-Hans |  |  |  |  |  | ✔︎ |
-| zh-Hant |  |  |  |  |  | ✔︎ |
+| Lookup          | \*  | de  | de-CH | de-DE | de-\*-DE | \*-CH |
+| --------------- | --- | --- | ----- | ----- | -------- | ----- |
+| de              |     | ✔︎︎ | ✔︎︎   | ✔︎    | ✔︎       | ✔︎    |
+| de-CH           |     |     | ✔︎    |       |          | ✔︎    |
+| de-CH-1996      |     |     |       |       |          | ✔︎    |
+| de-DE           |     |     |       | ✔︎    |          | ✔︎    |
+| de-DE-1996      |     |     |       |       |          | ✔︎    |
+| de-DE-x-goethe  |     |     |       |       |          | ✔︎    |
+| de-Deva         |     |     |       |       |          | ✔︎    |
+| de-Deva-DE      |     |     |       |       |          | ✔︎    |
+| de-Latf-DE      |     |     |       |       |          | ✔︎    |
+| de-Latn-DE      |     |     |       |       |          | ✔︎    |
+| de-Latn-DE-1996 |     |     |       |       |          | ✔︎    |
+| de-x-DE         |     |     |       |       |          | ✔︎    |
+| en              |     |     |       |       |          | ✔︎    |
+| en-GB           |     |     |       |       |          | ✔︎    |
+| zh              |     |     |       |       |          | ✔︎    |
+| zh-Hans         |     |     |       |       |          | ✔︎    |
+| zh-Hant         |     |     |       |       |          | ✔︎    |
 
 </details>
 
 ###### Parameters
 
-*   `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
-*   `ranges` (`string` or `Array.<string>`) — List of RFC 4647 basic ranges
-    (but `*` is ignored)
+- `tags` (`string` or `Array.<string>`) — List of BCP-47 tags
+- `ranges` (`string` or `Array.<string>`) — List of RFC 4647 basic ranges
+  (but `*` is ignored)
 
 ###### Returns
 
@@ -384,44 +379,26 @@ Returns the first match, if any.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/bcp-47-match.svg
-
 [build]: https://travis-ci.org/wooorm/bcp-47-match
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/bcp-47-match.svg
-
 [coverage]: https://codecov.io/github/wooorm/bcp-47-match
-
 [downloads-badge]: https://img.shields.io/npm/dm/bcp-47-match.svg
-
 [downloads]: https://www.npmjs.com/package/bcp-47-match
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/bcp-47-match.svg
-
 [size]: https://bundlephobia.com/result?p=bcp-47-match
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [bcp47]: https://github.com/wooorm/bcp-47
-
 [spec]: https://tools.ietf.org/html/bcp47
-
 [match]: https://tools.ietf.org/html/rfc4647
-
 [basic-range]: https://tools.ietf.org/html/rfc4647#section-2.1
-
 [extended-range]: https://tools.ietf.org/html/rfc4647#section-2.2
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/boolbase/</summary>
 
 ### [fixtures/node_modules/boolbase/README.md](fixtures/node_modules/boolbase/README.md)
+
 #boolbase
 This very simple module provides two basic functions, one that always returns true (`trueFunc`) and one that always returns false (`falseFunc`).
 
@@ -433,15 +410,13 @@ By having only a single instance of these functions around, it's possible to do 
 
 I'm trying to modularize `CSSselect` and most modules depend on these functions. IMHO, having a separate module is the easiest solution to this problem.
 
-
-
-
 </details><details> <summary>fixtures/node_modules/brace-expansion/</summary>
 
 ### [fixtures/node_modules/brace-expansion/README.md](fixtures/node_modules/brace-expansion/README.md)
+
 # brace-expansion
 
-[Brace expansion](https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html), 
+[Brace expansion](https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html),
 as known from sh/bash, in JavaScript.
 
 [![build status](https://secure.travis-ci.org/juliangruber/brace-expansion.svg)](http://travis-ci.org/juliangruber/brace-expansion)
@@ -453,43 +428,43 @@ as known from sh/bash, in JavaScript.
 ## Example
 
 ```js
-var expand = require('brace-expansion');
+var expand = require("brace-expansion");
 
-expand('file-{a,b,c}.jpg')
+expand("file-{a,b,c}.jpg");
 // => ['file-a.jpg', 'file-b.jpg', 'file-c.jpg']
 
-expand('-v{,,}')
+expand("-v{,,}");
 // => ['-v', '-v', '-v']
 
-expand('file{0..2}.jpg')
+expand("file{0..2}.jpg");
 // => ['file0.jpg', 'file1.jpg', 'file2.jpg']
 
-expand('file-{a..c}.jpg')
+expand("file-{a..c}.jpg");
 // => ['file-a.jpg', 'file-b.jpg', 'file-c.jpg']
 
-expand('file{2..0}.jpg')
+expand("file{2..0}.jpg");
 // => ['file2.jpg', 'file1.jpg', 'file0.jpg']
 
-expand('file{0..4..2}.jpg')
+expand("file{0..4..2}.jpg");
 // => ['file0.jpg', 'file2.jpg', 'file4.jpg']
 
-expand('file-{a..e..2}.jpg')
+expand("file-{a..e..2}.jpg");
 // => ['file-a.jpg', 'file-c.jpg', 'file-e.jpg']
 
-expand('file{00..10..5}.jpg')
+expand("file{00..10..5}.jpg");
 // => ['file00.jpg', 'file05.jpg', 'file10.jpg']
 
-expand('{{A..C},{a..c}}')
+expand("{{A..C},{a..c}}");
 // => ['A', 'B', 'C', 'a', 'b', 'c']
 
-expand('ppp{,config,oe{,conf}}')
+expand("ppp{,config,oe{,conf}}");
 // => ['ppp', 'pppconfig', 'pppoe', 'pppoeconf']
 ```
 
 ## API
 
 ```js
-var expand = require('brace-expansion');
+var expand = require("brace-expansion");
 ```
 
 ### var expanded = expand(str)
@@ -500,14 +475,14 @@ found, `[str]` is returned.
 Valid expansions are:
 
 ```js
-/^(.*,)+(.+)?$/
+/^(.*,)+(.+)?$/;
 // {a,b,...}
 ```
 
 A comma separated list of options, like `{a,b}` or `{a,{b,c}}` or `{,a,}`.
 
 ```js
-/^-?\d+\.\.-?\d+(\.\.-?\d+)?$/
+/^-?\d+\.\.-?\d+(\.\.-?\d+)?$/;
 // {x..y[..incr]}
 ```
 
@@ -516,7 +491,7 @@ If `x` or `y` start with a leading `0`, all the numbers will be padded
 to have equal length. Negative numbers and backwards iteration work too.
 
 ```js
-/^-?\d+\.\.-?\d+(\.\.-?\d+)?$/
+/^-?\d+\.\.-?\d+(\.\.-?\d+)?$/;
 // {x..y[..incr]}
 ```
 
@@ -569,13 +544,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-
-
-
 </details><details> <summary>fixtures/node_modules/ccount/</summary>
 
 ### [fixtures/node_modules/ccount/readme.md](fixtures/node_modules/ccount/readme.md)
+
 # ccount
 
 [![Build][build-badge]][build]
@@ -596,10 +568,10 @@ npm install ccount
 ## Use
 
 ```js
-var ccount = require('ccount')
+var ccount = require("ccount");
 
-ccount('foo(bar(baz)', '(') // => 2
-ccount('foo(bar(baz)', ')') // => 1
+ccount("foo(bar(baz)", "("); // => 2
+ccount("foo(bar(baz)", ")"); // => 1
 ```
 
 ## API
@@ -610,8 +582,8 @@ Get the total count of `character` in `value`.
 
 ###### Parameters
 
-*   `value` (`string`) — Content, coerced to string
-*   `character` (`string`) — Single character to look for
+- `value` (`string`) — Content, coerced to string
+- `character` (`string`) — Single character to look for
 
 ###### Returns
 
@@ -624,34 +596,21 @@ Get the total count of `character` in `value`.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/ccount.svg
-
 [build]: https://travis-ci.org/wooorm/ccount
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/ccount.svg
-
 [coverage]: https://codecov.io/github/wooorm/ccount
-
 [downloads-badge]: https://img.shields.io/npm/dm/ccount.svg
-
 [downloads]: https://www.npmjs.com/package/ccount
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/ccount.svg
-
 [size]: https://bundlephobia.com/result?p=ccount
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/character-entities-html4/</summary>
 
 ### [fixtures/node_modules/character-entities-html4/readme.md](fixtures/node_modules/character-entities-html4/readme.md)
+
 # character-entities-html4
 
 [![Build][build-badge]][build]
@@ -671,12 +630,12 @@ npm install character-entities-html4
 ## Use
 
 ```js
-var characterEntities = require('character-entities-html4')
+var characterEntities = require("character-entities-html4");
 
-console.log(characterEntities.AElig) // => 'Æ'
-console.log(characterEntities.aelig) // => 'æ'
-console.log(characterEntities.amp) // => '&'
-console.log(characterEntities.apos) // => undefined
+console.log(characterEntities.AElig); // => 'Æ'
+console.log(characterEntities.aelig); // => 'æ'
+console.log(characterEntities.amp); // => '&'
+console.log(characterEntities.apos); // => undefined
 ```
 
 ## API
@@ -691,14 +650,14 @@ See [`w3.org`][html].
 
 ## Related
 
-*   [`character-entities`](https://github.com/wooorm/character-entities)
-    — HTML character entity info
-*   [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)
-    — Legacy character entity info
-*   [`parse-entities`](https://github.com/wooorm/parse-entities)
-    — Parse HTML character references
-*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)
-    — Stringify HTML character references
+- [`character-entities`](https://github.com/wooorm/character-entities)
+  — HTML character entity info
+- [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)
+  — Legacy character entity info
+- [`parse-entities`](https://github.com/wooorm/parse-entities)
+  — Parse HTML character references
+- [`stringify-entities`](https://github.com/wooorm/stringify-entities)
+  — Stringify HTML character references
 
 ## License
 
@@ -707,32 +666,20 @@ See [`w3.org`][html].
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/character-entities-html4.svg
-
 [build]: https://travis-ci.org/wooorm/character-entities-html4
-
 [downloads-badge]: https://img.shields.io/npm/dm/character-entities-html4.svg
-
 [downloads]: https://www.npmjs.com/package/character-entities-html4
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/character-entities-html4.svg
-
 [size]: https://bundlephobia.com/result?p=character-entities-html4
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [html]: https://www.w3.org/TR/html4/sgml/entities.html
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/character-entities-legacy/</summary>
 
 ### [fixtures/node_modules/character-entities-legacy/readme.md](fixtures/node_modules/character-entities-legacy/readme.md)
+
 # character-entities-legacy
 
 [![Build][build-badge]][build]
@@ -754,11 +701,11 @@ npm install character-entities-legacy
 ## Use
 
 ```js
-var characterEntitiesLegacy = require('character-entities-legacy')
+var characterEntitiesLegacy = require("character-entities-legacy");
 
-console.log(characterEntitiesLegacy.copy) // => '©'
-console.log(characterEntitiesLegacy.frac34) // => '¾'
-console.log(characterEntitiesLegacy.sup1) // => '¹'
+console.log(characterEntitiesLegacy.copy); // => '©'
+console.log(characterEntitiesLegacy.frac34); // => '¾'
+console.log(characterEntitiesLegacy.sup1); // => '¹'
 ```
 
 ## API
@@ -773,14 +720,14 @@ See [`whatwg/html`][html].
 
 ## Related
 
-*   [`character-entities`](https://github.com/wooorm/character-entities)
-    — HTML character entity info
-*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
-    — HTML 4 character entity info
-*   [`parse-entities`](https://github.com/wooorm/parse-entities)
-    — Parse HTML character references
-*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)
-    — Serialize HTML character references
+- [`character-entities`](https://github.com/wooorm/character-entities)
+  — HTML character entity info
+- [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
+  — HTML 4 character entity info
+- [`parse-entities`](https://github.com/wooorm/parse-entities)
+  — Parse HTML character references
+- [`stringify-entities`](https://github.com/wooorm/stringify-entities)
+  — Serialize HTML character references
 
 ## License
 
@@ -789,32 +736,20 @@ See [`whatwg/html`][html].
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/character-entities-legacy.svg
-
 [build]: https://travis-ci.org/wooorm/character-entities-legacy
-
 [downloads-badge]: https://img.shields.io/npm/dm/character-entities-legacy.svg
-
 [downloads]: https://www.npmjs.com/package/character-entities-legacy
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/character-entities-legacy.svg
-
 [size]: https://bundlephobia.com/result?p=character-entities-legacy
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [html]: https://raw.githubusercontent.com/whatwg/html/master/json-entities-legacy.inc
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/comma-separated-tokens/</summary>
 
 ### [fixtures/node_modules/comma-separated-tokens/readme.md](fixtures/node_modules/comma-separated-tokens/readme.md)
+
 # comma-separated-tokens
 
 [![Build][build-badge]][build]
@@ -835,10 +770,10 @@ npm install comma-separated-tokens
 ## Use
 
 ```js
-var commaSeparated = require('comma-separated-tokens')
+var commaSeparated = require("comma-separated-tokens");
 
-commaSeparated.parse(' a ,b,,d d ') //=> ['a', 'b', '', 'd d']
-commaSeparated.stringify(['a', 'b', '', 'd d']) //=> 'a, b, , d d'
+commaSeparated.parse(" a ,b,,d d "); //=> ['a', 'b', '', 'd d']
+commaSeparated.stringify(["a", "b", "", "d d"]); //=> 'a, b, , d d'
 ```
 
 ## API
@@ -866,12 +801,12 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 
 ## Related
 
-*   [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)
-    — Replace multiple white-space characters with a single space
-*   [`property-information`](https://github.com/wooorm/property-information)
-    — Information on HTML properties
-*   [`space-separated-tokens`](https://github.com/wooorm/space-separated-tokens)
-    — Parse/stringify space-separated tokens
+- [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)
+  — Replace multiple white-space characters with a single space
+- [`property-information`](https://github.com/wooorm/property-information)
+  — Information on HTML properties
+- [`space-separated-tokens`](https://github.com/wooorm/space-separated-tokens)
+  — Parse/stringify space-separated tokens
 
 ## License
 
@@ -880,88 +815,91 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/comma-separated-tokens.svg
-
 [build]: https://travis-ci.org/wooorm/comma-separated-tokens
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/comma-separated-tokens.svg
-
 [coverage]: https://codecov.io/github/wooorm/comma-separated-tokens
-
 [downloads-badge]: https://img.shields.io/npm/dm/comma-separated-tokens.svg
-
 [downloads]: https://www.npmjs.com/package/comma-separated-tokens
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/comma-separated-tokens.svg
-
 [size]: https://bundlephobia.com/result?p=comma-separated-tokens
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [spec]: https://html.spec.whatwg.org/#comma-separated-tokens
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/core-js/</summary>
 
 ### [fixtures/node_modules/core-js/CHANGELOG.md](fixtures/node_modules/core-js/CHANGELOG.md)
+
 ## Changelog
+
 ##### 2.6.11 [LEGACY] - 2019.12.09
+
 - Returned usage of `node -e` in `postinstall` scripts for better cross-platform compatibility, [#582](https://github.com/zloirock/core-js/issues/582)
 - Improved CI detection in the `postinstall` script, [#707](https://github.com/zloirock/core-js/issues/707)
 
 ##### 2.6.10 [LEGACY] - 2019.10.13
+
 - Show similar `postinstall` messages only once per `npm i`, [#597](https://github.com/zloirock/core-js/issues/597)
 
 ##### 2.6.9 [LEGACY] - 2019.05.27
+
 - Some fixes and improvements of the `postinstall` script like support `npm` color config ([#556](https://github.com/zloirock/core-js/issues/556)) or adding support of `ADBLOCK` env variable
 
 ##### 2.6.8 [LEGACY] - 2019.05.22
+
 - Added a workaround of a strange `npx` bug on `postinstall`, [#551](https://github.com/zloirock/core-js/issues/551)
 
 ##### 2.6.7 [LEGACY] - 2019.05.21
+
 - Added one more workaround of alternative not completely correct `Symbol` polyfills, [#550](https://github.com/zloirock/core-js/issues/550), [#554](https://github.com/zloirock/core-js/issues/554)
 
 ##### 2.6.6 [LEGACY] - 2019.05.20
+
 - Fixed IE8- non-enumerable properties support in `Object.{ assign, entries, values }`, [#541](https://github.com/zloirock/core-js/issues/541)
 - Fixed support of primitives in `Object.getOwnPropertySymbols` in Chrome 38 / 39, [#539](https://github.com/zloirock/core-js/issues/539)
 - Show a message on `postinstall`
 
 ##### 2.6.5 - 2019.02.15
+
 - Fixed buggy `String#padStart` and `String#padEnd` mobile Safari implementations, [#414](https://github.com/zloirock/core-js/issues/414).
 
 ##### 2.6.4 - 2019.02.07
+
 - Added a workaround against crushing an old IE11.0.9600.16384 build, [#485](https://github.com/zloirock/core-js/issues/485).
 
 ##### 2.6.3 - 2019.01.22
+
 - Added a workaround for `babel-minify` bug, [#479](https://github.com/zloirock/core-js/issues/479)
 
 ##### 2.6.2 - 2019.01.10
+
 - Fixed handling of `$` in `String#replace`, [#471](https://github.com/zloirock/core-js/issues/471)
 
 ##### 2.6.1 - 2018.12.18
+
 - Fixed an issue with minified version, [#463](https://github.com/zloirock/core-js/issues/463)
 
 ##### 2.6.0 - 2018.12.05
+
 - Add direct .exec calling to `RegExp#{@@replace, @@split, @@match, @@search}`. Also, added fixes for `RegExp#exec` method. [#411](https://github.com/zloirock/core-js/issues/411), [#428](https://github.com/zloirock/core-js/issues/428), [#434](https://github.com/zloirock/core-js/issues/434), [#435](https://github.com/zloirock/core-js/issues/435), [#453](https://github.com/zloirock/core-js/issues/453), [#458](https://github.com/zloirock/core-js/issues/458), thanks [**@nicolo-ribaudo**](https://github.com/nicolo-ribaudo).
 
 ##### 2.5.7 - 2018.05.26
+
 - Get rid of reserved variable name `final`, related [#400](https://github.com/zloirock/core-js/issues/400)
 
 ##### 2.5.6 - 2018.05.07
+
 - Forced replace native `Promise` in V8 6.6 (Node 10 and Chrome 66) because of [a bug with resolving custom thenables](https://bugs.chromium.org/p/chromium/issues/detail?id=830565)
 - Added a workaround for usage buggy native LG WebOS 2 `Promise` in microtask implementation, [#396](https://github.com/zloirock/core-js/issues/396)
 - Added modern version internal debugging information about used versions
 
 ##### 2.5.5 - 2018.04.08
+
 - Fix some edge cases of `Reflect.set`, [#392](https://github.com/zloirock/core-js/issues/392) and [#393](https://github.com/zloirock/core-js/issues/393)
 
 ##### 2.5.4 - 2018.03.27
+
 - Fixed one case of deoptimization built-in iterators in V8, related [#377](https://github.com/zloirock/core-js/issues/377)
 - Fixed some cases of iterators feature detection, [#368](https://github.com/zloirock/core-js/issues/368)
 - Fixed manually entered NodeJS domains issue in `Promise`, [#367](https://github.com/zloirock/core-js/issues/367)
@@ -969,22 +907,26 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 - Fixed `__(define|lookup)[GS]etter__` import in the `library` version
 
 ##### 2.5.3 - 2017.12.12
+
 - Fixed calling `onunhandledrejectionhandler` multiple times for one `Promise` chain, [#318](https://github.com/zloirock/core-js/issues/318)
 - Forced replacement of `String#{padStart, padEnd}` in Safari 10 because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=161944), [#280](https://github.com/zloirock/core-js/issues/280)
 - Fixed `Array#@@iterator` in a very rare version of `WebKit`, [#236](https://github.com/zloirock/core-js/issues/236) and [#237](https://github.com/zloirock/core-js/issues/237)
 - One more [#345](https://github.com/zloirock/core-js/issues/345)-related fix
 
 ##### 2.5.2 - 2017.12.09
+
 - `MutationObserver` no longer used for microtask implementation in iOS Safari because of bug with scrolling, [#339](https://github.com/zloirock/core-js/issues/339)
 - Fixed `JSON.stringify(undefined, replacer)` case in the wrapper from the `Symbol` polyfill, [#345](https://github.com/zloirock/core-js/issues/345)
 - `Array()` calls changed to `new Array()` for V8 optimisation
 
 ##### 2.5.1 - 2017.09.01
+
 - Updated `Promise#finally` per [tc39/proposal-promise-finally#37](https://github.com/tc39/proposal-promise-finally/issues/37)
 - Optimized usage of some internal helpers for reducing size of `shim` version
 - Fixed some entry points for virtual methods
 
 ##### 2.5.0 - 2017.08.05
+
 - Added `Promise#finally` [stage 3 proposal](https://github.com/tc39/proposal-promise-finally), [#225](https://github.com/zloirock/core-js/issues/225)
 - Added `Promise.try` [stage 1 proposal](https://github.com/tc39/proposal-promise-try)
 - Added `Array#flatten` and `Array#flatMap` [stage 1 proposal](https://tc39.github.io/proposal-flatMap)
@@ -1040,8 +982,8 @@ Whether to pad a space after a token (`boolean`, default: `false`).
   - [String padding](https://github.com/tc39/proposal-string-pad-start-end) to [stage 4 (ES2017)](https://tc39.github.io/ecma262/2017/#sec-string.prototype.padend)
   - [`global`](https://github.com/tc39/proposal-global) to [stage 3](https://github.com/rwaldron/tc39-notes/blob/master/es7/2016-09/sept-28.md#revisit-systemglobal--global)
   - [String trimming](https://github.com/tc39/proposal-string-left-right-trim) to [stage 2](https://github.com/rwaldron/tc39-notes/blob/master/es7/2016-07/jul-27.md#10iic-trimstarttrimend)
-- Updated typed arrays to the modern (ES2016+) arguments validation, 
-[#293](https://github.com/zloirock/core-js/pull/293)
+- Updated typed arrays to the modern (ES2016+) arguments validation,
+  [#293](https://github.com/zloirock/core-js/pull/293)
 - Fixed `%TypedArray%.from` Safari bug, [#285](https://github.com/zloirock/core-js/issues/285)
 - Fixed compatibility with old version of Prototype.js, [#278](https://github.com/zloirock/core-js/issues/278), [#289](https://github.com/zloirock/core-js/issues/289)
 - `Function#name` no longer cache the result for correct behaviour with inherited constructors, [#296](https://github.com/zloirock/core-js/issues/296)
@@ -1057,19 +999,23 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 - Some other minor fixes and optimizations
 
 ##### 2.4.1 - 2016.07.18
+
 - Fixed `script` tag for some parsers, [#204](https://github.com/zloirock/core-js/issues/204), [#216](https://github.com/zloirock/core-js/issues/216)
 - Removed some unused variables, [#217](https://github.com/zloirock/core-js/issues/217), [#218](https://github.com/zloirock/core-js/issues/218)
 - Fixed MS Edge `Reflect.construct` and `Reflect.apply` - they should not allow primitive as `argumentsList` argument
 
 ##### 1.2.7 [LEGACY] - 2016.07.18
+
 - Some fixes for issues like [#159](https://github.com/zloirock/core-js/issues/159), [#186](https://github.com/zloirock/core-js/issues/186), [#194](https://github.com/zloirock/core-js/issues/194), [#207](https://github.com/zloirock/core-js/issues/207)
 
 ##### 2.4.0 - 2016.05.08
+
 - Added `Observable`, [stage 1 proposal](https://github.com/zenparsing/es-observable)
 - Fixed behavior `Object.{getOwnPropertySymbols, getOwnPropertyDescriptor}` and `Object#propertyIsEnumerable` on `Object.prototype`
 - `Reflect.construct` and `Reflect.apply` should throw an error if `argumentsList` argument is not an object, [#194](https://github.com/zloirock/core-js/issues/194)
 
 ##### 2.3.0 - 2016.04.24
+
 - Added `asap` for enqueuing microtasks, [stage 0 proposal](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask)
 - Added well-known symbol `Symbol.asyncIterator` for [stage 2 async iteration proposal](https://github.com/tc39/proposal-async-iteration)
 - Added well-known symbol `Symbol.observable` for [stage 1 observables proposal](https://github.com/zenparsing/es-observable)
@@ -1081,15 +1027,18 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 - Added fallback for `Function#name` on non-extensible functions and functions with broken `toString` conversion, [#193](https://github.com/zloirock/core-js/issues/193)
 
 ##### 2.2.2 - 2016.04.06
+
 - Added conversion `-0` to `+0` to `Array#{indexOf, lastIndexOf}`, [ES2016 fix](https://github.com/tc39/ecma262/pull/316)
 - Added fixes for some `Math` methods in Tor Browser
 - `Array.{from, of}` no longer calls prototype setters
 - Added workaround over Chrome DevTools strange behavior, [#186](https://github.com/zloirock/core-js/issues/186)
 
 ##### 2.2.1 - 2016.03.19
+
 - Fixed `Object.getOwnPropertyNames(window)` `2.1+` versions bug, [#181](https://github.com/zloirock/core-js/issues/181)
 
 ##### 2.2.0 - 2016.03.15
+
 - Added `String#matchAll`, [proposal](https://github.com/tc39/String.prototype.matchAll)
 - Added `Object#__(define|lookup)[GS]etter__`, [annex B ES2017](https://github.com/tc39/ecma262/pull/381)
 - Added `@@toPrimitive` methods to `Date` and `Symbol`
@@ -1097,23 +1046,28 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 - Some other minor fixes
 
 ##### 2.1.5 - 2016.03.12
+
 - Improved support NodeJS domains in `Promise#then`, [#180](https://github.com/zloirock/core-js/issues/180)
 - Added fallback for `Date#toJSON` bug in Qt Script, [#173](https://github.com/zloirock/core-js/issues/173#issuecomment-193972502)
 
 ##### 2.1.4 - 2016.03.08
+
 - Added fallback for `Symbol` polyfill in Qt Script, [#173](https://github.com/zloirock/core-js/issues/173)
 - Added one more fallback for IE11 `Script Access Denied` error with iframes, [#165](https://github.com/zloirock/core-js/issues/165)
 
 ##### 2.1.3 - 2016.02.29
+
 - Added fallback for [`es6-promise` package bug](https://github.com/stefanpenner/es6-promise/issues/169), [#176](https://github.com/zloirock/core-js/issues/176)
 
 ##### 2.1.2 - 2016.02.29
+
 - Some minor `Promise` fixes:
   - Browsers `rejectionhandled` event better HTML spec complaint
   - Errors in unhandled rejection handlers should not cause any problems
   - Fixed typo in feature detection
 
 ##### 2.1.1 - 2016.02.22
+
 - Some `Promise` improvements:
   - Feature detection:
     - **Added detection unhandled rejection tracking support - now it's available everywhere**, [#140](https://github.com/zloirock/core-js/issues/140)
@@ -1122,6 +1076,7 @@ Whether to pad a space after a token (`boolean`, default: `false`).
   - `Promise.all` fixed for some very specific cases
 
 ##### 2.1.0 - 2016.02.09
+
 - **API**:
   - ES5 polyfills are split and logic, used in other polyfills, moved to internal modules
     - **All entry point works in ES3 environment like IE8- without `core-js/(library/)es5`**
@@ -1159,23 +1114,27 @@ Whether to pad a space after a token (`boolean`, default: `false`).
   - Additional fixes for `String#split` (`RegExp#@@split`)
 - **Improvements**:
   - Correct subclassing wrapped collections, `Number` and `RegExp` constructors with native class syntax
-  - Correct support `SharedArrayBuffer` and buffers from other realms in typed arrays wrappers 
+  - Correct support `SharedArrayBuffer` and buffers from other realms in typed arrays wrappers
   - Additional validations for `Object.{defineProperty, getOwnPropertyDescriptor}` and `Reflect.defineProperty`
 - **Bug Fixes**:
   - Fixed some cases `Array#lastIndexOf` with negative second argument
 
 ##### 2.0.3 - 2016.01.11
+
 - Added fallback for V8 ~ Chrome 49 `Promise` subclassing bug causes unhandled rejection on feature detection, [#159](https://github.com/zloirock/core-js/issues/159)
 - Added fix for very specific environments with global `window === null`
 
 ##### 2.0.2 - 2016.01.04
+
 - Temporarily removed `length` validation from `Uint8Array` constructor wrapper. Reason - [bug in `ws` module](https://github.com/websockets/ws/pull/645) (-> `socket.io`) which passes to `Buffer` constructor -> `Uint8Array` float and uses [the `V8` bug](https://code.google.com/p/v8/issues/detail?id=4552) for conversion to int (by the spec should be thrown an error). [It creates problems for many people.](https://github.com/karma-runner/karma/issues/1768) I hope, it will be returned after fixing this bug in `V8`.
 
 ##### 2.0.1 - 2015.12.31
+
 - Forced usage `Promise.resolve` polyfill in the `library` version for correct work with wrapper
 - `Object.assign` should be defined in the strict mode -> throw an error on extension non-extensible objects, [#154](https://github.com/zloirock/core-js/issues/154)
 
 ##### 2.0.0 - 2015.12.24
+
 - Added implementations and fixes [Typed Arrays](https://github.com/zloirock/core-js#ecmascript-6-typed-arrays)-related features
   - `ArrayBuffer`, `ArrayBuffer.isView`, `ArrayBuffer#slice`
   - `DataView` with all getter / setter methods
@@ -1212,419 +1171,491 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 - Many other improvements
 
 ##### 1.2.6 - 2015.11.09
-* Reject with `TypeError` on attempt resolve promise itself
-* Correct behavior with broken `Promise` subclass constructors / methods
-* Added `Promise`-based fallback for microtask
-* Fixed V8 and FF `Array#{values, @@iterator}.name`
-* Fixed IE7- `[1, 2].join(undefined) -> '1,2'`
-* Some other fixes / improvements / optimizations
+
+- Reject with `TypeError` on attempt resolve promise itself
+- Correct behavior with broken `Promise` subclass constructors / methods
+- Added `Promise`-based fallback for microtask
+- Fixed V8 and FF `Array#{values, @@iterator}.name`
+- Fixed IE7- `[1, 2].join(undefined) -> '1,2'`
+- Some other fixes / improvements / optimizations
 
 ##### 1.2.5 - 2015.11.02
-* Some more `Number` constructor fixes:
-  * Fixed V8 ~ Node 0.8 bug: `Number('+0x1')` should be `NaN`
-  * Fixed `Number(' 0b1\n')` case, should be `1`
-  * Fixed `Number()` case, should be `0`
+
+- Some more `Number` constructor fixes:
+  - Fixed V8 ~ Node 0.8 bug: `Number('+0x1')` should be `NaN`
+  - Fixed `Number(' 0b1\n')` case, should be `1`
+  - Fixed `Number()` case, should be `0`
 
 ##### 1.2.4 - 2015.11.01
-* Fixed `Number('0b12') -> NaN` case in the shim
-* Fixed V8 ~ Chromium 40- bug - `Weak(Map|Set)#{delete, get, has}` should not throw errors [#124](https://github.com/zloirock/core-js/issues/124)
-* Some other fixes and optimizations
+
+- Fixed `Number('0b12') -> NaN` case in the shim
+- Fixed V8 ~ Chromium 40- bug - `Weak(Map|Set)#{delete, get, has}` should not throw errors [#124](https://github.com/zloirock/core-js/issues/124)
+- Some other fixes and optimizations
 
 ##### 1.2.3 - 2015.10.23
-* Fixed some problems related old V8 bug `Object('a').propertyIsEnumerable(0) // => false`, for example, `Object.assign({}, 'qwe')` from the last release
-* Fixed `.name` property and `Function#toString` conversion some polyfilled methods
-* Fixed `Math.imul` arity in Safari 8-
+
+- Fixed some problems related old V8 bug `Object('a').propertyIsEnumerable(0) // => false`, for example, `Object.assign({}, 'qwe')` from the last release
+- Fixed `.name` property and `Function#toString` conversion some polyfilled methods
+- Fixed `Math.imul` arity in Safari 8-
 
 ##### 1.2.2 - 2015.10.18
-* Improved optimisations for V8
-* Fixed build process from external packages, [#120](https://github.com/zloirock/core-js/pull/120)
-* One more `Object.{assign, values, entries}` fix for [**very** specific case](https://github.com/ljharb/proposal-object-values-entries/issues/5)
+
+- Improved optimisations for V8
+- Fixed build process from external packages, [#120](https://github.com/zloirock/core-js/pull/120)
+- One more `Object.{assign, values, entries}` fix for [**very** specific case](https://github.com/ljharb/proposal-object-values-entries/issues/5)
 
 ##### 1.2.1 - 2015.10.02
-* Replaced fix `JSON.stringify` + `Symbol` behavior from `.toJSON` method to wrapping `JSON.stringify` - little more correct, [compat-table/642](https://github.com/kangax/compat-table/pull/642)
-* Fixed typo which broke tasks scheduler in WebWorkers in old FF, [#114](https://github.com/zloirock/core-js/pull/114)
+
+- Replaced fix `JSON.stringify` + `Symbol` behavior from `.toJSON` method to wrapping `JSON.stringify` - little more correct, [compat-table/642](https://github.com/kangax/compat-table/pull/642)
+- Fixed typo which broke tasks scheduler in WebWorkers in old FF, [#114](https://github.com/zloirock/core-js/pull/114)
 
 ##### 1.2.0 - 2015.09.27
-* Added browser [`Promise` rejection hook](#unhandled-rejection-tracking), [#106](https://github.com/zloirock/core-js/issues/106)
-* Added correct [`IsRegExp`](http://www.ecma-international.org/ecma-262/6.0/#sec-isregexp) logic to [`String#{includes, startsWith, endsWith}`](https://github.com/zloirock/core-js/#ecmascript-6-string) and [`RegExp` constructor](https://github.com/zloirock/core-js/#ecmascript-6-regexp), `@@match` case, [example](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match#Disabling_the_isRegExp_check)
-* Updated [`String#leftPad`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) [with proposal](https://github.com/ljharb/proposal-string-pad-left-right/issues/6): string filler truncated from the right side
-* Replaced V8 [`Object.assign`](https://github.com/zloirock/core-js/#ecmascript-6-object) - its properties order not only [incorrect](https://github.com/sindresorhus/object-assign/issues/22), it is non-deterministic and it causes some problems
-* Fixed behavior with deleted in getters properties for `Object.{`[`assign`](https://github.com/zloirock/core-js/#ecmascript-6-object)`, `[`entries, values`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)`}`, [example](http://goo.gl/iQE01c)
-* Fixed [`Math.sinh`](https://github.com/zloirock/core-js/#ecmascript-6-math) with very small numbers in V8 near Chromium 38
-* Some other fixes and optimizations
+
+- Added browser [`Promise` rejection hook](#unhandled-rejection-tracking), [#106](https://github.com/zloirock/core-js/issues/106)
+- Added correct [`IsRegExp`](http://www.ecma-international.org/ecma-262/6.0/#sec-isregexp) logic to [`String#{includes, startsWith, endsWith}`](https://github.com/zloirock/core-js/#ecmascript-6-string) and [`RegExp` constructor](https://github.com/zloirock/core-js/#ecmascript-6-regexp), `@@match` case, [example](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match#Disabling_the_isRegExp_check)
+- Updated [`String#leftPad`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) [with proposal](https://github.com/ljharb/proposal-string-pad-left-right/issues/6): string filler truncated from the right side
+- Replaced V8 [`Object.assign`](https://github.com/zloirock/core-js/#ecmascript-6-object) - its properties order not only [incorrect](https://github.com/sindresorhus/object-assign/issues/22), it is non-deterministic and it causes some problems
+- Fixed behavior with deleted in getters properties for `Object.{`[`assign`](https://github.com/zloirock/core-js/#ecmascript-6-object)`, `[`entries, values`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)`}`, [example](http://goo.gl/iQE01c)
+- Fixed [`Math.sinh`](https://github.com/zloirock/core-js/#ecmascript-6-math) with very small numbers in V8 near Chromium 38
+- Some other fixes and optimizations
 
 ##### 1.1.4 - 2015.09.05
-* Fixed support symbols in FF34-35 [`Object.assign`](https://github.com/zloirock/core-js/#ecmascript-6-object)
-* Fixed [collections iterators](https://github.com/zloirock/core-js/#ecmascript-6-iterators) in FF25-26
-* Fixed non-generic WebKit [`Array.of`](https://github.com/zloirock/core-js/#ecmascript-6-array)
-* Some other fixes and optimizations
+
+- Fixed support symbols in FF34-35 [`Object.assign`](https://github.com/zloirock/core-js/#ecmascript-6-object)
+- Fixed [collections iterators](https://github.com/zloirock/core-js/#ecmascript-6-iterators) in FF25-26
+- Fixed non-generic WebKit [`Array.of`](https://github.com/zloirock/core-js/#ecmascript-6-array)
+- Some other fixes and optimizations
 
 ##### 1.1.3 - 2015.08.29
-* Fixed support Node.js domains in [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise), [#103](https://github.com/zloirock/core-js/issues/103)
+
+- Fixed support Node.js domains in [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise), [#103](https://github.com/zloirock/core-js/issues/103)
 
 ##### 1.1.2 - 2015.08.28
-* Added `toJSON` method to [`Symbol`](https://github.com/zloirock/core-js/#ecmascript-6-symbol) polyfill and to MS Edge implementation for expected `JSON.stringify` result w/o patching this method
-* Replaced [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) implementations w/o correct support third argument
-* Fixed `global` detection with changed `document.domain` in ~IE8, [#100](https://github.com/zloirock/core-js/issues/100)
+
+- Added `toJSON` method to [`Symbol`](https://github.com/zloirock/core-js/#ecmascript-6-symbol) polyfill and to MS Edge implementation for expected `JSON.stringify` result w/o patching this method
+- Replaced [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) implementations w/o correct support third argument
+- Fixed `global` detection with changed `document.domain` in ~IE8, [#100](https://github.com/zloirock/core-js/issues/100)
 
 ##### 1.1.1 - 2015.08.20
-* Added more correct microtask implementation for [`Promise`](#ecmascript-6-promise)
+
+- Added more correct microtask implementation for [`Promise`](#ecmascript-6-promise)
 
 ##### 1.1.0 - 2015.08.17
-* Updated [string padding](https://github.com/zloirock/core-js/#ecmascript-7-proposals) to [actual proposal](https://github.com/ljharb/proposal-string-pad-left-right) - renamed, minor internal changes:
-  * `String#lpad` -> `String#padLeft`
-  * `String#rpad` -> `String#padRight`
-* Added [string trim functions](#ecmascript-7-proposals) - [proposal](https://github.com/sebmarkbage/ecmascript-string-left-right-trim), defacto standard - required only for IE11- and fixed for some old engines:
-  * `String#trimLeft`
-  * `String#trimRight`
-* [`String#trim`](https://github.com/zloirock/core-js/#ecmascript-6-string) fixed for some engines by es6 spec and moved from `es5` to single `es6` module
-* Splitted [`es6.object.statics-accept-primitives`](https://github.com/zloirock/core-js/#ecmascript-6-object)
-* Caps for `freeze`-family `Object` methods moved from `es5` to `es6` namespace and joined with [es6 wrappers](https://github.com/zloirock/core-js/#ecmascript-6-object)
-* `es5` [namespace](https://github.com/zloirock/core-js/#commonjs) also includes modules, moved to `es6` namespace - you can use it as before
-* Increased `MessageChannel` priority in `$.task`, [#95](https://github.com/zloirock/core-js/issues/95)
-* Does not get `global.Symbol` on each getting iterator, if you wanna use alternative `Symbol` shim - add it before `core-js`
-* [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) optimized and fixed for some cases
-* Simplified [`Reflect.enumerate`](https://github.com/zloirock/core-js/#ecmascript-6-reflect), see [this question](https://esdiscuss.org/topic/question-about-enumerate-and-property-decision-timing)
-* Some corrections in [`Math.acosh`](https://github.com/zloirock/core-js/#ecmascript-6-math)
-* Fixed [`Math.imul`](https://github.com/zloirock/core-js/#ecmascript-6-math) for old WebKit
-* Some fixes in string / RegExp [well-known symbols](https://github.com/zloirock/core-js/#ecmascript-6-regexp) logic
-* Some other fixes and optimizations
+
+- Updated [string padding](https://github.com/zloirock/core-js/#ecmascript-7-proposals) to [actual proposal](https://github.com/ljharb/proposal-string-pad-left-right) - renamed, minor internal changes:
+  - `String#lpad` -> `String#padLeft`
+  - `String#rpad` -> `String#padRight`
+- Added [string trim functions](#ecmascript-7-proposals) - [proposal](https://github.com/sebmarkbage/ecmascript-string-left-right-trim), defacto standard - required only for IE11- and fixed for some old engines:
+  - `String#trimLeft`
+  - `String#trimRight`
+- [`String#trim`](https://github.com/zloirock/core-js/#ecmascript-6-string) fixed for some engines by es6 spec and moved from `es5` to single `es6` module
+- Splitted [`es6.object.statics-accept-primitives`](https://github.com/zloirock/core-js/#ecmascript-6-object)
+- Caps for `freeze`-family `Object` methods moved from `es5` to `es6` namespace and joined with [es6 wrappers](https://github.com/zloirock/core-js/#ecmascript-6-object)
+- `es5` [namespace](https://github.com/zloirock/core-js/#commonjs) also includes modules, moved to `es6` namespace - you can use it as before
+- Increased `MessageChannel` priority in `$.task`, [#95](https://github.com/zloirock/core-js/issues/95)
+- Does not get `global.Symbol` on each getting iterator, if you wanna use alternative `Symbol` shim - add it before `core-js`
+- [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) optimized and fixed for some cases
+- Simplified [`Reflect.enumerate`](https://github.com/zloirock/core-js/#ecmascript-6-reflect), see [this question](https://esdiscuss.org/topic/question-about-enumerate-and-property-decision-timing)
+- Some corrections in [`Math.acosh`](https://github.com/zloirock/core-js/#ecmascript-6-math)
+- Fixed [`Math.imul`](https://github.com/zloirock/core-js/#ecmascript-6-math) for old WebKit
+- Some fixes in string / RegExp [well-known symbols](https://github.com/zloirock/core-js/#ecmascript-6-regexp) logic
+- Some other fixes and optimizations
 
 ##### 1.0.1 - 2015.07.31
-* Some fixes for final MS Edge, replaced broken native `Reflect.defineProperty`
-* Some minor fixes and optimizations
-* Changed compression `client/*.min.js` options for safe `Function#name` and `Function#length`, should be fixed [#92](https://github.com/zloirock/core-js/issues/92)
+
+- Some fixes for final MS Edge, replaced broken native `Reflect.defineProperty`
+- Some minor fixes and optimizations
+- Changed compression `client/*.min.js` options for safe `Function#name` and `Function#length`, should be fixed [#92](https://github.com/zloirock/core-js/issues/92)
 
 ##### 1.0.0 - 2015.07.22
-* Added logic for [well-known symbols](https://github.com/zloirock/core-js/#ecmascript-6-regexp):
-  * `Symbol.match`
-  * `Symbol.replace`
-  * `Symbol.split`
-  * `Symbol.search`
-* Actualized and optimized work with iterables:
-  * Optimized  [`Map`, `Set`, `WeakMap`, `WeakSet` constructors](https://github.com/zloirock/core-js/#ecmascript-6-collections), [`Promise.all`, `Promise.race`](https://github.com/zloirock/core-js/#ecmascript-6-promise) for default `Array Iterator`
-  * Optimized  [`Array.from`](https://github.com/zloirock/core-js/#ecmascript-6-array) for default `Array Iterator`
-  * Added [`core.getIteratorMethod`](https://github.com/zloirock/core-js/#ecmascript-6-iterators) helper
-* Uses enumerable properties in shimmed instances - collections, iterators, etc for optimize performance
-* Added support native constructors to [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) with 2 arguments
-* Added support native constructors to [`Function#bind`](https://github.com/zloirock/core-js/#ecmascript-5) shim with `new`
-* Removed obsolete `.clear` methods native [`Weak`-collections](https://github.com/zloirock/core-js/#ecmascript-6-collections)
-* Maximum modularity, reduced minimal custom build size, separated into submodules:
-  * [`es6.reflect`](https://github.com/zloirock/core-js/#ecmascript-6-reflect)
-  * [`es6.regexp`](https://github.com/zloirock/core-js/#ecmascript-6-regexp)
-  * [`es6.math`](https://github.com/zloirock/core-js/#ecmascript-6-math)
-  * [`es6.number`](https://github.com/zloirock/core-js/#ecmascript-6-number)
-  * [`es7.object.to-array`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-  * [`core.object`](https://github.com/zloirock/core-js/#object)
-  * [`core.string`](https://github.com/zloirock/core-js/#escaping-strings)
-  * [`core.iter-helpers`](https://github.com/zloirock/core-js/#ecmascript-6-iterators)
-  * Internal modules (`$`, `$.iter`, etc)
-* Many other optimizations
-* Final cleaning non-standard features
-  * Moved `$for` to [separate library](https://github.com/zloirock/forof). This work for syntax - `for-of` loop and comprehensions
-  * Moved `Date#{format, formatUTC}` to [separate library](https://github.com/zloirock/dtf). Standard way for this - `ECMA-402`
-  * Removed `Math` methods from `Number.prototype`. Slight sugar for simple `Math` methods calling
-  * Removed `{Array#, Array, Dict}.turn`
-  * Removed `core.global`
-* Uses `ToNumber` instead of `ToLength` in [`Number Iterator`](https://github.com/zloirock/core-js/#number-iterator), `Array.from(2.5)` will be `[0, 1, 2]` instead of `[0, 1]`
-* Fixed [#85](https://github.com/zloirock/core-js/issues/85) - invalid `Promise` unhandled rejection message in nested `setTimeout`
-* Fixed [#86](https://github.com/zloirock/core-js/issues/86) - support FF extensions
-* Fixed [#89](https://github.com/zloirock/core-js/issues/89) - behavior `Number` constructor in strange case
+
+- Added logic for [well-known symbols](https://github.com/zloirock/core-js/#ecmascript-6-regexp):
+  - `Symbol.match`
+  - `Symbol.replace`
+  - `Symbol.split`
+  - `Symbol.search`
+- Actualized and optimized work with iterables:
+  - Optimized [`Map`, `Set`, `WeakMap`, `WeakSet` constructors](https://github.com/zloirock/core-js/#ecmascript-6-collections), [`Promise.all`, `Promise.race`](https://github.com/zloirock/core-js/#ecmascript-6-promise) for default `Array Iterator`
+  - Optimized [`Array.from`](https://github.com/zloirock/core-js/#ecmascript-6-array) for default `Array Iterator`
+  - Added [`core.getIteratorMethod`](https://github.com/zloirock/core-js/#ecmascript-6-iterators) helper
+- Uses enumerable properties in shimmed instances - collections, iterators, etc for optimize performance
+- Added support native constructors to [`Reflect.construct`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) with 2 arguments
+- Added support native constructors to [`Function#bind`](https://github.com/zloirock/core-js/#ecmascript-5) shim with `new`
+- Removed obsolete `.clear` methods native [`Weak`-collections](https://github.com/zloirock/core-js/#ecmascript-6-collections)
+- Maximum modularity, reduced minimal custom build size, separated into submodules:
+  - [`es6.reflect`](https://github.com/zloirock/core-js/#ecmascript-6-reflect)
+  - [`es6.regexp`](https://github.com/zloirock/core-js/#ecmascript-6-regexp)
+  - [`es6.math`](https://github.com/zloirock/core-js/#ecmascript-6-math)
+  - [`es6.number`](https://github.com/zloirock/core-js/#ecmascript-6-number)
+  - [`es7.object.to-array`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+  - [`core.object`](https://github.com/zloirock/core-js/#object)
+  - [`core.string`](https://github.com/zloirock/core-js/#escaping-strings)
+  - [`core.iter-helpers`](https://github.com/zloirock/core-js/#ecmascript-6-iterators)
+  - Internal modules (`$`, `$.iter`, etc)
+- Many other optimizations
+- Final cleaning non-standard features
+  - Moved `$for` to [separate library](https://github.com/zloirock/forof). This work for syntax - `for-of` loop and comprehensions
+  - Moved `Date#{format, formatUTC}` to [separate library](https://github.com/zloirock/dtf). Standard way for this - `ECMA-402`
+  - Removed `Math` methods from `Number.prototype`. Slight sugar for simple `Math` methods calling
+  - Removed `{Array#, Array, Dict}.turn`
+  - Removed `core.global`
+- Uses `ToNumber` instead of `ToLength` in [`Number Iterator`](https://github.com/zloirock/core-js/#number-iterator), `Array.from(2.5)` will be `[0, 1, 2]` instead of `[0, 1]`
+- Fixed [#85](https://github.com/zloirock/core-js/issues/85) - invalid `Promise` unhandled rejection message in nested `setTimeout`
+- Fixed [#86](https://github.com/zloirock/core-js/issues/86) - support FF extensions
+- Fixed [#89](https://github.com/zloirock/core-js/issues/89) - behavior `Number` constructor in strange case
 
 ##### 0.9.18 - 2015.06.17
-* Removed `/` from [`RegExp.escape`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) escaped characters
+
+- Removed `/` from [`RegExp.escape`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) escaped characters
 
 ##### 0.9.17 - 2015.06.14
-* Updated [`RegExp.escape`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) to the [latest proposal](https://github.com/benjamingr/RexExp.escape)
-* Fixed conflict with webpack dev server + IE buggy behavior
+
+- Updated [`RegExp.escape`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) to the [latest proposal](https://github.com/benjamingr/RexExp.escape)
+- Fixed conflict with webpack dev server + IE buggy behavior
 
 ##### 0.9.16 - 2015.06.11
-* More correct order resolving thenable in [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) polyfill
-* Uses polyfill instead of [buggy V8 `Promise`](https://github.com/zloirock/core-js/issues/78)
+
+- More correct order resolving thenable in [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) polyfill
+- Uses polyfill instead of [buggy V8 `Promise`](https://github.com/zloirock/core-js/issues/78)
 
 ##### 0.9.15 - 2015.06.09
-* [Collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) from `library` version return wrapped native instances
-* Fixed collections prototype methods in `library` version
-* Optimized [`Math.hypot`](https://github.com/zloirock/core-js/#ecmascript-6-math)
+
+- [Collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) from `library` version return wrapped native instances
+- Fixed collections prototype methods in `library` version
+- Optimized [`Math.hypot`](https://github.com/zloirock/core-js/#ecmascript-6-math)
 
 ##### 0.9.14 - 2015.06.04
-* Updated [`Promise.resolve` behavior](https://esdiscuss.org/topic/fixing-promise-resolve)
-* Added fallback for IE11 buggy `Object.getOwnPropertyNames` + iframe
-* Some other fixes
+
+- Updated [`Promise.resolve` behavior](https://esdiscuss.org/topic/fixing-promise-resolve)
+- Added fallback for IE11 buggy `Object.getOwnPropertyNames` + iframe
+- Some other fixes
 
 ##### 0.9.13 - 2015.05.25
-* Added fallback for [`Symbol` polyfill](https://github.com/zloirock/core-js/#ecmascript-6-symbol) for old Android
-* Some other fixes
+
+- Added fallback for [`Symbol` polyfill](https://github.com/zloirock/core-js/#ecmascript-6-symbol) for old Android
+- Some other fixes
 
 ##### 0.9.12 - 2015.05.24
-* Different instances `core-js` should use / recognize the same symbols
-* Some fixes
+
+- Different instances `core-js` should use / recognize the same symbols
+- Some fixes
 
 ##### 0.9.11 - 2015.05.18
-* Simplified [custom build](https://github.com/zloirock/core-js/#custom-build)
-  * Added custom build js api
-  * Added `grunt-cli` to `devDependencies` for `npm run grunt`
-* Some fixes
+
+- Simplified [custom build](https://github.com/zloirock/core-js/#custom-build)
+  - Added custom build js api
+  - Added `grunt-cli` to `devDependencies` for `npm run grunt`
+- Some fixes
 
 ##### 0.9.10 - 2015.05.16
-* Wrapped `Function#toString` for correct work wrapped methods / constructors with methods similar to the [`lodash` `isNative`](https://github.com/lodash/lodash/issues/1197)
-* Added proto versions of methods to export object in `default` version for consistency with `library` version
+
+- Wrapped `Function#toString` for correct work wrapped methods / constructors with methods similar to the [`lodash` `isNative`](https://github.com/lodash/lodash/issues/1197)
+- Added proto versions of methods to export object in `default` version for consistency with `library` version
 
 ##### 0.9.9 - 2015.05.14
-* Wrapped `Object#propertyIsEnumerable` for [`Symbol` polyfill](https://github.com/zloirock/core-js/#ecmascript-6-symbol)
-* [Added proto versions of methods to `library` for ES7 bind syntax](https://github.com/zloirock/core-js/issues/65)
-* Some other fixes
+
+- Wrapped `Object#propertyIsEnumerable` for [`Symbol` polyfill](https://github.com/zloirock/core-js/#ecmascript-6-symbol)
+- [Added proto versions of methods to `library` for ES7 bind syntax](https://github.com/zloirock/core-js/issues/65)
+- Some other fixes
 
 ##### 0.9.8 - 2015.05.12
-* Fixed [`Math.hypot`](https://github.com/zloirock/core-js/#ecmascript-6-math) with negative arguments
-* Added `Object#toString.toString` as fallback for [`lodash` `isNative`](https://github.com/lodash/lodash/issues/1197)
+
+- Fixed [`Math.hypot`](https://github.com/zloirock/core-js/#ecmascript-6-math) with negative arguments
+- Added `Object#toString.toString` as fallback for [`lodash` `isNative`](https://github.com/lodash/lodash/issues/1197)
 
 ##### 0.9.7 - 2015.05.07
-* Added [support DOM collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice#Streamlining_cross-browser_behavior) to IE8- `Array#slice`
+
+- Added [support DOM collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice#Streamlining_cross-browser_behavior) to IE8- `Array#slice`
 
 ##### 0.9.6 - 2015.05.01
-* Added [`String#lpad`, `String#rpad`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+
+- Added [`String#lpad`, `String#rpad`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
 
 ##### 0.9.5 - 2015.04.30
-* Added cap for `Function#@@hasInstance`
-* Some fixes and optimizations
+
+- Added cap for `Function#@@hasInstance`
+- Some fixes and optimizations
 
 ##### 0.9.4 - 2015.04.27
-* Fixed `RegExp` constructor
+
+- Fixed `RegExp` constructor
 
 ##### 0.9.3 - 2015.04.26
-* Some fixes and optimizations
+
+- Some fixes and optimizations
 
 ##### 0.9.2 - 2015.04.25
-* More correct [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) unhandled rejection tracking and resolving / rejection priority
+
+- More correct [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) unhandled rejection tracking and resolving / rejection priority
 
 ##### 0.9.1 - 2015.04.25
-* Fixed `__proto__`-based [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) subclassing in some environments
+
+- Fixed `__proto__`-based [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) subclassing in some environments
 
 ##### 0.9.0 - 2015.04.24
-* Added correct [symbols](https://github.com/zloirock/core-js/#ecmascript-6-symbol) descriptors
-  * Fixed behavior `Object.{assign, create, defineProperty, defineProperties, getOwnPropertyDescriptor, getOwnPropertyDescriptors}` with symbols
-  * Added [single entry points](https://github.com/zloirock/core-js/#commonjs) for `Object.{create, defineProperty, defineProperties}`
-* Added [`Map#toJSON`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-* Removed non-standard methods `Object#[_]` and `Function#only` - they solves syntax problems, but now in compilers available arrows and ~~in near future will be available~~ [available](http://babeljs.io/blog/2015/05/14/function-bind/) [bind syntax](https://github.com/zenparsing/es-function-bind)
-* Removed non-standard undocumented methods `Symbol.{pure, set}`
-* Some fixes and internal changes
+
+- Added correct [symbols](https://github.com/zloirock/core-js/#ecmascript-6-symbol) descriptors
+  - Fixed behavior `Object.{assign, create, defineProperty, defineProperties, getOwnPropertyDescriptor, getOwnPropertyDescriptors}` with symbols
+  - Added [single entry points](https://github.com/zloirock/core-js/#commonjs) for `Object.{create, defineProperty, defineProperties}`
+- Added [`Map#toJSON`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+- Removed non-standard methods `Object#[_]` and `Function#only` - they solves syntax problems, but now in compilers available arrows and ~~in near future will be available~~ [available](http://babeljs.io/blog/2015/05/14/function-bind/) [bind syntax](https://github.com/zenparsing/es-function-bind)
+- Removed non-standard undocumented methods `Symbol.{pure, set}`
+- Some fixes and internal changes
 
 ##### 0.8.4 - 2015.04.18
-* Uses `webpack` instead of `browserify` for browser builds - more compression-friendly result
+
+- Uses `webpack` instead of `browserify` for browser builds - more compression-friendly result
 
 ##### 0.8.3 - 2015.04.14
-* Fixed `Array` statics with single entry points
+
+- Fixed `Array` statics with single entry points
 
 ##### 0.8.2 - 2015.04.13
-* [`Math.fround`](https://github.com/zloirock/core-js/#ecmascript-6-math) now also works in IE9-
-* Added [`Set#toJSON`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-* Some optimizations and fixes
+
+- [`Math.fround`](https://github.com/zloirock/core-js/#ecmascript-6-math) now also works in IE9-
+- Added [`Set#toJSON`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+- Some optimizations and fixes
 
 ##### 0.8.1 - 2015.04.03
-* Fixed `Symbol.keyFor`
+
+- Fixed `Symbol.keyFor`
 
 ##### 0.8.0 - 2015.04.02
-* Changed [CommonJS API](https://github.com/zloirock/core-js/#commonjs)
-* Splitted and renamed some modules
-* Added support ES3 environment (ES5 polyfill) to **all** default versions - size increases slightly (+ ~4kb w/o gzip), many issues disappear, if you don't need it - [simply include only required namespaces / features / modules](https://github.com/zloirock/core-js/#commonjs)
-* Removed [abstract references](https://github.com/zenparsing/es-abstract-refs) support - proposal has been superseded =\
-* [`$for.isIterable` -> `core.isIterable`, `$for.getIterator` -> `core.getIterator`](https://github.com/zloirock/core-js/#ecmascript-6-iterators), temporary available in old namespace
-* Fixed iterators support in v8 `Promise.all` and `Promise.race`
-* Many other fixes
+
+- Changed [CommonJS API](https://github.com/zloirock/core-js/#commonjs)
+- Splitted and renamed some modules
+- Added support ES3 environment (ES5 polyfill) to **all** default versions - size increases slightly (+ ~4kb w/o gzip), many issues disappear, if you don't need it - [simply include only required namespaces / features / modules](https://github.com/zloirock/core-js/#commonjs)
+- Removed [abstract references](https://github.com/zenparsing/es-abstract-refs) support - proposal has been superseded =\
+- [`$for.isIterable` -> `core.isIterable`, `$for.getIterator` -> `core.getIterator`](https://github.com/zloirock/core-js/#ecmascript-6-iterators), temporary available in old namespace
+- Fixed iterators support in v8 `Promise.all` and `Promise.race`
+- Many other fixes
 
 ##### 0.7.2 - 2015.03.09
-* Some fixes
+
+- Some fixes
 
 ##### 0.7.1 - 2015.03.07
-* Some fixes
+
+- Some fixes
 
 ##### 0.7.0 - 2015.03.06
-* Rewritten and splitted into [CommonJS modules](https://github.com/zloirock/core-js/#commonjs)
+
+- Rewritten and splitted into [CommonJS modules](https://github.com/zloirock/core-js/#commonjs)
 
 ##### 0.6.1 - 2015.02.24
-* Fixed support [`Object.defineProperty`](https://github.com/zloirock/core-js/#ecmascript-5) with accessors on DOM elements on IE8
+
+- Fixed support [`Object.defineProperty`](https://github.com/zloirock/core-js/#ecmascript-5) with accessors on DOM elements on IE8
 
 ##### 0.6.0 - 2015.02.23
-* Added support safe closing iteration - calling `iterator.return` on abort iteration, if it exists
-* Added basic support [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) unhandled rejection tracking in shim
-* Added [`Object.getOwnPropertyDescriptors`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-* Removed `console` cap - creates too many problems
-* Restructuring [namespaces](https://github.com/zloirock/core-js/#custom-build)
-* Some fixes
+
+- Added support safe closing iteration - calling `iterator.return` on abort iteration, if it exists
+- Added basic support [`Promise`](https://github.com/zloirock/core-js/#ecmascript-6-promise) unhandled rejection tracking in shim
+- Added [`Object.getOwnPropertyDescriptors`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+- Removed `console` cap - creates too many problems
+- Restructuring [namespaces](https://github.com/zloirock/core-js/#custom-build)
+- Some fixes
 
 ##### 0.5.4 - 2015.02.15
-* Some fixes
+
+- Some fixes
 
 ##### 0.5.3 - 2015.02.14
-* Added [support binary and octal literals](https://github.com/zloirock/core-js/#ecmascript-6-number) to `Number` constructor
-* Added [`Date#toISOString`](https://github.com/zloirock/core-js/#ecmascript-5)
+
+- Added [support binary and octal literals](https://github.com/zloirock/core-js/#ecmascript-6-number) to `Number` constructor
+- Added [`Date#toISOString`](https://github.com/zloirock/core-js/#ecmascript-5)
 
 ##### 0.5.2 - 2015.02.10
-* Some fixes
+
+- Some fixes
 
 ##### 0.5.1 - 2015.02.09
-* Some fixes
+
+- Some fixes
 
 ##### 0.5.0 - 2015.02.08
-* Systematization of modules
-* Splitted [`es6` module](https://github.com/zloirock/core-js/#ecmascript-6)
-* Splitted `console` module: `web.console` - only cap for missing methods, `core.log` - bound methods & additional features
-* Added [`delay` method](https://github.com/zloirock/core-js/#delay)
-* Some fixes
+
+- Systematization of modules
+- Splitted [`es6` module](https://github.com/zloirock/core-js/#ecmascript-6)
+- Splitted `console` module: `web.console` - only cap for missing methods, `core.log` - bound methods & additional features
+- Added [`delay` method](https://github.com/zloirock/core-js/#delay)
+- Some fixes
 
 ##### 0.4.10 - 2015.01.28
-* [`Object.getOwnPropertySymbols`](https://github.com/zloirock/core-js/#ecmascript-6-symbol) polyfill returns array of wrapped keys
+
+- [`Object.getOwnPropertySymbols`](https://github.com/zloirock/core-js/#ecmascript-6-symbol) polyfill returns array of wrapped keys
 
 ##### 0.4.9 - 2015.01.27
-* FF20-24 fix
+
+- FF20-24 fix
 
 ##### 0.4.8 - 2015.01.25
-* Some [collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) fixes
+
+- Some [collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) fixes
 
 ##### 0.4.7 - 2015.01.25
-* Added support frozen objects as [collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) keys
+
+- Added support frozen objects as [collections](https://github.com/zloirock/core-js/#ecmascript-6-collections) keys
 
 ##### 0.4.6 - 2015.01.21
-* Added [`Object.getOwnPropertySymbols`](https://github.com/zloirock/core-js/#ecmascript-6-symbol)
-* Added [`NodeList.prototype[@@iterator]`](https://github.com/zloirock/core-js/#ecmascript-6-iterators)
-* Added basic `@@species` logic - getter in native constructors
-* Removed `Function#by`
-* Some fixes
+
+- Added [`Object.getOwnPropertySymbols`](https://github.com/zloirock/core-js/#ecmascript-6-symbol)
+- Added [`NodeList.prototype[@@iterator]`](https://github.com/zloirock/core-js/#ecmascript-6-iterators)
+- Added basic `@@species` logic - getter in native constructors
+- Removed `Function#by`
+- Some fixes
 
 ##### 0.4.5 - 2015.01.16
-* Some fixes
+
+- Some fixes
 
 ##### 0.4.4 - 2015.01.11
-* Enabled CSP support
+
+- Enabled CSP support
 
 ##### 0.4.3 - 2015.01.10
-* Added `Function` instances `name` property for IE9+
+
+- Added `Function` instances `name` property for IE9+
 
 ##### 0.4.2 - 2015.01.10
-* `Object` static methods accept primitives
-* `RegExp` constructor can alter flags (IE9+)
-* Added `Array.prototype[Symbol.unscopables]`
+
+- `Object` static methods accept primitives
+- `RegExp` constructor can alter flags (IE9+)
+- Added `Array.prototype[Symbol.unscopables]`
 
 ##### 0.4.1 - 2015.01.05
-* Some fixes
+
+- Some fixes
 
 ##### 0.4.0 - 2015.01.03
-* Added [`es6.reflect`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) module:
-  * Added `Reflect.apply`
-  * Added `Reflect.construct`
-  * Added `Reflect.defineProperty`
-  * Added `Reflect.deleteProperty`
-  * Added `Reflect.enumerate`
-  * Added `Reflect.get`
-  * Added `Reflect.getOwnPropertyDescriptor`
-  * Added `Reflect.getPrototypeOf`
-  * Added `Reflect.has`
-  * Added `Reflect.isExtensible`
-  * Added `Reflect.preventExtensions`
-  * Added `Reflect.set`
-  * Added `Reflect.setPrototypeOf`
-* `core-js` methods now can use external `Symbol.iterator` polyfill
-* Some fixes
+
+- Added [`es6.reflect`](https://github.com/zloirock/core-js/#ecmascript-6-reflect) module:
+  - Added `Reflect.apply`
+  - Added `Reflect.construct`
+  - Added `Reflect.defineProperty`
+  - Added `Reflect.deleteProperty`
+  - Added `Reflect.enumerate`
+  - Added `Reflect.get`
+  - Added `Reflect.getOwnPropertyDescriptor`
+  - Added `Reflect.getPrototypeOf`
+  - Added `Reflect.has`
+  - Added `Reflect.isExtensible`
+  - Added `Reflect.preventExtensions`
+  - Added `Reflect.set`
+  - Added `Reflect.setPrototypeOf`
+- `core-js` methods now can use external `Symbol.iterator` polyfill
+- Some fixes
 
 ##### 0.3.3 - 2014.12.28
-* [Console cap](https://github.com/zloirock/core-js/#console) excluded from node.js default builds
+
+- [Console cap](https://github.com/zloirock/core-js/#console) excluded from node.js default builds
 
 ##### 0.3.2 - 2014.12.25
-* Added cap for [ES5](https://github.com/zloirock/core-js/#ecmascript-5) freeze-family methods
-* Fixed `console` bug
+
+- Added cap for [ES5](https://github.com/zloirock/core-js/#ecmascript-5) freeze-family methods
+- Fixed `console` bug
 
 ##### 0.3.1 - 2014.12.23
-* Some fixes
+
+- Some fixes
 
 ##### 0.3.0 - 2014.12.23
-* Optimize [`Map` & `Set`](https://github.com/zloirock/core-js/#ecmascript-6-collections):
-  * Use entries chain on hash table
-  * Fast & correct iteration
-  * Iterators moved to [`es6`](https://github.com/zloirock/core-js/#ecmascript-6) and [`es6.collections`](https://github.com/zloirock/core-js/#ecmascript-6-collections) modules
+
+- Optimize [`Map` & `Set`](https://github.com/zloirock/core-js/#ecmascript-6-collections):
+  - Use entries chain on hash table
+  - Fast & correct iteration
+  - Iterators moved to [`es6`](https://github.com/zloirock/core-js/#ecmascript-6) and [`es6.collections`](https://github.com/zloirock/core-js/#ecmascript-6-collections) modules
 
 ##### 0.2.5 - 2014.12.20
-* `console` no longer shortcut for `console.log` (compatibility problems)
-* Some fixes
+
+- `console` no longer shortcut for `console.log` (compatibility problems)
+- Some fixes
 
 ##### 0.2.4 - 2014.12.17
-* Better compliance of ES6
-* Added [`Math.fround`](https://github.com/zloirock/core-js/#ecmascript-6-math) (IE10+)
-* Some fixes
+
+- Better compliance of ES6
+- Added [`Math.fround`](https://github.com/zloirock/core-js/#ecmascript-6-math) (IE10+)
+- Some fixes
 
 ##### 0.2.3 - 2014.12.15
-* [Symbols](https://github.com/zloirock/core-js/#ecmascript-6-symbol):
-  * Added option to disable addition setter to `Object.prototype` for Symbol polyfill:
-    * Added `Symbol.useSimple`
-    * Added `Symbol.useSetter`
-  * Added cap for well-known Symbols:
-    * Added `Symbol.hasInstance`
-    * Added `Symbol.isConcatSpreadable`
-    * Added `Symbol.match`
-    * Added `Symbol.replace`
-    * Added `Symbol.search`
-    * Added `Symbol.species`
-    * Added `Symbol.split`
-    * Added `Symbol.toPrimitive`
-    * Added `Symbol.unscopables`
+
+- [Symbols](https://github.com/zloirock/core-js/#ecmascript-6-symbol):
+  - Added option to disable addition setter to `Object.prototype` for Symbol polyfill:
+    - Added `Symbol.useSimple`
+    - Added `Symbol.useSetter`
+  - Added cap for well-known Symbols:
+    - Added `Symbol.hasInstance`
+    - Added `Symbol.isConcatSpreadable`
+    - Added `Symbol.match`
+    - Added `Symbol.replace`
+    - Added `Symbol.search`
+    - Added `Symbol.species`
+    - Added `Symbol.split`
+    - Added `Symbol.toPrimitive`
+    - Added `Symbol.unscopables`
 
 ##### 0.2.2 - 2014.12.13
-* Added [`RegExp#flags`](https://github.com/zloirock/core-js/#ecmascript-6-regexp) ([December 2014 Draft Rev 29](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#december_6_2014_draft_rev_29))
-* Added [`String.raw`](https://github.com/zloirock/core-js/#ecmascript-6-string)
+
+- Added [`RegExp#flags`](https://github.com/zloirock/core-js/#ecmascript-6-regexp) ([December 2014 Draft Rev 29](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#december_6_2014_draft_rev_29))
+- Added [`String.raw`](https://github.com/zloirock/core-js/#ecmascript-6-string)
 
 ##### 0.2.1 - 2014.12.12
-* Repair converting -0 to +0 in [native collections](https://github.com/zloirock/core-js/#ecmascript-6-collections)
+
+- Repair converting -0 to +0 in [native collections](https://github.com/zloirock/core-js/#ecmascript-6-collections)
 
 ##### 0.2.0 - 2014.12.06
-* Added [`es7.proposals`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) and [`es7.abstract-refs`](https://github.com/zenparsing/es-abstract-refs) modules
-* Added [`String#at`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-* Added real [`String Iterator`](https://github.com/zloirock/core-js/#ecmascript-6-iterators), older versions used Array Iterator
-* Added abstract references support:
-  * Added `Symbol.referenceGet`
-  * Added `Symbol.referenceSet`
-  * Added `Symbol.referenceDelete`
-  * Added `Function#@@referenceGet`
-  * Added `Map#@@referenceGet`
-  * Added `Map#@@referenceSet`
-  * Added `Map#@@referenceDelete`
-  * Added `WeakMap#@@referenceGet`
-  * Added `WeakMap#@@referenceSet`
-  * Added `WeakMap#@@referenceDelete`
-  * Added `Dict.{...methods}[@@referenceGet]`
-* Removed deprecated `.contains` methods
-* Some fixes
+
+- Added [`es7.proposals`](https://github.com/zloirock/core-js/#ecmascript-7-proposals) and [`es7.abstract-refs`](https://github.com/zenparsing/es-abstract-refs) modules
+- Added [`String#at`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+- Added real [`String Iterator`](https://github.com/zloirock/core-js/#ecmascript-6-iterators), older versions used Array Iterator
+- Added abstract references support:
+  - Added `Symbol.referenceGet`
+  - Added `Symbol.referenceSet`
+  - Added `Symbol.referenceDelete`
+  - Added `Function#@@referenceGet`
+  - Added `Map#@@referenceGet`
+  - Added `Map#@@referenceSet`
+  - Added `Map#@@referenceDelete`
+  - Added `WeakMap#@@referenceGet`
+  - Added `WeakMap#@@referenceSet`
+  - Added `WeakMap#@@referenceDelete`
+  - Added `Dict.{...methods}[@@referenceGet]`
+- Removed deprecated `.contains` methods
+- Some fixes
 
 ##### 0.1.5 - 2014.12.01
-* Added [`Array#copyWithin`](https://github.com/zloirock/core-js/#ecmascript-6-array)
-* Added [`String#codePointAt`](https://github.com/zloirock/core-js/#ecmascript-6-string)
-* Added [`String.fromCodePoint`](https://github.com/zloirock/core-js/#ecmascript-6-string)
+
+- Added [`Array#copyWithin`](https://github.com/zloirock/core-js/#ecmascript-6-array)
+- Added [`String#codePointAt`](https://github.com/zloirock/core-js/#ecmascript-6-string)
+- Added [`String.fromCodePoint`](https://github.com/zloirock/core-js/#ecmascript-6-string)
 
 ##### 0.1.4 - 2014.11.27
-* Added [`Dict.mapPairs`](https://github.com/zloirock/core-js/#dict)
+
+- Added [`Dict.mapPairs`](https://github.com/zloirock/core-js/#dict)
 
 ##### 0.1.3 - 2014.11.20
-* [TC39 November meeting](https://github.com/rwaldron/tc39-notes/tree/master/es6/2014-11):
-  * [`.contains` -> `.includes`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-18.md#51--44-arrayprototypecontains-and-stringprototypecontains)
-    * `String#contains` -> [`String#includes`](https://github.com/zloirock/core-js/#ecmascript-6-string)
-    * `Array#contains` -> [`Array#includes`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
-    * `Dict.contains` -> [`Dict.includes`](https://github.com/zloirock/core-js/#dict)
-  * [Removed `WeakMap#clear`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-19.md#412-should-weakmapweakset-have-a-clear-method-markm)
-  * [Removed `WeakSet#clear`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-19.md#412-should-weakmapweakset-have-a-clear-method-markm)
+
+- [TC39 November meeting](https://github.com/rwaldron/tc39-notes/tree/master/es6/2014-11):
+  - [`.contains` -> `.includes`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-18.md#51--44-arrayprototypecontains-and-stringprototypecontains)
+    - `String#contains` -> [`String#includes`](https://github.com/zloirock/core-js/#ecmascript-6-string)
+    - `Array#contains` -> [`Array#includes`](https://github.com/zloirock/core-js/#ecmascript-7-proposals)
+    - `Dict.contains` -> [`Dict.includes`](https://github.com/zloirock/core-js/#dict)
+  - [Removed `WeakMap#clear`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-19.md#412-should-weakmapweakset-have-a-clear-method-markm)
+  - [Removed `WeakSet#clear`](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-19.md#412-should-weakmapweakset-have-a-clear-method-markm)
 
 ##### 0.1.2 - 2014.11.19
-* `Map` & `Set` bug fix
+
+- `Map` & `Set` bug fix
 
 ##### 0.1.1 - 2014.11.18
-* Public release
 
-
-
+- Public release
 
 ### [fixtures/node_modules/core-js/README.md](fixtures/node_modules/core-js/README.md)
 
 # core-js
 
 [![Sponsors on Open Collective](https://opencollective.com/core-js/sponsors/badge.svg)](#raising-funds) [![Backers on Open Collective](https://opencollective.com/core-js/backers/badge.svg)](#raising-funds) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zloirock/core-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![version](https://img.shields.io/npm/v/core-js.svg)](https://www.npmjs.com/package/core-js) [![npm downloads](https://img.shields.io/npm/dm/core-js.svg)](http://npm-stat.com/charts.html?package=core-js&author=&from=2014-11-18) [![Build Status](https://travis-ci.org/zloirock/core-js.svg)](https://travis-ci.org/zloirock/core-js) [![devDependency status](https://david-dm.org/zloirock/core-js/dev-status.svg)](https://david-dm.org/zloirock/core-js?type=dev)
+
 ## As advertising: the author is looking for a good job :)
 
 ## [core-js@3, babel and a look into the future](https://github.com/zloirock/core-js/tree/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md)
@@ -1647,24 +1678,27 @@ Whether to pad a space after a token (`boolean`, default: `false`).
 
 Modular standard library for JavaScript. Includes polyfills for [ECMAScript 5](#ecmascript-5), [ECMAScript 6](#ecmascript-6): [promises](#ecmascript-6-promise), [symbols](#ecmascript-6-symbol), [collections](#ecmascript-6-collections), iterators, [typed arrays](#ecmascript-6-typed-arrays), [ECMAScript 7+ proposals](#ecmascript-7-proposals), [setImmediate](#setimmediate), etc. Some additional features such as [dictionaries](#dict) or [extended partial application](#partial-application). You can require only needed features or use it without global namespace pollution.
 
-[*Example*](http://goo.gl/a2xexl):
+[_Example_](http://goo.gl/a2xexl):
+
 ```js
-Array.from(new Set([1, 2, 3, 2, 1]));          // => [1, 2, 3]
-'*'.repeat(10);                                // => '**********'
-Promise.resolve(32).then(x => console.log(x)); // => 32
-setImmediate(x => console.log(x), 42);         // => 42
+Array.from(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
+"*".repeat(10); // => '**********'
+Promise.resolve(32).then((x) => console.log(x)); // => 32
+setImmediate((x) => console.log(x), 42); // => 42
 ```
 
-[*Without global namespace pollution*](http://goo.gl/paOHb0):
+[_Without global namespace pollution_](http://goo.gl/paOHb0):
+
 ```js
-var core = require('core-js/library'); // With a modular system, otherwise use global `core`
-core.Array.from(new core.Set([1, 2, 3, 2, 1]));     // => [1, 2, 3]
-core.String.repeat('*', 10);                        // => '**********'
-core.Promise.resolve(32).then(x => console.log(x)); // => 32
-core.setImmediate(x => console.log(x), 42);         // => 42
+var core = require("core-js/library"); // With a modular system, otherwise use global `core`
+core.Array.from(new core.Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
+core.String.repeat("*", 10); // => '**********'
+core.Promise.resolve(32).then((x) => console.log(x)); // => 32
+core.setImmediate((x) => console.log(x), 42); // => 42
 ```
 
 ### Index
+
 - [Usage](#usage)
   - [Basic](#basic)
   - [CommonJS](#commonjs)
@@ -1709,7 +1743,9 @@ core.setImmediate(x => console.log(x), 42);         // => 42
 - [Changelog](./CHANGELOG.md)
 
 ## Usage
+
 ### Basic
+
 ```
 npm i core-js
 bower install core.js
@@ -1717,66 +1753,78 @@ bower install core.js
 
 ```js
 // Default
-require('core-js');
+require("core-js");
 // Without global namespace pollution
-var core = require('core-js/library');
+var core = require("core-js/library");
 // Shim only
-require('core-js/shim');
+require("core-js/shim");
 ```
-If you need complete build for browser, use builds from `core-js/client` path:  
 
-* [default](https://raw.githack.com/zloirock/core-js/v2.6.11/client/core.min.js): Includes all features, standard and non-standard.
-* [as a library](https://raw.githack.com/zloirock/core-js/v2.6.11/client/library.min.js): Like "default", but does not pollute the global namespace (see [2nd example at the top](#core-js)).
-* [shim only](https://raw.githack.com/zloirock/core-js/v2.6.11/client/shim.min.js): Only includes the standard methods.
+If you need complete build for browser, use builds from `core-js/client` path:
+
+- [default](https://raw.githack.com/zloirock/core-js/v2.6.11/client/core.min.js): Includes all features, standard and non-standard.
+- [as a library](https://raw.githack.com/zloirock/core-js/v2.6.11/client/library.min.js): Like "default", but does not pollute the global namespace (see [2nd example at the top](#core-js)).
+- [shim only](https://raw.githack.com/zloirock/core-js/v2.6.11/client/shim.min.js): Only includes the standard methods.
 
 Warning: if you use `core-js` with the extension of native objects, require all needed `core-js` modules at the beginning of entry point of your application, otherwise, conflicts may occur.
 
 ### CommonJS
+
 You can require only needed modules.
 
 ```js
-require('core-js/fn/set');
-require('core-js/fn/array/from');
-require('core-js/fn/array/find-index');
+require("core-js/fn/set");
+require("core-js/fn/array/from");
+require("core-js/fn/array/find-index");
 Array.from(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
-[1, 2, NaN, 3, 4].findIndex(isNaN);   // => 2
+[1, 2, NaN, 3, 4].findIndex(isNaN); // => 2
 
 // or, w/o global namespace pollution:
 
-var Set       = require('core-js/library/fn/set');
-var from      = require('core-js/library/fn/array/from');
-var findIndex = require('core-js/library/fn/array/find-index');
-from(new Set([1, 2, 3, 2, 1]));      // => [1, 2, 3]
+var Set = require("core-js/library/fn/set");
+var from = require("core-js/library/fn/array/from");
+var findIndex = require("core-js/library/fn/array/find-index");
+from(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
 findIndex([1, 2, NaN, 3, 4], isNaN); // => 2
 ```
+
 Available entry points for methods / constructors, as above examples, and namespaces: for example, `core-js/es6/array` (`core-js/library/es6/array`) contains all [ES6 `Array` features](#ecmascript-6-array), `core-js/es6` (`core-js/library/es6`) contains all ES6 features.
 
 ##### Caveats when using CommonJS API:
 
-* `modules` path is internal API, does not inject all required dependencies and can be changed in minor or patch releases. Use it only for a custom build and / or if you know what are you doing.
-* `core-js` is extremely modular and uses a lot of very tiny modules, because of that for usage in browsers bundle up `core-js` instead of usage loader for each file, otherwise, you will have hundreds of requests.
+- `modules` path is internal API, does not inject all required dependencies and can be changed in minor or patch releases. Use it only for a custom build and / or if you know what are you doing.
+- `core-js` is extremely modular and uses a lot of very tiny modules, because of that for usage in browsers bundle up `core-js` instead of usage loader for each file, otherwise, you will have hundreds of requests.
 
 #### CommonJS and prototype methods without global namespace pollution
-In the `library` version, we can't pollute prototypes of native constructors. Because of that, prototype methods transformed to static methods like in examples above. `babel` `runtime` transformer also can't transform them. But with transpilers we can use one more trick - [bind operator and virtual methods](https://github.com/zenparsing/es-function-bind). Special for that, available `/virtual/` entry points. Example:
-```js
-import fill from 'core-js/library/fn/array/virtual/fill';
-import findIndex from 'core-js/library/fn/array/virtual/find-index';
 
-Array(10)::fill(0).map((a, b) => b * b)::findIndex(it => it && !(it % 8)); // => 4
+In the `library` version, we can't pollute prototypes of native constructors. Because of that, prototype methods transformed to static methods like in examples above. `babel` `runtime` transformer also can't transform them. But with transpilers we can use one more trick - [bind operator and virtual methods](https://github.com/zenparsing/es-function-bind). Special for that, available `/virtual/` entry points. Example:
+
+```js
+import fill from "core-js/library/fn/array/virtual/fill";
+import findIndex from "core-js/library/fn/array/virtual/find-index";
+
+Array(10)
+  ::fill(0)
+  .map((a, b) => b * b)
+  ::findIndex((it) => it && !(it % 8)); // => 4
 
 // or
 
-import {fill, findIndex} from 'core-js/library/fn/array/virtual';
+import { fill, findIndex } from "core-js/library/fn/array/virtual";
 
-Array(10)::fill(0).map((a, b) => b * b)::findIndex(it => it && !(it % 8)); // => 4
-
+Array(10)
+  ::fill(0)
+  .map((a, b) => b * b)
+  ::findIndex((it) => it && !(it % 8)); // => 4
 ```
 
 ### Custom build (from the command-line)
+
 ```
 npm i core-js && cd node_modules/core-js && npm i
 npm run grunt build:core.dict,es6 -- --blacklist=es6.promise,es6.math --library=on --path=custom uglify
 ```
+
 Where `core.dict` and `es6` are modules (namespaces) names, which will be added to the build, `es6.promise` and `es6.math` are modules (namespaces) names, which will be excluded from the build, `--library=on` is flag for build without global namespace pollution and `custom` is target file name.
 
 Available namespaces: for example, `es6.array` contains [ES6 `Array` features](#ecmascript-6-array), `es6` contains all modules whose names start with `es6`.
@@ -1786,19 +1834,24 @@ Available namespaces: for example, `es6.array` contains [ES6 `Array` features](#
 [`core-js-builder`](https://www.npmjs.com/package/core-js-builder) package exports a function that takes the same parameters as the `build` target from the previous section. This will conditionally include or exclude certain parts of `core-js`:
 
 ```js
-require('core-js-builder')({
-  modules: ['es6', 'core.dict'], // modules / namespaces
-  blacklist: ['es6.reflect'],    // blacklist of modules / namespaces, by default - empty list
-  library: false,                // flag for build without global namespace pollution, by default - false
-  umd: true                      // use UMD wrapper for export `core` object, by default - true
-}).then(code => {
-  // ...
-}).catch(error => {
-  // ...
-});
+require("core-js-builder")({
+  modules: ["es6", "core.dict"], // modules / namespaces
+  blacklist: ["es6.reflect"], // blacklist of modules / namespaces, by default - empty list
+  library: false, // flag for build without global namespace pollution, by default - false
+  umd: true, // use UMD wrapper for export `core` object, by default - true
+})
+  .then((code) => {
+    // ...
+  })
+  .catch((error) => {
+    // ...
+  });
 ```
+
 ## Supported engines
+
 **Tested in:**
+
 - Chrome 26+
 - Firefox 4+
 - Safari 5+
@@ -1813,13 +1866,18 @@ require('core-js-builder')({
 ...and it doesn't mean `core-js` will not work in other engines, they just have not been tested.
 
 ## Features:
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)       <- all features
 core-js(/library)/shim  <- only polyfills
 ```
+
 ### ECMAScript 5
+
 All features moved to the [`es6` namespace](#ecmascript-6), here just a list of features:
+
 ```js
 Object
   .create(proto | null, descriptors?)    -> object
@@ -1866,22 +1924,29 @@ Date
   #toISOString() -> string
   #toJSON()      -> string
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es5
 ```
 
 ### ECMAScript 6
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6
 ```
+
 #### ECMAScript 6: Object
+
 Modules [`es6.object.assign`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.assign.js), [`es6.object.is`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.is.js), [`es6.object.set-prototype-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.set-prototype-of.js) and [`es6.object.to-string`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.to-string.js).
 
 In ES6 most `Object` static methods should work with primitives. Modules [`es6.object.freeze`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.freeze.js), [`es6.object.seal`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.seal.js), [`es6.object.prevent-extensions`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.prevent-extensions.js), [`es6.object.is-frozen`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.is-frozen.js), [`es6.object.is-sealed`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.is-sealed.js), [`es6.object.is-extensible`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.is-extensible.js), [`es6.object.get-own-property-descriptor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.get-own-property-descriptor.js), [`es6.object.get-prototype-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.get-prototype-of.js), [`es6.object.keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.keys.js) and [`es6.object.get-own-property-names`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.get-own-property-names.js).
 
 Just ES5 features: [`es6.object.create`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.create.js), [`es6.object.define-property`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.define-property.js) and [`es6.object.define-properties`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.object.es6.object.define-properties.js).
+
 ```js
 Object
   .assign(target, ...src)                -> target
@@ -1902,7 +1967,9 @@ Object
   .isExtensible(var)                     -> bool
   #toString()                            -> string, ES6 fix: @@toStringTag support
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/object
 core-js(/library)/fn/object/assign
@@ -1923,40 +1990,47 @@ core-js(/library)/fn/object/is-sealed
 core-js(/library)/fn/object/is-extensible
 core-js/fn/object/to-string
 ```
-[*Examples*](http://goo.gl/ywdwPz):
+
+[_Examples_](http://goo.gl/ywdwPz):
+
 ```js
-var foo = {q: 1, w: 2}
-  , bar = {e: 3, r: 4}
-  , baz = {t: 5, y: 6};
+var foo = { q: 1, w: 2 },
+  bar = { e: 3, r: 4 },
+  baz = { t: 5, y: 6 };
 Object.assign(foo, bar, baz); // => foo = {q: 1, w: 2, e: 3, r: 4, t: 5, y: 6}
 
 Object.is(NaN, NaN); // => true
-Object.is(0, -0);    // => false
-Object.is(42, 42);   // => true
-Object.is(42, '42'); // => false
+Object.is(0, -0); // => false
+Object.is(42, 42); // => true
+Object.is(42, "42"); // => false
 
-function Parent(){}
-function Child(){}
+function Parent() {}
+function Child() {}
 Object.setPrototypeOf(Child.prototype, Parent.prototype);
-new Child instanceof Child;  // => true
-new Child instanceof Parent; // => true
+new Child() instanceof Child; // => true
+new Child() instanceof Parent; // => true
 
 var O = {};
-O[Symbol.toStringTag] = 'Foo';
-'' + O; // => '[object Foo]'
+O[Symbol.toStringTag] = "Foo";
+"" + O; // => '[object Foo]'
 
-Object.keys('qwe'); // => ['0', '1', '2']
-Object.getPrototypeOf('qwe') === String.prototype; // => true
+Object.keys("qwe"); // => ['0', '1', '2']
+Object.getPrototypeOf("qwe") === String.prototype; // => true
 ```
+
 #### ECMAScript 6: Function
+
 Modules [`es6.function.name`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.function.name.js), [`es6.function.has-instance`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.function.has-instance.js). Just ES5: [`es6.function.bind`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.function.bind.js).
+
 ```js
 Function
   #bind(object, ...args) -> boundFn(...args)
   #name                  -> string (IE9+)
   #@@hasInstance(var)    -> bool
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js/es6/function
 core-js/fn/function/name
@@ -1964,14 +2038,19 @@ core-js/fn/function/has-instance
 core-js/fn/function/bind
 core-js/fn/function/virtual/bind
 ```
-[*Example*](http://goo.gl/zqu3Wp):
+
+[_Example_](http://goo.gl/zqu3Wp):
+
 ```js
-(function foo(){}).name // => 'foo'
+(function foo() {}.name); // => 'foo'
 
 console.log.bind(console, 42)(43); // => 42 43
 ```
+
 #### ECMAScript 6: Array
+
 Modules [`es6.array.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.from.js), [`es6.array.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.of.js), [`es6.array.copy-within`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.copy-within.js), [`es6.array.fill`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.fill.js), [`es6.array.find`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.find.js), [`es6.array.find-index`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.find-index.js), [`es6.array.iterator`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.iterator.js). ES5 features with fixes: [`es6.array.is-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.is-array.js), [`es6.array.slice`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.slice.js), [`es6.array.join`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.join.js), [`es6.array.index-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.index-of.js), [`es6.array.last-index-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.last-index-of.js), [`es6.array.every`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.every.js), [`es6.array.some`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.some.js), [`es6.array.for-each`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.for-each.js), [`es6.array.map`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.map.js), [`es6.array.filter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.filter.js), [`es6.array.reduce`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.reduce.js), [`es6.array.reduce-right`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.reduce-right.js), [`es6.array.sort`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.array.sort.js).
+
 ```js
 Array
   .from(iterable | array-like, mapFn(val, index)?, that) -> array
@@ -2001,7 +2080,9 @@ Array
 Arguments
   #@@iterator() -> iterator (values, available only in core-js methods)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/array
 core-js(/library)/fn/array/from
@@ -2048,44 +2129,49 @@ core-js(/library)/fn/array/virtual/reduce
 core-js(/library)/fn/array/virtual/reduce-right
 core-js(/library)/fn/array/virtual/sort
 ```
-[*Examples*](http://goo.gl/oaUFUf):
-```js
-Array.from(new Set([1, 2, 3, 2, 1]));      // => [1, 2, 3]
-Array.from({0: 1, 1: 2, 2: 3, length: 3}); // => [1, 2, 3]
-Array.from('123', Number);                 // => [1, 2, 3]
-Array.from('123', function(it){
-  return it * it;
-});                                        // => [1, 4, 9]
 
-Array.of(1);       // => [1]
+[_Examples_](http://goo.gl/oaUFUf):
+
+```js
+Array.from(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
+Array.from({ 0: 1, 1: 2, 2: 3, length: 3 }); // => [1, 2, 3]
+Array.from("123", Number); // => [1, 2, 3]
+Array.from("123", function (it) {
+  return it * it;
+}); // => [1, 4, 9]
+
+Array.of(1); // => [1]
 Array.of(1, 2, 3); // => [1, 2, 3]
 
-var array = ['a', 'b', 'c'];
+var array = ["a", "b", "c"];
 
-for(var val of array)console.log(val);          // => 'a', 'b', 'c'
-for(var val of array.values())console.log(val); // => 'a', 'b', 'c'
-for(var key of array.keys())console.log(key);   // => 0, 1, 2
-for(var [key, val] of array.entries()){
-  console.log(key);                             // => 0, 1, 2
-  console.log(val);                             // => 'a', 'b', 'c'
+for (var val of array) console.log(val); // => 'a', 'b', 'c'
+for (var val of array.values()) console.log(val); // => 'a', 'b', 'c'
+for (var key of array.keys()) console.log(key); // => 0, 1, 2
+for (var [key, val] of array.entries()) {
+  console.log(key); // => 0, 1, 2
+  console.log(val); // => 'a', 'b', 'c'
 }
 
-function isOdd(val){
+function isOdd(val) {
   return val % 2;
 }
-[4, 8, 15, 16, 23, 42].find(isOdd);      // => 15
+[4, 8, 15, 16, 23, 42].find(isOdd); // => 15
 [4, 8, 15, 16, 23, 42].findIndex(isOdd); // => 2
-[4, 8, 15, 16, 23, 42].find(isNaN);      // => undefined
+[4, 8, 15, 16, 23, 42].find(isNaN); // => undefined
 [4, 8, 15, 16, 23, 42].findIndex(isNaN); // => -1
 
 Array(5).fill(42); // => [42, 42, 42, 42, 42]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3); // => [4, 5, 3, 4, 5]
 ```
+
 #### ECMAScript 6: String
+
 Modules [`es6.string.from-code-point`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.from-code-point.js), [`es6.string.raw`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.raw.js), [`es6.string.iterator`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.iterator.js), [`es6.string.code-point-at`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.code-point-at.js), [`es6.string.ends-with`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.ends-with.js), [`es6.string.includes`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.includes.js), [`es6.string.repeat`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.repeat.js), [`es6.string.starts-with`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.starts-with.js) and [`es6.string.trim`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.trim.js).
 
 Annex B HTML methods. Ugly, but it's also the part of the spec. Modules [`es6.string.anchor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.anchor.js), [`es6.string.big`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.big.js), [`es6.string.blink`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.blink.js), [`es6.string.bold`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.bold.js), [`es6.string.fixed`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.fixed.js), [`es6.string.fontcolor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.fontcolor.js), [`es6.string.fontsize`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.fontsize.js), [`es6.string.italics`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.italics.js), [`es6.string.link`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.link.js), [`es6.string.small`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.small.js), [`es6.string.strike`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.strike.js), [`es6.string.sub`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.sub.js) and [`es6.string.sup`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.string.sup.js).
+
 ```js
 String
   .fromCodePoint(...codePoints) -> str
@@ -2111,7 +2197,9 @@ String
   #sup()            -> str
   #@@iterator() -> iterator (code points)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/string
 core-js(/library)/fn/string/from-code-point
@@ -2157,36 +2245,41 @@ core-js(/library)/fn/string/virtual/sub
 core-js(/library)/fn/string/virtual/sup
 core-js(/library)/fn/string/virtual/iterator
 ```
-[*Examples*](http://goo.gl/3UaQ93):
+
+[_Examples_](http://goo.gl/3UaQ93):
+
 ```js
-for(var val of 'a𠮷b'){
+for (var val of "a𠮷b") {
   console.log(val); // => 'a', '𠮷', 'b'
 }
 
-'foobarbaz'.includes('bar');      // => true
-'foobarbaz'.includes('bar', 4);   // => false
-'foobarbaz'.startsWith('foo');    // => true
-'foobarbaz'.startsWith('bar', 3); // => true
-'foobarbaz'.endsWith('baz');      // => true
-'foobarbaz'.endsWith('bar', 6);   // => true
+"foobarbaz".includes("bar"); // => true
+"foobarbaz".includes("bar", 4); // => false
+"foobarbaz".startsWith("foo"); // => true
+"foobarbaz".startsWith("bar", 3); // => true
+"foobarbaz".endsWith("baz"); // => true
+"foobarbaz".endsWith("bar", 6); // => true
 
-'string'.repeat(3); // => 'stringstringstring'
+"string".repeat(3); // => 'stringstringstring'
 
-'𠮷'.codePointAt(0); // => 134071
+"𠮷".codePointAt(0); // => 134071
 String.fromCodePoint(97, 134071, 98); // => 'a𠮷b'
 
-var name = 'Bob';
-String.raw`Hi\n${name}!`;           // => 'Hi\\nBob!' (ES6 template string syntax)
-String.raw({raw: 'test'}, 0, 1, 2); // => 't0e1s2t'
+var name = "Bob";
+String.raw`Hi\n${name}!`; // => 'Hi\\nBob!' (ES6 template string syntax)
+String.raw({ raw: "test" }, 0, 1, 2); // => 't0e1s2t'
 
-'foo'.bold();                     // => '<b>foo</b>'
-'bar'.anchor('a"b');              // => '<a name="a&quot;b">bar</a>'
-'baz'.link('http://example.com'); // => '<a href="http://example.com">baz</a>'
+"foo".bold(); // => '<b>foo</b>'
+"bar".anchor('a"b'); // => '<a name="a&quot;b">bar</a>'
+"baz".link("http://example.com"); // => '<a href="http://example.com">baz</a>'
 ```
+
 #### ECMAScript 6: RegExp
+
 Modules [`es6.regexp.constructor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.constructor.js) and [`es6.regexp.flags`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.flags.js).
 
 Support well-known [symbols](#ecmascript-6-symbol) `@@match`, `@@replace`, `@@search` and `@@split`, modules [`es6.regexp.match`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.match.js), [`es6.regexp.replace`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.replace.js), [`es6.regexp.search`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.search.js) and [`es6.regexp.split`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.regexp.split.js).
+
 ```
 [new] RegExp(pattern, flags?) -> regexp, ES6 fix: can alter flags (IE9+)
   #flags -> str (IE9+)
@@ -2201,7 +2294,9 @@ String
   #search(tpl)            -> var, ES6 fix for support @@search
   #split(tpl, limit)      -> var, ES6 fix for support @@split, some fixes for old engines
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js/es6/regexp
 core-js/fn/regexp/constructor
@@ -2212,27 +2307,34 @@ core-js/fn/regexp/replace
 core-js/fn/regexp/search
 core-js/fn/regexp/split
 ```
-[*Examples*](http://goo.gl/PiJxBD):
-```js
-RegExp(/./g, 'm'); // => /./m
 
-/foo/.flags;    // => ''
+[_Examples_](http://goo.gl/PiJxBD):
+
+```js
+RegExp(/./g, "m"); // => /./m
+
+/foo/.flags; // => ''
 /foo/gim.flags; // => 'gim'
 
-'foo'.match({[Symbol.match]: _ => 1});     // => 1
-'foo'.replace({[Symbol.replace]: _ => 2}); // => 2
-'foo'.search({[Symbol.search]: _ => 3});   // => 3
-'foo'.split({[Symbol.split]: _ => 4});     // => 4
+"foo".match({ [Symbol.match]: (_) => 1 }); // => 1
+"foo".replace({ [Symbol.replace]: (_) => 2 }); // => 2
+"foo".search({ [Symbol.search]: (_) => 3 }); // => 3
+"foo".split({ [Symbol.split]: (_) => 4 }); // => 4
 
-RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}); // => '/foo/bar'
+RegExp.prototype.toString.call({ source: "foo", flags: "bar" }); // => '/foo/bar'
 ```
+
 #### ECMAScript 6: Number
-Module [`es6.number.constructor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.constructor.js). `Number` constructor support binary and octal literals, [*example*](http://goo.gl/jRd6b3):
+
+Module [`es6.number.constructor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.constructor.js). `Number` constructor support binary and octal literals, [_example_](http://goo.gl/jRd6b3):
+
 ```js
-Number('0b1010101'); // => 85
-Number('0o7654321'); // => 2054353
+Number("0b1010101"); // => 85
+Number("0o7654321"); // => 2054353
 ```
+
 Modules [`es6.number.epsilon`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.epsilon.js), [`es6.number.is-finite`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.is-finite.js), [`es6.number.is-integer`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.is-integer.js), [`es6.number.is-nan`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.is-nan.js), [`es6.number.is-safe-integer`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.is-safe-integer.js), [`es6.number.max-safe-integer`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.max-safe-integer.js), [`es6.number.min-safe-integer`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.min-safe-integer.js), [`es6.number.parse-float`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.parse-float.js), [`es6.number.parse-int`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.parse-int.js), [`es6.number.to-fixed`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.to-fixed.js), [`es6.number.to-precision`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.number.to-precision.js), [`es6.parse-int`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.parse-int.js), [`es6.parse-float`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.parse-float.js).
+
 ```js
 [new] Number(var)         -> number | number object
   .isFinite(num)          -> bool
@@ -2249,7 +2351,9 @@ Modules [`es6.number.epsilon`](https://github.com/zloirock/core-js/blob/v2.6.11/
 parseFloat(str)           -> num, fixes
 parseInt(str)             -> int, fixes
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/number
 core-js/es6/number/constructor
@@ -2267,8 +2371,11 @@ core-js(/library)/fn/number/to-precision
 core-js(/library)/fn/parse-float
 core-js(/library)/fn/parse-int
 ```
+
 #### ECMAScript 6: Math
+
 Modules [`es6.math.acosh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.acosh.js), [`es6.math.asinh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.asinh.js), [`es6.math.atanh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.atanh.js), [`es6.math.cbrt`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.cbrt.js), [`es6.math.clz32`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.clz32.js), [`es6.math.cosh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.cosh.js), [`es6.math.expm1`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.expm1.js), [`es6.math.fround`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.fround.js), [`es6.math.hypot`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.hypot.js), [`es6.math.imul`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.imul.js), [`es6.math.log10`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.log10.js), [`es6.math.log1p`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.log1p.js), [`es6.math.log2`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.log2.js), [`es6.math.sign`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.sign.js), [`es6.math.sinh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.sinh.js), [`es6.math.tanh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.tanh.js), [`es6.math.trunc`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.math.trunc.js).
+
 ```js
 Math
   .acosh(num)     -> num
@@ -2289,7 +2396,9 @@ Math
   .tanh(num)      -> num
   .trunc(num)     -> num
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/math
 core-js(/library)/fn/math/acosh
@@ -2310,8 +2419,11 @@ core-js(/library)/fn/math/sinh
 core-js(/library)/fn/math/tanh
 core-js(/library)/fn/math/trunc
 ```
+
 #### ECMAScript 6: Date
+
 Modules [`es6.date.to-string`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.date.to-string.js), ES5 features with fixes: [`es6.date.now`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.date.now.js), [`es6.date.to-iso-string`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.date.to-iso-string.js), [`es6.date.to-json`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.date.to-json.js) and [`es6.date.to-primitive`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.date.to-primitive.js).
+
 ```js
 Date
   .now()               -> int
@@ -2320,7 +2432,9 @@ Date
   #toString()          -> string
   #@@toPrimitive(hint) -> primitive
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js/es6/date
 core-js/fn/date/to-string
@@ -2329,13 +2443,17 @@ core-js(/library)/fn/date/to-iso-string
 core-js(/library)/fn/date/to-json
 core-js(/library)/fn/date/to-primitive
 ```
-[*Example*](http://goo.gl/haeHLR):
+
+[_Example_](http://goo.gl/haeHLR):
+
 ```js
 new Date(NaN).toString(); // => 'Invalid Date'
 ```
 
 #### ECMAScript 6: Promise
+
 Module [`es6.promise`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.promise.js).
+
 ```js
 new Promise(executor(resolve(var), reject(var))) -> promise
   #then(resolved(var), rejected(var))            -> promise
@@ -2345,86 +2463,106 @@ new Promise(executor(resolve(var), reject(var))) -> promise
   .all(iterable)                                 -> promise
   .race(iterable)                                -> promise
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/promise
 core-js(/library)/fn/promise
 ```
-Basic [*example*](http://goo.gl/vGrtUC):
+
+Basic [_example_](http://goo.gl/vGrtUC):
+
 ```js
-function sleepRandom(time){
-  return new Promise(function(resolve, reject){
-    setTimeout(resolve, time * 1e3, 0 | Math.random() * 1e3);
+function sleepRandom(time) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(resolve, time * 1e3, 0 | (Math.random() * 1e3));
   });
 }
 
-console.log('Run');                    // => Run
-sleepRandom(5).then(function(result){
-  console.log(result);                 // => 869, after 5 sec.
-  return sleepRandom(10);
-}).then(function(result){
-  console.log(result);                 // => 202, after 10 sec.
-}).then(function(){
-  console.log('immediately after');    // => immediately after
-  throw Error('Irror!');
-}).then(function(){
-  console.log('will not be displayed');
-}).catch(x => console.log(x));         // => => Error: Irror!
+console.log("Run"); // => Run
+sleepRandom(5)
+  .then(function (result) {
+    console.log(result); // => 869, after 5 sec.
+    return sleepRandom(10);
+  })
+  .then(function (result) {
+    console.log(result); // => 202, after 10 sec.
+  })
+  .then(function () {
+    console.log("immediately after"); // => immediately after
+    throw Error("Irror!");
+  })
+  .then(function () {
+    console.log("will not be displayed");
+  })
+  .catch((x) => console.log(x)); // => => Error: Irror!
 ```
-`Promise.resolve` and `Promise.reject` [*example*](http://goo.gl/vr8TN3):
-```js
-Promise.resolve(42).then(x => console.log(x)); // => 42
-Promise.reject(42).catch(x => console.log(x)); // => 42
 
-Promise.resolve($.getJSON('/data.json')); // => ES6 promise
+`Promise.resolve` and `Promise.reject` [_example_](http://goo.gl/vr8TN3):
+
+```js
+Promise.resolve(42).then((x) => console.log(x)); // => 42
+Promise.reject(42).catch((x) => console.log(x)); // => 42
+
+Promise.resolve($.getJSON("/data.json")); // => ES6 promise
 ```
-`Promise.all` [*example*](http://goo.gl/RdoDBZ):
+
+`Promise.all` [_example_](http://goo.gl/RdoDBZ):
+
 ```js
 Promise.all([
-  'foo',
+  "foo",
   sleepRandom(5),
   sleepRandom(15),
-  sleepRandom(10)             // after 15 sec:
-]).then(x => console.log(x)); // => ['foo', 956, 85, 382]
+  sleepRandom(10), // after 15 sec:
+]).then((x) => console.log(x)); // => ['foo', 956, 85, 382]
 ```
-`Promise.race` [*example*](http://goo.gl/L8ovkJ):
+
+`Promise.race` [_example_](http://goo.gl/L8ovkJ):
+
 ```js
-function timeLimit(promise, time){
-  return Promise.race([promise, new Promise(function(resolve, reject){
-    setTimeout(reject, time * 1e3, Error('Await > ' + time + ' sec'));
-  })]);
+function timeLimit(promise, time) {
+  return Promise.race([
+    promise,
+    new Promise(function (resolve, reject) {
+      setTimeout(reject, time * 1e3, Error("Await > " + time + " sec"));
+    }),
+  ]);
 }
 
-timeLimit(sleepRandom(5), 10).then(x => console.log(x));   // => 853, after 5 sec.
-timeLimit(sleepRandom(15), 10).catch(x => console.log(x)); // Error: Await > 10 sec
+timeLimit(sleepRandom(5), 10).then((x) => console.log(x)); // => 853, after 5 sec.
+timeLimit(sleepRandom(15), 10).catch((x) => console.log(x)); // Error: Await > 10 sec
 ```
-ECMAScript 7 [async functions](https://tc39.github.io/ecmascript-asyncawait) [example](http://goo.gl/wnQS4j):
-```js
-var delay = time => new Promise(resolve => setTimeout(resolve, time))
 
-async function sleepRandom(time){
+ECMAScript 7 [async functions](https://tc39.github.io/ecmascript-asyncawait) [example](http://goo.gl/wnQS4j):
+
+```js
+var delay = (time) => new Promise((resolve) => setTimeout(resolve, time));
+
+async function sleepRandom(time) {
   await delay(time * 1e3);
-  return 0 | Math.random() * 1e3;
-};
-async function sleepError(time, msg){
+  return 0 | (Math.random() * 1e3);
+}
+async function sleepError(time, msg) {
   await delay(time * 1e3);
   throw Error(msg);
-};
+}
 
 (async () => {
   try {
-    console.log('Run');                // => Run
+    console.log("Run"); // => Run
     console.log(await sleepRandom(5)); // => 936, after 5 sec.
     var [a, b, c] = await Promise.all([
       sleepRandom(5),
       sleepRandom(15),
-      sleepRandom(10)
+      sleepRandom(10),
     ]);
-    console.log(a, b, c);              // => 210 445 71, after 15 sec.
-    await sleepError(5, 'Irror!');
-    console.log('Will not be displayed');
-  } catch(e){
-    console.log(e);                    // => Error: 'Irror!', after 5 sec.
+    console.log(a, b, c); // => 210 445 71, after 15 sec.
+    await sleepError(5, "Irror!");
+    console.log("Will not be displayed");
+  } catch (e) {
+    console.log(e); // => Error: 'Irror!', after 5 sec.
   }
 })();
 ```
@@ -2432,30 +2570,38 @@ async function sleepError(time, msg){
 ##### Unhandled rejection tracking
 
 In Node.js, like in native implementation, available events [`unhandledRejection`](https://nodejs.org/api/process.html#process_event_unhandledrejection) and [`rejectionHandled`](https://nodejs.org/api/process.html#process_event_rejectionhandled):
+
 ```js
-process.on('unhandledRejection', (reason, promise) => console.log('unhandled', reason, promise));
-process.on('rejectionHandled', (promise) => console.log('handled', promise));
+process.on("unhandledRejection", (reason, promise) =>
+  console.log("unhandled", reason, promise)
+);
+process.on("rejectionHandled", (promise) => console.log("handled", promise));
 
 var p = Promise.reject(42);
 // unhandled 42 [object Promise]
 
-setTimeout(() => p.catch(_ => _), 1e3);
+setTimeout(() => p.catch((_) => _), 1e3);
 // handled [object Promise]
 ```
-In a browser on rejection, by default, you will see notify in the console, or you can add a custom handler and a handler on handling unhandled, [*example*](http://goo.gl/Wozskl):
+
+In a browser on rejection, by default, you will see notify in the console, or you can add a custom handler and a handler on handling unhandled, [_example_](http://goo.gl/Wozskl):
+
 ```js
-window.onunhandledrejection = e => console.log('unhandled', e.reason, e.promise);
-window.onrejectionhandled = e => console.log('handled', e.reason, e.promise);
+window.onunhandledrejection = (e) =>
+  console.log("unhandled", e.reason, e.promise);
+window.onrejectionhandled = (e) => console.log("handled", e.reason, e.promise);
 
 var p = Promise.reject(42);
 // unhandled 42 [object Promise]
 
-setTimeout(() => p.catch(_ => _), 1e3);
+setTimeout(() => p.catch((_) => _), 1e3);
 // handled 42 [object Promise]
 ```
 
 #### ECMAScript 6: Symbol
+
 Module [`es6.symbol`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.symbol.js).
+
 ```js
 Symbol(description?)  -> symbol
   .hasInstance        -> @@hasInstance
@@ -2476,7 +2622,9 @@ Symbol(description?)  -> symbol
 Object
   .getOwnPropertySymbols(object) -> array
 ```
+
 Also wrapped some methods for correct work with `Symbol` polyfill.
+
 ```js
 Object
   .create(proto | null, descriptors?)    -> object
@@ -2488,7 +2636,9 @@ Object
 JSON
   .stringify(target, replacer?, space?) -> string | undefined
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/symbol
 core-js(/library)/fn/symbol
@@ -2506,68 +2656,81 @@ core-js(/library)/fn/symbol/unscopables
 core-js(/library)/fn/symbol/for
 core-js(/library)/fn/symbol/key-for
 ```
-[*Basic example*](http://goo.gl/BbvWFc):
+
+[_Basic example_](http://goo.gl/BbvWFc):
+
 ```js
-var Person = (function(){
-  var NAME = Symbol('name');
-  function Person(name){
+var Person = (function () {
+  var NAME = Symbol("name");
+  function Person(name) {
     this[NAME] = name;
   }
-  Person.prototype.getName = function(){
+  Person.prototype.getName = function () {
     return this[NAME];
   };
   return Person;
 })();
 
-var person = new Person('Vasya');
-console.log(person.getName());          // => 'Vasya'
-console.log(person['name']);            // => undefined
-console.log(person[Symbol('name')]);    // => undefined, symbols are uniq
-for(var key in person)console.log(key); // => only 'getName', symbols are not enumerable
+var person = new Person("Vasya");
+console.log(person.getName()); // => 'Vasya'
+console.log(person["name"]); // => undefined
+console.log(person[Symbol("name")]); // => undefined, symbols are uniq
+for (var key in person) console.log(key); // => only 'getName', symbols are not enumerable
 ```
-`Symbol.for` & `Symbol.keyFor` [*example*](http://goo.gl/0pdJjX):
+
+`Symbol.for` & `Symbol.keyFor` [_example_](http://goo.gl/0pdJjX):
+
 ```js
-var symbol = Symbol.for('key');
-symbol === Symbol.for('key'); // true
-Symbol.keyFor(symbol);        // 'key'
+var symbol = Symbol.for("key");
+symbol === Symbol.for("key"); // true
+Symbol.keyFor(symbol); // 'key'
 ```
-[*Example*](http://goo.gl/mKVOQJ) with methods for getting own object keys:
+
+[_Example_](http://goo.gl/mKVOQJ) with methods for getting own object keys:
+
 ```js
-var O = {a: 1};
-Object.defineProperty(O, 'b', {value: 2});
-O[Symbol('c')] = 3;
-Object.keys(O);                  // => ['a']
-Object.getOwnPropertyNames(O);   // => ['a', 'b']
+var O = { a: 1 };
+Object.defineProperty(O, "b", { value: 2 });
+O[Symbol("c")] = 3;
+Object.keys(O); // => ['a']
+Object.getOwnPropertyNames(O); // => ['a', 'b']
 Object.getOwnPropertySymbols(O); // => [Symbol(c)]
-Reflect.ownKeys(O);              // => ['a', 'b', Symbol(c)]
+Reflect.ownKeys(O); // => ['a', 'b', Symbol(c)]
 ```
+
 ##### Caveats when using `Symbol` polyfill:
 
-* We can't add new primitive type, `Symbol` returns object.
-* `Symbol.for` and `Symbol.keyFor` can't be shimmed cross-realm.
-* By default, to hide the keys, `Symbol` polyfill defines setter in `Object.prototype`. For this reason, uncontrolled creation of symbols can cause memory leak and the `in` operator is not working correctly with `Symbol` polyfill: `Symbol() in {} // => true`.
+- We can't add new primitive type, `Symbol` returns object.
+- `Symbol.for` and `Symbol.keyFor` can't be shimmed cross-realm.
+- By default, to hide the keys, `Symbol` polyfill defines setter in `Object.prototype`. For this reason, uncontrolled creation of symbols can cause memory leak and the `in` operator is not working correctly with `Symbol` polyfill: `Symbol() in {} // => true`.
 
 You can disable defining setters in `Object.prototype`. [Example](http://goo.gl/N5UD7J):
+
 ```js
 Symbol.useSimple();
-var s1 = Symbol('s1')
-  , o1 = {};
+var s1 = Symbol("s1"),
+  o1 = {};
 o1[s1] = true;
-for(var key in o1)console.log(key); // => 'Symbol(s1)_t.qamkg9f3q', w/o native Symbol
+for (var key in o1) console.log(key); // => 'Symbol(s1)_t.qamkg9f3q', w/o native Symbol
 
 Symbol.useSetter();
-var s2 = Symbol('s2')
-  , o2 = {};
+var s2 = Symbol("s2"),
+  o2 = {};
 o2[s2] = true;
-for(var key in o2)console.log(key); // nothing
+for (var key in o2) console.log(key); // nothing
 ```
-* Currently, `core-js` not adds setters to `Object.prototype` for well-known symbols for correct work something like `Symbol.iterator in foo`. It can cause problems with their enumerability.
-* Some problems possible with environment exotic objects (for example, IE `localStorage`).
+
+- Currently, `core-js` not adds setters to `Object.prototype` for well-known symbols for correct work something like `Symbol.iterator in foo`. It can cause problems with their enumerability.
+- Some problems possible with environment exotic objects (for example, IE `localStorage`).
 
 #### ECMAScript 6: Collections
+
 `core-js` uses native collections in most case, just fixes methods / constructor, if it's required, and in old environment uses fast polyfill (O(1) lookup).
+
 #### Map
+
 Module [`es6.map`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.map.js).
+
 ```js
 new Map(iterable (entries) ?)     -> map
   #clear()                        -> void
@@ -2582,46 +2745,60 @@ new Map(iterable (entries) ?)     -> map
   #entries()                      -> iterator
   #@@iterator()                   -> iterator (entries)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/map
 core-js(/library)/fn/map
 ```
-[*Examples*](http://goo.gl/GWR7NI):
+
+[_Examples_](http://goo.gl/GWR7NI):
+
 ```js
 var a = [1];
 
-var map = new Map([['a', 1], [42, 2]]);
+var map = new Map([
+  ["a", 1],
+  [42, 2],
+]);
 map.set(a, 3).set(true, 4);
 
-console.log(map.size);        // => 4
-console.log(map.has(a));      // => true
-console.log(map.has([1]));    // => false
-console.log(map.get(a));      // => 3
-map.forEach(function(val, key){
-  console.log(val);           // => 1, 2, 3, 4
-  console.log(key);           // => 'a', 42, [1], true
+console.log(map.size); // => 4
+console.log(map.has(a)); // => true
+console.log(map.has([1])); // => false
+console.log(map.get(a)); // => 3
+map.forEach(function (val, key) {
+  console.log(val); // => 1, 2, 3, 4
+  console.log(key); // => 'a', 42, [1], true
 });
 map.delete(a);
-console.log(map.size);        // => 3
-console.log(map.get(a));      // => undefined
+console.log(map.size); // => 3
+console.log(map.get(a)); // => undefined
 console.log(Array.from(map)); // => [['a', 1], [42, 2], [true, 4]]
 
-var map = new Map([['a', 1], ['b', 2], ['c', 3]]);
+var map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
-for(var [key, val] of map){
-  console.log(key);                           // => 'a', 'b', 'c'
-  console.log(val);                           // => 1, 2, 3
+for (var [key, val] of map) {
+  console.log(key); // => 'a', 'b', 'c'
+  console.log(val); // => 1, 2, 3
 }
-for(var val of map.values())console.log(val); // => 1, 2, 3
-for(var key of map.keys())console.log(key);   // => 'a', 'b', 'c'
-for(var [key, val] of map.entries()){
-  console.log(key);                           // => 'a', 'b', 'c'
-  console.log(val);                           // => 1, 2, 3
+for (var val of map.values()) console.log(val); // => 1, 2, 3
+for (var key of map.keys()) console.log(key); // => 'a', 'b', 'c'
+for (var [key, val] of map.entries()) {
+  console.log(key); // => 'a', 'b', 'c'
+  console.log(val); // => 1, 2, 3
 }
 ```
+
 #### Set
+
 Module [`es6.set`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.set.js).
+
 ```js
 new Set(iterable?)              -> set
   #add(key)                     -> @
@@ -2635,37 +2812,44 @@ new Set(iterable?)              -> set
   #entries()                    -> iterator
   #@@iterator()                 -> iterator (values)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/set
 core-js(/library)/fn/set
 ```
-[*Examples*](http://goo.gl/bmhLwg):
+
+[_Examples_](http://goo.gl/bmhLwg):
+
 ```js
-var set = new Set(['a', 'b', 'a', 'c']);
-set.add('d').add('b').add('e');
-console.log(set.size);        // => 5
-console.log(set.has('b'));    // => true
-set.forEach(function(it){
-  console.log(it);            // => 'a', 'b', 'c', 'd', 'e'
+var set = new Set(["a", "b", "a", "c"]);
+set.add("d").add("b").add("e");
+console.log(set.size); // => 5
+console.log(set.has("b")); // => true
+set.forEach(function (it) {
+  console.log(it); // => 'a', 'b', 'c', 'd', 'e'
 });
-set.delete('b');
-console.log(set.size);        // => 4
-console.log(set.has('b'));    // => false
+set.delete("b");
+console.log(set.size); // => 4
+console.log(set.has("b")); // => false
 console.log(Array.from(set)); // => ['a', 'c', 'd', 'e']
 
 var set = new Set([1, 2, 3, 2, 1]);
 
-for(var val of set)console.log(val);          // => 1, 2, 3
-for(var val of set.values())console.log(val); // => 1, 2, 3
-for(var key of set.keys())console.log(key);   // => 1, 2, 3
-for(var [key, val] of set.entries()){
-  console.log(key);                           // => 1, 2, 3
-  console.log(val);                           // => 1, 2, 3
+for (var val of set) console.log(val); // => 1, 2, 3
+for (var val of set.values()) console.log(val); // => 1, 2, 3
+for (var key of set.keys()) console.log(key); // => 1, 2, 3
+for (var [key, val] of set.entries()) {
+  console.log(key); // => 1, 2, 3
+  console.log(val); // => 1, 2, 3
 }
 ```
+
 #### WeakMap
+
 Module [`es6.weak-map`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.weak-map.js).
+
 ```js
 new WeakMap(iterable (entries) ?) -> weakmap
   #delete(key)                    -> bool
@@ -2673,75 +2857,92 @@ new WeakMap(iterable (entries) ?) -> weakmap
   #has(key)                       -> bool
   #set(key, val)                  -> @
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/weak-map
 core-js(/library)/fn/weak-map
 ```
-[*Examples*](http://goo.gl/SILXyw):
-```js
-var a = [1]
-  , b = [2]
-  , c = [3];
 
-var wmap = new WeakMap([[a, 1], [b, 2]]);
+[_Examples_](http://goo.gl/SILXyw):
+
+```js
+var a = [1],
+  b = [2],
+  c = [3];
+
+var wmap = new WeakMap([
+  [a, 1],
+  [b, 2],
+]);
 wmap.set(c, 3).set(b, 4);
-console.log(wmap.has(a));   // => true
+console.log(wmap.has(a)); // => true
 console.log(wmap.has([1])); // => false
-console.log(wmap.get(a));   // => 1
+console.log(wmap.get(a)); // => 1
 wmap.delete(a);
-console.log(wmap.get(a));   // => undefined
+console.log(wmap.get(a)); // => undefined
 
 // Private properties store:
-var Person = (function(){
-  var names = new WeakMap;
-  function Person(name){
+var Person = (function () {
+  var names = new WeakMap();
+  function Person(name) {
     names.set(this, name);
   }
-  Person.prototype.getName = function(){
+  Person.prototype.getName = function () {
     return names.get(this);
   };
   return Person;
 })();
 
-var person = new Person('Vasya');
-console.log(person.getName());          // => 'Vasya'
-for(var key in person)console.log(key); // => only 'getName'
+var person = new Person("Vasya");
+console.log(person.getName()); // => 'Vasya'
+for (var key in person) console.log(key); // => only 'getName'
 ```
+
 #### WeakSet
+
 Module [`es6.weak-set`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.weak-set.js).
+
 ```js
 new WeakSet(iterable?) -> weakset
   #add(key)            -> @
   #delete(key)         -> bool
   #has(key)            -> bool
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/weak-set
 core-js(/library)/fn/weak-set
 ```
-[*Examples*](http://goo.gl/TdFbEx):
+
+[_Examples_](http://goo.gl/TdFbEx):
+
 ```js
-var a = [1]
-  , b = [2]
-  , c = [3];
+var a = [1],
+  b = [2],
+  c = [3];
 
 var wset = new WeakSet([a, b, a]);
 wset.add(c).add(b).add(c);
-console.log(wset.has(b));   // => true
+console.log(wset.has(b)); // => true
 console.log(wset.has([2])); // => false
 wset.delete(b);
-console.log(wset.has(b));   // => false
+console.log(wset.has(b)); // => false
 ```
+
 ##### Caveats when using collections polyfill:
 
-* Weak-collections polyfill stores values as hidden properties of keys. It works correct and not leak in most cases. However, it is desirable to store a collection longer than its keys.
+- Weak-collections polyfill stores values as hidden properties of keys. It works correct and not leak in most cases. However, it is desirable to store a collection longer than its keys.
 
 #### ECMAScript 6: Typed Arrays
+
 Implementations and fixes `ArrayBuffer`, `DataView`, typed arrays constructors, static and prototype methods. Typed Arrays work only in environments with support descriptors (IE9+), `ArrayBuffer` and `DataView` should work anywhere.
 
 Modules [`es6.typed.array-buffer`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.array-buffer.js), [`es6.typed.data-view`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.data-view.js), [`es6.typed.int8-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.int8-array.js), [`es6.typed.uint8-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.uint8-array.js), [`es6.typed.uint8-clamped-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.uint8-clamped-array.js), [`es6.typed.int16-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.int16-array.js), [`es6.typed.uint16-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.uint16-array.js), [`es6.typed.int32-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.int32-array.js), [`es6.typed.uint32-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.uint32-array.js), [`es6.typed.float32-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.float32-array.js) and [`es6.typed.float64-array`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.typed.float64-array.js).
+
 ```js
 new ArrayBuffer(length) -> buffer
   .isView(var) -> bool
@@ -2819,7 +3020,9 @@ new DataView(buffer, byteOffset = 0, byteLength = buffer.byteLength - byteOffset
   #byteOffset -> uint
   #length     -> uint
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/typed
 core-js(/library)/fn/typed
@@ -2835,46 +3038,51 @@ core-js(/library)/fn/typed/uint32-array
 core-js(/library)/fn/typed/float32-array
 core-js(/library)/fn/typed/float64-array
 ```
-[*Examples*](http://goo.gl/yla75z):
+
+[_Examples_](http://goo.gl/yla75z):
+
 ```js
-new Int32Array(4);                          // => [0, 0, 0, 0]
-new Uint8ClampedArray([1, 2, 3, 666]);      // => [1, 2, 3, 255]
+new Int32Array(4); // => [0, 0, 0, 0]
+new Uint8ClampedArray([1, 2, 3, 666]); // => [1, 2, 3, 255]
 new Float32Array(new Set([1, 2, 3, 2, 1])); // => [1, 2, 3]
 
 var buffer = new ArrayBuffer(8);
-var view   = new DataView(buffer);
+var view = new DataView(buffer);
 view.setFloat64(0, 123.456, true);
 new Uint8Array(buffer.slice(4)); // => [47, 221, 94, 64]
 
-Int8Array.of(1, 1.5, 5.7, 745);      // => [1, 1, 5, -23]
+Int8Array.of(1, 1.5, 5.7, 745); // => [1, 1, 5, -23]
 Uint8Array.from([1, 1.5, 5.7, 745]); // => [1, 1, 5, 233]
 
 var typed = new Uint8Array([1, 2, 3]);
 
-var a = typed.slice(1);    // => [2, 3]
+var a = typed.slice(1); // => [2, 3]
 typed.buffer === a.buffer; // => false
 var b = typed.subarray(1); // => [2, 3]
 typed.buffer === b.buffer; // => true
 
-typed.filter(it => it % 2); // => [1, 3]
-typed.map(it => it * 1.5);  // => [1, 3, 4]
+typed.filter((it) => it % 2); // => [1, 3]
+typed.map((it) => it * 1.5); // => [1, 3, 4]
 
-for(var val of typed)console.log(val);          // => 1, 2, 3
-for(var val of typed.values())console.log(val); // => 1, 2, 3
-for(var key of typed.keys())console.log(key);   // => 0, 1, 2
-for(var [key, val] of typed.entries()){
-  console.log(key);                             // => 0, 1, 2
-  console.log(val);                             // => 1, 2, 3
+for (var val of typed) console.log(val); // => 1, 2, 3
+for (var val of typed.values()) console.log(val); // => 1, 2, 3
+for (var key of typed.keys()) console.log(key); // => 0, 1, 2
+for (var [key, val] of typed.entries()) {
+  console.log(key); // => 0, 1, 2
+  console.log(val); // => 1, 2, 3
 }
 ```
+
 ##### Caveats when using typed arrays:
 
-* Typed Arrays polyfills works completely how should work by the spec, but because of internal use getter / setters on each instance, is slow and consumes significant memory. However, typed arrays polyfills required mainly for IE9 (and for `Uint8ClampedArray` in IE10 and early IE11), all modern engines have native typed arrays and requires only constructors fixes and methods.
-* The current version hasn't special entry points for methods, they can be added only with constructors. It can be added in the future.
-* In the `library` version we can't pollute native prototypes, so prototype methods available as constructors static.
+- Typed Arrays polyfills works completely how should work by the spec, but because of internal use getter / setters on each instance, is slow and consumes significant memory. However, typed arrays polyfills required mainly for IE9 (and for `Uint8ClampedArray` in IE10 and early IE11), all modern engines have native typed arrays and requires only constructors fixes and methods.
+- The current version hasn't special entry points for methods, they can be added only with constructors. It can be added in the future.
+- In the `library` version we can't pollute native prototypes, so prototype methods available as constructors static.
 
 #### ECMAScript 6: Reflect
+
 Modules [`es6.reflect.apply`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.apply.js), [`es6.reflect.construct`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.construct.js), [`es6.reflect.define-property`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.define-property.js), [`es6.reflect.delete-property`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.delete-property.js), [`es6.reflect.enumerate`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.enumerate.js), [`es6.reflect.get`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.get.js), [`es6.reflect.get-own-property-descriptor`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.get-own-property-descriptor.js), [`es6.reflect.get-prototype-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.get-prototype-of.js), [`es6.reflect.has`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.has.js), [`es6.reflect.is-extensible`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.is-extensible.js), [`es6.reflect.own-keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.own-keys.js), [`es6.reflect.prevent-extensions`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.prevent-extensions.js), [`es6.reflect.set`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.set.js), [`es6.reflect.set-prototype-of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es6.reflect.set-prototype-of.js).
+
 ```js
 Reflect
   .apply(target, thisArgument, argumentsList) -> var
@@ -2892,7 +3100,9 @@ Reflect
   .set(target, propertyKey, V, receiver?) -> bool
   .setPrototypeOf(target, proto) -> bool (required __proto__ - IE11+)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es6/reflect
 core-js(/library)/fn/reflect
@@ -2911,14 +3121,16 @@ core-js(/library)/fn/reflect/prevent-extensions
 core-js(/library)/fn/reflect/set
 core-js(/library)/fn/reflect/set-prototype-of
 ```
-[*Examples*](http://goo.gl/gVT0cH):
+
+[_Examples_](http://goo.gl/gVT0cH):
+
 ```js
-var O = {a: 1};
-Object.defineProperty(O, 'b', {value: 2});
-O[Symbol('c')] = 3;
+var O = { a: 1 };
+Object.defineProperty(O, "b", { value: 2 });
+O[Symbol("c")] = 3;
 Reflect.ownKeys(O); // => ['a', 'b', Symbol(c)]
 
-function C(a, b){
+function C(a, b) {
   this.c = a + b;
 }
 
@@ -2927,9 +3139,11 @@ instance.c; // => 42
 ```
 
 ### ECMAScript 7+ proposals
+
 [The TC39 process.](https://tc39.github.io/process-document/)
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```
 core-js(/library)/es7
 core-js(/library)/es7/array
@@ -2944,14 +3158,19 @@ core-js(/library)/es7/symbol
 core-js(/library)/es7/reflect
 core-js(/library)/es7/observable
 ```
+
 `core-js/stage/4` entry point contains only stage 4 proposals, `core-js/stage/3` - stage 3 and stage 4, etc.
+
 #### Stage 4 proposals
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/stage/4
 ```
-* `{Array, %TypedArray%}#includes` [proposal](https://github.com/tc39/Array.prototype.includes) - module [`es7.array.includes`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.includes.js), `%TypedArray%` version in modules from [this section](#ecmascript-6-typed-arrays).
+
+- `{Array, %TypedArray%}#includes` [proposal](https://github.com/tc39/Array.prototype.includes) - module [`es7.array.includes`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.includes.js), `%TypedArray%` version in modules from [this section](#ecmascript-6-typed-arrays).
+
 ```js
 Array
   #includes(var, from?) -> bool
@@ -2968,79 +3187,106 @@ Array
 }
   #includes(var, from?) -> bool
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/array/includes
 ```
-[*Examples*](http://goo.gl/2Gq4ma):
-```js
-[1, 2, 3].includes(2);        // => true
-[1, 2, 3].includes(4);        // => false
-[1, 2, 3].includes(2, 2);     // => false
 
-[NaN].indexOf(NaN);           // => -1
-[NaN].includes(NaN);          // => true
-Array(1).indexOf(undefined);  // => -1
+[_Examples_](http://goo.gl/2Gq4ma):
+
+```js
+[1, 2, 3].includes(2); // => true
+[1, 2, 3].includes(4); // => false
+[1, 2, 3].includes(2, 2); // => false
+
+[NaN].indexOf(NaN); // => -1
+[NaN].includes(NaN); // => true
+Array(1).indexOf(undefined); // => -1
 Array(1).includes(undefined); // => true
 ```
-* `Object.values`, `Object.entries` [proposal](https://github.com/tc39/proposal-object-values-entries) - modules [`es7.object.values`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.values.js), [`es7.object.entries`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.entries.js)
+
+- `Object.values`, `Object.entries` [proposal](https://github.com/tc39/proposal-object-values-entries) - modules [`es7.object.values`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.values.js), [`es7.object.entries`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.entries.js)
+
 ```js
 Object
   .values(object) -> array
   .entries(object) -> array
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/object/values
 core-js(/library)/fn/object/entries
 ```
-[*Examples*](http://goo.gl/6kuGOn):
-```js
-Object.values({a: 1, b: 2, c: 3});  // => [1, 2, 3]
-Object.entries({a: 1, b: 2, c: 3}); // => [['a', 1], ['b', 2], ['c', 3]]
 
-for(let [key, value] of Object.entries({a: 1, b: 2, c: 3})){
-  console.log(key);   // => 'a', 'b', 'c'
+[_Examples_](http://goo.gl/6kuGOn):
+
+```js
+Object.values({ a: 1, b: 2, c: 3 }); // => [1, 2, 3]
+Object.entries({ a: 1, b: 2, c: 3 }); // => [['a', 1], ['b', 2], ['c', 3]]
+
+for (let [key, value] of Object.entries({ a: 1, b: 2, c: 3 })) {
+  console.log(key); // => 'a', 'b', 'c'
   console.log(value); // => 1, 2, 3
 }
 ```
-* `Object.getOwnPropertyDescriptors` [proposal](https://github.com/tc39/proposal-object-getownpropertydescriptors) - module [`es7.object.get-own-property-descriptors`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.get-own-property-descriptors.js)
+
+- `Object.getOwnPropertyDescriptors` [proposal](https://github.com/tc39/proposal-object-getownpropertydescriptors) - module [`es7.object.get-own-property-descriptors`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.get-own-property-descriptors.js)
+
 ```js
 Object
   .getOwnPropertyDescriptors(object) -> object
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/object/get-own-property-descriptors
 ```
-*Examples*:
+
+_Examples_:
+
 ```js
 // Shallow object cloning with prototype and descriptors:
-var copy = Object.create(Object.getPrototypeOf(O), Object.getOwnPropertyDescriptors(O));
+var copy = Object.create(
+  Object.getPrototypeOf(O),
+  Object.getOwnPropertyDescriptors(O)
+);
 // Mixin:
 Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
 ```
-* `String#padStart`, `String#padEnd` [proposal](https://github.com/tc39/proposal-string-pad-start-end) - modules [`es7.string.pad-start`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.pad-start.js), [`es7.string.pad-end`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.pad-end.js)
+
+- `String#padStart`, `String#padEnd` [proposal](https://github.com/tc39/proposal-string-pad-start-end) - modules [`es7.string.pad-start`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.pad-start.js), [`es7.string.pad-end`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.pad-end.js)
+
 ```js
 String
   #padStart(length, fillStr = ' ') -> string
   #padEnd(length, fillStr = ' ') -> string
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/string/pad-start
 core-js(/library)/fn/string/pad-end
 core-js(/library)/fn/string/virtual/pad-start
 core-js(/library)/fn/string/virtual/pad-end
 ```
-[*Examples*](http://goo.gl/hK5ccv):
+
+[_Examples_](http://goo.gl/hK5ccv):
+
 ```js
-'hello'.padStart(10);         // => '     hello'
-'hello'.padStart(10, '1234'); // => '12341hello'
-'hello'.padEnd(10);           // => 'hello     '
-'hello'.padEnd(10, '1234');   // => 'hello12341'
+"hello".padStart(10); // => '     hello'
+"hello".padStart(10, "1234"); // => '12341hello'
+"hello".padEnd(10); // => 'hello     '
+"hello".padEnd(10, "1234"); // => 'hello12341'
 ```
-* `Object#__(define|lookup)[GS]etter__`, [annex B ES2017](https://github.com/tc39/ecma262/pull/381), but we haven't special namespace for that - modules [`es7.object.define-setter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.define-setter.js), [`es7.object.define-getter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.define-getter.js), [`es7.object.lookup-setter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.lookup-setter.js) and [`es7.object.lookup-getter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.lookup-getter.js).
+
+- `Object#__(define|lookup)[GS]etter__`, [annex B ES2017](https://github.com/tc39/ecma262/pull/381), but we haven't special namespace for that - modules [`es7.object.define-setter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.define-setter.js), [`es7.object.define-getter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.define-getter.js), [`es7.object.lookup-setter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.lookup-setter.js) and [`es7.object.lookup-getter`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.object.lookup-getter.js).
+
 ```js
 Object
   #__defineSetter__(key, fn) -> void
@@ -3048,7 +3294,9 @@ Object
   #__lookupSetter__(key) -> fn | void
   #__lookupGetter__(key) -> fn | void
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/object/define-getter
 core-js(/library)/fn/object/define-setter
@@ -3057,36 +3305,50 @@ core-js(/library)/fn/object/lookup-setter
 ```
 
 #### Stage 3 proposals
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/stage/3
 ```
-* `global` [proposal](https://github.com/tc39/proposal-global) - modules [`es7.global`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.global.js) and [`es7.system.global`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.system.global.js) (obsolete)
+
+- `global` [proposal](https://github.com/tc39/proposal-global) - modules [`es7.global`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.global.js) and [`es7.system.global`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.system.global.js) (obsolete)
+
 ```js
 global -> object
 System
   .global -> object (obsolete)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/global
 core-js(/library)/fn/system/global (obsolete)
 ```
-[*Examples*](http://goo.gl/gEqMl7):
+
+[_Examples_](http://goo.gl/gEqMl7):
+
 ```js
 global.Array === Array; // => true
 ```
-* `Promise#finally` [proposal](https://github.com/tc39/proposal-promise-finally) - module [`es7.promise.finally`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.promise.finally.js)
+
+- `Promise#finally` [proposal](https://github.com/tc39/proposal-promise-finally) - module [`es7.promise.finally`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.promise.finally.js)
+
 ```js
 Promise
   #finally(onFinally()) -> promise
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/promise/finally
 ```
-[*Examples*](https://goo.gl/AhyBbJ):
-```js
+
+[_Examples_](https://goo.gl/AhyBbJ):
+
+````js
 Promise.resolve(42).finally(() => console.log('You will see it anyway'));
 
 Promise.reject(42).finally(() => console.log('You will see it anyway'));
@@ -3095,8 +3357,10 @@ Promise.reject(42).finally(() => console.log('You will see it anyway'));
 [*CommonJS entry points:*](#commonjs)
 ```js
 core-js(/library)/stage/2
-```
-* `String#trimLeft`, `String#trimRight` / `String#trimStart`, `String#trimEnd` [proposal](https://github.com/sebmarkbage/ecmascript-string-left-right-trim) - modules [`es7.string.trim-left`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.trim-right.js), [`es7.string.trim-right`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.trim-right.js)
+````
+
+- `String#trimLeft`, `String#trimRight` / `String#trimStart`, `String#trimEnd` [proposal](https://github.com/sebmarkbage/ecmascript-string-left-right-trim) - modules [`es7.string.trim-left`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.trim-right.js), [`es7.string.trim-right`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.trim-right.js)
+
 ```js
 String
   #trimLeft()  -> string
@@ -3104,7 +3368,9 @@ String
   #trimStart() -> string
   #trimEnd()   -> string
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/string/trim-start
 core-js(/library)/fn/string/trim-end
@@ -3115,64 +3381,91 @@ core-js(/library)/fn/string/virtual/trim-end
 core-js(/library)/fn/string/virtual/trim-left
 core-js(/library)/fn/string/virtual/trim-right
 ```
-[*Examples*](http://goo.gl/Er5lMJ):
+
+[_Examples_](http://goo.gl/Er5lMJ):
+
 ```js
-'   hello   '.trimLeft();  // => 'hello   '
-'   hello   '.trimRight(); // => '   hello'
+"   hello   ".trimLeft(); // => 'hello   '
+"   hello   ".trimRight(); // => '   hello'
 ```
-```
+
+````
 * `Symbol.asyncIterator` for [async iteration proposal](https://github.com/tc39/proposal-async-iteration) - module [`es7.symbol.async-iterator`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.symbol.async-iterator.js)
 ```js
 Symbol
   .asyncIterator -> @@asyncIterator
-```
-[*CommonJS entry points:*](#commonjs)
+````
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/symbol/async-iterator
 ```
 
 #### Stage 1 proposals
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/stage/1
 ```
-* `Promise.try` [proposal](https://github.com/tc39/proposal-promise-try) - module [`es7.promise.try`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.promise.try.js)
+
+- `Promise.try` [proposal](https://github.com/tc39/proposal-promise-try) - module [`es7.promise.try`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.promise.try.js)
+
 ```js
 Promise
   .try(function()) -> promise
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/promise/try
 ```
-[*Examples*](https://goo.gl/k5GGRo):
-```js
-Promise.try(() => 42).then(it => console.log(`Promise, resolved as ${it}`));
 
-Promise.try(() => { throw 42; }).catch(it => console.log(`Promise, rejected as ${it}`));
+[_Examples_](https://goo.gl/k5GGRo):
+
+```js
+Promise.try(() => 42).then((it) => console.log(`Promise, resolved as ${it}`));
+
+Promise.try(() => {
+  throw 42;
+}).catch((it) => console.log(`Promise, rejected as ${it}`));
 ```
-* `Array#flatten` and `Array#flatMap` [proposal](https://tc39.github.io/proposal-flatMap) - modules [`es7.array.flatten`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.flatten.js) and [`es7.array.flat-map`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.flat-map.js)
+
+- `Array#flatten` and `Array#flatMap` [proposal](https://tc39.github.io/proposal-flatMap) - modules [`es7.array.flatten`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.flatten.js) and [`es7.array.flat-map`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.array.flat-map.js)
+
 ```js
 Array
   #flatten(depthArg = 1) -> array
   #flatMap(fn(val, key, @), that) -> array
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/array/flatten
 core-js(/library)/fn/array/flat-map
 core-js(/library)/fn/array/virtual/flatten
 core-js(/library)/fn/array/virtual/flat-map
 ```
-[*Examples*](https://goo.gl/jTXsZi):
+
+[_Examples_](https://goo.gl/jTXsZi):
+
 ```js
-[1, [2, 3], [4, 5]].flatten();    // => [1, 2, 3, 4, 5]
-[1, [2, [3, [4]]], 5].flatten();  // => [1, 2, [3, [4]], 5]
+[1, [2, 3], [4, 5]].flatten(); // => [1, 2, 3, 4, 5]
+[1, [2, [3, [4]]], 5].flatten(); // => [1, 2, [3, [4]], 5]
 [1, [2, [3, [4]]], 5].flatten(3); // => [1, 2, 3, 4, 5]
 
-[{a: 1, b: 2}, {a: 3, b: 4}, {a: 5, b: 6}].flatMap(it => [it.a, it.b]); // => [1, 2, 3, 4, 5, 6]
+[
+  { a: 1, b: 2 },
+  { a: 3, b: 4 },
+  { a: 5, b: 6 },
+].flatMap((it) => [it.a, it.b]); // => [1, 2, 3, 4, 5, 6]
 ```
-* `.of` and `.from` methods on collection constructors [proposal](https://github.com/tc39/proposal-setmap-offrom) - modules [`es7.set.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.of.js), [`es7.set.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.from.js), [`es7.map.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.of.js), [`es7.map.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.from.js), [`es7.weak-set.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-set.of.js), [`es7.weak-set.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-set.from.js), [`es7.weak-map.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-map.of.js), [`es7.weak-map.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-map.from.js)
+
+- `.of` and `.from` methods on collection constructors [proposal](https://github.com/tc39/proposal-setmap-offrom) - modules [`es7.set.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.of.js), [`es7.set.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.from.js), [`es7.map.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.of.js), [`es7.map.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.from.js), [`es7.weak-set.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-set.of.js), [`es7.weak-set.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-set.from.js), [`es7.weak-map.of`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-map.of.js), [`es7.weak-map.from`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.weak-map.from.js)
+
 ```js
 Set
   .of(...args) -> set
@@ -3187,7 +3480,9 @@ WeakMap
   .of(...args) -> weakmap
   .from(iterable, mapFn(val, index)?, that?) -> weakmap
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/set/of
 core-js(/library)/fn/set/from
@@ -3198,29 +3493,45 @@ core-js(/library)/fn/weak-set/from
 core-js(/library)/fn/weak-map/of
 core-js(/library)/fn/weak-map/from
 ```
-[*Examples*](https://goo.gl/mSC7eU):
+
+[_Examples_](https://goo.gl/mSC7eU):
+
 ```js
 Set.of(1, 2, 3, 2, 1); // => Set {1, 2, 3}
 
-Map.from([[1, 2], [3, 4]], ([key, val]) => [key ** 2, val ** 2]); // => Map {1: 4, 9: 16}
+Map.from(
+  [
+    [1, 2],
+    [3, 4],
+  ],
+  ([key, val]) => [key ** 2, val ** 2]
+); // => Map {1: 4, 9: 16}
 ```
-* `String#matchAll` [proposal](https://github.com/tc39/String.prototype.matchAll) - module [`es7.string.match-all`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.match-all.js)
+
+- `String#matchAll` [proposal](https://github.com/tc39/String.prototype.matchAll) - module [`es7.string.match-all`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.match-all.js)
+
 ```js
 String
   #matchAll(regexp) -> iterator
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/string/match-all
 core-js(/library)/fn/string/virtual/match-all
 ```
-[*Examples*](http://goo.gl/6kp9EB):
+
+[_Examples_](http://goo.gl/6kp9EB):
+
 ```js
-for(let [_, d, D] of '1111a2b3cccc'.matchAll(/(\d)(\D)/)){
+for (let [_, d, D] of "1111a2b3cccc".matchAll(/(\d)(\D)/)) {
   console.log(d, D); // => 1 a, 2 b, 3 c
 }
 ```
-* `Observable` [proposal](https://github.com/zenparsing/es-observable) - modules [`es7.observable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.observable.js) and [`es7.symbol.observable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.symbol.observable.js)
+
+- `Observable` [proposal](https://github.com/zenparsing/es-observable) - modules [`es7.observable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.observable.js) and [`es7.symbol.observable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.symbol.observable.js)
+
 ```js
 new Observable(fn)             -> observable
   #subscribe(observer)         -> subscription
@@ -3232,29 +3543,36 @@ new Observable(fn)             -> observable
 Symbol
   .observable                  -> @@observable
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/observable
 core-js(/library)/fn/symbol/observable
 ```
-[*Examples*](http://goo.gl/1LDywi):
+
+[_Examples_](http://goo.gl/1LDywi):
+
 ```js
-new Observable(observer => {
-  observer.next('hello');
-  observer.next('world');
+new Observable((observer) => {
+  observer.next("hello");
+  observer.next("world");
   observer.complete();
-}).forEach(it => console.log(it))
-  .then(_ => console.log('!'));
+})
+  .forEach((it) => console.log(it))
+  .then((_) => console.log("!"));
 ```
-* `Math.{clamp, DEG_PER_RAD, degrees, fscale, rad-per-deg, radians, scale}` 
-  [proposal](https://github.com/rwaldron/proposal-math-extensions) - modules 
-  [`es7.math.clamp`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.clamp.js), 
-  [`es7.math.DEG_PER_RAD`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.DEG_PER_RAD.js), 
+
+- `Math.{clamp, DEG_PER_RAD, degrees, fscale, rad-per-deg, radians, scale}`
+  [proposal](https://github.com/rwaldron/proposal-math-extensions) - modules
+  [`es7.math.clamp`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.clamp.js),
+  [`es7.math.DEG_PER_RAD`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.DEG_PER_RAD.js),
   [`es7.math.degrees`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.degrees.js),
-  [`es7.math.fscale`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.fscale.js), 
-  [`es7.math.RAD_PER_DEG`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.RAD_PER_DEG.js), 
+  [`es7.math.fscale`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.fscale.js),
+  [`es7.math.RAD_PER_DEG`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.RAD_PER_DEG.js),
   [`es7.math.radians`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.radians.js) and
   [`es7.math.scale`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.scale.js)
+
 ```js
 Math
   .DEG_PER_RAD -> number
@@ -3265,7 +3583,9 @@ Math
   .radians(degrees) -> number
   .scale(x, inLow, inHigh, outLow, outHigh) -> number
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/math/clamp
 core-js(/library)/fn/math/deg-per-rad
@@ -3275,66 +3595,90 @@ core-js(/library)/fn/math/rad-per-deg
 core-js(/library)/fn/math/radians
 core-js(/library)/fn/math/scale
 ```
-* `Math.signbit` [proposal](http://jfbastien.github.io/papers/Math.signbit.html) - module [`es7.math.signbit`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.signbit.js)
+
+- `Math.signbit` [proposal](http://jfbastien.github.io/papers/Math.signbit.html) - module [`es7.math.signbit`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.signbit.js)
+
 ```js
 Math
   .signbit(x) -> bool
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/math/signbit
 ```
-[*Examples*](http://es6.zloirock.ru/):
+
+[_Examples_](http://es6.zloirock.ru/):
+
 ```js
 Math.signbit(NaN); // => NaN
-Math.signbit(1);   // => true
-Math.signbit(-1);  // => false
-Math.signbit(0);   // => true
-Math.signbit(-0);  // => false
+Math.signbit(1); // => true
+Math.signbit(-1); // => false
+Math.signbit(0); // => true
+Math.signbit(-0); // => false
 ```
 
 #### Stage 0 proposals
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/stage/0
 ```
-* `String#at` [proposal](https://github.com/mathiasbynens/String.prototype.at) - module [`es7.string.at`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.at.js)
+
+- `String#at` [proposal](https://github.com/mathiasbynens/String.prototype.at) - module [`es7.string.at`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.string.at.js)
+
 ```js
 String
   #at(index) -> string
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/string/at
 core-js(/library)/fn/string/virtual/at
 ```
-[*Examples*](http://goo.gl/XluXI8):
+
+[_Examples_](http://goo.gl/XluXI8):
+
 ```js
-'a𠮷b'.at(1);        // => '𠮷'
-'a𠮷b'.at(1).length; // => 2
+"a𠮷b".at(1); // => '𠮷'
+"a𠮷b".at(1).length; // => 2
 ```
-* `Map#toJSON`, `Set#toJSON` [proposal](https://github.com/DavidBruant/Map-Set.prototype.toJSON) - modules [`es7.map.to-json`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.to-json.js), [`es7.set.to-json`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.to-json.js) (rejected and will be removed from `core-js@3`)
+
+- `Map#toJSON`, `Set#toJSON` [proposal](https://github.com/DavidBruant/Map-Set.prototype.toJSON) - modules [`es7.map.to-json`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.map.to-json.js), [`es7.set.to-json`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.set.to-json.js) (rejected and will be removed from `core-js@3`)
+
 ```js
 Map
   #toJSON() -> array (rejected and will be removed from core-js@3)
 Set
   #toJSON() -> array (rejected and will be removed from core-js@3)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/map
 core-js(/library)/fn/set
 ```
-* `Error.isError` [proposal](https://github.com/ljharb/proposal-is-error) - module [`es7.error.is-error`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.error.is-error.js) (withdrawn and will be removed from `core-js@3`)
+
+- `Error.isError` [proposal](https://github.com/ljharb/proposal-is-error) - module [`es7.error.is-error`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.error.is-error.js) (withdrawn and will be removed from `core-js@3`)
+
 ```js
 Error
   .isError(it) -> bool (withdrawn and will be removed from core-js@3)
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/error/is-error
 ```
-* `Math.{iaddh, isubh, imulh, umulh}` [proposal](https://gist.github.com/BrendanEich/4294d5c212a6d2254703) - modules [`es7.math.iaddh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.iaddh.js), [`es7.math.isubh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.isubh.js), [`es7.math.imulh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.imulh.js) and [`es7.math.umulh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.umulh.js)
+
+- `Math.{iaddh, isubh, imulh, umulh}` [proposal](https://gist.github.com/BrendanEich/4294d5c212a6d2254703) - modules [`es7.math.iaddh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.iaddh.js), [`es7.math.isubh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.isubh.js), [`es7.math.imulh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.imulh.js) and [`es7.math.umulh`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.math.umulh.js)
+
 ```js
 Math
   .iaddh(lo0, hi0, lo1, hi1) -> int32
@@ -3342,32 +3686,44 @@ Math
   .imulh(a, b) -> int32
   .umulh(a, b) -> uint32
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/math/iaddh
 core-js(/library)/fn/math/isubh
 core-js(/library)/fn/math/imulh
 core-js(/library)/fn/math/umulh
 ```
-* `global.asap`, [TC39 discussion](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask), module [`es7.asap`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.asap.js)
+
+- `global.asap`, [TC39 discussion](https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask), module [`es7.asap`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.asap.js)
+
 ```js
 asap(fn) -> void
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/asap
 ```
-[*Examples*](http://goo.gl/tx3SRK):
+
+[_Examples_](http://goo.gl/tx3SRK):
+
 ```js
-asap(() => console.log('called as microtask'));
+asap(() => console.log("called as microtask"));
 ```
 
 #### Pre-stage 0 proposals
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/stage/pre
 ```
-* `Reflect` metadata [proposal](https://github.com/jonathandturner/decorators/blob/master/specs/metadata.md) - modules [`es7.reflect.define-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.define-metadata.js), [`es7.reflect.delete-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.delete-metadata.js), [`es7.reflect.get-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-metadata.js), [`es7.reflect.get-metadata-keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-metadata-keys.js), [`es7.reflect.get-own-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-own-metadata.js), [`es7.reflect.get-own-metadata-keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-own-metadata-keys.js), [`es7.reflect.has-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.has-metadata.js), [`es7.reflect.has-own-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.has-own-metadata.js) and [`es7.reflect.metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.metadata.js).
+
+- `Reflect` metadata [proposal](https://github.com/jonathandturner/decorators/blob/master/specs/metadata.md) - modules [`es7.reflect.define-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.define-metadata.js), [`es7.reflect.delete-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.delete-metadata.js), [`es7.reflect.get-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-metadata.js), [`es7.reflect.get-metadata-keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-metadata-keys.js), [`es7.reflect.get-own-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-own-metadata.js), [`es7.reflect.get-own-metadata-keys`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.get-own-metadata-keys.js), [`es7.reflect.has-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.has-metadata.js), [`es7.reflect.has-own-metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.has-own-metadata.js) and [`es7.reflect.metadata`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/es7.reflect.metadata.js).
+
 ```js
 Reflect
   .defineMetadata(metadataKey, metadataValue, target, propertyKey?) -> void
@@ -3380,7 +3736,9 @@ Reflect
   .getOwnMetadataKeys(target, propertyKey?) -> array
   .metadata(metadataKey, metadataValue) -> decorator(target, targetKey?) -> void
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/reflect/define-metadata
 core-js(/library)/fn/reflect/delete-metadata
@@ -3392,62 +3750,88 @@ core-js(/library)/fn/reflect/has-metadata
 core-js(/library)/fn/reflect/has-own-metadata
 core-js(/library)/fn/reflect/metadata
 ```
-[*Examples*](http://goo.gl/KCo3PS):
+
+[_Examples_](http://goo.gl/KCo3PS):
+
 ```js
 var O = {};
-Reflect.defineMetadata('foo', 'bar', O);
-Reflect.ownKeys(O);               // => []
-Reflect.getOwnMetadataKeys(O);    // => ['foo']
-Reflect.getOwnMetadata('foo', O); // => 'bar'
+Reflect.defineMetadata("foo", "bar", O);
+Reflect.ownKeys(O); // => []
+Reflect.getOwnMetadataKeys(O); // => ['foo']
+Reflect.getOwnMetadata("foo", O); // => 'bar'
 ```
 
 ### Web standards
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/web
 ```
+
 #### setTimeout / setInterval
+
 Module [`web.timers`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/web.timers.js). Additional arguments fix for IE9-.
+
 ```js
 setTimeout(fn(...args), time, ...args) -> id
 setInterval(fn(...args), time, ...args) -> id
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/web/timers
 core-js(/library)/fn/set-timeout
 core-js(/library)/fn/set-interval
 ```
+
 ```js
 // Before:
 setTimeout(log.bind(null, 42), 1000);
 // After:
 setTimeout(log, 1000, 42);
 ```
+
 #### setImmediate
+
 Module [`web.immediate`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/web.immediate.js). [`setImmediate` proposal](https://developer.mozilla.org/en-US/docs/Web/API/Window.setImmediate) polyfill.
+
 ```js
 setImmediate(fn(...args), ...args) -> id
 clearImmediate(id) -> void
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/web/immediate
 core-js(/library)/fn/set-immediate
 core-js(/library)/fn/clear-immediate
 ```
-[*Examples*](http://goo.gl/6nXGrx):
-```js
-setImmediate(function(arg1, arg2){
-  console.log(arg1, arg2); // => Message will be displayed with minimum delay
-}, 'Message will be displayed', 'with minimum delay');
 
-clearImmediate(setImmediate(function(){
-  console.log('Message will not be displayed');
-}));
+[_Examples_](http://goo.gl/6nXGrx):
+
+```js
+setImmediate(
+  function (arg1, arg2) {
+    console.log(arg1, arg2); // => Message will be displayed with minimum delay
+  },
+  "Message will be displayed",
+  "with minimum delay"
+);
+
+clearImmediate(
+  setImmediate(function () {
+    console.log("Message will not be displayed");
+  })
+);
 ```
+
 #### Iterable DOM collections
+
 Some DOM collections should have [iterable interface](https://heycam.github.io/webidl/#idl-iterable) or should be [inherited from `Array`](https://heycam.github.io/webidl/#LegacyArrayClass). That mean they should have `keys`, `values`, `entries` and `@@iterator` methods for iteration. So add them. Module [`web.dom.iterable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/web.dom.iterable.js):
+
 ```js
 {
   CSSRuleList,
@@ -3492,28 +3876,38 @@ Some DOM collections should have [iterable interface](https://heycam.github.io/w
   #keys()    -> iterator
   #entries() -> iterator
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/web/dom-collections
 core-js(/library)/fn/dom-collections/iterator
 ```
-[*Examples*](http://goo.gl/lfXVFl):
+
+[_Examples_](http://goo.gl/lfXVFl):
+
 ```js
-for(var {id} of document.querySelectorAll('*')){
-  if(id)console.log(id);
+for (var { id } of document.querySelectorAll("*")) {
+  if (id) console.log(id);
 }
 
-for(var [index, {id}] of document.querySelectorAll('*').entries()){
-  if(id)console.log(index, id);
+for (var [index, { id }] of document.querySelectorAll("*").entries()) {
+  if (id) console.log(index, id);
 }
 ```
+
 ### Non-standard
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core
 ```
+
 #### Object
+
 Modules [`core.object.is-object`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.object.is-object.js), [`core.object.classof`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.object.classof.js), [`core.object.define`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.object.define.js), [`core.object.make`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.object.make.js).
+
 ```js
 Object
   .isObject(var) -> bool
@@ -3522,111 +3916,121 @@ Object
   .make(proto | null, mixin?) -> object
 ```
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core/object
 core-js(/library)/fn/object/is-object
 core-js(/library)/fn/object/define
 core-js(/library)/fn/object/make
 ```
-Object classify [*examples*](http://goo.gl/YZQmGo):
+
+Object classify [_examples_](http://goo.gl/YZQmGo):
+
 ```js
-Object.isObject({});    // => true
+Object.isObject({}); // => true
 Object.isObject(isNaN); // => true
-Object.isObject(null);  // => false
+Object.isObject(null); // => false
 
 var classof = Object.classof;
 
-classof(null);                 // => 'Null'
-classof(undefined);            // => 'Undefined'
-classof(1);                    // => 'Number'
-classof(true);                 // => 'Boolean'
-classof('string');             // => 'String'
-classof(Symbol());             // => 'Symbol'
+classof(null); // => 'Null'
+classof(undefined); // => 'Undefined'
+classof(1); // => 'Number'
+classof(true); // => 'Boolean'
+classof("string"); // => 'String'
+classof(Symbol()); // => 'Symbol'
 
-classof(new Number(1));        // => 'Number'
-classof(new Boolean(true));    // => 'Boolean'
-classof(new String('string')); // => 'String'
+classof(new Number(1)); // => 'Number'
+classof(new Boolean(true)); // => 'Boolean'
+classof(new String("string")); // => 'String'
 
-var fn   = function(){}
-  , list = (function(){return arguments})(1, 2, 3);
+var fn = function () {},
+  list = (function () {
+    return arguments;
+  })(1, 2, 3);
 
-classof({});                   // => 'Object'
-classof(fn);                   // => 'Function'
-classof([]);                   // => 'Array'
-classof(list);                 // => 'Arguments'
-classof(/./);                  // => 'RegExp'
-classof(new TypeError);        // => 'Error'
+classof({}); // => 'Object'
+classof(fn); // => 'Function'
+classof([]); // => 'Array'
+classof(list); // => 'Arguments'
+classof(/./); // => 'RegExp'
+classof(new TypeError()); // => 'Error'
 
-classof(new Set);              // => 'Set'
-classof(new Map);              // => 'Map'
-classof(new WeakSet);          // => 'WeakSet'
-classof(new WeakMap);          // => 'WeakMap'
-classof(new Promise(fn));      // => 'Promise'
+classof(new Set()); // => 'Set'
+classof(new Map()); // => 'Map'
+classof(new WeakSet()); // => 'WeakSet'
+classof(new WeakMap()); // => 'WeakMap'
+classof(new Promise(fn)); // => 'Promise'
 
-classof([].values());          // => 'Array Iterator'
-classof(new Set().values());   // => 'Set Iterator'
-classof(new Map().values());   // => 'Map Iterator'
+classof([].values()); // => 'Array Iterator'
+classof(new Set().values()); // => 'Set Iterator'
+classof(new Map().values()); // => 'Map Iterator'
 
-classof(Math);                 // => 'Math'
-classof(JSON);                 // => 'JSON'
+classof(Math); // => 'Math'
+classof(JSON); // => 'JSON'
 
-function Example(){}
-Example.prototype[Symbol.toStringTag] = 'Example';
+function Example() {}
+Example.prototype[Symbol.toStringTag] = "Example";
 
-classof(new Example);          // => 'Example'
+classof(new Example()); // => 'Example'
 ```
-`Object.define` and `Object.make` [*examples*](http://goo.gl/rtpD5Z):
+
+`Object.define` and `Object.make` [_examples_](http://goo.gl/rtpD5Z):
+
 ```js
 // Before:
-Object.defineProperty(target, 'c', {
+Object.defineProperty(target, "c", {
   enumerable: true,
   configurable: true,
-  get: function(){
+  get: function () {
     return this.a + this.b;
-  }
+  },
 });
 
 // After:
 Object.define(target, {
-  get c(){
+  get c() {
     return this.a + this.b;
-  }
+  },
 });
 
 // Shallow object cloning with prototype and descriptors:
 var copy = Object.make(Object.getPrototypeOf(src), src);
 
 // Simple inheritance:
-function Vector2D(x, y){
+function Vector2D(x, y) {
   this.x = x;
   this.y = y;
 }
 Object.define(Vector2D.prototype, {
-  get xy(){
+  get xy() {
     return Math.hypot(this.x, this.y);
-  }
+  },
 });
-function Vector3D(x, y, z){
+function Vector3D(x, y, z) {
   Vector2D.apply(this, arguments);
   this.z = z;
 }
 Vector3D.prototype = Object.make(Vector2D.prototype, {
   constructor: Vector3D,
-  get xyz(){
+  get xyz() {
     return Math.hypot(this.x, this.y, this.z);
-  }
+  },
 });
 
 var vector = new Vector3D(9, 12, 20);
-console.log(vector.xy);  // => 15
+console.log(vector.xy); // => 15
 console.log(vector.xyz); // => 25
 vector.y++;
-console.log(vector.xy);  // => 15.811388300841896
+console.log(vector.xy); // => 15.811388300841896
 console.log(vector.xyz); // => 25.495097567963924
 ```
+
 #### Dict
+
 Module [`core.dict`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.dict.js). Based on [TC39 discuss](https://github.com/rwaldron/tc39-notes/blob/master/es6/2012-11/nov-29.md#collection-apis-review) / [strawman](http://wiki.ecmascript.org/doku.php?id=harmony:modules_standard#dictionaries).
+
 ```js
 [new] Dict(iterable (entries) | object ?) -> dict
   .isDict(var) -> bool
@@ -3649,192 +4053,228 @@ Module [`core.dict`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/co
   .reduce(object, fn(memo, val, key, @), memo?) -> var
 ```
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core/dict
 core-js(/library)/fn/dict
 ```
+
 `Dict` create object without prototype from iterable or simple object.
 
-[*Examples*](http://goo.gl/pnp8Vr):
-```js
-var map = new Map([['a', 1], ['b', 2], ['c', 3]]);
+[_Examples_](http://goo.gl/pnp8Vr):
 
-Dict();                    // => {__proto__: null}
-Dict({a: 1, b: 2, c: 3});  // => {__proto__: null, a: 1, b: 2, c: 3}
-Dict(map);                 // => {__proto__: null, a: 1, b: 2, c: 3}
+```js
+var map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
+
+Dict(); // => {__proto__: null}
+Dict({ a: 1, b: 2, c: 3 }); // => {__proto__: null, a: 1, b: 2, c: 3}
+Dict(map); // => {__proto__: null, a: 1, b: 2, c: 3}
 Dict([1, 2, 3].entries()); // => {__proto__: null, 0: 1, 1: 2, 2: 3}
 
-var dict = Dict({a: 42});
-dict instanceof Object;   // => false
-dict.a;                   // => 42
-dict.toString;            // => undefined
-'a' in dict;              // => true
-'hasOwnProperty' in dict; // => false
+var dict = Dict({ a: 42 });
+dict instanceof Object; // => false
+dict.a; // => 42
+dict.toString; // => undefined
+"a" in dict; // => true
+"hasOwnProperty" in dict; // => false
 
-Dict.isDict({});     // => false
+Dict.isDict({}); // => false
 Dict.isDict(Dict()); // => true
 ```
+
 `Dict.keys`, `Dict.values` and `Dict.entries` returns iterators for objects.
 
-[*Examples*](http://goo.gl/xAvECH):
+[_Examples_](http://goo.gl/xAvECH):
+
 ```js
-var dict = {a: 1, b: 2, c: 3};
+var dict = { a: 1, b: 2, c: 3 };
 
-for(var key of Dict.keys(dict))console.log(key); // => 'a', 'b', 'c'
+for (var key of Dict.keys(dict)) console.log(key); // => 'a', 'b', 'c'
 
-for(var val of Dict.values(dict))console.log(val); // => 1, 2, 3
+for (var val of Dict.values(dict)) console.log(val); // => 1, 2, 3
 
-for(var [key, val] of Dict.entries(dict)){
+for (var [key, val] of Dict.entries(dict)) {
   console.log(key); // => 'a', 'b', 'c'
   console.log(val); // => 1, 2, 3
 }
 
 new Map(Dict.entries(dict)); // => Map {a: 1, b: 2, c: 3}
 ```
-Basic dict operations for objects with prototype [*examples*](http://goo.gl/B28UnG):
+
+Basic dict operations for objects with prototype [_examples_](http://goo.gl/B28UnG):
+
 ```js
-'q' in {q: 1};            // => true
-'toString' in {};         // => true
+"q" in { q: 1 }; // => true
+"toString" in {}; // => true
 
-Dict.has({q: 1}, 'q');    // => true
-Dict.has({}, 'toString'); // => false
+Dict.has({ q: 1 }, "q"); // => true
+Dict.has({}, "toString"); // => false
 
-({q: 1})['q'];            // => 1
-({}).toString;            // => function toString(){ [native code] }
+({ q: 1 }["q"]); // => 1
+({}.toString); // => function toString(){ [native code] }
 
-Dict.get({q: 1}, 'q');    // => 1
-Dict.get({}, 'toString'); // => undefined
-
-var O = {};
-O['q'] = 1;
-O['q'];         // => 1
-O['__proto__'] = {w: 2};
-O['__proto__']; // => {w: 2}
-O['w'];         // => 2
+Dict.get({ q: 1 }, "q"); // => 1
+Dict.get({}, "toString"); // => undefined
 
 var O = {};
-Dict.set(O, 'q', 1);
-O['q'];         // => 1
-Dict.set(O, '__proto__', {w: 2});
-O['__proto__']; // => {w: 2}
-O['w'];         // => undefined
+O["q"] = 1;
+O["q"]; // => 1
+O["__proto__"] = { w: 2 };
+O["__proto__"]; // => {w: 2}
+O["w"]; // => 2
+
+var O = {};
+Dict.set(O, "q", 1);
+O["q"]; // => 1
+Dict.set(O, "__proto__", { w: 2 });
+O["__proto__"]; // => {w: 2}
+O["w"]; // => undefined
 ```
+
 Other methods of `Dict` module are static equivalents of `Array.prototype` methods for dictionaries.
 
-[*Examples*](http://goo.gl/xFi1RH):
+[_Examples_](http://goo.gl/xFi1RH):
+
 ```js
-var dict = {a: 1, b: 2, c: 3};
+var dict = { a: 1, b: 2, c: 3 };
 
 Dict.forEach(dict, console.log, console);
 // => 1, 'a', {a: 1, b: 2, c: 3}
 // => 2, 'b', {a: 1, b: 2, c: 3}
 // => 3, 'c', {a: 1, b: 2, c: 3}
 
-Dict.map(dict, function(it){
+Dict.map(dict, function (it) {
   return it * it;
 }); // => {a: 1, b: 4, c: 9}
 
-Dict.mapPairs(dict, function(val, key){
-  if(key != 'b')return [key + key, val * val];
+Dict.mapPairs(dict, function (val, key) {
+  if (key != "b") return [key + key, val * val];
 }); // => {aa: 1, cc: 9}
 
-Dict.filter(dict, function(it){
+Dict.filter(dict, function (it) {
   return it % 2;
 }); // => {a: 1, c: 3}
 
-Dict.some(dict, function(it){
+Dict.some(dict, function (it) {
   return it === 2;
 }); // => true
 
-Dict.every(dict, function(it){
+Dict.every(dict, function (it) {
   return it === 2;
 }); // => false
 
-Dict.find(dict, function(it){
+Dict.find(dict, function (it) {
   return it > 2;
 }); // => 3
-Dict.find(dict, function(it){
+Dict.find(dict, function (it) {
   return it > 4;
 }); // => undefined
 
-Dict.findKey(dict, function(it){
+Dict.findKey(dict, function (it) {
   return it > 2;
 }); // => 'c'
-Dict.findKey(dict, function(it){
+Dict.findKey(dict, function (it) {
   return it > 4;
 }); // => undefined
 
-Dict.keyOf(dict, 2);    // => 'b'
-Dict.keyOf(dict, 4);    // => undefined
+Dict.keyOf(dict, 2); // => 'b'
+Dict.keyOf(dict, 4); // => undefined
 
 Dict.includes(dict, 2); // => true
 Dict.includes(dict, 4); // => false
 
-Dict.reduce(dict, function(memo, it){
+Dict.reduce(dict, function (memo, it) {
   return memo + it;
-});     // => 6
-Dict.reduce(dict, function(memo, it){
-  return memo + it;
-}, ''); // => '123'
+}); // => 6
+Dict.reduce(
+  dict,
+  function (memo, it) {
+    return memo + it;
+  },
+  ""
+); // => '123'
 ```
+
 #### Partial application
+
 Module [`core.function.part`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.function.part.js).
+
 ```js
 Function
   #part(...args | _) -> fn(...args)
 ```
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js/core/function
 core-js(/library)/fn/function/part
 core-js(/library)/fn/function/virtual/part
 core-js(/library)/fn/_
 ```
+
 `Function#part` partial apply function without `this` binding. Uses global variable `_` (`core._` for builds without global namespace pollution) as placeholder and not conflict with `Underscore` / `LoDash`.
 
-[*Examples*](http://goo.gl/p9ZJ8K):
+[_Examples_](http://goo.gl/p9ZJ8K):
+
 ```js
 var fn1 = log.part(1, 2);
-fn1(3, 4);    // => 1, 2, 3, 4
+fn1(3, 4); // => 1, 2, 3, 4
 
 var fn2 = log.part(_, 2, _, 4);
-fn2(1, 3);    // => 1, 2, 3, 4
+fn2(1, 3); // => 1, 2, 3, 4
 
 var fn3 = log.part(1, _, _, 4);
-fn3(2, 3);    // => 1, 2, 3, 4
+fn3(2, 3); // => 1, 2, 3, 4
 
 fn2(1, 3, 5); // => 1, 2, 3, 4, 5
-fn2(1);       // => 1, 2, undefined, 4
+fn2(1); // => 1, 2, undefined, 4
 ```
+
 #### Number Iterator
+
 Module [`core.number.iterator`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.number.iterator.js).
+
 ```js
 Number
   #@@iterator() -> iterator
 ```
 
-[*CommonJS entry points:*](#commonjs)
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core/number
 core-js(/library)/fn/number/iterator
 core-js(/library)/fn/number/virtual/iterator
 ```
-[*Examples*](http://goo.gl/o45pCN):
+
+[_Examples_](http://goo.gl/o45pCN):
+
 ```js
-for(var i of 3)console.log(i); // => 0, 1, 2
+for (var i of 3) console.log(i); // => 0, 1, 2
 
 [...10]; // => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 Array.from(10, Math.random); // => [0.9817775336559862, 0.02720663254149258, ...]
 
-Array.from(10, function(it){
-  return this + it * it;
-}, .42); // => [0.42, 1.42, 4.42, 9.42, 16.42, 25.42, 36.42, 49.42, 64.42, 81.42]
+Array.from(
+  10,
+  function (it) {
+    return this + it * it;
+  },
+  0.42
+); // => [0.42, 1.42, 4.42, 9.42, 16.42, 25.42, 36.42, 49.42, 64.42, 81.42]
 ```
+
 #### Escaping strings
+
 Modules [`core.regexp.escape`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.regexp.escape.js), [`core.string.escape-html`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.string.escape-html.js) and [`core.string.unescape-html`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.string.unescape-html.js).
+
 ```js
 RegExp
   .escape(str) -> str
@@ -3842,7 +4282,9 @@ String
   #escapeHTML() -> str
   #unescapeHTML() -> str
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core/regexp
 core-js(/library)/core/string
@@ -3852,51 +4294,67 @@ core-js(/library)/fn/string/unescape-html
 core-js(/library)/fn/string/virtual/escape-html
 core-js(/library)/fn/string/virtual/unescape-html
 ```
-[*Examples*](http://goo.gl/6bOvsQ):
-```js
-RegExp.escape('Hello, []{}()*+?.\\^$|!'); // => 'Hello, \[\]\{\}\(\)\*\+\?\.\\\^\$\|!'
 
-'<script>doSomething();</script>'.escapeHTML(); // => '&lt;script&gt;doSomething();&lt;/script&gt;'
-'&lt;script&gt;doSomething();&lt;/script&gt;'.unescapeHTML(); // => '<script>doSomething();</script>'
+[_Examples_](http://goo.gl/6bOvsQ):
+
+```js
+RegExp.escape("Hello, []{}()*+?.\\^$|!"); // => 'Hello, \[\]\{\}\(\)\*\+\?\.\\\^\$\|!'
+
+"<script>doSomething();</script>".escapeHTML(); // => '&lt;script&gt;doSomething();&lt;/script&gt;'
+"&lt;script&gt;doSomething();&lt;/script&gt;".unescapeHTML(); // => '<script>doSomething();</script>'
 ```
+
 #### delay
+
 Module [`core.delay`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.delay.js). [Promise](#ecmascript-6-promise)-returning delay function, [esdiscuss](https://esdiscuss.org/topic/promise-returning-delay-function).
+
 ```js
 delay(ms) -> promise
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/core/delay
 core-js(/library)/fn/delay
 ```
-[*Examples*](http://goo.gl/lbucba):
+
+[_Examples_](http://goo.gl/lbucba):
+
 ```js
-delay(1e3).then(() => console.log('after 1 sec'));
+delay(1e3).then(() => console.log("after 1 sec"));
 
 (async () => {
   await delay(3e3);
-  console.log('after 3 sec');
+  console.log("after 3 sec");
 
-  while(await delay(3e3))console.log('each 3 sec');
+  while (await delay(3e3)) console.log("each 3 sec");
 })();
 ```
+
 #### Helpers for iterators
+
 Modules [`core.is-iterable`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.is-iterable.js), [`core.get-iterator`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.get-iterator.js), [`core.get-iterator-method`](https://github.com/zloirock/core-js/blob/v2.6.11/modules/core.get-iterator-method.js) - helpers for check iterability / get iterator in the `library` version or, for example, for `arguments` object:
+
 ```js
 core
   .isIterable(var) -> bool
   .getIterator(iterable) -> iterator
   .getIteratorMethod(var) -> function | undefined
 ```
-[*CommonJS entry points:*](#commonjs)
+
+[_CommonJS entry points:_](#commonjs)
+
 ```js
 core-js(/library)/fn/is-iterable
 core-js(/library)/fn/get-iterator
 core-js(/library)/fn/get-iterator-method
 ```
-[*Examples*](http://goo.gl/SXsM6D):
+
+[_Examples_](http://goo.gl/SXsM6D):
+
 ```js
-var list = (function(){
+var list = (function () {
   return arguments;
 })(1, 2, 3);
 
@@ -3908,10 +4366,10 @@ console.log(iter.next().value); // 2
 console.log(iter.next().value); // 3
 console.log(iter.next().value); // undefined
 
-core.getIterator({});   // TypeError: [object Object] is not iterable!
+core.getIterator({}); // TypeError: [object Object] is not iterable!
 
 var iterFn = core.getIteratorMethod(list);
-console.log(typeof iterFn);     // 'function'
+console.log(typeof iterFn); // 'function'
 var iter = iterFn.call(list);
 console.log(iter.next().value); // 1
 console.log(iter.next().value); // 2
@@ -3922,48 +4380,51 @@ console.log(core.getIteratorMethod({})); // undefined
 ```
 
 ## Missing polyfills
+
 - ES5 `JSON` is missing now only in IE7- and never will it be added to `core-js`, if you need it in these old browsers, many implementations are available, for example, [json3](https://github.com/bestiejs/json3).
 - ES6 `String#normalize` is not a very useful feature, but this polyfill will be very large. If you need it, you can use [unorm](https://github.com/walling/unorm/).
 - ES6 `Proxy` can't be polyfilled, but for Node.js / Chromium with additional flags you can try [harmony-reflect](https://github.com/tvcutsem/harmony-reflect) for adapt old style `Proxy` API to final ES6 version.
 - ES6 logic for `@@isConcatSpreadable` and `@@species` (in most places) can be polyfilled without problems, but it will cause a serious slowdown in popular cases in some engines. It will be polyfilled when it will be implemented in modern engines.
 - ES7 `SIMD`. `core-js` doesn't add polyfill of this feature because of large size and some other reasons. You can use [this polyfill](https://github.com/tc39/ecmascript_simd/blob/master/src/ecmascript_simd.js).
-- `window.fetch` is not a cross-platform feature, in some environments it makes no sense. For this reason, I don't think it should be in `core-js`. Looking at a large number of requests it *may be*  added in the future. Now you can use, for example, [this polyfill](https://github.com/github/fetch).
+- `window.fetch` is not a cross-platform feature, in some environments it makes no sense. For this reason, I don't think it should be in `core-js`. Looking at a large number of requests it _may be_ added in the future. Now you can use, for example, [this polyfill](https://github.com/github/fetch).
 - ECMA-402 `Intl` is missed because of size. You can use [this polyfill](https://github.com/andyearnshaw/Intl.js/).
-
 
 </details><details> <summary>fixtures/node_modules/css-selector-parser/</summary>
 
 ### [fixtures/node_modules/css-selector-parser/README.md](fixtures/node_modules/css-selector-parser/README.md)
-node-css-selector-parser [![Build Status](https://travis-ci.org/mdevils/node-css-selector-parser.svg?branch=master)](https://travis-ci.org/mdevils/node-css-selector-parser)
-========================
+
+# node-css-selector-parser [![Build Status](https://travis-ci.org/mdevils/node-css-selector-parser.svg?branch=master)](https://travis-ci.org/mdevils/node-css-selector-parser)
 
 Fast and low memory CSS selector parser.
 
 Parses CSS selector into object-model.
 
-Installation
-------------
+## Installation
 
 ```
 npm install css-selector-parser
 ```
 
-Usage
------
+## Usage
 
 ```javascript
-var CssSelectorParser = require('css-selector-parser').CssSelectorParser,
+var CssSelectorParser = require("css-selector-parser").CssSelectorParser,
+  parser = new CssSelectorParser();
 
-    parser = new CssSelectorParser();
-
-parser.registerSelectorPseudos('has');
-parser.registerNestingOperators('>', '+', '~');
-parser.registerAttrEqualityMods('^', '$', '*', '~');
+parser.registerSelectorPseudos("has");
+parser.registerNestingOperators(">", "+", "~");
+parser.registerAttrEqualityMods("^", "$", "*", "~");
 parser.enableSubstitutes();
 
-var util = require('util');
+var util = require("util");
 
-console.log(util.inspect(parser.parse('a[href^=/], .container:has(nav) > a[href]:lt($var)'), false, null));
+console.log(
+  util.inspect(
+    parser.parse("a[href^=/], .container:has(nav) > a[href]:lt($var)"),
+    false,
+    null
+  )
+);
 ```
 
 Produces:
@@ -3992,38 +4453,34 @@ Produces:
              type: 'rule' } } } ] }
 ```
 
-Token description
------------------
+## Token description
 
-*type* may be one of:
+_type_ may be one of:
 
-* *selectors* — list of selectors, token contains *selectors* array of *ruleSet* tokens (based on "," operator).
-* *ruleSet* — selector, token contains *rule* field with *rule*-type object.
-* *rule* — single rule.
+- _selectors_ — list of selectors, token contains _selectors_ array of _ruleSet_ tokens (based on "," operator).
+- _ruleSet_ — selector, token contains _rule_ field with _rule_-type object.
+- _rule_ — single rule.
 
-Fields for *rule* type.
+Fields for _rule_ type.
 
-* *tagName* — tag name for the rule (e.g. "div"), may be '*'.
-* *classNames* — list of CSS class names for the rule.
-* *attrs* — list of attribute rules; rule may contain fields:
-  * *name* — attribute name, required field.
-  * *valueType* — type of comparison value ("string" or "substitute").
-  * *operator* — attribute value comparison operator.
-  * *value* — comparison attribute value.
-* *pseudos* — list of pseudo class rules; rule may contain fields:
-  * *name* — pseudo name, required field.
-  * *valueType* — argument type ("string", "selector" or "substitute").
-  * *value* — pseudo argument.
-* *nestingOperator* — the operator used to nest this rule (e.g. in selector "tag1 > tag2", tag2 will have nestingOperator=">")
-* *rule* — nested rule.
-
-
-
-
+- _tagName_ — tag name for the rule (e.g. "div"), may be '\*'.
+- _classNames_ — list of CSS class names for the rule.
+- _attrs_ — list of attribute rules; rule may contain fields:
+  - _name_ — attribute name, required field.
+  - _valueType_ — type of comparison value ("string" or "substitute").
+  - _operator_ — attribute value comparison operator.
+  - _value_ — comparison attribute value.
+- _pseudos_ — list of pseudo class rules; rule may contain fields:
+  - _name_ — pseudo name, required field.
+  - _valueType_ — argument type ("string", "selector" or "substitute").
+  - _value_ — pseudo argument.
+- _nestingOperator_ — the operator used to nest this rule (e.g. in selector "tag1 > tag2", tag2 will have nestingOperator=">")
+- _rule_ — nested rule.
 
 </details><details> <summary>fixtures/node_modules/direction/</summary>
 
 ### [fixtures/node_modules/direction/readme.md](fixtures/node_modules/direction/readme.md)
+
 # direction
 
 [![Build][build-badge]][build]
@@ -4044,12 +4501,12 @@ npm install direction
 Use:
 
 ```js
-var direction = require('direction')
+var direction = require("direction");
 
-direction('A') // => 'ltr'
-direction('anglais') // => 'ltr'
-direction('بسيطة') // => 'rtl'
-direction('@') // => 'neutral'
+direction("A"); // => 'ltr'
+direction("anglais"); // => 'ltr'
+direction("بسيطة"); // => 'rtl'
+direction("@"); // => 'neutral'
 ```
 
 ## CLI
@@ -4090,32 +4547,20 @@ $ echo 'الانجليزية' | direction
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/direction.svg
-
 [build]: https://travis-ci.org/wooorm/direction
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/direction.svg
-
 [coverage]: https://codecov.io/github/wooorm/direction
-
 [downloads-badge]: https://img.shields.io/npm/dm/direction.svg
-
 [downloads]: https://www.npmjs.com/package/direction
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/direction.svg
-
 [size]: https://bundlephobia.com/result?p=direction
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/doctype/</summary>
 
 ### [fixtures/node_modules/doctype/readme.md](fixtures/node_modules/doctype/readme.md)
+
 # doctype
 
 [![Build][build-badge]][build]
@@ -4136,18 +4581,18 @@ npm install doctype
 ## Use
 
 ```js
-var doctype = require('doctype')
+var doctype = require("doctype");
 
-doctype(5)
+doctype(5);
 // => 'html'
 
-doctype(4.01)
-doctype('4.01t')
-doctype('4.01 Transitional')
-doctype('HTML 4.01 Transitional')
+doctype(4.01);
+doctype("4.01t");
+doctype("4.01 Transitional");
+doctype("HTML 4.01 Transitional");
 // => 'HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"'
 
-doctype('svg')
+doctype("svg");
 // => 'svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"'
 ```
 
@@ -4171,21 +4616,21 @@ Returns: `string?` — When applicable.
 }
 ```
 
-`Object` mapping doctype names to doctype strings.  This gives raw
+`Object` mapping doctype names to doctype strings. This gives raw
 access to the information returned by [`doctype()`](#doctypename).
 
 ## Related
 
-*   [`html-tag-names`](https://github.com/wooorm/html-tag-names)
-    — List of HTML tag-names
-*   [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
-    — Map of HTML attributes
-*   [`html-void-elements`](https://github.com/wooorm/html-void-elements)
-    — List of void HTML tag-names
-*   [`property-information`](https://github.com/wooorm/property-information)
-    — Information on HTML properties
-*   [`web-namespaces`](https://github.com/wooorm/web-namespaces)
-    — Map of web namespaces
+- [`html-tag-names`](https://github.com/wooorm/html-tag-names)
+  — List of HTML tag-names
+- [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
+  — Map of HTML attributes
+- [`html-void-elements`](https://github.com/wooorm/html-void-elements)
+  — List of void HTML tag-names
+- [`property-information`](https://github.com/wooorm/property-information)
+  — Information on HTML properties
+- [`web-namespaces`](https://github.com/wooorm/web-namespaces)
+  — Map of web namespaces
 
 ## License
 
@@ -4194,34 +4639,21 @@ access to the information returned by [`doctype()`](#doctypename).
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/doctype.svg
-
 [build]: https://travis-ci.org/wooorm/doctype
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/doctype.svg
-
 [coverage]: https://codecov.io/github/wooorm/doctype
-
 [downloads-badge]: https://img.shields.io/npm/dm/doctype.svg
-
 [downloads]: https://www.npmjs.com/package/doctype
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/doctype.svg
-
 [size]: https://bundlephobia.com/result?p=doctype
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/dotenv/</summary>
 
 ### [fixtures/node_modules/dotenv/CHANGELOG.md](fixtures/node_modules/dotenv/CHANGELOG.md)
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
@@ -4230,12 +4662,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [8.1.0](https://github.com/motdotla/dotenv/compare/v7.0.0...v8.1.0) (2019-08-18)
 
-
 ### ⚠ BREAKING CHANGES
 
-* dropping Node v6 support because end-of-life
+- dropping Node v6 support because end-of-life
 
-* Drop support for Node v6 (#392) ([2e9636a](https://github.com/motdotla/dotenv/commit/2e9636a)), closes [#392](https://github.com/motdotla/dotenv/issues/392)
+- Drop support for Node v6 (#392) ([2e9636a](https://github.com/motdotla/dotenv/commit/2e9636a)), closes [#392](https://github.com/motdotla/dotenv/issues/392)
 
 # [8.0.0](https://github.com/motdotla/dotenv/compare/v7.0.0...v8.0.0) (2019-05-02)
 
@@ -4378,10 +4809,6 @@ All notable changes to this project will be documented in this file. See [standa
 [1.1.0]: https://github.com/motdotla/dotenv/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/motdotla/dotenv/compare/v0.4.0...v1.0.0
 
-
-
-
-
 ### [fixtures/node_modules/dotenv/README.md](fixtures/node_modules/dotenv/README.md)
 
 # dotenv
@@ -4413,7 +4840,7 @@ yarn add dotenv
 As early as possible in your application, require and configure dotenv.
 
 ```javascript
-require('dotenv').config()
+require("dotenv").config();
 ```
 
 Create a `.env` file in the root directory of your project. Add
@@ -4429,12 +4856,12 @@ DB_PASS=s1mpl3
 `process.env` now has the keys and values you defined in your `.env` file.
 
 ```javascript
-const db = require('db')
+const db = require("db");
 db.connect({
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
-  password: process.env.DB_PASS
-})
+  password: process.env.DB_PASS,
+});
 ```
 
 ### Preload
@@ -4468,13 +4895,13 @@ $ DOTENV_CONFIG_ENCODING=latin1 node -r dotenv/config your_script.js dotenv_conf
 and return an Object with a `parsed` key containing the loaded content or an `error` key if it failed.
 
 ```js
-const result = dotenv.config()
+const result = dotenv.config();
 
 if (result.error) {
-  throw result.error
+  throw result.error;
 }
 
-console.log(result.parsed)
+console.log(result.parsed);
 ```
 
 You can additionally, pass options to `config`.
@@ -4488,7 +4915,7 @@ Default: `path.resolve(process.cwd(), '.env')`
 You may specify a custom path if your file containing environment variables is located elsewhere.
 
 ```js
-require('dotenv').config({ path: '/full/custom/path/to/your/env/vars' })
+require("dotenv").config({ path: "/full/custom/path/to/your/env/vars" });
 ```
 
 #### Encoding
@@ -4498,7 +4925,7 @@ Default: `utf8`
 You may specify the encoding of your file containing environment variables.
 
 ```js
-require('dotenv').config({ encoding: 'latin1' })
+require("dotenv").config({ encoding: "latin1" });
 ```
 
 #### Debug
@@ -4508,7 +4935,7 @@ Default: `false`
 You may turn on logging to help debug why certain keys or values are not being set as you expect.
 
 ```js
-require('dotenv').config({ debug: process.env.DEBUG })
+require("dotenv").config({ debug: process.env.DEBUG });
 ```
 
 ## Parse
@@ -4518,10 +4945,10 @@ variables is available to use. It accepts a String or Buffer and will return
 an Object with the parsed keys and values.
 
 ```js
-const dotenv = require('dotenv')
-const buf = Buffer.from('BASIC=basic')
-const config = dotenv.parse(buf) // will return an object
-console.log(typeof config, config) // object { BASIC : 'basic' }
+const dotenv = require("dotenv");
+const buf = Buffer.from("BASIC=basic");
+const config = dotenv.parse(buf); // will return an object
+console.log(typeof config, config); // object { BASIC : 'basic' }
 ```
 
 ### Options
@@ -4533,10 +4960,10 @@ Default: `false`
 You may turn on logging to help debug why certain keys or values are not being set as you expect.
 
 ```js
-const dotenv = require('dotenv')
-const buf = Buffer.from('hello world')
-const opt = { debug: true }
-const config = dotenv.parse(buf, opt)
+const dotenv = require("dotenv");
+const buf = Buffer.from("hello world");
+const opt = { debug: true };
+const config = dotenv.parse(buf, opt);
 // expect a debug message because the buffer is not in KEY=VAL form
 ```
 
@@ -4549,9 +4976,9 @@ The parsing engine currently supports the following rules:
 - lines beginning with `#` are treated as comments
 - empty values become empty strings (`EMPTY=` becomes `{EMPTY: ''}`)
 - inner quotes are maintained (think JSON) (`JSON={"foo": "bar"}` becomes `{JSON:"{\"foo\": \"bar\"}"`)
-- whitespace is removed from both ends of unquoted values (see more on [`trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)) (`FOO=  some value  ` becomes `{FOO: 'some value'}`)
+- whitespace is removed from both ends of unquoted values (see more on [`trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)) (`FOO= some value ` becomes `{FOO: 'some value'}`)
 - single and double quoted values are escaped (`SINGLE_QUOTE='quoted'` becomes `{SINGLE_QUOTE: "quoted"}`)
-- single and double quoted values maintain whitespace from both ends (`FOO="  some value  "` becomes `{FOO: '  some value  '}`)
+- single and double quoted values maintain whitespace from both ends (`FOO=" some value "` becomes `{FOO: ' some value '}`)
 - double quoted values expand new lines (`MULTILINE="new\nline"` becomes
 
 ```
@@ -4583,11 +5010,11 @@ We will never modify any environment variables that have already been set. In pa
 If you want to override `process.env` you can do something like this:
 
 ```javascript
-const fs = require('fs')
-const dotenv = require('dotenv')
-const envConfig = dotenv.parse(fs.readFileSync('.env.override'))
+const fs = require("fs");
+const dotenv = require("dotenv");
+const envConfig = dotenv.parse(fs.readFileSync(".env.override"));
 for (const k in envConfig) {
-  process.env[k] = envConfig[k]
+  process.env[k] = envConfig[k];
 }
 ```
 
@@ -4598,10 +5025,10 @@ the parsed `.env` file. This gives you everything you need to continue
 setting values on `process.env`. For example:
 
 ```js
-const dotenv = require('dotenv')
-const variableExpansion = require('dotenv-expand')
-const myEnv = dotenv.config()
-variableExpansion(myEnv)
+const dotenv = require("dotenv");
+const variableExpansion = require("dotenv-expand");
+const myEnv = dotenv.config();
+variableExpansion(myEnv);
 ```
 
 ### What about variable expansion?
@@ -4621,19 +5048,19 @@ You must run `dotenv.config()` before referencing any environment variables. Her
 `errorReporter.js`:
 
 ```js
-import { Client } from 'best-error-reporting-service'
+import { Client } from "best-error-reporting-service";
 
-export const client = new Client(process.env.BEST_API_KEY)
+export const client = new Client(process.env.BEST_API_KEY);
 ```
 
 `index.js`:
 
 ```js
-import dotenv from 'dotenv'
-import errorReporter from './errorReporter'
+import dotenv from "dotenv";
+import errorReporter from "./errorReporter";
 
-dotenv.config()
-errorReporter.client.report(new Error('faq example'))
+dotenv.config();
+errorReporter.client.report(new Error("faq example"));
 ```
 
 `client` will not be configured correctly because it was constructed before `dotenv.config()` was executed. There are (at least) 3 ways to make this work.
@@ -4656,51 +5083,48 @@ See [CHANGELOG.md](CHANGELOG.md)
 
 Projects that expand it often use the [keyword "dotenv" on npm](https://www.npmjs.com/search?q=keywords:dotenv).
 
-
 </details><details> <summary>fixtures/node_modules/fs.realpath/</summary>
 
 ### [fixtures/node_modules/fs.realpath/README.md](fixtures/node_modules/fs.realpath/README.md)
+
 # fs.realpath
 
 A backwards-compatible fs.realpath for Node v6 and above
 
 In Node v6, the JavaScript implementation of fs.realpath was replaced
-with a faster (but less resilient) native implementation.  That raises
+with a faster (but less resilient) native implementation. That raises
 new and platform-specific errors and cannot handle long or excessively
 symlink-looping paths.
 
 This module handles those cases by detecting the new errors and
-falling back to the JavaScript implementation.  On versions of Node
+falling back to the JavaScript implementation. On versions of Node
 prior to v6, it has no effect.
 
 ## USAGE
 
 ```js
-var rp = require('fs.realpath')
+var rp = require("fs.realpath");
 
 // async version
 rp.realpath(someLongAndLoopingPath, function (er, real) {
   // the ELOOP was handled, but it was a bit slower
-})
+});
 
 // sync version
-var real = rp.realpathSync(someLongAndLoopingPath)
+var real = rp.realpathSync(someLongAndLoopingPath);
 
 // monkeypatch at your own risk!
 // This replaces the fs.realpath/fs.realpathSync builtins
-rp.monkeypatch()
+rp.monkeypatch();
 
 // un-do the monkeypatching
-rp.unmonkeypatch()
+rp.unmonkeypatch();
 ```
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/glob/</summary>
 
 ### [fixtures/node_modules/glob/changelog.md](fixtures/node_modules/glob/changelog.md)
+
 ## 7.0
 
 - Raise error if `options.cwd` is specified, and not a directory
@@ -4769,10 +5193,6 @@ rp.unmonkeypatch()
 
 - `glob.h` static binding.
 
-
-
-
-
 ### [fixtures/node_modules/glob/README.md](fixtures/node_modules/glob/README.md)
 
 # Glob
@@ -4781,7 +5201,7 @@ Match files using the patterns the shell uses, like stars and stuff.
 
 [![Build Status](https://travis-ci.org/isaacs/node-glob.svg?branch=master)](https://travis-ci.org/isaacs/node-glob/) [![Build Status](https://ci.appveyor.com/api/projects/status/kd7f3yftf7unxlsx?svg=true)](https://ci.appveyor.com/project/isaacs/node-glob) [![Coverage Status](https://coveralls.io/repos/isaacs/node-glob/badge.svg?branch=master&service=github)](https://coveralls.io/github/isaacs/node-glob?branch=master)
 
-This is a glob implementation in JavaScript.  It uses the `minimatch`
+This is a glob implementation in JavaScript. It uses the `minimatch`
 library to do its matching.
 
 ![](logo/glob.png)
@@ -4795,7 +5215,7 @@ npm i glob
 ```
 
 ```javascript
-var glob = require("glob")
+var glob = require("glob");
 
 // options is optional
 glob("**/*.js", options, function (er, files) {
@@ -4803,7 +5223,7 @@ glob("**/*.js", options, function (er, files) {
   // If the `nonull` option is set, and nothing
   // was found, then files is ["**/*.js"]
   // er is an error object or null.
-})
+});
 ```
 
 ## Glob Primer
@@ -4812,28 +5232,28 @@ glob("**/*.js", options, function (er, files) {
 the command line, or put `build/*` in a `.gitignore` file.
 
 Before parsing the path part patterns, braced sections are expanded
-into a set.  Braced sections start with `{` and end with `}`, with any
-number of comma-delimited sections within.  Braced sections may contain
+into a set. Braced sections start with `{` and end with `}`, with any
+number of comma-delimited sections within. Braced sections may contain
 slash characters, so `a{/b/c,bcd}` would expand into `a/b/c` and `abcd`.
 
 The following characters have special magic meaning when used in a
 path portion:
 
-* `*` Matches 0 or more characters in a single path portion
-* `?` Matches 1 character
-* `[...]` Matches a range of characters, similar to a RegExp range.
+- `*` Matches 0 or more characters in a single path portion
+- `?` Matches 1 character
+- `[...]` Matches a range of characters, similar to a RegExp range.
   If the first character of the range is `!` or `^` then it matches
   any character not in the range.
-* `!(pattern|pattern|pattern)` Matches anything that does not match
+- `!(pattern|pattern|pattern)` Matches anything that does not match
   any of the patterns provided.
-* `?(pattern|pattern|pattern)` Matches zero or one occurrence of the
+- `?(pattern|pattern|pattern)` Matches zero or one occurrence of the
   patterns provided.
-* `+(pattern|pattern|pattern)` Matches one or more occurrences of the
+- `+(pattern|pattern|pattern)` Matches one or more occurrences of the
   patterns provided.
-* `*(a|b|c)` Matches zero or more occurrences of the patterns provided
-* `@(pattern|pat*|pat?erN)` Matches exactly one of the patterns
+- `*(a|b|c)` Matches zero or more occurrences of the patterns provided
+- `@(pattern|pat*|pat?erN)` Matches exactly one of the patterns
   provided
-* `**` If a "globstar" is alone in a path portion, then it matches
+- `**` If a "globstar" is alone in a path portion, then it matches
   zero or more directories and subdirectories searching for matches.
   It does not crawl symlinked directories.
 
@@ -4854,13 +5274,13 @@ You can make glob treat dots as normal characters by setting
 
 If you set `matchBase:true` in the options, and the pattern has no
 slashes in it, then it will seek for any file anywhere in the tree
-with a matching basename.  For example, `*.js` would match
+with a matching basename. For example, `*.js` would match
 `test/simple/basic.js`.
 
 ### Empty Sets
 
-If no matching files are found, then an empty array is returned.  This
-differs from the shell, where the pattern itself is returned.  For
+If no matching files are found, then an empty array is returned. This
+differs from the shell, where the pattern itself is returned. For
 example:
 
     $ echo a*s*d*f
@@ -4870,38 +5290,38 @@ To get the bash-style behavior, set the `nonull:true` in the options.
 
 ### See Also:
 
-* `man sh`
-* `man bash` (Search for "Pattern Matching")
-* `man 3 fnmatch`
-* `man 5 gitignore`
-* [minimatch documentation](https://github.com/isaacs/minimatch)
+- `man sh`
+- `man bash` (Search for "Pattern Matching")
+- `man 3 fnmatch`
+- `man 5 gitignore`
+- [minimatch documentation](https://github.com/isaacs/minimatch)
 
 ## glob.hasMagic(pattern, [options])
 
 Returns `true` if there are any special characters in the pattern, and
 `false` otherwise.
 
-Note that the options affect the results.  If `noext:true` is set in
+Note that the options affect the results. If `noext:true` is set in
 the options object, then `+(a|b)` will not be considered a magic
-pattern.  If the pattern has a brace expansion, like `a/{b/c,x/y}`
+pattern. If the pattern has a brace expansion, like `a/{b/c,x/y}`
 then that is considered magical, unless `nobrace:true` is set in the
 options.
 
 ## glob(pattern, [options], cb)
 
-* `pattern` `{String}` Pattern to be matched
-* `options` `{Object}`
-* `cb` `{Function}`
-  * `err` `{Error | null}`
-  * `matches` `{Array<String>}` filenames found matching the pattern
+- `pattern` `{String}` Pattern to be matched
+- `options` `{Object}`
+- `cb` `{Function}`
+  - `err` `{Error | null}`
+  - `matches` `{Array<String>}` filenames found matching the pattern
 
 Perform an asynchronous glob search.
 
 ## glob.sync(pattern, [options])
 
-* `pattern` `{String}` Pattern to be matched
-* `options` `{Object}`
-* return: `{Array<String>}` filenames found matching the pattern
+- `pattern` `{String}` Pattern to be matched
+- `options` `{Object}`
+- return: `{Array<String>}` filenames found matching the pattern
 
 Perform a synchronous glob search.
 
@@ -4910,8 +5330,8 @@ Perform a synchronous glob search.
 Create a Glob object by instantiating the `glob.Glob` class.
 
 ```javascript
-var Glob = require("glob").Glob
-var mg = new Glob(pattern, options, cb)
+var Glob = require("glob").Glob;
+var mg = new Glob(pattern, options, cb);
 ```
 
 It's an EventEmitter, and starts walking the filesystem to find matches
@@ -4919,60 +5339,60 @@ immediately.
 
 ### new glob.Glob(pattern, [options], [cb])
 
-* `pattern` `{String}` pattern to search for
-* `options` `{Object}`
-* `cb` `{Function}` Called when an error occurs, or matches are found
-  * `err` `{Error | null}`
-  * `matches` `{Array<String>}` filenames found matching the pattern
+- `pattern` `{String}` pattern to search for
+- `options` `{Object}`
+- `cb` `{Function}` Called when an error occurs, or matches are found
+  - `err` `{Error | null}`
+  - `matches` `{Array<String>}` filenames found matching the pattern
 
 Note that if the `sync` flag is set in the options, then matches will
 be immediately available on the `g.found` member.
 
 ### Properties
 
-* `minimatch` The minimatch object that the glob uses.
-* `options` The options object passed in.
-* `aborted` Boolean which is set to true when calling `abort()`.  There
+- `minimatch` The minimatch object that the glob uses.
+- `options` The options object passed in.
+- `aborted` Boolean which is set to true when calling `abort()`. There
   is no way at this time to continue a glob search after aborting, but
   you can re-use the statCache to avoid having to duplicate syscalls.
-* `cache` Convenience object.  Each field has the following possible
+- `cache` Convenience object. Each field has the following possible
   values:
-  * `false` - Path does not exist
-  * `true` - Path exists
-  * `'FILE'` - Path exists, and is not a directory
-  * `'DIR'` - Path exists, and is a directory
-  * `[file, entries, ...]` - Path exists, is a directory, and the
+  - `false` - Path does not exist
+  - `true` - Path exists
+  - `'FILE'` - Path exists, and is not a directory
+  - `'DIR'` - Path exists, and is a directory
+  - `[file, entries, ...]` - Path exists, is a directory, and the
     array value is the results of `fs.readdir`
-* `statCache` Cache of `fs.stat` results, to prevent statting the same
+- `statCache` Cache of `fs.stat` results, to prevent statting the same
   path multiple times.
-* `symlinks` A record of which paths are symbolic links, which is
+- `symlinks` A record of which paths are symbolic links, which is
   relevant in resolving `**` patterns.
-* `realpathCache` An optional object which is passed to `fs.realpath`
-  to minimize unnecessary syscalls.  It is stored on the instantiated
+- `realpathCache` An optional object which is passed to `fs.realpath`
+  to minimize unnecessary syscalls. It is stored on the instantiated
   Glob object, and may be re-used.
 
 ### Events
 
-* `end` When the matching is finished, this is emitted with all the
-  matches found.  If the `nonull` option is set, and no match was found,
-  then the `matches` list contains the original pattern.  The matches
+- `end` When the matching is finished, this is emitted with all the
+  matches found. If the `nonull` option is set, and no match was found,
+  then the `matches` list contains the original pattern. The matches
   are sorted, unless the `nosort` flag is set.
-* `match` Every time a match is found, this is emitted with the specific
+- `match` Every time a match is found, this is emitted with the specific
   thing that matched. It is not deduplicated or resolved to a realpath.
-* `error` Emitted when an unexpected error is encountered, or whenever
+- `error` Emitted when an unexpected error is encountered, or whenever
   any fs error occurs if `options.strict` is set.
-* `abort` When `abort()` is called, this event is raised.
+- `abort` When `abort()` is called, this event is raised.
 
 ### Methods
 
-* `pause` Temporarily stop the search
-* `resume` Resume the search
-* `abort` Stop the search forever
+- `pause` Temporarily stop the search
+- `resume` Resume the search
+- `abort` Stop the search forever
 
 ### Options
 
 All the options that can be passed to Minimatch can also be passed to
-Glob to change pattern matching behavior.  Also, some have been added,
+Glob to change pattern matching behavior. Also, some have been added,
 or have glob-specific ramifications.
 
 All options are false by default, unless otherwise noted.
@@ -4981,77 +5401,77 @@ All options are added to the Glob object, as well.
 
 If you are running many `glob` operations, you can pass a Glob object
 as the `options` argument to a subsequent operation to shortcut some
-`stat` and `readdir` calls.  At the very least, you may pass in shared
+`stat` and `readdir` calls. At the very least, you may pass in shared
 `symlinks`, `statCache`, `realpathCache`, and `cache` options, so that
 parallel glob operations will be sped up by sharing information about
 the filesystem.
 
-* `cwd` The current working directory in which to search.  Defaults
+- `cwd` The current working directory in which to search. Defaults
   to `process.cwd()`.
-* `root` The place where patterns starting with `/` will be mounted
-  onto.  Defaults to `path.resolve(options.cwd, "/")` (`/` on Unix
+- `root` The place where patterns starting with `/` will be mounted
+  onto. Defaults to `path.resolve(options.cwd, "/")` (`/` on Unix
   systems, and `C:\` or some such on Windows.)
-* `dot` Include `.dot` files in normal matches and `globstar` matches.
+- `dot` Include `.dot` files in normal matches and `globstar` matches.
   Note that an explicit dot in a portion of the pattern will always
   match dot files.
-* `nomount` By default, a pattern starting with a forward-slash will be
+- `nomount` By default, a pattern starting with a forward-slash will be
   "mounted" onto the root setting, so that a valid filesystem path is
-  returned.  Set this flag to disable that behavior.
-* `mark` Add a `/` character to directory matches.  Note that this
+  returned. Set this flag to disable that behavior.
+- `mark` Add a `/` character to directory matches. Note that this
   requires additional stat calls.
-* `nosort` Don't sort the results.
-* `stat` Set to true to stat *all* results.  This reduces performance
+- `nosort` Don't sort the results.
+- `stat` Set to true to stat _all_ results. This reduces performance
   somewhat, and is completely unnecessary, unless `readdir` is presumed
   to be an untrustworthy indicator of file existence.
-* `silent` When an unusual error is encountered when attempting to
-  read a directory, a warning will be printed to stderr.  Set the
+- `silent` When an unusual error is encountered when attempting to
+  read a directory, a warning will be printed to stderr. Set the
   `silent` option to true to suppress these warnings.
-* `strict` When an unusual error is encountered when attempting to
+- `strict` When an unusual error is encountered when attempting to
   read a directory, the process will just continue on in search of
-  other matches.  Set the `strict` option to raise an error in these
+  other matches. Set the `strict` option to raise an error in these
   cases.
-* `cache` See `cache` property above.  Pass in a previously generated
+- `cache` See `cache` property above. Pass in a previously generated
   cache object to save some fs calls.
-* `statCache` A cache of results of filesystem information, to prevent
-  unnecessary stat calls.  While it should not normally be necessary
+- `statCache` A cache of results of filesystem information, to prevent
+  unnecessary stat calls. While it should not normally be necessary
   to set this, you may pass the statCache from one glob() call to the
   options object of another, if you know that the filesystem will not
-  change between calls.  (See "Race Conditions" below.)
-* `symlinks` A cache of known symbolic links.  You may pass in a
+  change between calls. (See "Race Conditions" below.)
+- `symlinks` A cache of known symbolic links. You may pass in a
   previously generated `symlinks` object to save `lstat` calls when
   resolving `**` matches.
-* `sync` DEPRECATED: use `glob.sync(pattern, opts)` instead.
-* `nounique` In some cases, brace-expanded patterns can result in the
-  same file showing up multiple times in the result set.  By default,
-  this implementation prevents duplicates in the result set.  Set this
+- `sync` DEPRECATED: use `glob.sync(pattern, opts)` instead.
+- `nounique` In some cases, brace-expanded patterns can result in the
+  same file showing up multiple times in the result set. By default,
+  this implementation prevents duplicates in the result set. Set this
   flag to disable that behavior.
-* `nonull` Set to never return an empty set, instead returning a set
-  containing the pattern itself.  This is the default in glob(3).
-* `debug` Set to enable debug logging in minimatch and glob.
-* `nobrace` Do not expand `{a,b}` and `{1..3}` brace sets.
-* `noglobstar` Do not match `**` against multiple filenames.  (Ie,
+- `nonull` Set to never return an empty set, instead returning a set
+  containing the pattern itself. This is the default in glob(3).
+- `debug` Set to enable debug logging in minimatch and glob.
+- `nobrace` Do not expand `{a,b}` and `{1..3}` brace sets.
+- `noglobstar` Do not match `**` against multiple filenames. (Ie,
   treat it as a normal `*` instead.)
-* `noext` Do not match `+(a|b)` "extglob" patterns.
-* `nocase` Perform a case-insensitive match.  Note: on
+- `noext` Do not match `+(a|b)` "extglob" patterns.
+- `nocase` Perform a case-insensitive match. Note: on
   case-insensitive filesystems, non-magic patterns will match by
   default, since `stat` and `readdir` will not raise errors.
-* `matchBase` Perform a basename-only match if the pattern does not
-  contain any slash characters.  That is, `*.js` would be treated as
+- `matchBase` Perform a basename-only match if the pattern does not
+  contain any slash characters. That is, `*.js` would be treated as
   equivalent to `**/*.js`, matching all js files in all directories.
-* `nodir` Do not match directories, only files.  (Note: to match
-  *only* directories, simply put a `/` at the end of the pattern.)
-* `ignore` Add a pattern or an array of glob patterns to exclude matches.
-  Note: `ignore` patterns are *always* in `dot:true` mode, regardless
+- `nodir` Do not match directories, only files. (Note: to match
+  _only_ directories, simply put a `/` at the end of the pattern.)
+- `ignore` Add a pattern or an array of glob patterns to exclude matches.
+  Note: `ignore` patterns are _always_ in `dot:true` mode, regardless
   of any other settings.
-* `follow` Follow symlinked directories when expanding `**` patterns.
+- `follow` Follow symlinked directories when expanding `**` patterns.
   Note that this can result in a lot of duplicate references in the
   presence of cyclic links.
-* `realpath` Set to true to call `fs.realpath` on all of the results.
+- `realpath` Set to true to call `fs.realpath` on all of the results.
   In the case of a symlink that cannot be resolved, the full absolute
   path to the matched entry is returned (though it will usually be a
   broken symlink)
-* `absolute` Set to true to always receive absolute paths for matched
-  files.  Unlike `realpath`, this also affects the values returned in
+- `absolute` Set to true to always receive absolute paths for matched
+  files. Unlike `realpath`, this also affects the values returned in
   the `match` event.
 
 ## Comparisons to other fnmatch/glob implementations
@@ -5061,27 +5481,27 @@ goal, some discrepancies exist between node-glob and other
 implementations, and are intentional.
 
 The double-star character `**` is supported by default, unless the
-`noglobstar` flag is set.  This is supported in the manner of bsdglob
+`noglobstar` flag is set. This is supported in the manner of bsdglob
 and bash 4.3, where `**` only has special significance if it is the only
-thing in a path part.  That is, `a/**/b` will match `a/x/y/b`, but
+thing in a path part. That is, `a/**/b` will match `a/x/y/b`, but
 `a/**b` will not.
 
 Note that symlinked directories are not crawled as part of a `**`,
 though their contents may match against subsequent portions of the
-pattern.  This prevents infinite loops and duplicates and the like.
+pattern. This prevents infinite loops and duplicates and the like.
 
 If an escaped pattern has no matches, and the `nonull` flag is set,
 then glob returns the pattern as-provided, rather than
-interpreting the character escapes.  For example,
+interpreting the character escapes. For example,
 `glob.match([], "\\*a\\?")` will return `"\\*a\\?"` rather than
-`"*a?"`.  This is akin to setting the `nullglob` option in bash, except
+`"*a?"`. This is akin to setting the `nullglob` option in bash, except
 that it does not resolve escaped pattern characters.
 
 If brace expansion is not disabled, then it is performed before any
-other interpretation of the glob pattern.  Thus, a pattern like
+other interpretation of the glob pattern. Thus, a pattern like
 `+(a|{b),c)}`, which would not be valid in bash or zsh, is expanded
 **first** into the set of `+(a|b)` and `+(a|c)`, and those patterns are
-checked for validity.  Since those two are valid, matching proceeds.
+checked for validity. Since those two are valid, matching proceeds.
 
 ### Comments and Negation
 
@@ -5098,12 +5518,12 @@ To specify things that should not match, use the `ignore` option.
 **Please only use forward-slashes in glob expressions.**
 
 Though windows uses either `/` or `\` as its path separator, only `/`
-characters are used by this glob implementation.  You must use
-forward-slashes **only** in glob expressions.  Back-slashes will always
+characters are used by this glob implementation. You must use
+forward-slashes **only** in glob expressions. Back-slashes will always
 be interpreted as escape characters, not path separators.
 
 Results from absolute patterns such as `/foo/*` are mounted onto the
-root setting using `path.join`.  On windows, this will by default result
+root setting using `path.join`. On windows, this will by default result
 in `/foo/*` matching `C:\foo\bar.txt`.
 
 ## Race Conditions
@@ -5116,15 +5536,16 @@ it may have been deleted or modified by the time it returns the result.
 
 As part of its internal implementation, this program caches all stat
 and readdir calls that it makes, in order to cut down on system
-overhead.  However, this also makes it even more susceptible to races,
+overhead. However, this also makes it even more susceptible to races,
 especially if the cache or statCache objects are reused between glob
 calls.
 
 Users are thus advised not to use a glob result as a guarantee of
-filesystem state in the face of rapid changes.  For the vast majority
+filesystem state in the face of rapid changes. For the vast majority
 of operations, this is never a problem.
 
 ## Glob Logo
+
 Glob's logo was created by [Tanya Brassie](http://tanyabrassie.com/). Logo files can be found [here](https://github.com/isaacs/node-glob/tree/master/logo).
 
 The logo is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -5151,10 +5572,10 @@ npm run prof
 
 ![](oh-my-glob.gif)
 
-
 </details><details> <summary>fixtures/node_modules/hast-util-from-selector/</summary>
 
 ### [fixtures/node_modules/hast-util-from-selector/readme.md](fixtures/node_modules/hast-util-from-selector/readme.md)
+
 # hast-util-from-selector
 
 [![Build][build-badge]][build]
@@ -5178,9 +5599,9 @@ npm install hast-util-from-selector
 ## Use
 
 ```js
-var from = require('hast-util-from-selector')
+var from = require("hast-util-from-selector");
 
-console.log(from('p svg[viewbox=0 0 10 10] circle[cx=10][cy=10][r=10]'))
+console.log(from("p svg[viewbox=0 0 10 10] circle[cx=10][cy=10][r=10]"));
 ```
 
 Yields:
@@ -5212,17 +5633,17 @@ Yields:
 
 ### `fromSelector([selector][, options])`
 
-Create one or more [*element*][element] [*node*][node]s from a CSS selector.
+Create one or more [_element_][element] [_node_][node]s from a CSS selector.
 
 ###### Parameters
 
-*   `selector` (`string`, optional)
-    — CSS selector
-*   `space` (`string`, optional)
-    — Treated as `options.space`
-*   `options.space` (enum, `'svg'` or `'html'`, default: `'html'`)
-    — Which space first element in the selector is in.
-    When an `svg` is created in HTML, the space is switched automatically to SVG
+- `selector` (`string`, optional)
+  — CSS selector
+- `space` (`string`, optional)
+  — Treated as `options.space`
+- `options.space` (enum, `'svg'` or `'html'`, default: `'html'`)
+  — Which space first element in the selector is in.
+  When an `svg` is created in HTML, the space is switched automatically to SVG
 
 ###### Returns
 
@@ -5230,16 +5651,16 @@ Create one or more [*element*][element] [*node*][node]s from a CSS selector.
 
 ## Support
 
-*   [x] `*` (universal selector, *creates a `div` in HTML, `g` in SVG*)
-*   [x] `p` (type selector)
-*   [x] `.class` (class selector)
-*   [x] `#id` (id selector)
-*   [x] `[attr]` (attribute existence, *creates a boolean*)
-*   [x] `[attr=value]` (attribute equality)
-*   [x] `article p` (descendant combinator)
-*   [x] `article > p` (child combinator)
-*   [x] `section h1 + p` (next-sibling combinator, *not at root*)
-*   [x] `section h1 ~ p` (subsequent-sibling combinator, *not at root*)
+- [x] `*` (universal selector, _creates a `div` in HTML, `g` in SVG_)
+- [x] `p` (type selector)
+- [x] `.class` (class selector)
+- [x] `#id` (id selector)
+- [x] `[attr]` (attribute existence, _creates a boolean_)
+- [x] `[attr=value]` (attribute equality)
+- [x] `article p` (descendant combinator)
+- [x] `article > p` (child combinator)
+- [x] `section h1 + p` (next-sibling combinator, _not at root_)
+- [x] `section h1 ~ p` (subsequent-sibling combinator, _not at root_)
 
 ## Security
 
@@ -5266,60 +5687,34 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-from-selector.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-from-selector
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-from-selector.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-from-selector
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-from-selector.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-from-selector
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-from-selector.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-from-selector
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hast]: https://github.com/syntax-tree/hast
-
 [node]: https://github.com/syntax-tree/hast#nodes
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [sanitize]: https://github.com/syntax-tree/hast-util-sanitize
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-has-property/</summary>
 
 ### [fixtures/node_modules/hast-util-has-property/readme.md](fixtures/node_modules/hast-util-has-property/readme.md)
+
 # hast-util-has-property
 
 [![Build][build-badge]][build]
@@ -5330,8 +5725,8 @@ abide by its terms.
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**hast**][hast] utility to check if an [*element*][element] has a
-[*property*][property].
+[**hast**][hast] utility to check if an [_element_][element] has a
+[_property_][property].
 
 ## Install
 
@@ -5344,47 +5739,47 @@ npm install hast-util-has-property
 ## Use
 
 ```js
-var has = require('hast-util-has-property')
+var has = require("hast-util-has-property");
 
-has({type: 'text', value: 'alpha'}, 'bravo') // => false
-
-has(
-  {
-    type: 'element',
-    tagName: 'div',
-    properties: {id: 'bravo'},
-    children: []
-  },
-  'className'
-) // => false
+has({ type: "text", value: "alpha" }, "bravo"); // => false
 
 has(
   {
-    type: 'element',
-    tagName: 'div',
-    properties: {id: 'charlie'},
-    children: []
+    type: "element",
+    tagName: "div",
+    properties: { id: "bravo" },
+    children: [],
   },
-  'id'
-) // => true
+  "className"
+); // => false
+
+has(
+  {
+    type: "element",
+    tagName: "div",
+    properties: { id: "charlie" },
+    children: [],
+  },
+  "id"
+); // => true
 ```
 
 ## API
 
 ### `hasProperty(node, name)`
 
-Check if `node` is an [*element*][element] that has a `name`
-[*property name*][property].
+Check if `node` is an [_element_][element] that has a `name`
+[_property name_][property].
 
 ###### Parameters
 
-*   `node` ([`Node`][node], optional) — [*Node*][node] to check
-*   `name` (`string`) - [*Property name*][property]
+- `node` ([`Node`][node], optional) — [_Node_][node] to check
+- `name` (`string`) - [_Property name_][property]
 
 ###### Returns
 
-`boolean` — Whether `node` is an [*element*][element] that has a `name`
-[*property name*][property].
+`boolean` — Whether `node` is an [_element_][element] that has a `name`
+[_property name_][property].
 
 ## Security
 
@@ -5408,60 +5803,34 @@ abide by its terms.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-has-property.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-has-property
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-has-property.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-has-property
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-has-property.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-has-property
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-has-property.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-has-property
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hast]: https://github.com/syntax-tree/hast
-
 [node]: https://github.com/syntax-tree/hast#nodes
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [property]: https://github.com/syntax-tree/hast#property-names
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-is-element/</summary>
 
 ### [fixtures/node_modules/hast-util-is-element/readme.md](fixtures/node_modules/hast-util-is-element/readme.md)
+
 # hast-util-is-element
 
 [![Build][build-badge]][build]
@@ -5472,8 +5841,8 @@ abide by its terms.
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**hast**][hast] utility to check if a [*node*][node] is a (certain)
-[*element*][element].
+[**hast**][hast] utility to check if a [_node_][node] is a (certain)
+[_element_][element].
 
 ## Install
 
@@ -5486,33 +5855,33 @@ npm install hast-util-is-element
 ## Use
 
 ```js
-var is = require('hast-util-is-element')
+var is = require("hast-util-is-element");
 
-is({type: 'text', value: 'foo'}) // => false
+is({ type: "text", value: "foo" }); // => false
 
-is({type: 'element', tagName: 'a'}, 'a') // => true
+is({ type: "element", tagName: "a" }, "a"); // => true
 
-is({type: 'element', tagName: 'a'}, ['a', 'area']) // => true
+is({ type: "element", tagName: "a" }, ["a", "area"]); // => true
 ```
 
 ## API
 
 ### `isElement(node[, tagName|tagNames])`
 
-Check if the given value is a (certain) [*element*][element].
+Check if the given value is a (certain) [_element_][element].
 
-*   When given a `tagName` or `tagNames`, checks that `node` is an
-    [*element*][element] whose `tagName` field matches `tagName` or is included
-    in `tagNames`
-*   Otherwise checks that `node` is an [*element*][element]
+- When given a `tagName` or `tagNames`, checks that `node` is an
+  [_element_][element] whose `tagName` field matches `tagName` or is included
+  in `tagNames`
+- Otherwise checks that `node` is an [_element_][element]
 
 ###### Parameters
 
-*   `node` (`*`) — Value to check, probably [`Node`][node]
-*   `tagName` (`string`, optional) — Value that `node`s `tagName` field should
-    match
-*   `tagNames` (`Array.<string>`, optional) — Values that should include `node`s
-    `tagName` field should match
+- `node` (`*`) — Value to check, probably [`Node`][node]
+- `tagName` (`string`, optional) — Value that `node`s `tagName` field should
+  match
+- `tagNames` (`Array.<string>`, optional) — Values that should include `node`s
+  `tagName` field should match
 
 ###### Returns
 
@@ -5544,58 +5913,33 @@ abide by its terms.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-is-element.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-is-element
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-is-element.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-is-element
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-is-element.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-is-element
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-is-element.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-is-element
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hast]: https://github.com/syntax-tree/hast
-
 [node]: https://github.com/syntax-tree/unist#node
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-parse-selector/</summary>
 
 ### [fixtures/node_modules/hast-util-parse-selector/readme.md](fixtures/node_modules/hast-util-parse-selector/readme.md)
+
 # hast-util-parse-selector
 
 [![Build][build-badge]][build]
@@ -5606,7 +5950,7 @@ abide by its terms.
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**hast**][hast] utility to create an [*element*][element] from a simple CSS
+[**hast**][hast] utility to create an [_element_][element] from a simple CSS
 selector.
 
 ## Install
@@ -5620,9 +5964,9 @@ npm install hast-util-parse-selector
 ## Use
 
 ```js
-var parseSelector = require('hast-util-parse-selector')
+var parseSelector = require("hast-util-parse-selector");
 
-console.log(parseSelector('.quux#bar.baz.qux'))
+console.log(parseSelector(".quux#bar.baz.qux"));
 ```
 
 Yields:
@@ -5638,7 +5982,7 @@ Yields:
 
 ### `parseSelector([selector][, defaultTagName])`
 
-Create an [*element*][element] [*node*][node] from a simple CSS selector.
+Create an [_element_][element] [_node_][node] from a simple CSS selector.
 
 ###### `selector`
 
@@ -5681,60 +6025,34 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-parse-selector.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-parse-selector
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-parse-selector.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-parse-selector
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-parse-selector.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-parse-selector
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-parse-selector.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-parse-selector
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hast]: https://github.com/syntax-tree/hast
-
 [node]: https://github.com/syntax-tree/hast#nodes
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [sanitize]: https://github.com/syntax-tree/hast-util-sanitize
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-select/</summary>
 
 ### [fixtures/node_modules/hast-util-select/readme.md](fixtures/node_modules/hast-util-select/readme.md)
+
 <!--lint disable no-html-->
 
 # hast-util-select
@@ -5780,27 +6098,27 @@ This only checks that the given element matches the selector.
 ##### Use
 
 ```js
-var h = require('hastscript')
-var matches = require('hast-util-select').matches
+var h = require("hastscript");
+var matches = require("hast-util-select").matches;
 
-matches('b, i', h('b')) // => true
-matches(':any-link', h('a')) // => false
-matches(':any-link', h('a', {href: '#'})) // => true
-matches('.classy', h('a', {className: ['classy']})) // => true
-matches('#id', h('a', {id: 'id'})) // => true
-matches('[lang|=en]', h('a', {lang: 'en'})) // => true
-matches('[lang|=en]', h('a', {lang: 'en-GB'})) // => true
+matches("b, i", h("b")); // => true
+matches(":any-link", h("a")); // => false
+matches(":any-link", h("a", { href: "#" })); // => true
+matches(".classy", h("a", { className: ["classy"] })); // => true
+matches("#id", h("a", { id: "id" })); // => true
+matches("[lang|=en]", h("a", { lang: "en" })); // => true
+matches("[lang|=en]", h("a", { lang: "en-GB" })); // => true
 // ...
 ```
 
 ##### Parameters
 
-*   `selector` (`string`)
-    — CSS selectors (`,` is also supported)
-*   `node` ([`Node`][node])
-    — Thing to check, could be anything, but should be an [*element*][element]
-*   `space` (enum, `'svg'` or `'html'`, default: `'html'`)
-    — Which space the node exists in
+- `selector` (`string`)
+  — CSS selectors (`,` is also supported)
+- `node` ([`Node`][node])
+  — Thing to check, could be anything, but should be an [_element_][element]
+- `space` (enum, `'svg'` or `'html'`, default: `'html'`)
+  — Which space the node exists in
 
 ##### Returns
 
@@ -5810,26 +6128,26 @@ matches('[lang|=en]', h('a', {lang: 'en-GB'})) // => true
 
 Select the first `node` matching `selector` in the given `tree` (could be the
 tree itself).
-Searches the [*tree*][tree] in [*preorder*][preorder].
+Searches the [_tree_][tree] in [_preorder_][preorder].
 
 ##### Use
 
 ```js
-var h = require('hastscript')
-var select = require('hast-util-select').select
+var h = require("hastscript");
+var select = require("hast-util-select").select;
 
 console.log(
   select(
-    'h1 ~ :nth-child(even)',
-    h('section', [
-      h('p', 'Alpha'),
-      h('p', 'Bravo'),
-      h('h1', 'Charlie'),
-      h('p', 'Delta'),
-      h('p', 'Echo')
+    "h1 ~ :nth-child(even)",
+    h("section", [
+      h("p", "Alpha"),
+      h("p", "Bravo"),
+      h("h1", "Charlie"),
+      h("p", "Delta"),
+      h("p", "Echo"),
     ])
   )
-)
+);
 ```
 
 Yields:
@@ -5843,10 +6161,10 @@ Yields:
 
 ##### Parameters
 
-*   `selector` (`string`) — CSS selectors (`,` is also supported)
-*   `tree` ([`Node`][node]) — [*Tree*][tree] to search
-*   `space` (enum, `'svg'` or `'html'`, default: `'html'`)
-    — Which space the tree exists in
+- `selector` (`string`) — CSS selectors (`,` is also supported)
+- `tree` ([`Node`][node]) — [_Tree_][tree] to search
+- `space` (enum, `'svg'` or `'html'`, default: `'html'`)
+  — Which space the tree exists in
 
 ##### Returns
 
@@ -5856,49 +6174,55 @@ Yields:
 
 Select all nodes matching `selector` in the given `tree` (could include the tree
 itself).
-Searches the [*tree*][tree] in [*preorder*][preorder].
+Searches the [_tree_][tree] in [_preorder_][preorder].
 
 ##### Use
 
 ```js
-var h = require('hastscript')
-var selectAll = require('hast-util-select').selectAll
+var h = require("hastscript");
+var selectAll = require("hast-util-select").selectAll;
 
 console.log(
   selectAll(
-    'h1 ~ :nth-child(even)',
-    h('section', [
-      h('p', 'Alpha'),
-      h('p', 'Bravo'),
-      h('h1', 'Charlie'),
-      h('p', 'Delta'),
-      h('p', 'Echo'),
-      h('p', 'Foxtrot'),
-      h('p', 'Golf')
+    "h1 ~ :nth-child(even)",
+    h("section", [
+      h("p", "Alpha"),
+      h("p", "Bravo"),
+      h("h1", "Charlie"),
+      h("p", "Delta"),
+      h("p", "Echo"),
+      h("p", "Foxtrot"),
+      h("p", "Golf"),
     ])
   )
-)
+);
 ```
 
 Yields:
 
 ```js
-[ { type: 'element',
-    tagName: 'p',
+[
+  {
+    type: "element",
+    tagName: "p",
     properties: {},
-    children: [ { type: 'text', value: 'Delta' } ] },
-  { type: 'element',
-    tagName: 'p',
+    children: [{ type: "text", value: "Delta" }],
+  },
+  {
+    type: "element",
+    tagName: "p",
     properties: {},
-    children: [ { type: 'text', value: 'Foxtrot' } ] } ]
+    children: [{ type: "text", value: "Foxtrot" }],
+  },
+];
 ```
 
 ##### Parameters
 
-*   `selector` (`string`) — CSS selectors (`,` is also supported)
-*   `tree` ([`Node`][node]) — [*Tree*][tree] to search
-*   `space` (enum, `'svg'` or `'html'`, default: `'html'`)
-    — Which space the tree exists in
+- `selector` (`string`) — CSS selectors (`,` is also supported)
+- `tree` ([`Node`][node]) — [_Tree_][tree] to search
+- `space` (enum, `'svg'` or `'html'`, default: `'html'`)
+  — Which space the tree exists in
 
 ##### Returns
 
@@ -5906,111 +6230,111 @@ Yields:
 
 ## Support
 
-*   [x] `*` (universal selector)
-*   [x] `,` (multiple selector)
-*   [x] `p` (type selector)
-*   [x] `.class` (class selector)
-*   [x] `#id` (id selector)
-*   [x] `article p` (combinator: descendant selector)
-*   [x] `article > p` (combinator: child selector)
-*   [x] `h1 + p` (combinator: next-sibling selector)
-*   [x] `h1 ~ p` (combinator: subsequent sibling selector)
-*   [x] `[attr]` (attribute existence)
-*   [x] `[attr=value]` (attribute equality)
-*   [x] `[attr~=value]` (attribute contains in space-separated list)
-*   [x] `[attr|=value]` (attribute equality or prefix)
-*   [x] `[attr^=value]` (attribute begins with)
-*   [x] `[attr$=value]` (attribute ends with)
-*   [x] `[attr*=value]` (attribute contains)
-*   [x] `:any()` (functional pseudo-class, use `:matches` instead)
-*   [x] `:dir()` (functional pseudo-class)
-*   [x] `:has()` (functional pseudo-class)
-*   [x] `:lang()` (functional pseudo-class)
-*   [x] `:matches()` (functional pseudo-class)
-*   [x] `:not()` (functional pseudo-class)
-*   [x] `:any-link` (pseudo-class)
-*   [x] `:blank` (pseudo-class)
-*   [x] `:checked` (pseudo-class)
-*   [x] `:disabled` (pseudo-class)
-*   [x] `:empty` (pseudo-class)
-*   [x] `:enabled` (pseudo-class)
-*   [x] `:optional` (pseudo-class)
-*   [x] `:read-only` (pseudo-class)
-*   [x] `:read-write` (pseudo-class)
-*   [x] `:required` (pseudo-class)
-*   [x] `:root` (pseudo-class)
-*   [x] `:scope` (pseudo-class):
-*   [x] \* `:first-child` (pseudo-class)
-*   [x] \* `:first-of-type` (pseudo-class)
-*   [x] \* `:last-child` (pseudo-class)
-*   [x] \* `:last-of-type` (pseudo-class)
-*   [x] \* `:only-child` (pseudo-class)
-*   [x] \* `:only-of-type` (pseudo-class)
-*   [x] \* `:nth-child()` (functional pseudo-class)
-*   [x] \* `:nth-last-child()` (functional pseudo-class)
-*   [x] \* `:nth-last-of-type()` (functional pseudo-class)
-*   [x] \* `:nth-of-type()` (functional pseudo-class)
+- [x] `*` (universal selector)
+- [x] `,` (multiple selector)
+- [x] `p` (type selector)
+- [x] `.class` (class selector)
+- [x] `#id` (id selector)
+- [x] `article p` (combinator: descendant selector)
+- [x] `article > p` (combinator: child selector)
+- [x] `h1 + p` (combinator: next-sibling selector)
+- [x] `h1 ~ p` (combinator: subsequent sibling selector)
+- [x] `[attr]` (attribute existence)
+- [x] `[attr=value]` (attribute equality)
+- [x] `[attr~=value]` (attribute contains in space-separated list)
+- [x] `[attr|=value]` (attribute equality or prefix)
+- [x] `[attr^=value]` (attribute begins with)
+- [x] `[attr$=value]` (attribute ends with)
+- [x] `[attr*=value]` (attribute contains)
+- [x] `:any()` (functional pseudo-class, use `:matches` instead)
+- [x] `:dir()` (functional pseudo-class)
+- [x] `:has()` (functional pseudo-class)
+- [x] `:lang()` (functional pseudo-class)
+- [x] `:matches()` (functional pseudo-class)
+- [x] `:not()` (functional pseudo-class)
+- [x] `:any-link` (pseudo-class)
+- [x] `:blank` (pseudo-class)
+- [x] `:checked` (pseudo-class)
+- [x] `:disabled` (pseudo-class)
+- [x] `:empty` (pseudo-class)
+- [x] `:enabled` (pseudo-class)
+- [x] `:optional` (pseudo-class)
+- [x] `:read-only` (pseudo-class)
+- [x] `:read-write` (pseudo-class)
+- [x] `:required` (pseudo-class)
+- [x] `:root` (pseudo-class)
+- [x] `:scope` (pseudo-class):
+- [x] \* `:first-child` (pseudo-class)
+- [x] \* `:first-of-type` (pseudo-class)
+- [x] \* `:last-child` (pseudo-class)
+- [x] \* `:last-of-type` (pseudo-class)
+- [x] \* `:only-child` (pseudo-class)
+- [x] \* `:only-of-type` (pseudo-class)
+- [x] \* `:nth-child()` (functional pseudo-class)
+- [x] \* `:nth-last-child()` (functional pseudo-class)
+- [x] \* `:nth-last-of-type()` (functional pseudo-class)
+- [x] \* `:nth-of-type()` (functional pseudo-class)
 
 ## Unsupported
 
-*   [ ] † `||` (column combinator)
-*   [ ] ‡ `ns|E` (namespace type selector)
-*   [ ] ‡ `*|E` (any namespace type selector)
-*   [ ] ‡ `|E` (no namespace type selector)
-*   [ ] ‡ `[ns|attr]` (namespace attribute)
-*   [ ] ‡ `[*|attr]` (any namespace attribute)
-*   [ ] ‡ `[|attr]` (no namespace attribute)
-*   [ ] ‡ `[attr=value i]` (attribute case-insensitive)
-*   [ ] ‡ `:has()` (functional pseudo-class).
-    <small>Relative selectors (`:has(> img)`) are not supported, but scope is
-    (`:has(:scope > img)`) </small>
-*   [ ] ‖ `:nth-child(n of S)` (functional pseudo-class).
-    <small>Scoping to parents is not supported</small>
-*   [ ] ‖ `:nth-last-child(n of S)` (scoped to parent S).
-    <small>Scoping to parents is not supported</small>
-*   [ ] † `:active` (pseudo-class)
-*   [ ] † `:current` (pseudo-class)
-*   [ ] † `:current()` (functional pseudo-class)
-*   [ ] † `:default` (pseudo-class)
-*   [ ] † `:defined` (pseudo-class)
-*   [ ] † `:drop` (pseudo-class)
-*   [ ] † `:drop()` (functional pseudo-class)
-*   [ ] † `:focus` (pseudo-class)
-*   [ ] † `:focus-visible` (pseudo-class)
-*   [ ] † `:focus-within` (pseudo-class)
-*   [ ] † `:fullscreen` (pseudo-class)
-*   [ ] † `:future` (pseudo-class)
-*   [ ] ‖ `:host()` (functional pseudo-class)
-*   [ ] ‖ `:host-context()` (functional pseudo-class)
-*   [ ] † `:hover` (pseudo-class)
-*   [ ] § `:in-range` (pseudo-class)
-*   [ ] † `:indeterminate` (pseudo-class)
-*   [ ] § `:invalid` (pseudo-class)
-*   [ ] † `:link` (pseudo-class)
-*   [ ] † `:local-link` (pseudo-class)
-*   [ ] † `:nth-column()` (functional pseudo-class)
-*   [ ] † `:nth-last-column()` (functional pseudo-class)
-*   [ ] § `:out-of-range` (pseudo-class)
-*   [ ] † `:past` (pseudo-class)
-*   [ ] † `:paused` (pseudo-class)
-*   [ ] † `:placeholder-shown` (pseudo-class)
-*   [ ] † `:playing` (pseudo-class)
-*   [ ] ‖ `:something()` (functional pseudo-class)
-*   [ ] † `:target` (pseudo-class)
-*   [ ] † `:target-within` (pseudo-class)
-*   [ ] † `:user-error` (pseudo-class)
-*   [ ] † `:user-invalid` (pseudo-class)
-*   [ ] § `:valid` (pseudo-class)
-*   [ ] † `:visited` (pseudo-class)
-*   [ ] † `::before` (pseudo-elements: none are supported)
+- [ ] † `||` (column combinator)
+- [ ] ‡ `ns|E` (namespace type selector)
+- [ ] ‡ `*|E` (any namespace type selector)
+- [ ] ‡ `|E` (no namespace type selector)
+- [ ] ‡ `[ns|attr]` (namespace attribute)
+- [ ] ‡ `[*|attr]` (any namespace attribute)
+- [ ] ‡ `[|attr]` (no namespace attribute)
+- [ ] ‡ `[attr=value i]` (attribute case-insensitive)
+- [ ] ‡ `:has()` (functional pseudo-class).
+      <small>Relative selectors (`:has(> img)`) are not supported, but scope is
+      (`:has(:scope > img)`) </small>
+- [ ] ‖ `:nth-child(n of S)` (functional pseudo-class).
+      <small>Scoping to parents is not supported</small>
+- [ ] ‖ `:nth-last-child(n of S)` (scoped to parent S).
+      <small>Scoping to parents is not supported</small>
+- [ ] † `:active` (pseudo-class)
+- [ ] † `:current` (pseudo-class)
+- [ ] † `:current()` (functional pseudo-class)
+- [ ] † `:default` (pseudo-class)
+- [ ] † `:defined` (pseudo-class)
+- [ ] † `:drop` (pseudo-class)
+- [ ] † `:drop()` (functional pseudo-class)
+- [ ] † `:focus` (pseudo-class)
+- [ ] † `:focus-visible` (pseudo-class)
+- [ ] † `:focus-within` (pseudo-class)
+- [ ] † `:fullscreen` (pseudo-class)
+- [ ] † `:future` (pseudo-class)
+- [ ] ‖ `:host()` (functional pseudo-class)
+- [ ] ‖ `:host-context()` (functional pseudo-class)
+- [ ] † `:hover` (pseudo-class)
+- [ ] § `:in-range` (pseudo-class)
+- [ ] † `:indeterminate` (pseudo-class)
+- [ ] § `:invalid` (pseudo-class)
+- [ ] † `:link` (pseudo-class)
+- [ ] † `:local-link` (pseudo-class)
+- [ ] † `:nth-column()` (functional pseudo-class)
+- [ ] † `:nth-last-column()` (functional pseudo-class)
+- [ ] § `:out-of-range` (pseudo-class)
+- [ ] † `:past` (pseudo-class)
+- [ ] † `:paused` (pseudo-class)
+- [ ] † `:placeholder-shown` (pseudo-class)
+- [ ] † `:playing` (pseudo-class)
+- [ ] ‖ `:something()` (functional pseudo-class)
+- [ ] † `:target` (pseudo-class)
+- [ ] † `:target-within` (pseudo-class)
+- [ ] † `:user-error` (pseudo-class)
+- [ ] † `:user-invalid` (pseudo-class)
+- [ ] § `:valid` (pseudo-class)
+- [ ] † `:visited` (pseudo-class)
+- [ ] † `::before` (pseudo-elements: none are supported)
 
 ###### Notes
 
-*   \* — Not supported in `matches`
-*   † — Needs a user, browser, interactivity, or scripting to make sense
-*   ‡ — Not supported by the underlying algorithm
-*   § — Not very interested in writing / including the code for this
-*   ‖ — Too new, the spec is still changing
+- \* — Not supported in `matches`
+- † — Needs a user, browser, interactivity, or scripting to make sense
+- ‡ — Not supported by the underlying algorithm
+- § — Not very interested in writing / including the code for this
+- ‖ — Too new, the spec is still changing
 
 ## Security
 
@@ -6034,64 +6358,36 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-select.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-select
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-select.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-select
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-select.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-select
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-select.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-select
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [help]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [tree]: https://github.com/syntax-tree/unist#tree
-
 [preorder]: https://github.com/syntax-tree/unist#preorder
-
 [hast]: https://github.com/syntax-tree/hast
-
 [node]: https://github.com/syntax-tree/hast#nodes
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [support]: #support
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-to-html/</summary>
 
 ### [fixtures/node_modules/hast-util-to-html/readme.md](fixtures/node_modules/hast-util-to-html/readme.md)
+
 # hast-util-to-html
 
 [![Build][build-badge]][build]
@@ -6115,34 +6411,36 @@ npm install hast-util-to-html
 ## Use
 
 ```js
-var h = require('hastscript')
-var toHtml = require('hast-util-to-html')
+var h = require("hastscript");
+var toHtml = require("hast-util-to-html");
 
-var tree = h('.alpha', [
-  'bravo ',
-  h('b', 'charlie'),
-  ' delta ',
-  h('a.echo', {download: true}, 'foxtrot')
-])
+var tree = h(".alpha", [
+  "bravo ",
+  h("b", "charlie"),
+  " delta ",
+  h("a.echo", { download: true }, "foxtrot"),
+]);
 
-console.log(toHtml(tree))
+console.log(toHtml(tree));
 ```
 
 Yields:
 
 ```html
-<div class="alpha">bravo <b>charlie</b> delta <a class="echo" download>foxtrot</a></div>
+<div class="alpha">
+  bravo <b>charlie</b> delta <a class="echo" download>foxtrot</a>
+</div>
 ```
 
 ## API
 
 ### `toHtml(tree[, options])`
 
-Serialize the given [**hast**][hast] [*tree*][tree] (or list of nodes).
+Serialize the given [**hast**][hast] [_tree_][tree] (or list of nodes).
 
 ###### `options.space`
 
-Whether the [*root*][root] of the [*tree*][tree] is in the `'html'` or `'svg'`
+Whether the [_root_][root] of the [_tree_][tree] is in the `'html'` or `'svg'`
 space (enum, `'svg'` or `'html'`, default: `'html'`).
 
 If an `svg` element is found in the HTML space, `toHtml` automatically switches
@@ -6159,7 +6457,7 @@ However, `useNamedReferences`, `useShortestReferences`, and
 
 ###### `options.voids`
 
-Tag names of [*elements*][element] to serialize without closing tag
+Tag names of [_elements_][element] to serialize without closing tag
 (`Array.<string>`, default: [`html-void-elements`][html-void-elements]).
 
 Not used in the SVG space.
@@ -6280,10 +6578,10 @@ Use [`hast-util-santize`][sanitize] to make the hast tree safe.
 
 ## Related
 
-*   [`hast-util-sanitize`][hast-util-sanitize]
-    — Sanitize hast nodes
-*   [`rehype-stringify`](https://github.com/wooorm/rehype/tree/master/packages/rehype-stringify)
-    — Wrapper around this project for [**rehype**](https://github.com/wooorm/rehype)
+- [`hast-util-sanitize`][hast-util-sanitize]
+  — Sanitize hast nodes
+- [`rehype-stringify`](https://github.com/wooorm/rehype/tree/master/packages/rehype-stringify)
+  — Wrapper around this project for [**rehype**](https://github.com/wooorm/rehype)
 
 ## Contribute
 
@@ -6302,68 +6600,38 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-to-html.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-to-html
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-to-html.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-to-html
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-to-html.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-to-html
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-to-html.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-to-html
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [html-void-elements]: https://github.com/wooorm/html-void-elements
-
 [stringify-entities]: https://github.com/wooorm/stringify-entities
-
 [hast-util-sanitize]: https://github.com/syntax-tree/hast-util-sanitize
-
 [tree]: https://github.com/syntax-tree/unist#tree
-
 [root]: https://github.com/syntax-tree/unist#root
-
 [hast]: https://github.com/syntax-tree/hast
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [sanitize]: https://github.com/syntax-tree/hast-util-sanitize
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-to-string/</summary>
 
 ### [fixtures/node_modules/hast-util-to-string/readme.md](fixtures/node_modules/hast-util-to-string/readme.md)
+
 <!--This file is generated by `build-packages.js`-->
 
 # hast-util-to-string
@@ -6389,12 +6657,12 @@ npm install hast-util-to-string
 ## Use
 
 ```js
-var h = require('hastscript')
-var toString = require('hast-util-to-string')
+var h = require("hastscript");
+var toString = require("hast-util-to-string");
 
-toString(h('p', 'Alpha'))
+toString(h("p", "Alpha"));
 //=> 'Alpha'
-toString(h('div', [h('b', 'Bold'), ' and ', h('i', 'italic'), '.']))
+toString(h("div", [h("b", "Bold"), " and ", h("i", "italic"), "."]));
 //=> 'Bold and italic.'
 ```
 
@@ -6419,52 +6687,30 @@ abide by its terms.
 [MIT][license] © [Titus Wormer][author]
 
 [build-badge]: https://img.shields.io/travis/rehypejs/rehype-minify.svg
-
 [build]: https://travis-ci.org/rehypejs/rehype-minify
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/rehypejs/rehype-minify.svg
-
 [coverage]: https://codecov.io/github/rehypejs/rehype-minify
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-to-string.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-to-string
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-to-string.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-to-string
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [health]: https://github.com/rehypejs/.github
-
 [contributing]: https://github.com/rehypejs/.github/blob/master/contributing.md
-
 [support]: https://github.com/rehypejs/.github/blob/master/support.md
-
 [coc]: https://github.com/rehypejs/.github/blob/master/code-of-conduct.md
-
 [license]: https://github.com/rehypejs/rehype-minify/blob/master/license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hast-util-whitespace/</summary>
 
 ### [fixtures/node_modules/hast-util-whitespace/readme.md](fixtures/node_modules/hast-util-whitespace/readme.md)
+
 # hast-util-whitespace
 
 [![Build][build-badge]][build]
@@ -6475,8 +6721,8 @@ abide by its terms.
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**hast**][hast] utility to check if a `node` is [*inter-element
-whitespace*][spec].
+[**hast**][hast] utility to check if a `node` is [_inter-element
+whitespace_][spec].
 
 ## Install
 
@@ -6489,42 +6735,42 @@ npm install hast-util-whitespace
 ## Use
 
 ```js
-var whitespace = require('hast-util-whitespace')
+var whitespace = require("hast-util-whitespace");
 
 whitespace({
-  type: 'element',
-  tagName: 'div',
-  children: []
-}) // => false
+  type: "element",
+  tagName: "div",
+  children: [],
+}); // => false
 
 whitespace({
-  type: 'text',
-  value: '\t  \n'
-}) // => true
+  type: "text",
+  value: "\t  \n",
+}); // => true
 
 whitespace({
-  type: 'text',
-  value: '  text\f'
-}) // => false
+  type: "text",
+  value: "  text\f",
+}); // => false
 ```
 
 ## API
 
 ### `whitespace(node|value)`
 
-Check if the given value is [*inter-element whitespace*][spec].
+Check if the given value is [_inter-element whitespace_][spec].
 
 ###### Parameters
 
-*   `node` ([`Node`][node], optional) — Node to check
-*   `value` (`string`, optional) — Value to check
+- `node` ([`Node`][node], optional) — Node to check
+- `value` (`string`, optional) — Value to check
 
 ###### Returns
 
 `boolean` — Whether the `value` is inter-element white-space: consisting of zero
 or more of space, tab (`\t`), line feed (`\n`), carriage return (`\r`), or form
 feed (`\f`).
-If `node` is passed it must be a [*text*][text] node.
+If `node` is passed it must be a [_text_][text] node.
 
 ## Security
 
@@ -6548,60 +6794,34 @@ abide by its terms.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hast-util-whitespace.svg
-
 [build]: https://travis-ci.org/syntax-tree/hast-util-whitespace
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hast-util-whitespace.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hast-util-whitespace
-
 [downloads-badge]: https://img.shields.io/npm/dm/hast-util-whitespace.svg
-
 [downloads]: https://www.npmjs.com/package/hast-util-whitespace
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hast-util-whitespace.svg
-
 [size]: https://bundlephobia.com/result?p=hast-util-whitespace
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hast]: https://github.com/syntax-tree/hast
-
 [spec]: https://html.spec.whatwg.org/#inter-element-whitespace
-
 [node]: https://github.com/syntax-tree/hast#nodes
-
 [text]: https://github.com/syntax-tree/hast#text
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/hastscript/</summary>
 
 ### [fixtures/node_modules/hastscript/readme.md](fixtures/node_modules/hastscript/readme.md)
+
 # hastscript
 
 [![Build][build-badge]][build]
@@ -6612,7 +6832,7 @@ abide by its terms.
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**hast**][hast] utility to create [*trees*][tree] in HTML or SVG.
+[**hast**][hast] utility to create [_trees_][tree] in HTML or SVG.
 
 Similar to [`hyperscript`][hyperscript], [`virtual-dom/h`][virtual-hyperscript],
 [`React.createElement`][react], and [Vue’s `createElement`][vue],
@@ -6631,39 +6851,39 @@ npm install hastscript
 ## Use
 
 ```js
-var h = require('hastscript')
-var s = require('hastscript/svg')
+var h = require("hastscript");
+var s = require("hastscript/svg");
 
 // Children as an array:
 console.log(
-  h('.foo#some-id', [
-    h('span', 'some text'),
-    h('input', {type: 'text', value: 'foo'}),
-    h('a.alpha', {class: 'bravo charlie', download: 'download'}, [
-      'delta',
-      'echo'
-    ])
+  h(".foo#some-id", [
+    h("span", "some text"),
+    h("input", { type: "text", value: "foo" }),
+    h("a.alpha", { class: "bravo charlie", download: "download" }, [
+      "delta",
+      "echo",
+    ]),
   ])
-)
+);
 
 // Children as arguments:
 console.log(
   h(
-    'form',
-    {method: 'POST'},
-    h('input', {type: 'text', name: 'foo'}),
-    h('input', {type: 'text', name: 'bar'}),
-    h('input', {type: 'submit', value: 'send'})
+    "form",
+    { method: "POST" },
+    h("input", { type: "text", name: "foo" }),
+    h("input", { type: "text", name: "bar" }),
+    h("input", { type: "submit", value: "send" })
   )
-)
+);
 
 // SVG:
 console.log(
-  s('svg', {xmlns: 'http://www.w3.org/2000/svg', viewbox: '0 0 500 500'}, [
-    s('title', 'SVG `<circle>` element'),
-    s('circle', {cx: 120, cy: 120, r: 100})
+  s("svg", { xmlns: "http://www.w3.org/2000/svg", viewbox: "0 0 500 500" }, [
+    s("title", "SVG `<circle>` element"),
+    s("circle", { cx: 120, cy: 120, r: 100 }),
   ])
-)
+);
 ```
 
 Yields:
@@ -6746,7 +6966,7 @@ Yields:
 
 ### `s(selector?[, properties][, ...children])`
 
-DSL to create virtual [**hast**][hast] [*trees*][tree] for HTML or SVG.
+DSL to create virtual [**hast**][hast] [_trees_][tree] for HTML or SVG.
 
 ##### Parameters
 
@@ -6779,56 +6999,62 @@ The following example shows how a script is injected that runs when loaded in a
 browser.
 
 ```js
-var tree = {type: 'root', children: []}
+var tree = { type: "root", children: [] };
 
-tree.children.push(h('script', 'alert(1)'))
+tree.children.push(h("script", "alert(1)"));
 ```
 
 Yields:
 
 ```html
-<script>alert(1)</script>
+<script>
+  alert(1);
+</script>
 ```
 
 The following example shows how an image is injected that fails loading and
 therefore runs code in a browser.
 
 ```js
-var tree = {type: 'root', children: []}
+var tree = { type: "root", children: [] };
 
 // Somehow someone injected these properties instead of an expected `src` and
 // `alt`:
-var otherProps = {src: 'x', onError: 'alert(2)'}
+var otherProps = { src: "x", onError: "alert(2)" };
 
-tree.children.push(h('img', {src: 'default.png', ...otherProps}))
+tree.children.push(h("img", { src: "default.png", ...otherProps }));
 ```
 
 Yields:
 
 ```html
-<img src="x" onerror="alert(2)">
+<img src="x" onerror="alert(2)" />
 ```
 
 The following example shows how code can run in a browser because someone stored
 an object in a database instead of the expected string.
 
 ```js
-var tree = {type: 'root', children: []}
+var tree = { type: "root", children: [] };
 
 // Somehow this isn’t the expected `'wooorm'`.
 var username = {
-  type: 'element',
-  tagName: 'script',
-  children: [{type: 'text', value: 'alert(3)'}]
-}
+  type: "element",
+  tagName: "script",
+  children: [{ type: "text", value: "alert(3)" }],
+};
 
-tree.children.push(h('span.handle', username))
+tree.children.push(h("span.handle", username));
 ```
 
 Yields:
 
 ```html
-<span class="handle"><script>alert(3)</script></span>
+<span class="handle"
+  ><script>
+    alert(3);
+  </script></span
+>
 ```
 
 Either do not use user input in `hastscript` or use
@@ -6836,18 +7062,18 @@ Either do not use user input in `hastscript` or use
 
 ## Related
 
-*   [`unist-builder`](https://github.com/syntax-tree/unist-builder)
-    — Create any unist tree
-*   [`hast-to-hyperscript`](https://github.com/syntax-tree/hast-to-hyperscript)
-    — Convert a Node to React, Virtual DOM, Hyperscript, and more
-*   [`hast-util-from-dom`](https://github.com/syntax-tree/hast-util-from-dom)
-    — Transform a DOM tree to hast
-*   [`hast-util-select`](https://github.com/syntax-tree/hast-util-select)
-    — `querySelector`, `querySelectorAll`, and `matches`
-*   [`hast-util-to-html`](https://github.com/syntax-tree/hast-util-to-html)
-    — Stringify nodes to HTML
-*   [`hast-util-to-dom`](https://github.com/syntax-tree/hast-util-to-dom)
-    — Transform to a DOM tree
+- [`unist-builder`](https://github.com/syntax-tree/unist-builder)
+  — Create any unist tree
+- [`hast-to-hyperscript`](https://github.com/syntax-tree/hast-to-hyperscript)
+  — Convert a Node to React, Virtual DOM, Hyperscript, and more
+- [`hast-util-from-dom`](https://github.com/syntax-tree/hast-util-from-dom)
+  — Transform a DOM tree to hast
+- [`hast-util-select`](https://github.com/syntax-tree/hast-util-select)
+  — `querySelector`, `querySelectorAll`, and `matches`
+- [`hast-util-to-html`](https://github.com/syntax-tree/hast-util-to-html)
+  — Stringify nodes to HTML
+- [`hast-util-to-dom`](https://github.com/syntax-tree/hast-util-to-dom)
+  — Transform to a DOM tree
 
 ## Contribute
 
@@ -6866,76 +7092,42 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/hastscript.svg
-
 [build]: https://travis-ci.org/syntax-tree/hastscript
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/hastscript.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/hastscript
-
 [downloads-badge]: https://img.shields.io/npm/dm/hastscript.svg
-
 [downloads]: https://www.npmjs.com/package/hastscript
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/hastscript.svg
-
 [size]: https://bundlephobia.com/result?p=hastscript
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [hyperscript]: https://github.com/dominictarr/hyperscript
-
 [virtual-hyperscript]: https://github.com/Matt-Esch/virtual-dom/tree/master/virtual-hyperscript
-
 [react]: https://reactjs.org/docs/glossary.html#react-elements
-
 [vue]: https://vuejs.org/v2/guide/render-function.html#createElement-Arguments
-
 [unist]: https://github.com/syntax-tree/unist
-
 [tree]: https://github.com/syntax-tree/unist#tree
-
 [hast]: https://github.com/syntax-tree/hast
-
 [element]: https://github.com/syntax-tree/hast#element
-
 [text]: https://github.com/syntax-tree/hast#text
-
 [u]: https://github.com/syntax-tree/unist-builder
-
 [parse-selector]: https://github.com/syntax-tree/hast-util-parse-selector
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [sanitize]: https://github.com/syntax-tree/hast-util-sanitize
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/html-void-elements/</summary>
 
 ### [fixtures/node_modules/html-void-elements/readme.md](fixtures/node_modules/html-void-elements/readme.md)
+
 # html-void-elements
 
 [![Build][build-badge]][build]
@@ -6961,37 +7153,39 @@ npm install html-void-elements
 ## Use
 
 ```js
-var htmlVoidElements = require('html-void-elements')
+var htmlVoidElements = require("html-void-elements");
 
-console.log(htmlVoidElements)
+console.log(htmlVoidElements);
 ```
 
 Yields:
 
 ```js
-[ 'area',
-  'base',
-  'basefont',
-  'bgsound',
-  'br',
-  'col',
-  'command',
-  'embed',
-  'frame',
-  'hr',
-  'image',
-  'img',
-  'input',
-  'isindex',
-  'keygen',
-  'link',
-  'menuitem',
-  'meta',
-  'nextid',
-  'param',
-  'source',
-  'track',
-  'wbr' ]
+[
+  "area",
+  "base",
+  "basefont",
+  "bgsound",
+  "br",
+  "col",
+  "command",
+  "embed",
+  "frame",
+  "hr",
+  "image",
+  "img",
+  "input",
+  "isindex",
+  "keygen",
+  "link",
+  "menuitem",
+  "meta",
+  "nextid",
+  "param",
+  "source",
+  "track",
+  "wbr",
+];
 ```
 
 ## API
@@ -7007,30 +7201,19 @@ Yields:
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/html-void-elements.svg
-
 [build]: https://travis-ci.org/wooorm/html-void-elements
-
 [downloads-badge]: https://img.shields.io/npm/dm/html-void-elements.svg
-
 [downloads]: https://www.npmjs.com/package/html-void-elements
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/html-void-elements.svg
-
 [size]: https://bundlephobia.com/result?p=html-void-elements
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/inflight/</summary>
 
 ### [fixtures/node_modules/inflight/README.md](fixtures/node_modules/inflight/README.md)
+
 # inflight
 
 Add callbacks to requests in flight to avoid async duplication
@@ -7038,7 +7221,7 @@ Add callbacks to requests in flight to avoid async duplication
 ## USAGE
 
 ```javascript
-var inflight = require('inflight')
+var inflight = require("inflight");
 
 // some request that does some stuff
 function req(key, callback) {
@@ -7048,34 +7231,31 @@ function req(key, callback) {
   // request for this key is already in flight, or a new callback
   // which when called will call all callbacks passed to inflightk
   // with the same key
-  callback = inflight(key, callback)
+  callback = inflight(key, callback);
 
   // If we got a falsey value back, then there's already a req going
-  if (!callback) return
+  if (!callback) return;
 
   // this is where you'd fetch the url or whatever
   // callback is also once()-ified, so it can safely be assigned
   // to multiple events etc.  First call wins.
-  setTimeout(function() {
-    callback(null, key)
-  }, 100)
+  setTimeout(function () {
+    callback(null, key);
+  }, 100);
 }
 
 // only assigns a single setTimeout
 // when it dings, all cbs get called
-req('foo', cb1)
-req('foo', cb2)
-req('foo', cb3)
-req('foo', cb4)
+req("foo", cb1);
+req("foo", cb2);
+req("foo", cb3);
+req("foo", cb4);
 ```
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/inherits/</summary>
 
 ### [fixtures/node_modules/inherits/README.md](fixtures/node_modules/inherits/README.md)
+
 Browser-friendly inheritance fully compatible with standard node.js
 [inherits](http://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor).
 
@@ -7102,7 +7282,7 @@ not only in node.js but in browser too.
 ## usage
 
 ```js
-var inherits = require('inherits');
+var inherits = require("inherits");
 // then use exactly as the standard one
 ```
 
@@ -7114,18 +7294,15 @@ neither with 2.0 nor with standard node.js `inherits`.
 If you are using version ~1.0 and planning to switch to ~2.0, be
 careful:
 
-* new version uses `super_` instead of `super` for referencing
+- new version uses `super_` instead of `super` for referencing
   superclass
-* new version overwrites current prototype while old one preserves any
+- new version overwrites current prototype while old one preserves any
   existing fields on it
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/is-alphabetical/</summary>
 
 ### [fixtures/node_modules/is-alphabetical/readme.md](fixtures/node_modules/is-alphabetical/readme.md)
+
 # is-alphabetical
 
 [![Build][build-badge]][build]
@@ -7146,12 +7323,12 @@ npm install is-alphabetical
 ## Use
 
 ```js
-var alphabetical = require('is-alphabetical')
+var alphabetical = require("is-alphabetical");
 
-alphabetical('a') // => true
-alphabetical('B') // => true
-alphabetical('0') // => false
-alphabetical('💩') // => false
+alphabetical("a"); // => true
+alphabetical("B"); // => true
+alphabetical("0"); // => false
+alphabetical("💩"); // => false
 ```
 
 ## API
@@ -7163,11 +7340,11 @@ first position (`string`), is alphabetical.
 
 ## Related
 
-*   [`is-decimal`](https://github.com/wooorm/is-decimal)
-*   [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
-*   [`is-alphanumerical`](https://github.com/wooorm/is-alphanumerical)
-*   [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
-*   [`is-word-character`](https://github.com/wooorm/is-word-character)
+- [`is-decimal`](https://github.com/wooorm/is-decimal)
+- [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
+- [`is-alphanumerical`](https://github.com/wooorm/is-alphanumerical)
+- [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
+- [`is-word-character`](https://github.com/wooorm/is-word-character)
 
 ## License
 
@@ -7176,34 +7353,21 @@ first position (`string`), is alphabetical.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/is-alphabetical.svg
-
 [build]: https://travis-ci.org/wooorm/is-alphabetical
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/is-alphabetical.svg
-
 [coverage]: https://codecov.io/github/wooorm/is-alphabetical
-
 [downloads-badge]: https://img.shields.io/npm/dm/is-alphabetical.svg
-
 [downloads]: https://www.npmjs.com/package/is-alphabetical
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/is-alphabetical.svg
-
 [size]: https://bundlephobia.com/result?p=is-alphabetical
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/is-alphanumerical/</summary>
 
 ### [fixtures/node_modules/is-alphanumerical/readme.md](fixtures/node_modules/is-alphanumerical/readme.md)
+
 # is-alphanumerical
 
 [![Build][build-badge]][build]
@@ -7224,13 +7388,13 @@ npm install is-alphanumerical
 ## Use
 
 ```js
-var alphanumerical = require('is-alphanumerical')
+var alphanumerical = require("is-alphanumerical");
 
-alphanumerical('a') // => true
-alphanumerical('Z') // => true
-alphanumerical('0') // => true
-alphanumerical(' ') // => false
-alphanumerical('💩') // => false
+alphanumerical("a"); // => true
+alphanumerical("Z"); // => true
+alphanumerical("0"); // => true
+alphanumerical(" "); // => false
+alphanumerical("💩"); // => false
 ```
 
 ## API
@@ -7242,11 +7406,11 @@ first position (`string`), is alphanumerical.
 
 ## Related
 
-*   [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
-*   [`is-decimal`](https://github.com/wooorm/is-decimal)
-*   [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
-*   [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
-*   [`is-word-character`](https://github.com/wooorm/is-word-character)
+- [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
+- [`is-decimal`](https://github.com/wooorm/is-decimal)
+- [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
+- [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
+- [`is-word-character`](https://github.com/wooorm/is-word-character)
 
 ## License
 
@@ -7255,34 +7419,21 @@ first position (`string`), is alphanumerical.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/is-alphanumerical.svg
-
 [build]: https://travis-ci.org/wooorm/is-alphanumerical
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/is-alphanumerical.svg
-
 [coverage]: https://codecov.io/github/wooorm/is-alphanumerical
-
 [downloads-badge]: https://img.shields.io/npm/dm/is-alphanumerical.svg
-
 [downloads]: https://www.npmjs.com/package/is-alphanumerical
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/is-alphanumerical.svg
-
 [size]: https://bundlephobia.com/result?p=is-alphanumerical
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/is-decimal/</summary>
 
 ### [fixtures/node_modules/is-decimal/readme.md](fixtures/node_modules/is-decimal/readme.md)
+
 # is-decimal
 
 [![Build][build-badge]][build]
@@ -7303,12 +7454,12 @@ npm install is-decimal
 ## Use
 
 ```js
-var decimal = require('is-decimal')
+var decimal = require("is-decimal");
 
-decimal('0') // => true
-decimal('9') // => true
-decimal('a') // => false
-decimal('💩') // => false
+decimal("0"); // => true
+decimal("9"); // => true
+decimal("a"); // => false
+decimal("💩"); // => false
 ```
 
 ## API
@@ -7320,10 +7471,10 @@ first position (`string`), is decimal.
 
 ## Related
 
-*   [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
-*   [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
-*   [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
-*   [`is-word-character`](https://github.com/wooorm/is-word-character)
+- [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
+- [`is-hexadecimal`](https://github.com/wooorm/is-hexadecimal)
+- [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
+- [`is-word-character`](https://github.com/wooorm/is-word-character)
 
 ## License
 
@@ -7332,34 +7483,21 @@ first position (`string`), is decimal.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/is-decimal.svg
-
 [build]: https://travis-ci.org/wooorm/is-decimal
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/is-decimal.svg
-
 [coverage]: https://codecov.io/github/wooorm/is-decimal
-
 [downloads-badge]: https://img.shields.io/npm/dm/is-decimal.svg
-
 [downloads]: https://www.npmjs.com/package/is-decimal
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/is-decimal.svg
-
 [size]: https://bundlephobia.com/result?p=is-decimal
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/is-hexadecimal/</summary>
 
 ### [fixtures/node_modules/is-hexadecimal/readme.md](fixtures/node_modules/is-hexadecimal/readme.md)
+
 # is-hexadecimal
 
 [![Build][build-badge]][build]
@@ -7380,12 +7518,12 @@ npm install is-hexadecimal
 ## Use
 
 ```js
-var hexadecimal = require('is-hexadecimal')
+var hexadecimal = require("is-hexadecimal");
 
-hexadecimal('a') // => true
-hexadecimal('0') // => true
-hexadecimal('G') // => false
-hexadecimal('💩') // => false
+hexadecimal("a"); // => true
+hexadecimal("0"); // => true
+hexadecimal("G"); // => false
+hexadecimal("💩"); // => false
 ```
 
 ## API
@@ -7397,11 +7535,11 @@ first position (`string`), is hexadecimal.
 
 ## Related
 
-*   [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
-*   [`is-alphanumerical`](https://github.com/wooorm/is-alphabetical)
-*   [`is-decimal`](https://github.com/wooorm/is-decimal)
-*   [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
-*   [`is-word-character`](https://github.com/wooorm/is-word-character)
+- [`is-alphabetical`](https://github.com/wooorm/is-alphabetical)
+- [`is-alphanumerical`](https://github.com/wooorm/is-alphabetical)
+- [`is-decimal`](https://github.com/wooorm/is-decimal)
+- [`is-whitespace-character`](https://github.com/wooorm/is-whitespace-character)
+- [`is-word-character`](https://github.com/wooorm/is-word-character)
 
 ## License
 
@@ -7410,40 +7548,26 @@ first position (`string`), is hexadecimal.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/is-hexadecimal.svg
-
 [build]: https://travis-ci.org/wooorm/is-hexadecimal
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/is-hexadecimal.svg
-
 [coverage]: https://codecov.io/github/wooorm/is-hexadecimal
-
 [downloads-badge]: https://img.shields.io/npm/dm/is-hexadecimal.svg
-
 [downloads]: https://www.npmjs.com/package/is-hexadecimal
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/is-hexadecimal.svg
-
 [size]: https://bundlephobia.com/result?p=is-hexadecimal
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/minimatch/</summary>
 
 ### [fixtures/node_modules/minimatch/README.md](fixtures/node_modules/minimatch/README.md)
+
 # minimatch
 
 A minimal matching utility.
 
 [![Build Status](https://secure.travis-ci.org/isaacs/minimatch.svg)](http://travis-ci.org/isaacs/minimatch)
-
 
 This is the matching library used internally by npm.
 
@@ -7453,70 +7577,70 @@ objects.
 ## Usage
 
 ```javascript
-var minimatch = require("minimatch")
+var minimatch = require("minimatch");
 
-minimatch("bar.foo", "*.foo") // true!
-minimatch("bar.foo", "*.bar") // false!
-minimatch("bar.foo", "*.+(bar|foo)", { debug: true }) // true, and noisy!
+minimatch("bar.foo", "*.foo"); // true!
+minimatch("bar.foo", "*.bar"); // false!
+minimatch("bar.foo", "*.+(bar|foo)", { debug: true }); // true, and noisy!
 ```
 
 ## Features
 
 Supports these glob features:
 
-* Brace Expansion
-* Extended glob matching
-* "Globstar" `**` matching
+- Brace Expansion
+- Extended glob matching
+- "Globstar" `**` matching
 
 See:
 
-* `man sh`
-* `man bash`
-* `man 3 fnmatch`
-* `man 5 gitignore`
+- `man sh`
+- `man bash`
+- `man 3 fnmatch`
+- `man 5 gitignore`
 
 ## Minimatch Class
 
 Create a minimatch object by instantiating the `minimatch.Minimatch` class.
 
 ```javascript
-var Minimatch = require("minimatch").Minimatch
-var mm = new Minimatch(pattern, options)
+var Minimatch = require("minimatch").Minimatch;
+var mm = new Minimatch(pattern, options);
 ```
 
 ### Properties
 
-* `pattern` The original pattern the minimatch object represents.
-* `options` The options supplied to the constructor.
-* `set` A 2-dimensional array of regexp or string expressions.
+- `pattern` The original pattern the minimatch object represents.
+- `options` The options supplied to the constructor.
+- `set` A 2-dimensional array of regexp or string expressions.
   Each row in the
-  array corresponds to a brace-expanded pattern.  Each item in the row
-  corresponds to a single path-part.  For example, the pattern
+  array corresponds to a brace-expanded pattern. Each item in the row
+  corresponds to a single path-part. For example, the pattern
   `{a,b/c}/d` would expand to a set of patterns like:
 
         [ [ a, d ]
         , [ b, c, d ] ]
 
-    If a portion of the pattern doesn't have any "magic" in it
-    (that is, it's something like `"foo"` rather than `fo*o?`), then it
-    will be left as a string rather than converted to a regular
-    expression.
+  If a portion of the pattern doesn't have any "magic" in it
+  (that is, it's something like `"foo"` rather than `fo*o?`), then it
+  will be left as a string rather than converted to a regular
+  expression.
 
-* `regexp` Created by the `makeRe` method.  A single regular expression
-  expressing the entire pattern.  This is useful in cases where you wish
+- `regexp` Created by the `makeRe` method. A single regular expression
+  expressing the entire pattern. This is useful in cases where you wish
   to use the pattern somewhat like `fnmatch(3)` with `FNM_PATH` enabled.
-* `negate` True if the pattern is negated.
-* `comment` True if the pattern is a comment.
-* `empty` True if the pattern is `""`.
+- `negate` True if the pattern is negated.
+- `comment` True if the pattern is a comment.
+- `empty` True if the pattern is `""`.
 
 ### Methods
 
-* `makeRe` Generate the `regexp` member if necessary, and return it.
+- `makeRe` Generate the `regexp` member if necessary, and return it.
   Will return `false` if the pattern is invalid.
-* `match(fname)` Return true if the filename matches the pattern, or
+- `match(fname)` Return true if the filename matches the pattern, or
   false otherwise.
-* `matchOne(fileArray, patternArray, partial)` Take a `/`-split
-  filename, and match it against a single row in the `regExpSet`.  This
+- `matchOne(fileArray, patternArray, partial)` Take a `/`-split
+  filename, and match it against a single row in the `regExpSet`. This
   method is mainly for internal use, but is exposed so that it can be
   used by a glob-walker that needs to avoid excessive filesystem calls.
 
@@ -7524,25 +7648,27 @@ All other methods are internal, and will be called as necessary.
 
 ### minimatch(path, pattern, options)
 
-Main export.  Tests a path against the pattern using the options.
+Main export. Tests a path against the pattern using the options.
 
 ```javascript
-var isJS = minimatch(file, "*.js", { matchBase: true })
+var isJS = minimatch(file, "*.js", { matchBase: true });
 ```
 
 ### minimatch.filter(pattern, options)
 
 Returns a function that tests its
-supplied argument, suitable for use with `Array.filter`.  Example:
+supplied argument, suitable for use with `Array.filter`. Example:
 
 ```javascript
-var javascripts = fileList.filter(minimatch.filter("*.js", {matchBase: true}))
+var javascripts = fileList.filter(
+  minimatch.filter("*.js", { matchBase: true })
+);
 ```
 
 ### minimatch.match(list, pattern, options)
 
 Match against the list of
-files, in the style of fnmatch or glob.  If nothing is matched, and
+files, in the style of fnmatch or glob. If nothing is matched, and
 options.nonull is set, then return a list containing the pattern itself.
 
 ```javascript
@@ -7588,13 +7714,13 @@ Perform a case-insensitive match.
 ### nonull
 
 When a match is not found by `minimatch.match`, return a list containing
-the pattern itself if this option is set.  When not set, an empty list
+the pattern itself if this option is set. When not set, an empty list
 is returned if there are no matches.
 
 ### matchBase
 
 If set, then patterns without slashes will be matched
-against the basename of the path if it contains slashes.  For example,
+against the basename of the path if it contains slashes. For example,
 `a?b` would match the path `/xyz/123/acb`, but not `/xyz/acb/123`.
 
 ### nocomment
@@ -7611,50 +7737,46 @@ Suppress the behavior of treating a leading `!` character as negation.
 Returns from negate expressions the same as if they were not negated.
 (Ie, true on a hit, false on a miss.)
 
-
 ## Comparisons to other fnmatch/glob implementations
 
 While strict compliance with the existing standards is a worthwhile
 goal, some discrepancies exist between minimatch and other
 implementations, and are intentional.
 
-If the pattern starts with a `!` character, then it is negated.  Set the
+If the pattern starts with a `!` character, then it is negated. Set the
 `nonegate` flag to suppress this behavior, and treat leading `!`
-characters normally.  This is perhaps relevant if you wish to start the
-pattern with a negative extglob pattern like `!(a|B)`.  Multiple `!`
+characters normally. This is perhaps relevant if you wish to start the
+pattern with a negative extglob pattern like `!(a|B)`. Multiple `!`
 characters at the start of a pattern will negate the pattern multiple
 times.
 
 If a pattern starts with `#`, then it is treated as a comment, and
-will not match anything.  Use `\#` to match a literal `#` at the
+will not match anything. Use `\#` to match a literal `#` at the
 start of a line, or set the `nocomment` flag to suppress this behavior.
 
 The double-star character `**` is supported by default, unless the
-`noglobstar` flag is set.  This is supported in the manner of bsdglob
+`noglobstar` flag is set. This is supported in the manner of bsdglob
 and bash 4.1, where `**` only has special significance if it is the only
-thing in a path part.  That is, `a/**/b` will match `a/x/y/b`, but
+thing in a path part. That is, `a/**/b` will match `a/x/y/b`, but
 `a/**b` will not.
 
 If an escaped pattern has no matches, and the `nonull` flag is set,
 then minimatch.match returns the pattern as-provided, rather than
-interpreting the character escapes.  For example,
+interpreting the character escapes. For example,
 `minimatch.match([], "\\*a\\?")` will return `"\\*a\\?"` rather than
-`"*a?"`.  This is akin to setting the `nullglob` option in bash, except
+`"*a?"`. This is akin to setting the `nullglob` option in bash, except
 that it does not resolve escaped pattern characters.
 
 If brace expansion is not disabled, then it is performed before any
-other interpretation of the glob pattern.  Thus, a pattern like
+other interpretation of the glob pattern. Thus, a pattern like
 `+(a|{b),c)}`, which would not be valid in bash or zsh, is expanded
 **first** into the set of `+(a|b)` and `+(a|c)`, and those patterns are
-checked for validity.  Since those two are valid, matching proceeds.
-
-
-
-
+checked for validity. Since those two are valid, matching proceeds.
 
 </details><details> <summary>fixtures/node_modules/newsapi/</summary>
 
 ### [fixtures/node_modules/newsapi/README.md](fixtures/node_modules/newsapi/README.md)
+
 # newsapi
 
 A node interface for NewsAPI.
@@ -7674,88 +7796,101 @@ is totally valid. There are some usage examples below to see how these options s
 If you use this in a project, add a 'powered by' attribution link back to NewsAPI.org
 
 ## Add to your project
+
 ```shell
 $ npm install newsapi --save
 ```
 
 ## Test
+
 ```shell
 $ API_KEY=<your api key> npm test
 ```
 
 ## Example usage of v2 API
+
 All methods support promises and node-style callbacks.
+
 ```js
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('YOUR_API_KEY');
+const NewsAPI = require("newsapi");
+const newsapi = new NewsAPI("YOUR_API_KEY");
 
 // To query top headlines
 // All options passed to topHeadlines are optional, but you need to include at least one of them
-newsapi.v2.topHeadlines({
-  q: 'trump',
-  category: 'politics',
-  language: 'en',
-  country: 'us'
-}).then(response => {
-  console.log(response);
-  /*
+newsapi.v2
+  .topHeadlines({
+    q: "trump",
+    category: "politics",
+    language: "en",
+    country: "us",
+  })
+  .then((response) => {
+    console.log(response);
+    /*
     {
       status: "ok",
       articles: [...]
     }
   */
-});
+  });
 
 // To query everything
 // You must include at least one q, source, or domain
-newsapi.v2.everything({
-  q: 'trump',
-  sources: 'bbc-news,the-verge',
-  domains: 'bbc.co.uk,techcrunch.com',
-  from: '2017-12-01',
-  to: '2017-12-12',
-  language: 'en',
-  sortBy: 'relevancy',
-  page: 2
-}).then(response => {
-  console.log(response);
-  /*
+newsapi.v2
+  .everything({
+    q: "trump",
+    sources: "bbc-news,the-verge",
+    domains: "bbc.co.uk,techcrunch.com",
+    from: "2017-12-01",
+    to: "2017-12-12",
+    language: "en",
+    sortBy: "relevancy",
+    page: 2,
+  })
+  .then((response) => {
+    console.log(response);
+    /*
     {
       status: "ok",
       articles: [...]
     }
   */
-});
+  });
 
 // To query sources
 // All options are optional
-newsapi.v2.sources({
-  category: 'technology',
-  language: 'en',
-  country: 'us'
-}).then(response => {
-  console.log(response);
-  /*
+newsapi.v2
+  .sources({
+    category: "technology",
+    language: "en",
+    country: "us",
+  })
+  .then((response) => {
+    console.log(response);
+    /*
     {
       status: "ok",
       sources: [...]
     }
   */
-});
+  });
 ```
 
 ## Example usage of v1 legacy API
+
 ```js
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('YOUR_API_KEY');
+const NewsAPI = require("newsapi");
+const newsapi = new NewsAPI("YOUR_API_KEY");
 
 // To query articles:
-newsapi.articles({
-  source: 'associated-press', // required
-  sortBy: 'top' // optional
-}).then(articlesResponse => {
-  console.log(articlesResponse);
-  /*
+newsapi
+  .articles({
+    source: "associated-press", // required
+    sortBy: "top", // optional
+  })
+  .then((articlesResponse) => {
+    console.log(articlesResponse);
+    /*
     {
       status: "ok",
       source: "associated-press",
@@ -7763,36 +7898,43 @@ newsapi.articles({
       articles: [...]
     }
    */
-});
+  });
 
 // To query sources:
-newsapi.sources({
-  category: 'technology', // optional
-  language: 'en', // optional
-  country: 'us' // optional
-}).then(sourcesResponse => {
-  console.log(sourcesResponse);
-  /*
+newsapi
+  .sources({
+    category: "technology", // optional
+    language: "en", // optional
+    country: "us", // optional
+  })
+  .then((sourcesResponse) => {
+    console.log(sourcesResponse);
+    /*
     {
       status: "ok",
       sources: [...]
     }
   */
-});
+  });
 
 // For both methods you can also use traditional Node callback style:
-newsapi.articles({
-  source: 'associated-press',
-  sortBy: 'top'
-}, (err, articlesResponse) => {
-  if (err) console.error(err);
-  else console.log(articlesResponse);
-});
+newsapi.articles(
+  {
+    source: "associated-press",
+    sortBy: "top",
+  },
+  (err, articlesResponse) => {
+    if (err) console.error(err);
+    else console.log(articlesResponse);
+  }
+);
 ```
 
 ## Caching
+
 [NewsAPI's caching behavior](https://newsapi.org/docs/caching).
 You can disable caching on a request level by adding the `noCache: true` option to your queries.
+
 ```js
 newsapi.v2.everything({
   sources: 'bbc-news'
@@ -7803,47 +7945,48 @@ newsapi.v2.everything({
 });
 ```
 
-
-
-
-
 ### [fixtures/node_modules/newsapi/RELEASE.md](fixtures/node_modules/newsapi/RELEASE.md)
 
 # Release Notes
 
 ## v2.4.0
+
 Date: 2018-09-16  
 Type: Minor  
 This release makes the following changes, updates, and bug fixes:
+
 1. Add babel build step to provide compatibility with ES5 environments
 
 ## v2.3.0
+
 Date: 2018-07-31  
 Type: Minor  
 This release makes the following changes, updates, and bug fixes:
+
 1. Update mocha to eliminate vulnerabilities.
 2. Remove use of bluebird. Use native promises instead.
 
 ## v2.2.2
+
 Date: 2018-03-26  
 Type: Patch  
 This release makes the following changes, updates, and bug fixes:
+
 1. Remove use of Promise.spread() to improve compatibility with react native.
 
 ## v2.2.1
+
 Date: 2018-03-24  
 Type: Patch  
 This release makes the following changes, updates, and bug fixes:
-1. Switch from `request` to `node-fetch` for http requests in order to support more platforms.
 
+1. Switch from `request` to `node-fetch` for http requests in order to support more platforms.
 
 </details><details> <summary>fixtures/node_modules/node-fetch/</summary>
 
 ### [fixtures/node_modules/node-fetch/CHANGELOG.md](fixtures/node_modules/node-fetch/CHANGELOG.md)
 
-Changelog
-=========
-
+# Changelog
 
 # 2.x release
 
@@ -7962,7 +8105,6 @@ This is a major release. Check [our upgrade guide](https://github.com/bitinn/nod
 
 - Enhance: more comprehensive API docs
 - Enhance: add a list of default headers in README
-
 
 # 1.x release
 
@@ -8100,16 +8242,11 @@ See [changelog on 1.x branch](https://github.com/bitinn/node-fetch/blob/1.x/CHAN
 
 - Enhance: better test coverage and doc
 
-
 # 0.x release
 
 ## v0.1
 
 - Major: initial public release
-
-
-
-
 
 ### [fixtures/node_modules/node-fetch/LICENSE.md](fixtures/node_modules/node-fetch/LICENSE.md)
 
@@ -8135,12 +8272,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-
 ### [fixtures/node_modules/node-fetch/README.md](fixtures/node_modules/node-fetch/README.md)
 
-node-fetch
-==========
+# node-fetch
 
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -8159,29 +8293,29 @@ A light-weight module that brings `window.fetch` to Node.js
 - [Installation](#installation)
 - [Loading and configuring the module](#loading-and-configuring-the-module)
 - [Common Usage](#common-usage)
-    - [Plain text or HTML](#plain-text-or-html)
-    - [JSON](#json)
-    - [Simple Post](#simple-post)
-    - [Post with JSON](#post-with-json)
-    - [Post with form parameters](#post-with-form-parameters)
-    - [Handling exceptions](#handling-exceptions)
-    - [Handling client and server errors](#handling-client-and-server-errors)
+  - [Plain text or HTML](#plain-text-or-html)
+  - [JSON](#json)
+  - [Simple Post](#simple-post)
+  - [Post with JSON](#post-with-json)
+  - [Post with form parameters](#post-with-form-parameters)
+  - [Handling exceptions](#handling-exceptions)
+  - [Handling client and server errors](#handling-client-and-server-errors)
 - [Advanced Usage](#advanced-usage)
-    - [Streams](#streams)
-    - [Buffer](#buffer)
-    - [Accessing Headers and other Meta data](#accessing-headers-and-other-meta-data)
-    - [Extract Set-Cookie Header](#extract-set-cookie-header)
-    - [Post data using a file stream](#post-data-using-a-file-stream)
-    - [Post with form-data (detect multipart)](#post-with-form-data-detect-multipart)
-    - [Request cancellation with AbortSignal](#request-cancellation-with-abortsignal)
+  - [Streams](#streams)
+  - [Buffer](#buffer)
+  - [Accessing Headers and other Meta data](#accessing-headers-and-other-meta-data)
+  - [Extract Set-Cookie Header](#extract-set-cookie-header)
+  - [Post data using a file stream](#post-data-using-a-file-stream)
+  - [Post with form-data (detect multipart)](#post-with-form-data-detect-multipart)
+  - [Request cancellation with AbortSignal](#request-cancellation-with-abortsignal)
 - [API](#api)
-    - [fetch(url[, options])](#fetchurl-options)
-    - [Options](#options)
-    - [Class: Request](#class-request)
-    - [Class: Response](#class-response)
-    - [Class: Headers](#class-headers)
-    - [Interface: Body](#interface-body)
-    - [Class: FetchError](#class-fetcherror)
+  - [fetch(url[, options])](#fetchurl-options)
+  - [Options](#options)
+  - [Class: Request](#class-request)
+  - [Class: Response](#class-response)
+  - [Class: Headers](#class-headers)
+  - [Interface: Body](#interface-body)
+  - [Class: FetchError](#class-fetcherror)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
 
@@ -8217,14 +8351,17 @@ $ npm install node-fetch --save
 ```
 
 ## Loading and configuring the module
+
 We suggest you load the module via `require`, pending the stabalizing of es modules in node:
+
 ```js
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 ```
 
 If you are using a Promise library other than native, set it through fetch.Promise:
+
 ```js
-const Bluebird = require('bluebird');
+const Bluebird = require("bluebird");
 
 fetch.Promise = Bluebird;
 ```
@@ -8234,26 +8371,27 @@ fetch.Promise = Bluebird;
 NOTE: The documentation below is up-to-date with `2.x` releases, [see `1.x` readme](https://github.com/bitinn/node-fetch/blob/1.x/README.md), [changelog](https://github.com/bitinn/node-fetch/blob/1.x/CHANGELOG.md) and [2.x upgrade guide](UPGRADE-GUIDE.md) for the differences.
 
 #### Plain text or HTML
+
 ```js
-fetch('https://github.com/')
-    .then(res => res.text())
-    .then(body => console.log(body));
+fetch("https://github.com/")
+  .then((res) => res.text())
+  .then((body) => console.log(body));
 ```
 
 #### JSON
 
 ```js
-
-fetch('https://api.github.com/users/github')
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://api.github.com/users/github")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 ```
 
 #### Simple Post
+
 ```js
-fetch('https://httpbin.org/post', { method: 'POST', body: 'a=1' })
-    .then(res => res.json()) // expecting a json response
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", { method: "POST", body: "a=1" })
+  .then((res) => res.json()) // expecting a json response
+  .then((json) => console.log(json));
 ```
 
 #### Post with JSON
@@ -8261,93 +8399,101 @@ fetch('https://httpbin.org/post', { method: 'POST', body: 'a=1' })
 ```js
 const body = { a: 1 };
 
-fetch('https://httpbin.org/post', {
-        method: 'post',
-        body:    JSON.stringify(body),
-        headers: { 'Content-Type': 'application/json' },
-    })
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", {
+  method: "post",
+  body: JSON.stringify(body),
+  headers: { "Content-Type": "application/json" },
+})
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 ```
 
 #### Post with form parameters
+
 `URLSearchParams` is available in Node.js as of v7.5.0. See [official documentation](https://nodejs.org/api/url.html#url_class_urlsearchparams) for more usage methods.
 
 NOTE: The `Content-Type` header is only set automatically to `x-www-form-urlencoded` when an instance of `URLSearchParams` is given as such:
 
 ```js
-const { URLSearchParams } = require('url');
+const { URLSearchParams } = require("url");
 
 const params = new URLSearchParams();
-params.append('a', 1);
+params.append("a", 1);
 
-fetch('https://httpbin.org/post', { method: 'POST', body: params })
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", { method: "POST", body: params })
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 ```
 
 #### Handling exceptions
-NOTE: 3xx-5xx responses are *NOT* exceptions, and should be handled in `then()`, see the next section.
 
-Adding a catch to the fetch promise chain will catch *all* exceptions, such as errors originating from node core libraries, like network errors, and operational errors which are instances of FetchError. See the [error handling document](ERROR-HANDLING.md)  for more details.
+NOTE: 3xx-5xx responses are _NOT_ exceptions, and should be handled in `then()`, see the next section.
+
+Adding a catch to the fetch promise chain will catch _all_ exceptions, such as errors originating from node core libraries, like network errors, and operational errors which are instances of FetchError. See the [error handling document](ERROR-HANDLING.md) for more details.
 
 ```js
-fetch('https://domain.invalid/')
-    .catch(err => console.error(err));
+fetch("https://domain.invalid/").catch((err) => console.error(err));
 ```
 
 #### Handling client and server errors
+
 It is common to create a helper function to check that the response contains no client (4xx) or server (5xx) error responses:
 
 ```js
 function checkStatus(res) {
-    if (res.ok) { // res.status >= 200 && res.status < 300
-        return res;
-    } else {
-        throw MyCustomError(res.statusText);
-    }
+  if (res.ok) {
+    // res.status >= 200 && res.status < 300
+    return res;
+  } else {
+    throw MyCustomError(res.statusText);
+  }
 }
 
-fetch('https://httpbin.org/status/400')
-    .then(checkStatus)
-    .then(res => console.log('will not get here...'))
+fetch("https://httpbin.org/status/400")
+  .then(checkStatus)
+  .then((res) => console.log("will not get here..."));
 ```
 
 ## Advanced Usage
 
 #### Streams
+
 The "Node.js way" is to use streams when possible:
 
 ```js
-fetch('https://assets-cdn.github.com/images/modules/logos_page/Octocat.png')
-    .then(res => {
-        const dest = fs.createWriteStream('./octocat.png');
-        res.body.pipe(dest);
-    });
+fetch(
+  "https://assets-cdn.github.com/images/modules/logos_page/Octocat.png"
+).then((res) => {
+  const dest = fs.createWriteStream("./octocat.png");
+  res.body.pipe(dest);
+});
 ```
 
 #### Buffer
+
 If you prefer to cache binary data in full, use buffer(). (NOTE: buffer() is a `node-fetch` only API)
 
 ```js
-const fileType = require('file-type');
+const fileType = require("file-type");
 
-fetch('https://assets-cdn.github.com/images/modules/logos_page/Octocat.png')
-    .then(res => res.buffer())
-    .then(buffer => fileType(buffer))
-    .then(type => { /* ... */ });
+fetch("https://assets-cdn.github.com/images/modules/logos_page/Octocat.png")
+  .then((res) => res.buffer())
+  .then((buffer) => fileType(buffer))
+  .then((type) => {
+    /* ... */
+  });
 ```
 
 #### Accessing Headers and other Meta data
+
 ```js
-fetch('https://github.com/')
-    .then(res => {
-        console.log(res.ok);
-        console.log(res.status);
-        console.log(res.statusText);
-        console.log(res.headers.raw());
-        console.log(res.headers.get('content-type'));
-    });
+fetch("https://github.com/").then((res) => {
+  console.log(res.ok);
+  console.log(res.status);
+  console.log(res.statusText);
+  console.log(res.headers.raw());
+  console.log(res.headers.get("content-type"));
+});
 ```
 
 #### Extract Set-Cookie Header
@@ -8355,51 +8501,51 @@ fetch('https://github.com/')
 Unlike browsers, you can access raw `Set-Cookie` headers manually using `Headers.raw()`, this is a `node-fetch` only API.
 
 ```js
-fetch(url).then(res => {
-    // returns an array of values, instead of a string of comma-separated values
-    console.log(res.headers.raw()['set-cookie']);
+fetch(url).then((res) => {
+  // returns an array of values, instead of a string of comma-separated values
+  console.log(res.headers.raw()["set-cookie"]);
 });
 ```
 
 #### Post data using a file stream
 
 ```js
-const { createReadStream } = require('fs');
+const { createReadStream } = require("fs");
 
-const stream = createReadStream('input.txt');
+const stream = createReadStream("input.txt");
 
-fetch('https://httpbin.org/post', { method: 'POST', body: stream })
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", { method: "POST", body: stream })
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 ```
 
 #### Post with form-data (detect multipart)
 
 ```js
-const FormData = require('form-data');
+const FormData = require("form-data");
 
 const form = new FormData();
-form.append('a', 1);
+form.append("a", 1);
 
-fetch('https://httpbin.org/post', { method: 'POST', body: form })
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", { method: "POST", body: form })
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 
 // OR, using custom headers
 // NOTE: getHeaders() is non-standard API
 
 const form = new FormData();
-form.append('a', 1);
+form.append("a", 1);
 
 const options = {
-    method: 'POST',
-    body: form,
-    headers: form.getHeaders()
-}
+  method: "POST",
+  body: form,
+  headers: form.getHeaders(),
+};
 
-fetch('https://httpbin.org/post', options)
-    .then(res => res.json())
-    .then(json => console.log(json));
+fetch("https://httpbin.org/post", options)
+  .then((res) => res.json())
+  .then((json) => console.log(json));
 ```
 
 #### Request cancellation with AbortSignal
@@ -8411,25 +8557,24 @@ You may cancel requests with `AbortController`. A suggested implementation is [`
 An example of timing out a request after 150ms could be achieved as follows:
 
 ```js
-import AbortController from 'abort-controller';
+import AbortController from "abort-controller";
 
 const controller = new AbortController();
-const timeout = setTimeout(
-  () => { controller.abort(); },
-  150,
-);
+const timeout = setTimeout(() => {
+  controller.abort();
+}, 150);
 
 fetch(url, { signal: controller.signal })
-  .then(res => res.json())
+  .then((res) => res.json())
   .then(
-    data => {
-      useData(data)
+    (data) => {
+      useData(data);
     },
-    err => {
-      if (err.name === 'AbortError') {
+    (err) => {
+      if (err.name === "AbortError") {
         // request was aborted
       }
-    },
+    }
   )
   .finally(() => {
     clearTimeout(timeout);
@@ -8437,7 +8582,6 @@ fetch(url, { signal: controller.signal })
 ```
 
 See [test cases](https://github.com/bitinn/node-fetch/blob/master/test/test.js) for more examples.
-
 
 ## API
 
@@ -8452,6 +8596,7 @@ Perform an HTTP(S) fetch.
 `url` should be an absolute url, such as `https://example.com/`. A path-relative URL (`/file/under/root`) or protocol-relative URL (`//can-be-http-or-https.com/`) will result in a rejected promise.
 
 <a id="fetch-options"></a>
+
 ### Options
 
 The default values are shown after each option key.
@@ -8478,14 +8623,14 @@ The default values are shown after each option key.
 
 If no values are set, the following request headers will be sent automatically:
 
-Header              | Value
-------------------- | --------------------------------------------------------
-`Accept-Encoding`   | `gzip,deflate` _(when `options.compress === true`)_
-`Accept`            | `*/*`
-`Connection`        | `close` _(when no `options.agent` is present)_
-`Content-Length`    | _(automatically calculated, if possible)_
-`Transfer-Encoding` | `chunked` _(when `req.body` is a stream)_
-`User-Agent`        | `node-fetch/1.0 (+https://github.com/bitinn/node-fetch)`
+| Header              | Value                                                    |
+| ------------------- | -------------------------------------------------------- |
+| `Accept-Encoding`   | `gzip,deflate` _(when `options.compress === true`)_      |
+| `Accept`            | `*/*`                                                    |
+| `Connection`        | `close` _(when no `options.agent` is present)_           |
+| `Content-Length`    | _(automatically calculated, if possible)_                |
+| `Transfer-Encoding` | `chunked` _(when `req.body` is a stream)_                |
+| `User-Agent`        | `node-fetch/1.0 (+https://github.com/bitinn/node-fetch)` |
 
 Note: when `body` is a `Stream`, `Content-Length` is not set automatically.
 
@@ -8503,24 +8648,25 @@ In addition, `agent` option accepts a function that returns http(s).Agent instan
 
 ```js
 const httpAgent = new http.Agent({
-    keepAlive: true
+  keepAlive: true,
 });
 const httpsAgent = new https.Agent({
-    keepAlive: true
+  keepAlive: true,
 });
 
 const options = {
-    agent: function (_parsedURL) {
-        if (_parsedURL.protocol == 'http:') {
-            return httpAgent;
-        } else {
-            return httpsAgent;
-        }
+  agent: function (_parsedURL) {
+    if (_parsedURL.protocol == "http:") {
+      return httpAgent;
+    } else {
+      return httpsAgent;
     }
-}
+  },
+};
 ```
 
 <a id="class-request"></a>
+
 ### Class: Request
 
 An HTTP(S) request containing information about URL, method, headers, and the body. This class implements the [Body](#iface-body) interface.
@@ -8548,7 +8694,7 @@ See [options](#fetch-options) for exact meaning of these extensions.
 
 #### new Request(input[, options])
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
 - `input` A string representing a URL, or another `Request` (which will be cloned)
 - `options` [Options][#fetch-options] for the HTTP(S) request
@@ -8558,6 +8704,7 @@ Constructs a new `Request` object. The constructor is identical to that in the [
 In most cases, directly `fetch(url, options)` is simpler than creating a `Request` object.
 
 <a id="class-response"></a>
+
 ### Class: Response
 
 An HTTP(S) response. This class implements the [Body](#iface-body) interface.
@@ -8571,7 +8718,7 @@ The following properties are not implemented in node-fetch at this moment:
 
 #### new Response([body[, options]])
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
 - `body` A string or [Readable stream][node-readable]
 - `options` A [`ResponseInit`][response-init] options dictionary
@@ -8582,24 +8729,25 @@ Because Node.js does not implement service workers (for which this class was des
 
 #### response.ok
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
 Convenience property representing if the request ended normally. Will evaluate to true if the response status was greater than or equal to 200 but smaller than 300.
 
 #### response.redirected
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
 Convenience property representing if the request has been redirected at least once. Will evaluate to true if the internal redirect counter is greater than 0.
 
 <a id="class-headers"></a>
+
 ### Class: Headers
 
 This class allows manipulating and iterating over a set of HTTP headers. All methods specified in the [Fetch Standard][whatwg-fetch] are implemented.
 
 #### new Headers([init])
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
 - `init` Optional argument to pre-fill the `Headers` object
 
@@ -8609,27 +8757,28 @@ Construct a new `Headers` object. `init` can be either `null`, a `Headers` objec
 // Example adapted from https://fetch.spec.whatwg.org/#example-headers-class
 
 const meta = {
-  'Content-Type': 'text/xml',
-  'Breaking-Bad': '<3'
+  "Content-Type": "text/xml",
+  "Breaking-Bad": "<3",
 };
 const headers = new Headers(meta);
 
 // The above is equivalent to
 const meta = [
-  [ 'Content-Type', 'text/xml' ],
-  [ 'Breaking-Bad', '<3' ]
+  ["Content-Type", "text/xml"],
+  ["Breaking-Bad", "<3"],
 ];
 const headers = new Headers(meta);
 
 // You can in fact use any iterable objects, like a Map or even another Headers
 const meta = new Map();
-meta.set('Content-Type', 'text/xml');
-meta.set('Breaking-Bad', '<3');
+meta.set("Content-Type", "text/xml");
+meta.set("Breaking-Bad", "<3");
 const headers = new Headers(meta);
 const copyOfHeaders = new Headers(headers);
 ```
 
 <a id="iface-body"></a>
+
 ### Interface: Body
 
 `Body` is an abstract interface with methods that are applicable to both `Request` and `Response` classes.
@@ -8640,60 +8789,65 @@ The following methods are not yet implemented in node-fetch at this moment:
 
 #### body.body
 
-<small>*(deviation from spec)*</small>
+<small>_(deviation from spec)_</small>
 
-* Node.js [`Readable` stream][node-readable]
+- Node.js [`Readable` stream][node-readable]
 
 The data encapsulated in the `Body` object. Note that while the [Fetch Standard][whatwg-fetch] requires the property to always be a WHATWG `ReadableStream`, in node-fetch it is a Node.js [`Readable` stream][node-readable].
 
 #### body.bodyUsed
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
-* `Boolean`
+- `Boolean`
 
 A boolean property for if this body has been consumed. Per spec, a consumed body cannot be used again.
 
 #### body.arrayBuffer()
+
 #### body.blob()
+
 #### body.json()
+
 #### body.text()
 
-<small>*(spec-compliant)*</small>
+<small>_(spec-compliant)_</small>
 
-* Returns: <code>Promise</code>
+- Returns: <code>Promise</code>
 
 Consume the body and return a promise that will resolve to one of these formats.
 
 #### body.buffer()
 
-<small>*(node-fetch extension)*</small>
+<small>_(node-fetch extension)_</small>
 
-* Returns: <code>Promise&lt;Buffer&gt;</code>
+- Returns: <code>Promise&lt;Buffer&gt;</code>
 
 Consume the body and return a promise that will resolve to a Buffer.
 
 #### body.textConverted()
 
-<small>*(node-fetch extension)*</small>
+<small>_(node-fetch extension)_</small>
 
-* Returns: <code>Promise&lt;String&gt;</code>
+- Returns: <code>Promise&lt;String&gt;</code>
 
 Identical to `body.text()`, except instead of always converting to UTF-8, encoding sniffing will be performed and text converted to UTF-8, if possible.
 
 (This API requires an optional dependency on npm package [encoding](https://www.npmjs.com/package/encoding), which you need to install manually. `webpack` users may see [a warning message](https://github.com/bitinn/node-fetch/issues/412#issuecomment-379007792) due to this optional dependency.)
 
 <a id="class-fetcherror"></a>
+
 ### Class: FetchError
 
-<small>*(node-fetch extension)*</small>
+<small>_(node-fetch extension)_</small>
 
 An operational error in the fetching process. See [ERROR-HANDLING.md][] for more info.
 
 <a id="class-aborterror"></a>
+
 ### Class: AbortError
 
-<small>*(node-fetch extension)*</small>
+<small>_(node-fetch extension)_</small>
 
 An Error thrown when the request is aborted in response to an `AbortSignal`'s `abort` event. It has a `name` property of `AbortError`. See [ERROR-HANDLING.MD][] for more info.
 
@@ -8719,14 +8873,14 @@ MIT
 [response-init]: https://fetch.spec.whatwg.org/#responseinit
 [node-readable]: https://nodejs.org/api/stream.html#stream_readable_streams
 [mdn-headers]: https://developer.mozilla.org/en-US/docs/Web/API/Headers
-[LIMITS.md]: https://github.com/bitinn/node-fetch/blob/master/LIMITS.md
-[ERROR-HANDLING.md]: https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md
-[UPGRADE-GUIDE.md]: https://github.com/bitinn/node-fetch/blob/master/UPGRADE-GUIDE.md
-
+[limits.md]: https://github.com/bitinn/node-fetch/blob/master/LIMITS.md
+[error-handling.md]: https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md
+[upgrade-guide.md]: https://github.com/bitinn/node-fetch/blob/master/UPGRADE-GUIDE.md
 
 </details><details> <summary>fixtures/node_modules/not/</summary>
 
 ### [fixtures/node_modules/not/README.md](fixtures/node_modules/not/README.md)
+
 # not
 
 Returns the negation of a function
@@ -8748,17 +8902,14 @@ console.log(not(truth)(), not(lies)())
 
 ## Contributors
 
- - Raynos
+- Raynos
 
 ## MIT Licenced
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/nth-check/</summary>
 
 ### [fixtures/node_modules/nth-check/README.md](fixtures/node_modules/nth-check/README.md)
+
 # nth-check [![Build Status](https://travis-ci.org/fb55/nth-check.svg)](https://travis-ci.org/fb55/nth-check)
 
 A performant nth-check parser & compiler.
@@ -8783,10 +8934,10 @@ First parses, then compiles the formula.
 
 Parses the expression, throws a `SyntaxError` if it fails, otherwise returns an array containing two elements.
 
-__Example:__
+**Example:**
 
 ```js
-nthCheck.parse("2n+3") //[2, 3]
+nthCheck.parse("2n+3"); //[2, 3]
 ```
 
 ##### `nthCheck.compile([a, b])`
@@ -8795,29 +8946,28 @@ Takes an array with two elements (as returned by `.parse`) and returns a highly 
 
 If the formula doesn't match any elements, it returns [`boolbase`](https://github.com/fb55/boolbase)'s `falseFunc`, otherwise, a function accepting an _index_ is returned, which returns whether or not a passed _index_ matches the formula. (Note: The spec starts counting at `1`, the returned function at `0`).
 
-__Example:__
+**Example:**
+
 ```js
 var check = nthCheck.compile([2, 3]);
 
-check(0) //false
-check(1) //false
-check(2) //true
-check(3) //false
-check(4) //true
-check(5) //false
-check(6) //true
+check(0); //false
+check(1); //false
+check(2); //true
+check(3); //false
+check(4); //true
+check(5); //false
+check(6); //true
 ```
 
 ---
+
 License: BSD
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/once/</summary>
 
 ### [fixtures/node_modules/once/README.md](fixtures/node_modules/once/README.md)
+
 # once
 
 Only call a function once.
@@ -8825,13 +8975,13 @@ Only call a function once.
 ## usage
 
 ```javascript
-var once = require('once')
+var once = require("once");
 
-function load (file, cb) {
-  cb = once(cb)
-  loader.load('file')
-  loader.once('load', cb)
-  loader.once('error', cb)
+function load(file, cb) {
+  cb = once(cb);
+  loader.load("file");
+  loader.once("load", cb);
+  loader.once("error", cb);
 }
 ```
 
@@ -8839,13 +8989,13 @@ Or add to the Function.prototype in a responsible way:
 
 ```javascript
 // only has to be done once
-require('once').proto()
+require("once").proto();
 
-function load (file, cb) {
-  cb = cb.once()
-  loader.load('file')
-  loader.once('load', cb)
-  loader.once('error', cb)
+function load(file, cb) {
+  cb = cb.once();
+  loader.load("file");
+  loader.once("load", cb);
+  loader.once("error", cb);
 }
 ```
 
@@ -8858,15 +9008,15 @@ function is saved in `fn.value` and subsequent calls will continue to
 return this value.
 
 ```javascript
-var once = require('once')
+var once = require("once");
 
-function load (cb) {
-  cb = once(cb)
-  var stream = createStream()
-  stream.once('data', cb)
-  stream.once('end', function () {
-    if (!cb.called) cb(new Error('not found'))
-  })
+function load(cb) {
+  cb = once(cb);
+  var stream = createStream();
+  stream.once("data", cb);
+  stream.once("end", function () {
+    if (!cb.called) cb(new Error("not found"));
+  });
 }
 ```
 
@@ -8880,35 +9030,31 @@ potentially hide logical errors.
 In the example below, the `greet` function has to call the callback only once:
 
 ```javascript
-function greet (name, cb) {
+function greet(name, cb) {
   // return is missing from the if statement
   // when no name is passed, the callback is called twice
-  if (!name) cb('Hello anonymous')
-  cb('Hello ' + name)
+  if (!name) cb("Hello anonymous");
+  cb("Hello " + name);
 }
 
-function log (msg) {
-  console.log(msg)
+function log(msg) {
+  console.log(msg);
 }
 
 // this will print 'Hello anonymous' but the logical error will be missed
-greet(null, once(msg))
+greet(null, once(msg));
 
 // once.strict will print 'Hello anonymous' and throw an error when the callback will be called the second time
-greet(null, once.strict(msg))
+greet(null, once.strict(msg));
 ```
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/path-is-absolute/</summary>
 
 ### [fixtures/node_modules/path-is-absolute/readme.md](fixtures/node_modules/path-is-absolute/readme.md)
+
 # path-is-absolute [![Build Status](https://travis-ci.org/sindresorhus/path-is-absolute.svg?branch=master)](https://travis-ci.org/sindresorhus/path-is-absolute)
 
 > Node.js 0.12 [`path.isAbsolute()`](http://nodejs.org/api/path.html#path_path_isabsolute_path) [ponyfill](https://ponyfill.com)
-
 
 ## Install
 
@@ -8916,35 +9062,33 @@ greet(null, once.strict(msg))
 $ npm install --save path-is-absolute
 ```
 
-
 ## Usage
 
 ```js
-const pathIsAbsolute = require('path-is-absolute');
+const pathIsAbsolute = require("path-is-absolute");
 
 // Running on Linux
-pathIsAbsolute('/home/foo');
+pathIsAbsolute("/home/foo");
 //=> true
-pathIsAbsolute('C:/Users/foo');
+pathIsAbsolute("C:/Users/foo");
 //=> false
 
 // Running on Windows
-pathIsAbsolute('C:/Users/foo');
+pathIsAbsolute("C:/Users/foo");
 //=> true
-pathIsAbsolute('/home/foo');
+pathIsAbsolute("/home/foo");
 //=> false
 
 // Running on any OS
-pathIsAbsolute.posix('/home/foo');
+pathIsAbsolute.posix("/home/foo");
 //=> true
-pathIsAbsolute.posix('C:/Users/foo');
+pathIsAbsolute.posix("C:/Users/foo");
 //=> false
-pathIsAbsolute.win32('C:/Users/foo');
+pathIsAbsolute.win32("C:/Users/foo");
 //=> true
-pathIsAbsolute.win32('/home/foo');
+pathIsAbsolute.win32("/home/foo");
 //=> false
 ```
-
 
 ## API
 
@@ -8960,18 +9104,14 @@ POSIX specific version.
 
 Windows specific version.
 
-
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
 
-
-
-
-
 </details><details> <summary>fixtures/node_modules/property-information/</summary>
 
 ### [fixtures/node_modules/property-information/readme.md](fixtures/node_modules/property-information/readme.md)
+
 # property-information
 
 [![Build][build-badge]][build]
@@ -8994,31 +9134,31 @@ npm install property-information
 
 ## Contents
 
-*   [Use](#use)
-*   [API](#api)
-    *   [`propertyInformation.find(schema, name)`](#propertyinformationfindschema-name)
-    *   [`propertyInformation.normalize(name)`](#propertyinformationnormalizename)
-    *   [`propertyInformation.html`](#propertyinformationhtml)
-    *   [`propertyInformation.svg`](#propertyinformationsvg)
-    *   [`hastToReact`](#hasttoreact)
-*   [Support](#support)
-*   [Related](#related)
-*   [License](#license)
+- [Use](#use)
+- [API](#api)
+  - [`propertyInformation.find(schema, name)`](#propertyinformationfindschema-name)
+  - [`propertyInformation.normalize(name)`](#propertyinformationnormalizename)
+  - [`propertyInformation.html`](#propertyinformationhtml)
+  - [`propertyInformation.svg`](#propertyinformationsvg)
+  - [`hastToReact`](#hasttoreact)
+- [Support](#support)
+- [Related](#related)
+- [License](#license)
 
 ## Use
 
 ```js
-var info = require('property-information')
+var info = require("property-information");
 
-console.log(info.find(info.html, 'className'))
+console.log(info.find(info.html, "className"));
 // Or: info.find(info.html, 'class')
-console.log(info.find(info.svg, 'horiz-adv-x'))
+console.log(info.find(info.svg, "horiz-adv-x"));
 // Or: info.find(info.svg, 'horizAdvX')
-console.log(info.find(info.svg, 'xlink:arcrole'))
+console.log(info.find(info.svg, "xlink:arcrole"));
 // Or: info.find(info.svg, 'xLinkArcRole')
-console.log(info.find(info.html, 'xmlLang'))
+console.log(info.find(info.html, "xmlLang"));
 // Or: info.find(info.html, 'xml:lang')
-console.log(info.find(info.html, 'ariaValueNow'))
+console.log(info.find(info.html, "ariaValueNow"));
 // Or: info.find(info.html, 'aria-valuenow')
 ```
 
@@ -9060,11 +9200,11 @@ properties.
 
 #### Parameters
 
-*   `schema` ([`Schema`][schema])
-    — Either `propertyInformation.html` or `propertyInformation.svg`
-*   `name` (`string`)
-    — An attribute-like or property-like name that is passed through
-    [`normalize`][normalize] to find the correct info
+- `schema` ([`Schema`][schema])
+  — Either `propertyInformation.html` or `propertyInformation.svg`
+- `name` (`string`)
+  — An attribute-like or property-like name that is passed through
+  [`normalize`][normalize] to find the correct info
 
 #### Returns
 
@@ -9081,7 +9221,7 @@ Aside from the aforementioned example, which shows known HTML, SVG, XML, XLink,
 and ARIA support, data properties, and attributes are also supported:
 
 ```js
-console.log(info.find(info.html, 'data-date-of-birth'))
+console.log(info.find(info.html, "data-date-of-birth"));
 // Or: info.find(info.html, 'dataDateOfBirth')
 ```
 
@@ -9094,7 +9234,7 @@ Yields:
 Unknown values are passed through untouched:
 
 ```js
-console.log(info.find(info.html, 'un-Known'))
+console.log(info.find(info.html, "un-Known"));
 ```
 
 Yields:
@@ -9109,7 +9249,7 @@ Get the cleaned case-insensitive form of an attribute or a property.
 
 #### Parameters
 
-*   `name` (`string`) — An attribute-like or property-like name
+- `name` (`string`) — An attribute-like or property-like name
 
 #### Returns
 
@@ -9124,10 +9264,10 @@ Get the cleaned case-insensitive form of an attribute or a property.
 #### Example
 
 ```js
-info.html.normal[info.normalize('for')] // => 'htmlFor'
-info.svg.normal[info.normalize('VIEWBOX')] // => 'viewBox'
-info.html.normal[info.normalize('unknown')] // => undefined
-info.html.normal[info.normalize('accept-charset')] // => 'acceptCharset'
+info.html.normal[info.normalize("for")]; // => 'htmlFor'
+info.svg.normal[info.normalize("VIEWBOX")]; // => 'viewBox'
+info.html.normal[info.normalize("unknown")]; // => undefined
+info.html.normal[info.normalize("accept-charset")]; // => 'acceptCharset'
 ```
 
 ### `propertyInformation.html`
@@ -9147,9 +9287,9 @@ as well.
 #### Example
 
 ```js
-console.log(info.html.property.htmlFor)
-console.log(info.svg.property.viewBox)
-console.log(info.html.property.unknown)
+console.log(info.html.property.htmlFor);
+console.log(info.svg.property.viewBox);
+console.log(info.html.property.unknown);
 ```
 
 Yields:
@@ -9167,49 +9307,49 @@ undefined
 
 A schema for a primary space.
 
-*   `space` (`'html'` or `'svg'`) — Primary space of the schema
-*   `normal` (`Object.<string>`) — Object mapping normalized attributes and
-    properties to properly cased properties
-*   `property` ([`Object.<Info>`][info]) — Object mapping properties to info
+- `space` (`'html'` or `'svg'`) — Primary space of the schema
+- `normal` (`Object.<string>`) — Object mapping normalized attributes and
+  properties to properly cased properties
+- `property` ([`Object.<Info>`][info]) — Object mapping properties to info
 
 #### `Info`
 
 Info on a property.
 
-*   `space` (`'html'`, `'svg'`, `'xml'`, `'xlink'`, `'xmlns'`, optional)
-    — [Space][namespace] of the property
-*   `attribute` (`string`) — Attribute name for the property that could be used
-    in markup (for example: `'aria-describedby'`, `'allowfullscreen'`,
-    `'xml:lang'`, `'for'`, or `'charoff'`)
-*   `property` (`string`) — JavaScript-style camel-cased name, based on the
-    DOM, but sometimes different (for example: `'ariaDescribedBy'`,
-    `'allowFullScreen'`, `'xmlLang'`, `'htmlFor'`, `'charOff'`)
-*   `boolean` (`boolean`) — The property is `boolean`.
-    The default value of this property is false, so it can be omitted
-*   `booleanish` (`boolean`) — The property is a `boolean`.
-    The default value of this property is something other than false, so
-    `false` must persist.
-    The value can hold a string (as is the case with `ariaChecked` and its
-    `'mixed'` value)
-*   `overloadedBoolean` (`boolean`) — The property is `boolean`.
-    The default value of this property is false, so it can be omitted.
-    The value can hold a string (as is the case with `download` as its value
-    reflects the name to use for the downloaded file)
-*   `number` (`boolean`) — The property is `number`.
-    These values can sometimes hold a string
-*   `spaceSeparated` (`boolean`) — The property is a list separated by spaces
-    (for example, `className`)
-*   `commaSeparated` (`boolean`) — The property is a list separated by commas
-    (for example, `srcSet`)
-*   `commaOrSpaceSeparated` (`boolean`) — The property is a list separated by
-    commas or spaces (for example, `strokeDashArray`)
-*   `mustUseProperty` (`boolean`) — If a DOM is used, setting the property
-    should be used for the change to take effect (this is true only for
-    `'checked'`, `'multiple'`, `'muted'`, and `'selected'`)
-*   `defined` (`boolean`) — The property is [defined by a space](#support).
-    This is true for values in HTML (including data and ARIA), SVG, XML,
-    XMLNS, and XLink.
-    These values can only be accessed through `find`.
+- `space` (`'html'`, `'svg'`, `'xml'`, `'xlink'`, `'xmlns'`, optional)
+  — [Space][namespace] of the property
+- `attribute` (`string`) — Attribute name for the property that could be used
+  in markup (for example: `'aria-describedby'`, `'allowfullscreen'`,
+  `'xml:lang'`, `'for'`, or `'charoff'`)
+- `property` (`string`) — JavaScript-style camel-cased name, based on the
+  DOM, but sometimes different (for example: `'ariaDescribedBy'`,
+  `'allowFullScreen'`, `'xmlLang'`, `'htmlFor'`, `'charOff'`)
+- `boolean` (`boolean`) — The property is `boolean`.
+  The default value of this property is false, so it can be omitted
+- `booleanish` (`boolean`) — The property is a `boolean`.
+  The default value of this property is something other than false, so
+  `false` must persist.
+  The value can hold a string (as is the case with `ariaChecked` and its
+  `'mixed'` value)
+- `overloadedBoolean` (`boolean`) — The property is `boolean`.
+  The default value of this property is false, so it can be omitted.
+  The value can hold a string (as is the case with `download` as its value
+  reflects the name to use for the downloaded file)
+- `number` (`boolean`) — The property is `number`.
+  These values can sometimes hold a string
+- `spaceSeparated` (`boolean`) — The property is a list separated by spaces
+  (for example, `className`)
+- `commaSeparated` (`boolean`) — The property is a list separated by commas
+  (for example, `srcSet`)
+- `commaOrSpaceSeparated` (`boolean`) — The property is a list separated by
+  commas or spaces (for example, `strokeDashArray`)
+- `mustUseProperty` (`boolean`) — If a DOM is used, setting the property
+  should be used for the change to take effect (this is true only for
+  `'checked'`, `'multiple'`, `'muted'`, and `'selected'`)
+- `defined` (`boolean`) — The property is [defined by a space](#support).
+  This is true for values in HTML (including data and ARIA), SVG, XML,
+  XMLNS, and XLink.
+  These values can only be accessed through `find`.
 
 ### `hastToReact`
 
@@ -9844,26 +9984,26 @@ corresponding value, otherwise, use the hast property.
 
 ## Related
 
-*   [`web-namespaces`][namespace]
-    — List of web namespaces
-*   [`space-separated-tokens`](https://github.com/wooorm/space-separated-tokens)
-    — Parse/stringify space-separated tokens
-*   [`comma-separated-tokens`](https://github.com/wooorm/comma-separated-tokens)
-    — Parse/stringify comma-separated tokens
-*   [`html-tag-names`](https://github.com/wooorm/html-tag-names)
-    — List of HTML tags
-*   [`mathml-tag-names`](https://github.com/wooorm/mathml-tag-names)
-    — List of MathML tags
-*   [`svg-tag-names`](https://github.com/wooorm/svg-tag-names)
-    — List of SVG tags
-*   [`html-void-elements`](https://github.com/wooorm/html-void-elements)
-    — List of void HTML tag-names
-*   [`svg-element-attributes`](https://github.com/wooorm/svg-element-attributes)
-    — Map of SVG elements to allowed attributes
-*   [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
-    — Map of HTML elements to allowed attributes
-*   [`aria-attributes`](https://github.com/wooorm/aria-attributes)
-    — List of ARIA attributes
+- [`web-namespaces`][namespace]
+  — List of web namespaces
+- [`space-separated-tokens`](https://github.com/wooorm/space-separated-tokens)
+  — Parse/stringify space-separated tokens
+- [`comma-separated-tokens`](https://github.com/wooorm/comma-separated-tokens)
+  — Parse/stringify comma-separated tokens
+- [`html-tag-names`](https://github.com/wooorm/html-tag-names)
+  — List of HTML tags
+- [`mathml-tag-names`](https://github.com/wooorm/mathml-tag-names)
+  — List of MathML tags
+- [`svg-tag-names`](https://github.com/wooorm/svg-tag-names)
+  — List of SVG tags
+- [`html-void-elements`](https://github.com/wooorm/html-void-elements)
+  — List of void HTML tag-names
+- [`svg-element-attributes`](https://github.com/wooorm/svg-element-attributes)
+  — Map of SVG elements to allowed attributes
+- [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
+  — Map of HTML elements to allowed attributes
+- [`aria-attributes`](https://github.com/wooorm/aria-attributes)
+  — List of ARIA attributes
 
 ## License
 
@@ -9873,54 +10013,31 @@ Derivative work based on [React][source] licensed under
 [BSD-3-Clause-Clear][source-license], © 2013-2015, Facebook, Inc.
 
 [build-badge]: https://img.shields.io/travis/wooorm/property-information/master.svg
-
 [build]: https://travis-ci.org/wooorm/property-information
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/property-information.svg
-
 [coverage]: https://codecov.io/github/wooorm/property-information
-
 [downloads-badge]: https://img.shields.io/npm/dm/property-information.svg
-
 [downloads]: https://www.npmjs.com/package/property-information
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/property-information.svg
-
 [size]: https://bundlephobia.com/result?p=property-information
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [author]: https://wooorm.com
-
 [license]: license
-
 [source]: https://github.com/facebook/react/blob/f445dd9/src/renderers/dom/shared/HTMLDOMPropertyConfig.js
-
 [source-license]: https://github.com/facebook/react/blob/88cdc27/LICENSE
-
 [data]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
-
 [namespace]: https://github.com/wooorm/web-namespaces
-
 [info]: #info
-
 [schema]: #schema
-
 [normalize]: #propertyinformationnormalizename
-
 [react]: https://github.com/facebook/react
-
 [hast-to-react]: hast-to-react.json
-
 [hast]: https://github.com/syntax-tree/hast#propertyname
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/regenerator-runtime/</summary>
 
 ### [fixtures/node_modules/regenerator-runtime/README.md](fixtures/node_modules/regenerator-runtime/README.md)
+
 # regenerator-runtime
 
 Standalone runtime for
@@ -9929,6 +10046,7 @@ and `async` functions.
 
 To import the runtime as a module (recommended), either of the following
 import styles will work:
+
 ```js
 // CommonJS
 const regeneratorRuntime = require("regenerator-runtime");
@@ -9939,6 +10057,7 @@ import regeneratorRuntime from "regenerator-runtime";
 
 To ensure that `regeneratorRuntime` is defined globally, either of the
 following styles will work:
+
 ```js
 // CommonJS
 require("regenerator-runtime/runtime");
@@ -9949,17 +10068,15 @@ import "regenerator-runtime/runtime.js";
 
 To get the absolute file system path of `runtime.js`, evaluate the
 following expression:
+
 ```js
-require("regenerator-runtime/path").path
+require("regenerator-runtime/path").path;
 ```
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/rehype-document/</summary>
 
 ### [fixtures/node_modules/rehype-document/readme.md](fixtures/node_modules/rehype-document/readme.md)
+
 # rehype-document
 
 [![Build][build-badge]][build]
@@ -9993,40 +10110,40 @@ This is **my** document.
 …and `example.js` like this:
 
 ```js
-var vfile = require('to-vfile')
-var report = require('vfile-reporter')
-var unified = require('unified')
-var parse = require('remark-parse')
-var mutate = require('remark-rehype')
-var stringify = require('rehype-stringify')
-var doc = require('rehype-document')
+var vfile = require("to-vfile");
+var report = require("vfile-reporter");
+var unified = require("unified");
+var parse = require("remark-parse");
+var mutate = require("remark-rehype");
+var stringify = require("rehype-stringify");
+var doc = require("rehype-document");
 
 unified()
   .use(parse)
   .use(mutate)
-  .use(doc, {title: 'Hi!'})
+  .use(doc, { title: "Hi!" })
   .use(stringify)
-  .process(vfile.readSync('example.md'), function(err, file) {
-    console.error(report(err || file))
-    console.log(String(file))
-  })
+  .process(vfile.readSync("example.md"), function (err, file) {
+    console.error(report(err || file));
+    console.log(String(file));
+  });
 ```
 
 Now, running `node example` yields:
 
 ```html
 example.md: no issues found
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Hi!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<h2>Hello world!</h2>
-<p>This is <strong>my</strong> document.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hi!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h2>Hello world!</h2>
+    <p>This is <strong>my</strong> document.</p>
+  </body>
 </html>
 ```
 
@@ -10096,10 +10213,10 @@ Always be wary of user input and use [`rehype-sanitize`][sanitize].
 
 ## Related
 
-*   [`rehype-format`](https://github.com/rehypejs/rehype-format)
-    — Format HTML
-*   [`rehype-minify`](https://github.com/rehypejs/rehype-minify)
-    — Minify HTML
+- [`rehype-format`](https://github.com/rehypejs/rehype-format)
+  — Format HTML
+- [`rehype-minify`](https://github.com/rehypejs/rehype-minify)
+  — Minify HTML
 
 ## Contribute
 
@@ -10118,66 +10235,37 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/rehypejs/rehype-document.svg
-
 [build]: https://travis-ci.org/rehypejs/rehype-document
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/rehypejs/rehype-document.svg
-
 [coverage]: https://codecov.io/github/rehypejs/rehype-document
-
 [downloads-badge]: https://img.shields.io/npm/dm/rehype-document.svg
-
 [downloads]: https://www.npmjs.com/package/rehype-document
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/rehype-document.svg
-
 [size]: https://bundlephobia.com/result?p=rehype-document
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/rehype
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [health]: https://github.com/rehypejs/.github
-
 [contributing]: https://github.com/rehypejs/.github/blob/master/contributing.md
-
 [support]: https://github.com/rehypejs/.github/blob/master/support.md
-
 [coc]: https://github.com/rehypejs/.github/blob/master/code-of-conduct.md
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [doctype]: https://github.com/wooorm/doctype
-
 [bcp47]: https://tools.ietf.org/html/bcp47
-
 [props]: https://github.com/syntax-tree/hastscript#hselector-properties-children
-
 [h]: https://github.com/syntax-tree/hastscript
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
 [sanitize]: https://github.com/rehypejs/rehype-sanitize
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/rehype-meta/</summary>
 
 ### [fixtures/node_modules/rehype-meta/readme.md](fixtures/node_modules/rehype-meta/readme.md)
+
 # rehype-meta
 
 [![Build][build-badge]][build]
@@ -10192,16 +10280,16 @@ abide by its terms.
 
 ## Table of contents
 
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-    *   [`rehype().use(meta[, options])`](#rehypeusemeta-options)
-    *   [`Config`](#config)
-*   [Metadata](#metadata)
-*   [Security](#security)
-*   [Related](#related)
-*   [Contribute](#contribute)
-*   [License](#license)
+- [Install](#install)
+- [Use](#use)
+- [API](#api)
+  - [`rehype().use(meta[, options])`](#rehypeusemeta-options)
+  - [`Config`](#config)
+- [Metadata](#metadata)
+- [Security](#security)
+- [Related](#related)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Install
 
@@ -10216,63 +10304,62 @@ npm install rehype-meta
 Say `example.js` looks as follows:
 
 ```js
-var report = require('vfile-reporter')
-var rehype = require('rehype')
-var meta = require('rehype-meta')
+var report = require("vfile-reporter");
+var rehype = require("rehype");
+var meta = require("rehype-meta");
 
 rehype()
-  .data('settings', {fragment: true})
+  .data("settings", { fragment: true })
   .use(meta, {
     twitter: true,
     og: true,
     copyright: true,
-    type: 'article',
-    origin: 'https://www.nytimes.com',
-    pathname: '/interactive/2019/12/02/nyregion/nyc-subway-map.html',
-    name: 'The New York Times',
+    type: "article",
+    origin: "https://www.nytimes.com",
+    pathname: "/interactive/2019/12/02/nyregion/nyc-subway-map.html",
+    name: "The New York Times",
     siteTags: [
-      'US Politics',
-      'Impeachment',
-      'NATO',
-      'London',
-      'Food',
-      'Poverty',
-      'Climate Change',
-      'Global Warming'
+      "US Politics",
+      "Impeachment",
+      "NATO",
+      "London",
+      "Food",
+      "Poverty",
+      "Climate Change",
+      "Global Warming",
     ],
-    siteAuthor: 'The New York Times',
-    siteTwitter: '@nytimes',
-    author: 'Jane Doe',
-    authorTwitter: '@jane',
-    authorFacebook: 'janedoe',
-    title: 'The New York City Subway Map as You’ve Never Seen It Before',
-    separator: ' | ',
+    siteAuthor: "The New York Times",
+    siteTwitter: "@nytimes",
+    author: "Jane Doe",
+    authorTwitter: "@jane",
+    authorFacebook: "janedoe",
+    title: "The New York City Subway Map as You’ve Never Seen It Before",
+    separator: " | ",
     description:
-      'The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured.',
-    section: 'New York',
+      "The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured.",
+    section: "New York",
     tags: [
-      'Subway',
-      'Map',
-      'Public Transit',
-      'Design',
-      'MTA',
-      'Massimo Vignelli',
-      'NYC'
+      "Subway",
+      "Map",
+      "Public Transit",
+      "Design",
+      "MTA",
+      "Massimo Vignelli",
+      "NYC",
     ],
     image: {
-      url:
-        'https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg',
-      alt: 'M.T.A. map designed in 1979',
-      width: '1050',
-      height: '550'
+      url: "https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg",
+      alt: "M.T.A. map designed in 1979",
+      width: "1050",
+      height: "550",
     },
-    published: '2019-12-02T10:00:00.000Z',
-    modified: '2019-12-03T19:13:00.000Z'
+    published: "2019-12-02T10:00:00.000Z",
+    modified: "2019-12-03T19:13:00.000Z",
   })
-  .process('', function(err, file) {
-    console.error(report(err || file))
-    console.log(String(file))
-  })
+  .process("", function (err, file) {
+    console.error(report(err || file));
+    console.log(String(file));
+  });
 ```
 
 Now, running `node example` yields:
@@ -10280,36 +10367,63 @@ Now, running `node example` yields:
 ```html
 no issues found
 <head>
-<title>The New York City Subway Map as You’ve Never Seen It Before | The New York Times</title>
-<link rel="canonical" href="https://www.nytimes.com/interactive/2019/12/02/nyregion/nyc-subway-map.html">
-<meta name="description" content="The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured.">
-<meta name="keywords" content="Subway, Map, Public Transit, Design, MTA, Massimo Vignelli, NYC, US Politics, Impeachment, NATO, London, Food, Poverty, Climate Change, Global Warming">
-<meta name="author" content="Jane Doe">
-<meta name="copyright" content="© 2019 Jane Doe">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="The New York Times">
-<meta property="og:url" content="https://www.nytimes.com/interactive/2019/12/02/nyregion/nyc-subway-map.html">
-<meta property="og:title" content="The New York City Subway Map as You’ve Never Seen It Before">
-<meta property="og:description" content="The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured.">
-<meta property="og:image" content="https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg">
-<meta property="og:image:alt" content="M.T.A. map designed in 1979">
-<meta property="og:image:width" content="1050">
-<meta property="og:image:height" content="550">
-<meta property="article:published_time" content="2019-12-02T10:00:00.000Z">
-<meta property="article:modified_time" content="2019-12-03T19:13:00.000Z">
-<meta property="article:author" content="https://www.facebook.com/janedoe">
-<meta property="article:section" content="New York">
-<meta property="article:tag" content="Subway">
-<meta property="article:tag" content="Map">
-<meta property="article:tag" content="Public Transit">
-<meta property="article:tag" content="Design">
-<meta property="article:tag" content="MTA">
-<meta property="article:tag" content="Massimo Vignelli">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg">
-<meta name="twitter:image:alt" content="M.T.A. map designed in 1979">
-<meta name="twitter:site" content="@nytimes">
-<meta name="twitter:creator" content="@jane">
+  <title>
+    The New York City Subway Map as You’ve Never Seen It Before | The New York
+    Times
+  </title>
+  <link
+    rel="canonical"
+    href="https://www.nytimes.com/interactive/2019/12/02/nyregion/nyc-subway-map.html"
+  />
+  <meta
+    name="description"
+    content="The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured."
+  />
+  <meta
+    name="keywords"
+    content="Subway, Map, Public Transit, Design, MTA, Massimo Vignelli, NYC, US Politics, Impeachment, NATO, London, Food, Poverty, Climate Change, Global Warming"
+  />
+  <meta name="author" content="Jane Doe" />
+  <meta name="copyright" content="© 2019 Jane Doe" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="The New York Times" />
+  <meta
+    property="og:url"
+    content="https://www.nytimes.com/interactive/2019/12/02/nyregion/nyc-subway-map.html"
+  />
+  <meta
+    property="og:title"
+    content="The New York City Subway Map as You’ve Never Seen It Before"
+  />
+  <meta
+    property="og:description"
+    content="The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured."
+  />
+  <meta
+    property="og:image"
+    content="https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg"
+  />
+  <meta property="og:image:alt" content="M.T.A. map designed in 1979" />
+  <meta property="og:image:width" content="1050" />
+  <meta property="og:image:height" content="550" />
+  <meta property="article:published_time" content="2019-12-02T10:00:00.000Z" />
+  <meta property="article:modified_time" content="2019-12-03T19:13:00.000Z" />
+  <meta property="article:author" content="https://www.facebook.com/janedoe" />
+  <meta property="article:section" content="New York" />
+  <meta property="article:tag" content="Subway" />
+  <meta property="article:tag" content="Map" />
+  <meta property="article:tag" content="Public Transit" />
+  <meta property="article:tag" content="Design" />
+  <meta property="article:tag" content="MTA" />
+  <meta property="article:tag" content="Massimo Vignelli" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:image"
+    content="https://static01.nyt.com/images/2019/12/02/autossell/mta-promo-image/mta-crop-facebookJumbo.jpg"
+  />
+  <meta name="twitter:image:alt" content="M.T.A. map designed in 1979" />
+  <meta name="twitter:site" content="@nytimes" />
+  <meta name="twitter:creator" content="@jane" />
 </head>
 ```
 
@@ -10410,8 +10524,7 @@ Affects: [`title`][m-title], [`meta[property=og:site_name]`][m-og-site-name].
 ###### `config.siteTags`
 
 Tags associated with the whole site (`Array.<string>`, optional, example:
-`['US Politics', 'Impeachment', 'NATO', 'London', 'Food', 'Poverty', 'Climate
-Change', 'Global Warming']`).
+`['US Politics', 'Impeachment', 'NATO', 'London', 'Food', 'Poverty', 'Climate Change', 'Global Warming']`).
 
 Affects: [`meta[name=keywords]`][m-keywords].
 
@@ -10458,8 +10571,7 @@ Affects: [`meta[property=article:author]`][m-article-author].
 
 ###### `config.title`
 
-Title of the document (`string`, optional, example: `'The New York City Subway
-Map as You’ve Never Seen It Before'`).
+Title of the document (`string`, optional, example: `'The New York City Subway Map as You’ve Never Seen It Before'`).
 
 Affects: [`title`][m-title], [`meta[property=og:title]`][m-og-title].
 
@@ -10473,8 +10585,7 @@ Affects: [`title`][m-title].
 ###### `config.description`
 
 Value used to join the `title` and `name` together if both exist (`string`,
-optional, example: `'The city has changed drastically over the past 40 years,
-yet the M.T.A. map designed in 1979 has largely endured.'`).
+optional, example: `'The city has changed drastically over the past 40 years, yet the M.T.A. map designed in 1979 has largely endured.'`).
 
 Affects: [`meta[name=description]`][m-description],
 [`meta[property=og:description]`][m-og-description].
@@ -10489,8 +10600,7 @@ Affects: [`meta[property=article:section]`][m-article-section].
 ###### `config.tags`
 
 Tags associated with the document (`Array.<string>`, optional, example:
-`['Subway', 'Map', 'Public Transit', 'Design', 'MTA', 'Massimo Vignelli',
-'NYC']`).
+`['Subway', 'Map', 'Public Transit', 'Design', 'MTA', 'Massimo Vignelli', 'NYC']`).
 
 Affects: [`meta[name=keywords]`][m-keywords],
 [`meta[property=article:tag]`][m-article-tag].
@@ -10504,10 +10614,10 @@ to that value.
 
 `Image`:
 
-*   `url` (`string`, required, example: `'https://static01.nyt.com/images/…/mta-crop-jumbo.jpg'`)
-*   `alt` (`string`, optional, example: `'M.T.A. map designed in 1979'`)
-*   `width` (`string`, optional, example: `'1050'`)
-*   `height` (`string`, optional, example: `'550'`)
+- `url` (`string`, required, example: `'https://static01.nyt.com/images/…/mta-crop-jumbo.jpg'`)
+- `alt` (`string`, optional, example: `'M.T.A. map designed in 1979'`)
+- `width` (`string`, optional, example: `'1050'`)
+- `height` (`string`, optional, example: `'550'`)
 
 Affects: [`meta[property=og:image]`][m-og-image],
 [`meta[name=twitter:card]`][m-twitter-card],
@@ -10518,7 +10628,7 @@ Affects: [`meta[property=og:image]`][m-og-image],
 Date the document (or site) was first published (`Date` or `string`, optional,
 example: `'2019-12-02T10:00:00.000Z'`).
 
-*Note*: parsing a string is [inconsistent][timestamp], prefer dates.
+_Note_: parsing a string is [inconsistent][timestamp], prefer dates.
 
 Affects: [`meta[name=copyright]`][m-copyright],
 [`meta[property=article:published_time]`][m-article-published-time].
@@ -10528,7 +10638,7 @@ Affects: [`meta[name=copyright]`][m-copyright],
 Date the document was last modified (`Date` or `string`, optional, example:
 `'2019-12-03T19:13:00.000Z'`).
 
-*Note*: parsing a string is [inconsistent][timestamp], prefer dates.
+_Note_: parsing a string is [inconsistent][timestamp], prefer dates.
 
 Affects: [`meta[property=article:modified_time]`][m-article-modified-time].
 
@@ -10571,13 +10681,13 @@ Affected by: [`origin`][c-origin], [`pathname`][c-pathname].
 If `origin` is `'https://example.com'` and `path` is `'/path/'`:
 
 ```html
-<link rel="canonical" href="https://example.com/path/">
+<link rel="canonical" href="https://example.com/path/" />
 ```
 
 If `origin` is `'https://example.com'` and `path` is not set:
 
 ```html
-<link rel="canonical" href="https://example.com/">
+<link rel="canonical" href="https://example.com/" />
 ```
 
 ###### `meta[name=description]`
@@ -10587,7 +10697,7 @@ Affected by: [`description`][c-description].
 If `description` is `'Lorem ipsum'`:
 
 ```html
-<meta name="description" content="Lorem ipsum">
+<meta name="description" content="Lorem ipsum" />
 ```
 
 ###### `meta[name=keywords]`
@@ -10597,19 +10707,19 @@ Affected by: [`tags`][c-tags], [`siteTags`][c-sitetags].
 If `tags` is `['a', 'b']`:
 
 ```html
-<meta name="keywords" content="a, b">
+<meta name="keywords" content="a, b" />
 ```
 
 If `siteTags` is `['b', 'c']`:
 
 ```html
-<meta name="keywords" content="b, c">
+<meta name="keywords" content="b, c" />
 ```
 
 If `tags` is `['a', 'b']` and `siteTags` is `['b', 'c']`:
 
 ```html
-<meta name="keywords" content="a, b, c">
+<meta name="keywords" content="a, b, c" />
 ```
 
 ###### `meta[name=author]`
@@ -10619,19 +10729,19 @@ Affected by: [`author`][c-author], [`siteAuthor`][c-siteauthor].
 If `author` is `'Jane'`:
 
 ```html
-<meta name="author" content="Jane">
+<meta name="author" content="Jane" />
 ```
 
 If `siteAuthor` is `'John'`:
 
 ```html
-<meta name="author" content="John">
+<meta name="author" content="John" />
 ```
 
 If `author` is `'Jane'` and `siteAuthor` is `'John'`:
 
 ```html
-<meta name="author" content="Jane">
+<meta name="author" content="Jane" />
 ```
 
 ###### `meta[name=copyright]`
@@ -10647,25 +10757,25 @@ If `copyright` is not `true`, `meta[name=copyright]` is not added.
 If `copyright` is `true` and `author` is `'Jane'`:
 
 ```html
-<meta name="copyright" content="© 2030 Jane">
+<meta name="copyright" content="© 2030 Jane" />
 ```
 
 If `copyright` is `true` and `siteAuthor` is `'John'`:
 
 ```html
-<meta name="copyright" content="© 2030 John">
+<meta name="copyright" content="© 2030 John" />
 ```
 
 If `copyright` is `true`, `author` is `'Jane'`, and `siteAuthor` is `'John'`:
 
 ```html
-<meta name="copyright" content="© 2030 Jane">
+<meta name="copyright" content="© 2030 Jane" />
 ```
 
 If `copyright` is `true`, `author` is `'Jane'`, and `published` is `'2015'`:
 
 ```html
-<meta name="copyright" content="© 2015 Jane">
+<meta name="copyright" content="© 2015 Jane" />
 ```
 
 ###### `meta[name=theme-color]`
@@ -10675,7 +10785,7 @@ Affected by: [`color`][c-color].
 If `color` is `'#bada55'`:
 
 ```html
-<meta name="theme-color" content="#bada55">
+<meta name="theme-color" content="#bada55" />
 ```
 
 ###### `meta[property=og:type]`
@@ -10687,13 +10797,13 @@ If `og` is not `true`, `meta[property=og:type]` is not added.
 If `og` is `true` and `type` is `'website'`:
 
 ```html
-<meta property="og:type" content="website">
+<meta property="og:type" content="website" />
 ```
 
 If `og` is `true` and `type` is `'article'`:
 
 ```html
-<meta property="og:type" content="article">
+<meta property="og:type" content="article" />
 ```
 
 ###### `meta[property=og:site_name]`
@@ -10705,7 +10815,7 @@ If `og` is not `true`, `meta[property=og:site_name]` is not added.
 If `og` is `true` and `name` is `'Example'`:
 
 ```html
-<meta property="og:site_name" content="Example">
+<meta property="og:site_name" content="Example" />
 ```
 
 ###### `meta[property=og:url]`
@@ -10718,13 +10828,13 @@ If `og` is `true`, `origin` is `'https://example.com'`, and `path` is
 `'/path/'`:
 
 ```html
-<meta property="og:url" content="https://example.com/path/">
+<meta property="og:url" content="https://example.com/path/" />
 ```
 
 If `origin` is `'https://example.com'` and `path` is not set:
 
 ```html
-<meta property="og:url" content="https://example.com/">
+<meta property="og:url" content="https://example.com/" />
 ```
 
 ###### `meta[property=og:title]`
@@ -10736,7 +10846,7 @@ If `og` is not `true`, `meta[property=og:title]` is not added.
 If `og` is `true` and `title` is `'About'`:
 
 ```html
-<meta property="og:title" content="title">
+<meta property="og:title" content="title" />
 ```
 
 ###### `meta[property=og:description]`
@@ -10748,7 +10858,7 @@ If `og` is not `true`, `meta[property=og:description]` is not added.
 If `og` is `true` and `description` is `'Lorem ipsum'`:
 
 ```html
-<meta property="og:description" content="Lorem ipsum">
+<meta property="og:description" content="Lorem ipsum" />
 ```
 
 ###### `meta[property=og:image]`
@@ -10759,30 +10869,28 @@ If `og` is not `true`, `meta[property=og:image]`, `meta[property=og:image:alt]`,
 `meta[property=og:image:width]`, and `meta[property=og:image:height]` are not
 added.
 
-*Note*: up to 6 images are added.
+_Note_: up to 6 images are added.
 
 If `og` is `true` and `image` is `'https://example.com/image.png'`:
 
 ```html
-<meta property="og:image" content="https://example.com/image.png">
+<meta property="og:image" content="https://example.com/image.png" />
 ```
 
-If `og` is `true` and `image` is `['https://example.com/a.png',
-'https://example.com/b.png']`:
+If `og` is `true` and `image` is `['https://example.com/a.png', 'https://example.com/b.png']`:
 
 ```html
-<meta property="og:image" content="https://example.com/a.png">
-<meta property="og:image" content="https://example.com/b.png">
+<meta property="og:image" content="https://example.com/a.png" />
+<meta property="og:image" content="https://example.com/b.png" />
 ```
 
-If `og` is `true` and `image` is `{url: 'https://example.com/a.png', alt: 'A',
-width: '670', height: '1012'}`:
+If `og` is `true` and `image` is `{url: 'https://example.com/a.png', alt: 'A', width: '670', height: '1012'}`:
 
 ```html
-<meta property="og:image" content="https://example.com/a.png">
-<meta property="og:image:alt" content="A">
-<meta property="og:image:width" content="670">
-<meta property="og:image:height" content="1012">
+<meta property="og:image" content="https://example.com/a.png" />
+<meta property="og:image:alt" content="A" />
+<meta property="og:image:width" content="670" />
+<meta property="og:image:height" content="1012" />
 ```
 
 ###### `meta[property=article:published_time]`
@@ -10796,7 +10904,7 @@ If `og` is `true`, `type` is `'article'`, and `published` is
 `'2014-06-30T15:01:35-05:00'`:
 
 ```html
-<meta property="article:published_time" content="2014-06-30T20:01:35.000Z">
+<meta property="article:published_time" content="2014-06-30T20:01:35.000Z" />
 ```
 
 ###### `meta[property=article:modified_time]`
@@ -10810,7 +10918,7 @@ If `og` is `true`, `type` is `'article'`, and `modified` is
 `'2017-04-26T22:37:10-05:00'`:
 
 ```html
-<meta property="article:modified_time" content="2017-04-27T03:37:10.000Z">
+<meta property="article:modified_time" content="2017-04-27T03:37:10.000Z" />
 ```
 
 ###### `meta[property=article:author]`
@@ -10825,7 +10933,7 @@ If `og` is `true`, `type` is `'article'`, and `authorFacebook` is
 `'jane'`:
 
 ```html
-<meta property="article:author" content="https://www.facebook.com/jane">
+<meta property="article:author" content="https://www.facebook.com/jane" />
 ```
 
 ###### `meta[property=article:section]`
@@ -10838,7 +10946,7 @@ If `og` is not `true` or `type` is not `'article'`,
 If `og` is `true`, `type` is `'article'`, and `section` is `'Politics'`:
 
 ```html
-<meta property="article:section" content="Politics">
+<meta property="article:section" content="Politics" />
 ```
 
 ###### `meta[property=article:tag]`
@@ -10848,18 +10956,17 @@ Affected by: [`og`][c-og], [`type`][c-type], [`tag`][c-tags].
 If `og` is not `true` or `type` is not `'article'`, `meta[property=article:tag]`
 are not added.
 
-*Note*: up to 6 tags are added.
+_Note_: up to 6 tags are added.
 
-If `og` is `true`, `type` is `'article'`, and `tags` is `['US Politics',
-'Impeachment', 'NATO', 'London', 'Food', 'Poverty', 'Climate Change']`:
+If `og` is `true`, `type` is `'article'`, and `tags` is `['US Politics', 'Impeachment', 'NATO', 'London', 'Food', 'Poverty', 'Climate Change']`:
 
 ```html
-<meta property="article:tag" content="US Politics">
-<meta property="article:tag" content="Impeachment">
-<meta property="article:tag" content="NATO">
-<meta property="article:tag" content="London">
-<meta property="article:tag" content="Food">
-<meta property="article:tag" content="Poverty">
+<meta property="article:tag" content="US Politics" />
+<meta property="article:tag" content="Impeachment" />
+<meta property="article:tag" content="NATO" />
+<meta property="article:tag" content="London" />
+<meta property="article:tag" content="Food" />
+<meta property="article:tag" content="Poverty" />
 ```
 
 ###### `meta[name=twitter:card]`
@@ -10874,13 +10981,13 @@ this case.
 If `twitter` is `true` and there is a valid image:
 
 ```html
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image" />
 ```
 
 If `twitter` is `true` and there is no valid image:
 
 ```html
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 ```
 
 ###### `meta[name=twitter:image]`
@@ -10890,27 +10997,25 @@ Affected by: [`twitter`][c-twitter], [`image`][c-image].
 If `twitter` is not `true`, `meta[name=twitter:image]` and
 `meta[name=twitter:image:alt]` are not added.
 
-*Note*: only one image is added.
+_Note_: only one image is added.
 
 If `twitter` is `true` and `image` is `'https://example.com/image.png'`:
 
 ```html
-<meta name="twitter:image" content="https://example.com/image.png">
+<meta name="twitter:image" content="https://example.com/image.png" />
 ```
 
-If `twitter` is `true` and `image` is `['https://example.com/a.png',
-'https://example.com/b.png']`:
+If `twitter` is `true` and `image` is `['https://example.com/a.png', 'https://example.com/b.png']`:
 
 ```html
-<meta name="twitter:image" content="https://example.com/a.png">
+<meta name="twitter:image" content="https://example.com/a.png" />
 ```
 
-If `twitter` is `true` and `image` is `{url: 'https://example.com/a.png', alt:
-'A', width: '670', height: '1012'}`:
+If `twitter` is `true` and `image` is `{url: 'https://example.com/a.png', alt: 'A', width: '670', height: '1012'}`:
 
 ```html
-<meta name="twitter:image" content="https://example.com/a.png">
-<meta name="twitter:image:alt" content="A">
+<meta name="twitter:image" content="https://example.com/a.png" />
+<meta name="twitter:image:alt" content="A" />
 ```
 
 ###### `meta[name=twitter:site]`
@@ -10922,7 +11027,7 @@ If `twitter` is not `true`, `meta[name=twitter:site]` is not added.
 If `twitter` is `true` and `siteTwitter` is `'@example'`:
 
 ```html
-<meta name="twitter:site" content="@example">
+<meta name="twitter:site" content="@example" />
 ```
 
 ###### `meta[name=twitter:creator]`
@@ -10934,7 +11039,7 @@ If `twitter` is not `true`, `meta[name=twitter:creator]` is not added.
 If `twitter` is `true` and `authorTwitter` is `'@example'`:
 
 ```html
-<meta name="twitter:creator" content="@example">
+<meta name="twitter:creator" content="@example" />
 ```
 
 ## Security
@@ -10944,12 +11049,12 @@ to define metadata from within a because of the [`matter`][matter] integration .
 
 ## Related
 
-*   [`rehype-document`](https://github.com/rehypejs/rehype-document)
-    — Wrap a document around the tree
-*   [`rehype-format`](https://github.com/rehypejs/rehype-format)
-    — Format HTML
-*   [`rehype-minify`](https://github.com/rehypejs/rehype-minify)
-    — Minify HTML
+- [`rehype-document`](https://github.com/rehypejs/rehype-document)
+  — Wrap a document around the tree
+- [`rehype-format`](https://github.com/rehypejs/rehype-format)
+  — Format HTML
+- [`rehype-minify`](https://github.com/rehypejs/rehype-minify)
+  — Minify HTML
 
 ## Contribute
 
@@ -10968,150 +11073,79 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/rehypejs/rehype-meta.svg
-
 [build]: https://travis-ci.org/rehypejs/rehype-meta
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/rehypejs/rehype-meta.svg
-
 [coverage]: https://codecov.io/github/rehypejs/rehype-meta
-
 [downloads-badge]: https://img.shields.io/npm/dm/rehype-meta.svg
-
 [downloads]: https://www.npmjs.com/package/rehype-meta
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/rehype-meta.svg
-
 [size]: https://bundlephobia.com/result?p=rehype-meta
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/rehype
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [health]: https://github.com/rehypejs/.github
-
 [contributing]: https://github.com/rehypejs/.github/blob/master/contributing.md
-
 [support]: https://github.com/rehypejs/.github/blob/master/support.md
-
 [coc]: https://github.com/rehypejs/.github/blob/master/code-of-conduct.md
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [matter]: https://github.com/vfile/vfile-matter
-
 [config]: #config
-
 [use]: #rehypeusemeta-options
-
 [timestamp]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date#Timestamp_string
-
 [c-og]: #configog
-
 [c-type]: #configtype
-
 [c-twitter]: #configtwitter
-
 [c-copyright]: #configcopyright
-
 [c-origin]: #configorigin
-
 [c-pathname]: #configpathname
-
 [c-name]: #configname
-
 [c-sitetags]: #configsitetags
-
 [c-siteauthor]: #configsiteauthor
-
 [c-sitetwitter]: #configsitetwitter
-
 [c-color]: #configcolor
-
 [c-author]: #configauthor
-
 [c-authortwitter]: #configauthortwitter
-
 [c-authorfacebook]: #configauthorfacebook
-
 [c-title]: #configtitle
-
 [c-separator]: #configseparator
-
 [c-description]: #configdescription
-
 [c-section]: #configsection
-
 [c-tags]: #configtags
-
 [c-image]: #configimage
-
 [c-published]: #configpublished
-
 [c-modified]: #configmodified
-
 [m-title]: #title
-
 [m-canonical]: #linkrelcanonical
-
 [m-description]: #metanamedescription
-
 [m-keywords]: #metanamekeywords
-
 [m-author]: #metanameauthor
-
 [m-copyright]: #metanamecopyright
-
 [m-theme-color]: #metanametheme-color
-
 [m-og-type]: #metapropertyogtype
-
 [m-og-site-name]: #metapropertyogsite_name
-
 [m-og-url]: #metapropertyogurl
-
 [m-og-title]: #metapropertyogtitle
-
 [m-og-description]: #metapropertyogdescription
-
 [m-og-image]: #metapropertyogimage
-
 [m-article-published-time]: #metapropertyarticlepublished_time
-
 [m-article-modified-time]: #metapropertyarticlemodified_time
-
 [m-article-author]: #metapropertyarticleauthor
-
 [m-article-section]: #metapropertyarticlesection
-
 [m-article-tag]: #metapropertyarticletag
-
 [m-twitter-card]: #metanametwittercard
-
 [m-twitter-image]: #metanametwitterimage
-
 [m-twitter-site]: #metanametwittersite
-
 [m-twitter-creator]: #metanametwittercreator
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/rehype-stringify/</summary>
 
 ### [fixtures/node_modules/rehype-stringify/readme.md](fixtures/node_modules/rehype-stringify/readme.md)
+
 # rehype-stringify
 
 [![Build][build-badge]][build]
@@ -11177,10 +11211,10 @@ npm install rehype-stringify
 ## Use
 
 ```js
-var unified = require('unified')
-var createStream = require('unified-stream')
-var parse = require('rehype-parse')
-var stringify = require('rehype-stringify')
+var unified = require("unified");
+var createStream = require("unified-stream");
+var parse = require("rehype-parse");
+var stringify = require("rehype-stringify");
 
 var processor = unified()
   .use(parse)
@@ -11188,10 +11222,10 @@ var processor = unified()
     quoteSmart: true,
     closeSelfClosing: true,
     omitOptionalTags: true,
-    entities: {useShortestReferences: true}
-  })
+    entities: { useShortestReferences: true },
+  });
 
-process.stdin.pipe(createStream(processor)).pipe(process.stdout)
+process.stdin.pipe(createStream(processor)).pipe(process.stdout);
 ```
 
 ## API
@@ -11233,76 +11267,42 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/rehypejs/rehype.svg
-
 [build]: https://travis-ci.org/rehypejs/rehype
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/rehypejs/rehype.svg
-
 [coverage]: https://codecov.io/github/rehypejs/rehype
-
 [downloads-badge]: https://img.shields.io/npm/dm/rehype-stringify.svg
-
 [downloads]: https://www.npmjs.com/package/rehype-stringify
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/rehype-stringify.svg
-
 [size]: https://bundlephobia.com/result?p=rehype-stringify
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/rehype
-
 [health]: https://github.com/rehypejs/.github
-
 [contributing]: https://github.com/rehypejs/.github/blob/master/contributing.md
-
 [support]: https://github.com/rehypejs/.github/blob/master/support.md
-
 [coc]: https://github.com/rehypejs/.github/blob/master/code-of-conduct.md
-
 [ideas]: https://github.com/rehypejs/ideas
-
 [awesome]: https://github.com/rehypejs/awesome-rehype
-
 [license]: https://github.com/rehypejs/rehype/blob/master/license
-
 [author]: https://wooorm.com
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [unified]: https://github.com/unifiedjs/unified
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [processor]: https://github.com/rehypejs/rehype/tree/master/packages/rehype
-
 [compiler]: https://github.com/unifiedjs/unified#processorcompiler
-
 [hast]: https://github.com/syntax-tree/hast
-
 [hast-util-to-html]: https://github.com/syntax-tree/hast-util-to-html#tohtmlnode-options
-
 [rehype-dom-stringify]: https://github.com/rehypejs/rehype-dom/tree/master/packages/rehype-dom-stringify
-
 [announcement]: https://medium.com/unifiedjs/collectively-evolving-through-crowdsourcing-22c359ea95cc
-
 [sanitize]: https://github.com/rehypejs/rehype-sanitize
-
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/rimraf/</summary>
 
 ### [fixtures/node_modules/rimraf/CHANGELOG.md](fixtures/node_modules/rimraf/CHANGELOG.md)
+
 # v3.0
 
 - Add `--preserve-root` option to executable (default true)
@@ -11369,15 +11369,11 @@ abide by its terms.
 - Consistent error naming, and rethrow non-ENOENT stat errors
 - add fiber implementation
 
-
-
-
-
 ### [fixtures/node_modules/rimraf/README.md](fixtures/node_modules/rimraf/README.md)
 
 [![Build Status](https://travis-ci.org/isaacs/rimraf.svg?branch=master)](https://travis-ci.org/isaacs/rimraf) [![Dependency Status](https://david-dm.org/isaacs/rimraf.svg)](https://david-dm.org/isaacs/rimraf) [![devDependency Status](https://david-dm.org/isaacs/rimraf/dev-status.svg)](https://david-dm.org/isaacs/rimraf#info=devDependencies)
 
-The [UNIX command](http://en.wikipedia.org/wiki/Rm_(Unix)) `rm -rf` for node.
+The [UNIX command](<http://en.wikipedia.org/wiki/Rm_(Unix)>) `rm -rf` for node.
 
 Install with `npm install rimraf`, or just drop rimraf.js somewhere.
 
@@ -11390,82 +11386,82 @@ want to disable globbing you can do so with `opts.disableGlob` (defaults to
 `false`). This might be handy, for instance, if you have filenames that contain
 globbing wildcard characters.
 
-The callback will be called with an error if there is one.  Certain
+The callback will be called with an error if there is one. Certain
 errors are handled for you:
 
-* Windows: `EBUSY` and `ENOTEMPTY` - rimraf will back off a maximum of
+- Windows: `EBUSY` and `ENOTEMPTY` - rimraf will back off a maximum of
   `opts.maxBusyTries` times before giving up, adding 100ms of wait
-  between each attempt.  The default `maxBusyTries` is 3.
-* `ENOENT` - If the file doesn't exist, rimraf will return
+  between each attempt. The default `maxBusyTries` is 3.
+- `ENOENT` - If the file doesn't exist, rimraf will return
   successfully, since your desired outcome is already the case.
-* `EMFILE` - Since `readdir` requires opening a file descriptor, it's
+- `EMFILE` - Since `readdir` requires opening a file descriptor, it's
   possible to hit `EMFILE` if too many file descriptors are in use.
-  In the sync case, there's nothing to be done for this.  But in the
+  In the sync case, there's nothing to be done for this. But in the
   async case, rimraf will gradually back off with timeouts up to
   `opts.emfileWait` ms, which defaults to 1000.
 
 ## options
 
-* unlink, chmod, stat, lstat, rmdir, readdir,
+- unlink, chmod, stat, lstat, rmdir, readdir,
   unlinkSync, chmodSync, statSync, lstatSync, rmdirSync, readdirSync
 
-    In order to use a custom file system library, you can override
-    specific fs functions on the options object.
+  In order to use a custom file system library, you can override
+  specific fs functions on the options object.
 
-    If any of these functions are present on the options object, then
-    the supplied function will be used instead of the default fs
-    method.
+  If any of these functions are present on the options object, then
+  the supplied function will be used instead of the default fs
+  method.
 
-    Sync methods are only relevant for `rimraf.sync()`, of course.
+  Sync methods are only relevant for `rimraf.sync()`, of course.
 
-    For example:
+  For example:
 
-    ```javascript
-    var myCustomFS = require('some-custom-fs')
+  ```javascript
+  var myCustomFS = require("some-custom-fs");
 
-    rimraf('some-thing', myCustomFS, callback)
-    ```
+  rimraf("some-thing", myCustomFS, callback);
+  ```
 
-* maxBusyTries
+- maxBusyTries
 
-    If an `EBUSY`, `ENOTEMPTY`, or `EPERM` error code is encountered
-    on Windows systems, then rimraf will retry with a linear backoff
-    wait of 100ms longer on each try.  The default maxBusyTries is 3.
+  If an `EBUSY`, `ENOTEMPTY`, or `EPERM` error code is encountered
+  on Windows systems, then rimraf will retry with a linear backoff
+  wait of 100ms longer on each try. The default maxBusyTries is 3.
 
-    Only relevant for async usage.
+  Only relevant for async usage.
 
-* emfileWait
+- emfileWait
 
-    If an `EMFILE` error is encountered, then rimraf will retry
-    repeatedly with a linear backoff of 1ms longer on each try, until
-    the timeout counter hits this max.  The default limit is 1000.
+  If an `EMFILE` error is encountered, then rimraf will retry
+  repeatedly with a linear backoff of 1ms longer on each try, until
+  the timeout counter hits this max. The default limit is 1000.
 
-    If you repeatedly encounter `EMFILE` errors, then consider using
-    [graceful-fs](http://npm.im/graceful-fs) in your program.
+  If you repeatedly encounter `EMFILE` errors, then consider using
+  [graceful-fs](http://npm.im/graceful-fs) in your program.
 
-    Only relevant for async usage.
+  Only relevant for async usage.
 
-* glob
+- glob
 
-    Set to `false` to disable [glob](http://npm.im/glob) pattern
-    matching.
+  Set to `false` to disable [glob](http://npm.im/glob) pattern
+  matching.
 
-    Set to an object to pass options to the glob module.  The default
-    glob options are `{ nosort: true, silent: true }`.
+  Set to an object to pass options to the glob module. The default
+  glob options are `{ nosort: true, silent: true }`.
 
-    Glob version 6 is used in this module.
+  Glob version 6 is used in this module.
 
-    Relevant for both sync and async usage.
+  Relevant for both sync and async usage.
 
-* disableGlob
+- disableGlob
 
-    Set to any non-falsey value to disable globbing entirely.
-    (Equivalent to setting `glob: false`.)
+  Set to any non-falsey value to disable globbing entirely.
+  (Equivalent to setting `glob: false`.)
 
 ## rimraf.sync
 
-It can remove stuff synchronously, too.  But that's not so good.  Use
-the async API.  It's better.
+It can remove stuff synchronously, too. But that's not so good. Use
+the async API. It's better.
 
 ## CLI
 
@@ -11477,7 +11473,6 @@ command `rimraf <path> [<path> ...]` which is useful for cross platform support.
 If you need to create a directory recursively, check out
 [mkdirp](https://github.com/substack/node-mkdirp).
 
-
 </details><details> <summary>fixtures/node_modules/slugify/</summary>
 
 ### [fixtures/node_modules/slugify/README.md](fixtures/node_modules/slugify/README.md)
@@ -11487,12 +11482,12 @@ If you need to create a directory recursively, check out
 [![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
 
 ```js
-var slugify = require('slugify')
+var slugify = require("slugify");
 
-slugify('some string') // some-string
+slugify("some string"); // some-string
 
 // if you prefer something other than '-' as separator
-slugify('some string', '_')  // some_string
+slugify("some string", "_"); // some_string
 ```
 
 - Vanilla ES5 JavaScript
@@ -11503,12 +11498,12 @@ slugify('some string', '_')  // some_string
 ## Options
 
 ```js
-slugify('some string', {
-  replacement: '-',  // replace spaces with replacement character, defaults to `-`
+slugify("some string", {
+  replacement: "-", // replace spaces with replacement character, defaults to `-`
   remove: undefined, // remove characters that match regex, defaults to `undefined`
-  lower: false,      // convert to lower case, defaults to `false`
-  strict: false,     // strip special characters except replacement, defaults to `false`
-})
+  lower: false, // convert to lower case, defaults to `false`
+  strict: false, // strip special characters except replacement, defaults to `false`
+});
 ```
 
 For example, to remove `*+~.()'"!:@` from the result slug, you can use `slugify('..', {remove: /[*+~.()'"!:@]/g})`.
@@ -11518,21 +11513,21 @@ For example, to remove `*+~.()'"!:@` from the result slug, you can use `slugify(
 Out of the box `slugify` comes with support for a handful of Unicode symbols. For example the `☢` (radioactive) symbol is not defined in the [`charMap`][charmap] and therefore it will be stripped by default:
 
 ```js
-slugify('unicode ♥ is ☢') // unicode-love-is
+slugify("unicode ♥ is ☢"); // unicode-love-is
 ```
 
 However you can extend the supported symbols, or override the existing ones with your own:
 
 ```js
-slugify.extend({'☢': 'radioactive'})
-slugify('unicode ♥ is ☢') // unicode-love-is-radioactive
+slugify.extend({ "☢": "radioactive" });
+slugify("unicode ♥ is ☢"); // unicode-love-is-radioactive
 ```
 
 Keep in mind that the `extend` method extends/overrides the default `charMap` for the entire process. In case you need a fresh instance of the slugify's `charMap` object you have to clean up the module cache first:
 
 ```js
-delete require.cache[require.resolve('slugify')]
-var slugify = require('slugify')
+delete require.cache[require.resolve("slugify")];
+var slugify = require("slugify");
 ```
 
 ## Contribute
@@ -11548,28 +11543,22 @@ var slugify = require('slugify')
 > Note that the original [slug][slug] module has been ported to vanilla javascript too.<br>
 > One major difference between the two modules is that `slugify` does not depend on the external [unicode][unicode] module.
 
-
-  [npm-version]: https://img.shields.io/npm/v/slugify.svg?style=flat-square (NPM Package Version)
-  [travis-ci]: https://img.shields.io/travis/simov/slugify/master.svg?style=flat-square (Build Status - Travis CI)
-  [coveralls-status]: https://img.shields.io/coveralls/simov/slugify.svg?style=flat-square (Test Coverage - Coveralls)
-
-  [npm]: https://www.npmjs.com/package/slugify
-  [travis]: https://travis-ci.org/simov/slugify
-  [coveralls]: https://coveralls.io/r/simov/slugify?branch=master
-
-  [node-slug]: https://github.com/dodo/node-slug
-  [slug]: https://www.npmjs.com/package/slug
-  [unicode]: https://www.npmjs.com/package/unicode
-  [index]: https://github.com/simov/slugify/blob/master/index.js
-  [charmap]: https://github.com/simov/slugify/blob/master/config/charmap.json
-
-
-
-
+[npm-version]: https://img.shields.io/npm/v/slugify.svg?style=flat-square "NPM Package Version"
+[travis-ci]: https://img.shields.io/travis/simov/slugify/master.svg?style=flat-square "Build Status - Travis CI"
+[coveralls-status]: https://img.shields.io/coveralls/simov/slugify.svg?style=flat-square "Test Coverage - Coveralls"
+[npm]: https://www.npmjs.com/package/slugify
+[travis]: https://travis-ci.org/simov/slugify
+[coveralls]: https://coveralls.io/r/simov/slugify?branch=master
+[node-slug]: https://github.com/dodo/node-slug
+[slug]: https://www.npmjs.com/package/slug
+[unicode]: https://www.npmjs.com/package/unicode
+[index]: https://github.com/simov/slugify/blob/master/index.js
+[charmap]: https://github.com/simov/slugify/blob/master/config/charmap.json
 
 </details><details> <summary>fixtures/node_modules/space-separated-tokens/</summary>
 
 ### [fixtures/node_modules/space-separated-tokens/readme.md](fixtures/node_modules/space-separated-tokens/readme.md)
+
 # space-separated-tokens
 
 [![Build][build-badge]][build]
@@ -11590,12 +11579,12 @@ npm install space-separated-tokens
 ## Usage
 
 ```js
-var spaceSeparated = require('space-separated-tokens')
+var spaceSeparated = require("space-separated-tokens");
 
-spaceSeparated.parse(' foo\tbar\nbaz  ')
+spaceSeparated.parse(" foo\tbar\nbaz  ");
 //=> ['foo', 'bar', 'baz']
 
-spaceSeparated.stringify(['foo', 'bar', 'baz'])
+spaceSeparated.stringify(["foo", "bar", "baz"]);
 //=> 'foo bar baz'
 ```
 
@@ -11607,7 +11596,7 @@ Parse space-separated tokens to an array of strings, according to the [spec][].
 
 ###### Parameters
 
-*   `value` (`string`) — space-separated tokens
+- `value` (`string`) — space-separated tokens
 
 ###### Returns
 
@@ -11620,7 +11609,7 @@ Note that it’s not possible to specify empty or whitespace only values.
 
 ###### Parameters
 
-*   `values` (`Array.<string>`) — List of tokens
+- `values` (`Array.<string>`) — List of tokens
 
 ###### Returns
 
@@ -11628,12 +11617,12 @@ Note that it’s not possible to specify empty or whitespace only values.
 
 ## Related
 
-*   [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)
-    — Replace multiple white-space characters with a single space
-*   [`property-information`](https://github.com/wooorm/property-information)
-    — Information on HTML properties
-*   [`comma-separated-tokens`](https://github.com/wooorm/comma-separated-tokens)
-    — Parse/stringify comma-separated tokens
+- [`collapse-white-space`](https://github.com/wooorm/collapse-white-space)
+  — Replace multiple white-space characters with a single space
+- [`property-information`](https://github.com/wooorm/property-information)
+  — Information on HTML properties
+- [`comma-separated-tokens`](https://github.com/wooorm/comma-separated-tokens)
+  — Parse/stringify comma-separated tokens
 
 ## License
 
@@ -11642,36 +11631,22 @@ Note that it’s not possible to specify empty or whitespace only values.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/space-separated-tokens.svg
-
 [build]: https://travis-ci.org/wooorm/space-separated-tokens
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/space-separated-tokens.svg
-
 [coverage]: https://codecov.io/github/wooorm/space-separated-tokens
-
 [downloads-badge]: https://img.shields.io/npm/dm/space-separated-tokens.svg
-
 [downloads]: https://www.npmjs.com/package/space-separated-tokens
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/space-separated-tokens.svg
-
 [size]: https://bundlephobia.com/result?p=space-separated-tokens
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [spec]: https://html.spec.whatwg.org/#space-separated-tokens
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/stringify-entities/</summary>
 
 ### [fixtures/node_modules/stringify-entities/readme.md](fixtures/node_modules/stringify-entities/readme.md)
+
 # stringify-entities
 
 [![Build Status][build-badge]][build-status]
@@ -11681,12 +11656,12 @@ Note that it’s not possible to specify empty or whitespace only values.
 
 Encode HTML character references and character entities.
 
-*   [x] Very fast
-*   [x] Just the encoding part
-*   [x] Reliable: ``'`'`` characters are escaped to ensure no scripts
-    run in IE6-8.
-    Additionally, only named entities recognised by HTML4 are encoded, meaning
-    the infamous `&apos;` (which people think is a [virus][]) won’t show up
+- [x] Very fast
+- [x] Just the encoding part
+- [x] Reliable: `` '`' `` characters are escaped to ensure no scripts
+      run in IE6-8.
+      Additionally, only named entities recognised by HTML4 are encoded, meaning
+      the infamous `&apos;` (which people think is a [virus][]) won’t show up
 
 ## Algorithm
 
@@ -11710,12 +11685,12 @@ npm install stringify-entities
 ## Use
 
 ```js
-var stringify = require('stringify-entities')
+var stringify = require("stringify-entities");
 
-stringify('alpha © bravo ≠ charlie 𝌆 delta')
+stringify("alpha © bravo ≠ charlie 𝌆 delta");
 // => 'alpha &#xA9; bravo &#x2260; charlie &#x1D306; delta'
 
-stringify('alpha © bravo ≠ charlie 𝌆 delta', {useNamedReferences: true})
+stringify("alpha © bravo ≠ charlie 𝌆 delta", { useNamedReferences: true });
 // => 'alpha &copy; bravo &ne; charlie &#x1D306; delta'
 ```
 
@@ -11763,16 +11738,16 @@ Create entities which don’t fail in attributes (`boolean?`, default: `false`).
 
 ## Related
 
-*   [`parse-entities`](https://github.com/wooorm/parse-entities)
-    — Parse HTML character references
-*   [`character-entities`](https://github.com/wooorm/character-entities)
-    — Info on character entities
-*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
-    — Info on HTML4 character entities
-*   [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)
-    — Info on legacy character entities
-*   [`character-reference-invalid`](https://github.com/wooorm/character-reference-invalid)
-    — Info on invalid numeric character references
+- [`parse-entities`](https://github.com/wooorm/parse-entities)
+  — Parse HTML character references
+- [`character-entities`](https://github.com/wooorm/character-entities)
+  — Info on character entities
+- [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
+  — Info on HTML4 character entities
+- [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)
+  — Info on legacy character entities
+- [`character-reference-invalid`](https://github.com/wooorm/character-reference-invalid)
+  — Info on invalid numeric character references
 
 ## License
 
@@ -11781,48 +11756,28 @@ Create entities which don’t fail in attributes (`boolean?`, default: `false`).
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/stringify-entities.svg
-
 [build-status]: https://travis-ci.org/wooorm/stringify-entities
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/stringify-entities.svg
-
 [coverage-status]: https://codecov.io/github/wooorm/stringify-entities
-
 [downloads-badge]: https://img.shields.io/npm/dm/stringify-entities.svg
-
 [downloads]: https://www.npmjs.com/package/stringify-entities
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/stringify-entities.svg
-
 [size]: https://bundlephobia.com/result?p=stringify-entities
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [virus]: https://www.telegraph.co.uk/technology/advice/10516839/Why-do-some-apostrophes-get-replaced-with-andapos.html
-
 [dangerous]: dangerous.json
-
 [legacy]: https://github.com/wooorm/character-entities-legacy
-
 [subset]: #optionssubset
-
 [escapeonly]: #optionsescapeonly
-
 [named]: #optionsusenamedreferences
-
 [short]: #optionsuseshortestreferences
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/unist-builder/</summary>
 
 ### [fixtures/node_modules/unist-builder/readme.md](fixtures/node_modules/unist-builder/readme.md)
+
 # unist-builder
 
 [![Build][build-badge]][build]
@@ -11847,18 +11802,18 @@ npm install unist-builder
 ## Use
 
 ```js
-var u = require('unist-builder')
+var u = require("unist-builder");
 
-var tree = u('root', [
-  u('subtree', {id: 1}),
-  u('subtree', {id: 2}, [
-    u('node', [u('leaf', 'leaf 1'), u('leaf', 'leaf 2')]),
-    u('leaf', {id: 3}, 'leaf 3'),
-    u('void', {id: 4})
-  ])
-])
+var tree = u("root", [
+  u("subtree", { id: 1 }),
+  u("subtree", { id: 2 }, [
+    u("node", [u("leaf", "leaf 1"), u("leaf", "leaf 2")]),
+    u("leaf", { id: 3 }, "leaf 3"),
+    u("void", { id: 4 }),
+  ]),
+]);
 
-console.dir(tree, {depth: null})
+console.dir(tree, { depth: null });
 ```
 
 results in the following tree:
@@ -11895,16 +11850,16 @@ Creates a node from `props`, `children`, and optionally `value`.
 
 ###### Signatures
 
-*   `u(type[, props], children)` — create a [parent][]
-*   `u(type[, props], value)` — create a [literal][]
-*   `u(type[, props])` — create a void node
+- `u(type[, props], children)` — create a [parent][]
+- `u(type[, props], value)` — create a [literal][]
+- `u(type[, props])` — create a void node
 
 ###### Parameters
 
-*   `type` (`string`) — node [type][]
-*   `props` (`Object`) — other values assigned to `node`
-*   `children` ([`Array.<Node>`][node]) — children of `node`
-*   `value` (`*`) — value of `node` (cast to string)
+- `type` (`string`) — node [type][]
+- `props` (`Object`) — other values assigned to `node`
+- `children` ([`Array.<Node>`][node]) — children of `node`
+- `value` (`*`) — value of `node` (cast to string)
 
 ###### Returns
 
@@ -11912,12 +11867,12 @@ Creates a node from `props`, `children`, and optionally `value`.
 
 ## Related
 
-*   [`unist-builder-blueprint`](https://github.com/syntax-tree/unist-builder-blueprint)
-    — Convert unist trees to `unist-builder` notation
-*   [`hastscript`](https://github.com/syntax-tree/hastscript)
-    — Create [hast][] elements
-*   [`xastscript`](https://github.com/syntax-tree/xastscript)
-    — Create [xast][] elements
+- [`unist-builder-blueprint`](https://github.com/syntax-tree/unist-builder-blueprint)
+  — Convert unist trees to `unist-builder` notation
+- [`hastscript`](https://github.com/syntax-tree/hastscript)
+  — Create [hast][] elements
+- [`xastscript`](https://github.com/syntax-tree/xastscript)
+  — Create [xast][] elements
 
 ## Contribute
 
@@ -11936,66 +11891,37 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/unist-builder.svg
-
 [build]: https://travis-ci.org/syntax-tree/unist-builder
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-builder.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/unist-builder
-
 [downloads-badge]: https://img.shields.io/npm/dm/unist-builder.svg
-
 [downloads]: https://www.npmjs.com/package/unist-builder
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/unist-builder.svg
-
 [size]: https://bundlephobia.com/result?p=unist-builder
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [unist]: https://github.com/syntax-tree/unist
-
 [hast]: https://github.com/syntax-tree/hast
-
 [xast]: https://github.com/syntax-tree/xast
-
 [hyperscript]: https://github.com/dominictarr/hyperscript
-
 [node]: https://github.com/syntax-tree/unist#node
-
 [tree]: https://github.com/syntax-tree/unist#tree
-
 [parent]: https://github.com/syntax-tree/unist#parent
-
 [literal]: https://github.com/syntax-tree/unist#literal
-
 [type]: https://github.com/syntax-tree/unist#type
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/unist-util-is/</summary>
 
 ### [fixtures/node_modules/unist-util-is/readme.md](fixtures/node_modules/unist-util-is/readme.md)
+
 # unist-util-is
 
 [![Build][build-badge]][build]
@@ -12019,28 +11945,28 @@ npm install unist-util-is
 ## Use
 
 ```js
-var is = require('unist-util-is')
+var is = require("unist-util-is");
 
-var node = {type: 'strong'}
-var parent = {type: 'paragraph', children: [node]}
+var node = { type: "strong" };
+var parent = { type: "paragraph", children: [node] };
 
 function test(node, n) {
-  return n === 5
+  return n === 5;
 }
 
-is() // => false
-is({children: []}) // => false
-is(node) // => true
-is(node, 'strong') // => true
-is(node, 'emphasis') // => false
+is(); // => false
+is({ children: [] }); // => false
+is(node); // => true
+is(node, "strong"); // => true
+is(node, "emphasis"); // => false
 
-is(node, node) // => true
-is(parent, {type: 'paragraph'}) // => true
-is(parent, {type: 'strong'}) // => false
+is(node, node); // => true
+is(parent, { type: "paragraph" }); // => true
+is(parent, { type: "strong" }); // => false
 
-is(node, test) // => false
-is(node, test, 4, parent) // => false
-is(node, test, 5, parent) // => true
+is(node, test); // => false
+is(node, test, 4, parent); // => false
+is(node, test, 5, parent); // => true
 ```
 
 ## API
@@ -12049,29 +11975,29 @@ is(node, test, 5, parent) // => true
 
 ###### Parameters
 
-*   `node` ([`Node`][node]) — Node to check.
-*   `test` ([`Function`][test], `string`, `Object`, or `Array.<Test>`, optional)
-    —  When not given, checks if `node` is a [`Node`][node].
-    When `string`, works like passing `node => node.type === test`.
-    When `array`, checks if any one of the subtests pass.
-    When `object`, checks that all keys in `test` are in `node`,
-    and that they have strictly equal values
-*   `index` (`number`, optional) — [Index][] of `node` in `parent`
-*   `parent` ([`Node`][node], optional) — [Parent][] of `node`
-*   `context` (`*`, optional) — Context object to invoke `test` with
+- `node` ([`Node`][node]) — Node to check.
+- `test` ([`Function`][test], `string`, `Object`, or `Array.<Test>`, optional)
+  — When not given, checks if `node` is a [`Node`][node].
+  When `string`, works like passing `node => node.type === test`.
+  When `array`, checks if any one of the subtests pass.
+  When `object`, checks that all keys in `test` are in `node`,
+  and that they have strictly equal values
+- `index` (`number`, optional) — [Index][] of `node` in `parent`
+- `parent` ([`Node`][node], optional) — [Parent][] of `node`
+- `context` (`*`, optional) — Context object to invoke `test` with
 
 ###### Returns
 
-`boolean` — Whether `test` passed *and* `node` is a [`Node`][node] (object with
+`boolean` — Whether `test` passed _and_ `node` is a [`Node`][node] (object with
 `type` set to a non-empty `string`).
 
 #### `function test(node[, index, parent])`
 
 ###### Parameters
 
-*   `node` ([`Node`][node]) — Node to check
-*   `index` (`number?`) — [Index][] of `node` in `parent`
-*   `parent` ([`Node?`][node]) — [Parent][] of `node`
+- `node` ([`Node`][node]) — Node to check
+- `index` (`number?`) — [Index][] of `node` in `parent`
+- `parent` ([`Node?`][node]) — [Parent][] of `node`
 
 ###### Context
 
@@ -12096,47 +12022,50 @@ Can also be accessed with `require('unist-util-is/convert')`.
 For example:
 
 ```js
-var u = require('unist-builder')
-var convert = require('unist-util-is/convert')
+var u = require("unist-builder");
+var convert = require("unist-util-is/convert");
 
-var test = convert('leaf')
+var test = convert("leaf");
 
-var tree = u('tree', [
-  u('node', [u('leaf', '1')]),
-  u('leaf', '2'),
-  u('node', [u('leaf', '3'), u('leaf', '4')]),
-  u('leaf', '5')
-])
+var tree = u("tree", [
+  u("node", [u("leaf", "1")]),
+  u("leaf", "2"),
+  u("node", [u("leaf", "3"), u("leaf", "4")]),
+  u("leaf", "5"),
+]);
 
-var leafs = tree.children.filter((child, index) => test(child, index, tree))
+var leafs = tree.children.filter((child, index) => test(child, index, tree));
 
-console.log(leafs)
+console.log(leafs);
 ```
 
 Yields:
 
 ```js
-[{type: 'leaf', value: '2'}, {type: 'leaf', value: '5'}]
+[
+  { type: "leaf", value: "2" },
+  { type: "leaf", value: "5" },
+];
 ```
 
 ## Related
 
-*   [`unist-util-find-after`](https://github.com/syntax-tree/unist-util-find-after)
-    — Find a node after another node
-*   [`unist-util-find-before`](https://github.com/syntax-tree/unist-util-find-before)
-    — Find a node before another node
-*   [`unist-util-find-all-after`](https://github.com/syntax-tree/unist-util-find-all-after)
-    — Find all nodes after another node
-*   [`unist-util-find-all-before`](https://github.com/syntax-tree/unist-util-find-all-before)
-    — Find all nodes before another node
-*   [`unist-util-find-all-between`](https://github.com/mrzmmr/unist-util-find-all-between)
-    — Find all nodes between two nodes
-*   [`unist-util-find`](https://github.com/blahah/unist-util-find)
-    — Find nodes matching a predicate
-*   [`unist-util-filter`](https://github.com/eush77/unist-util-filter)
-    — Create a new tree with nodes that pass a check
-*   [`unist-util-remove`](https://github.com/eush77/unist-util-remove)
-    — Remove nodes from tree
+- [`unist-util-find-after`](https://github.com/syntax-tree/unist-util-find-after)
+  — Find a node after another node
+- [`unist-util-find-before`](https://github.com/syntax-tree/unist-util-find-before)
+  — Find a node before another node
+- [`unist-util-find-all-after`](https://github.com/syntax-tree/unist-util-find-all-after)
+  — Find all nodes after another node
+- [`unist-util-find-all-before`](https://github.com/syntax-tree/unist-util-find-all-before)
+  — Find all nodes before another node
+- [`unist-util-find-all-between`](https://github.com/mrzmmr/unist-util-find-all-between)
+  — Find all nodes between two nodes
+- [`unist-util-find`](https://github.com/blahah/unist-util-find)
+  — Find nodes matching a predicate
+- [`unist-util-filter`](https://github.com/eush77/unist-util-filter)
+  — Create a new tree with nodes that pass a check
+- [`unist-util-remove`](https://github.com/eush77/unist-util-remove)
+  — Remove nodes from tree
 
 ## Contribute
 
@@ -12155,60 +12084,34 @@ abide by its terms.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/unist-util-is.svg
-
 [build]: https://travis-ci.org/syntax-tree/unist-util-is
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-util-is.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/unist-util-is
-
 [downloads-badge]: https://img.shields.io/npm/dm/unist-util-is.svg
-
 [downloads]: https://www.npmjs.com/package/unist-util-is
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/unist-util-is.svg
-
 [size]: https://bundlephobia.com/result?p=unist-util-is
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [unist]: https://github.com/syntax-tree/unist
-
 [node]: https://github.com/syntax-tree/unist#node
-
 [parent]: https://github.com/syntax-tree/unist#parent-1
-
 [index]: https://github.com/syntax-tree/unist#index
-
 [test]: #function-testnode-index-parent
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/unist-util-visit-parents/</summary>
 
 ### [fixtures/node_modules/unist-util-visit-parents/readme.md](fixtures/node_modules/unist-util-visit-parents/readme.md)
+
 # unist-util-visit-parents
 
 [![Build][build-badge]][build]
@@ -12232,45 +12135,50 @@ npm install unist-util-visit-parents
 ## Use
 
 ```js
-var remark = require('remark')
-var visit = require('unist-util-visit-parents')
+var remark = require("remark");
+var visit = require("unist-util-visit-parents");
 
-var tree = remark.parse('Some _emphasis_, **importance**, and `code`.')
+var tree = remark.parse("Some _emphasis_, **importance**, and `code`.");
 
-visit(tree, 'strong', visitor)
+visit(tree, "strong", visitor);
 
 function visitor(node, ancestors) {
-  console.log(ancestors)
+  console.log(ancestors);
 }
 ```
 
 Yields:
 
 ```js
-[ { type: 'root', children: [ [Object] ] },
-  { type: 'paragraph',
-    children:
-     [ [Object],
-       [Object],
-       [Object],
-       [Object],
-       [Object],
-       [Object],
-       [Object] ] } ]
+[
+  { type: "root", children: [[Object]] },
+  {
+    type: "paragraph",
+    children: [
+      [Object],
+      [Object],
+      [Object],
+      [Object],
+      [Object],
+      [Object],
+      [Object],
+    ],
+  },
+];
 ```
 
 ## API
 
 ### `visit(tree[, test], visitor[, reverse])`
 
-Visit nodes ([*inclusive descendants*][descendant] of [`tree`][tree]), with
+Visit nodes ([_inclusive descendants_][descendant] of [`tree`][tree]), with
 ancestral information.
 Optionally filtering nodes.
 Optionally in reverse.
 
-This algorithm performs [*depth-first*][depth-first]
-[*tree traversal*][tree-traversal] in [*preorder*][preorder] (**NLR**), or
-if `reverse` is given, in *reverse preorder* (**NRL**).
+This algorithm performs [_depth-first_][depth-first]
+[_tree traversal_][tree-traversal] in [_preorder_][preorder] (**NLR**), or
+if `reverse` is given, in _reverse preorder_ (**NRL**).
 
 Walking the tree is an intensive task.
 Make use of the return values of the visitor when possible.
@@ -12280,15 +12188,15 @@ and then perform different operations.
 
 ###### Parameters
 
-*   `tree` ([`Node`][node]) — [Tree][] to traverse
-*   `test` ([`Test`][is], optional) — [`is`][is]-compatible test (such as a
-    [type][])
-*   `visitor` ([Function][visitor]) — Function invoked when a node is found
-    that passes `test`
-*   `reverse` (`boolean`, default: `false`) — The tree is traversed in
-    [preorder][] (NLR), visiting the node itself, then its [head][], etc.
-    When `reverse` is passed, the tree is traversed in reverse preorder (NRL):
-    the node itself is visited, then its [tail][], etc.
+- `tree` ([`Node`][node]) — [Tree][] to traverse
+- `test` ([`Test`][is], optional) — [`is`][is]-compatible test (such as a
+  [type][])
+- `visitor` ([Function][visitor]) — Function invoked when a node is found
+  that passes `test`
+- `reverse` (`boolean`, default: `false`) — The tree is traversed in
+  [preorder][] (NLR), visiting the node itself, then its [head][], etc.
+  When `reverse` is passed, the tree is traversed in reverse preorder (NRL):
+  the node itself is visited, then its [tail][], etc.
 
 #### `next? = visitor(node, ancestors)`
 
@@ -12308,30 +12216,30 @@ traversed.
 
 ###### Parameters
 
-*   `node` ([`Node`][node]) — Found node
-*   `ancestors` (`Array.<Node>`) — [Ancestor][]s of `node`
+- `node` ([`Node`][node]) — Found node
+- `ancestors` (`Array.<Node>`) — [Ancestor][]s of `node`
 
 ##### Returns
 
 The return value can have the following forms:
 
-*   [`index`][index] (`number`) — Treated as a tuple of `[CONTINUE, index]`
-*   `action` (`*`) — Treated as a tuple of `[action]`
-*   `tuple` (`Array.<*>`) — List with one or two values, the first an `action`,
-    the second and `index`.
-    Note that passing a tuple only makes sense if the `action` is `SKIP`.
-    If the `action` is `EXIT`, that action can be returned.
-    If the `action` is `CONTINUE`, `index` can be returned.
+- [`index`][index] (`number`) — Treated as a tuple of `[CONTINUE, index]`
+- `action` (`*`) — Treated as a tuple of `[action]`
+- `tuple` (`Array.<*>`) — List with one or two values, the first an `action`,
+  the second and `index`.
+  Note that passing a tuple only makes sense if the `action` is `SKIP`.
+  If the `action` is `EXIT`, that action can be returned.
+  If the `action` is `CONTINUE`, `index` can be returned.
 
 ###### `action`
 
 An action can have the following values:
 
-*   `visit.EXIT` (`false`) — Stop traversing immediately
-*   `visit.CONTINUE` (`true`) — Continue traversing as normal (same behaviour
-    as not returning anything)
-*   `visit.SKIP` (`'skip'`) — Do not traverse this node’s children; continue
-    with the specified index
+- `visit.EXIT` (`false`) — Stop traversing immediately
+- `visit.CONTINUE` (`true`) — Continue traversing as normal (same behaviour
+  as not returning anything)
+- `visit.SKIP` (`'skip'`) — Do not traverse this node’s children; continue
+  with the specified index
 
 ###### `index`
 
@@ -12344,19 +12252,19 @@ traversing the parent
 
 ## Related
 
-*   [`unist-util-visit`](https://github.com/syntax-tree/unist-util-visit)
-    — Like `visit-parents`, but with one parent
-*   [`unist-util-filter`](https://github.com/eush77/unist-util-filter)
-    — Create a new tree with all nodes that pass a test
-*   [`unist-util-map`](https://github.com/syntax-tree/unist-util-map)
-    — Create a new tree with all nodes mapped by a given function
-*   [`unist-util-flatmap`](https://gitlab.com/staltz/unist-util-flatmap)
-    — Create a new tree by mapping (to an array) with the provided function and
-    then flattening
-*   [`unist-util-remove`](https://github.com/eush77/unist-util-remove)
-    — Remove nodes from a tree that pass a test
-*   [`unist-util-select`](https://github.com/eush77/unist-util-select)
-    — Select nodes with CSS-like selectors
+- [`unist-util-visit`](https://github.com/syntax-tree/unist-util-visit)
+  — Like `visit-parents`, but with one parent
+- [`unist-util-filter`](https://github.com/eush77/unist-util-filter)
+  — Create a new tree with all nodes that pass a test
+- [`unist-util-map`](https://github.com/syntax-tree/unist-util-map)
+  — Create a new tree with all nodes mapped by a given function
+- [`unist-util-flatmap`](https://gitlab.com/staltz/unist-util-flatmap)
+  — Create a new tree by mapping (to an array) with the provided function and
+  then flattening
+- [`unist-util-remove`](https://github.com/eush77/unist-util-remove)
+  — Remove nodes from a tree that pass a test
+- [`unist-util-select`](https://github.com/eush77/unist-util-select)
+  — Select nodes with CSS-like selectors
 
 ## Contribute
 
@@ -12375,82 +12283,45 @@ abide by its terms.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/unist-util-visit-parents.svg
-
 [build]: https://travis-ci.org/syntax-tree/unist-util-visit-parents
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-util-visit-parents.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/unist-util-visit-parents
-
 [downloads-badge]: https://img.shields.io/npm/dm/unist-util-visit-parents.svg
-
 [downloads]: https://www.npmjs.com/package/unist-util-visit-parents
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/unist-util-visit-parents.svg
-
 [size]: https://bundlephobia.com/result?p=unist-util-visit-parents
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [unist]: https://github.com/syntax-tree/unist
-
 [node]: https://github.com/syntax-tree/unist#node
-
 [visitor]: #next--visitornode-ancestors
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [is]: https://github.com/syntax-tree/unist-util-is
-
 [depth-first]: https://github.com/syntax-tree/unist#depth-first-traversal
-
 [tree-traversal]: https://github.com/syntax-tree/unist#tree-traversal
-
 [preorder]: https://github.com/syntax-tree/unist#preorder
-
 [descendant]: https://github.com/syntax-tree/unist#descendant
-
 [head]: https://github.com/syntax-tree/unist#head
-
 [tail]: https://github.com/syntax-tree/unist#tail
-
 [parent]: https://github.com/syntax-tree/unist#parent-1
-
 [sibling]: https://github.com/syntax-tree/unist#sibling
-
 [index]: https://github.com/syntax-tree/unist#index
-
 [ancestor]: https://github.com/syntax-tree/unist#ancestor
-
 [tree]: https://github.com/syntax-tree/unist#tree
-
 [type]: https://github.com/syntax-tree/unist#type
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/unist-util-visit/</summary>
 
 ### [fixtures/node_modules/unist-util-visit/readme.md](fixtures/node_modules/unist-util-visit/readme.md)
+
 # unist-util-visit
 
 [![Build][build-badge]][build]
@@ -12474,19 +12345,19 @@ npm install unist-util-visit
 ## Use
 
 ```js
-var u = require('unist-builder')
-var visit = require('unist-util-visit')
+var u = require("unist-builder");
+var visit = require("unist-util-visit");
 
-var tree = u('tree', [
-  u('leaf', '1'),
-  u('node', [u('leaf', '2')]),
-  u('void'),
-  u('leaf', '3')
-])
+var tree = u("tree", [
+  u("leaf", "1"),
+  u("node", [u("leaf", "2")]),
+  u("void"),
+  u("leaf", "3"),
+]);
 
-visit(tree, 'leaf', function(node) {
-  console.log(node)
-})
+visit(tree, "leaf", function (node) {
+  console.log(node);
+});
 ```
 
 Yields:
@@ -12513,19 +12384,19 @@ Otherwise the same as [`unist-util-visit-parents`][vp].
 
 ## Related
 
-*   [`unist-util-visit-parents`][vp]
-    — Like `visit`, but with a stack of parents
-*   [`unist-util-filter`](https://github.com/syntax-tree/unist-util-filter)
-    — Create a new tree with all nodes that pass a test
-*   [`unist-util-map`](https://github.com/syntax-tree/unist-util-map)
-    — Create a new tree with all nodes mapped by a given function
-*   [`unist-util-flatmap`](https://gitlab.com/staltz/unist-util-flatmap)
-    — Create a new tree by mapping (to an array) with the provided function and
-    then flattening
-*   [`unist-util-remove`](https://github.com/syntax-tree/unist-util-remove)
-    — Remove nodes from a tree that pass a test
-*   [`unist-util-select`](https://github.com/syntax-tree/unist-util-select)
-    — Select nodes with CSS-like selectors
+- [`unist-util-visit-parents`][vp]
+  — Like `visit`, but with a stack of parents
+- [`unist-util-filter`](https://github.com/syntax-tree/unist-util-filter)
+  — Create a new tree with all nodes that pass a test
+- [`unist-util-map`](https://github.com/syntax-tree/unist-util-map)
+  — Create a new tree with all nodes mapped by a given function
+- [`unist-util-flatmap`](https://gitlab.com/staltz/unist-util-flatmap)
+  — Create a new tree by mapping (to an array) with the provided function and
+  then flattening
+- [`unist-util-remove`](https://github.com/syntax-tree/unist-util-remove)
+  — Remove nodes from a tree that pass a test
+- [`unist-util-select`](https://github.com/syntax-tree/unist-util-select)
+  — Select nodes with CSS-like selectors
 
 ## Contribute
 
@@ -12544,58 +12415,33 @@ abide by its terms.
 <!-- Definition -->
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/unist-util-visit.svg
-
 [build]: https://travis-ci.org/syntax-tree/unist-util-visit
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/unist-util-visit.svg
-
 [coverage]: https://codecov.io/github/syntax-tree/unist-util-visit
-
 [downloads-badge]: https://img.shields.io/npm/dm/unist-util-visit.svg
-
 [downloads]: https://www.npmjs.com/package/unist-util-visit
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/unist-util-visit.svg
-
 [size]: https://bundlephobia.com/result?p=unist-util-visit
-
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
 [collective]: https://opencollective.com/unified
-
 [chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
-
 [chat]: https://spectrum.chat/unified/syntax-tree
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
-
 [support]: https://github.com/syntax-tree/.github/blob/master/support.md
-
 [coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
-
 [unist]: https://github.com/syntax-tree/unist
-
 [vp]: https://github.com/syntax-tree/unist-util-visit-parents
-
 [index]: https://github.com/syntax-tree/unist#index
-
 [parent]: https://github.com/syntax-tree/unist#parent-1
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/wrappy/</summary>
 
 ### [fixtures/node_modules/wrappy/README.md](fixtures/node_modules/wrappy/README.md)
+
 # wrappy
 
 Callback wrapping utility
@@ -12603,43 +12449,40 @@ Callback wrapping utility
 ## USAGE
 
 ```javascript
-var wrappy = require("wrappy")
+var wrappy = require("wrappy");
 
 // var wrapper = wrappy(wrapperFunction)
 
 // make sure a cb is called only once
 // See also: http://npm.im/once for this specific use case
 var once = wrappy(function (cb) {
-  var called = false
+  var called = false;
   return function () {
-    if (called) return
-    called = true
-    return cb.apply(this, arguments)
-  }
-})
+    if (called) return;
+    called = true;
+    return cb.apply(this, arguments);
+  };
+});
 
-function printBoo () {
-  console.log('boo')
+function printBoo() {
+  console.log("boo");
 }
 // has some rando property
-printBoo.iAmBooPrinter = true
+printBoo.iAmBooPrinter = true;
 
-var onlyPrintOnce = once(printBoo)
+var onlyPrintOnce = once(printBoo);
 
-onlyPrintOnce() // prints 'boo'
-onlyPrintOnce() // does nothing
+onlyPrintOnce(); // prints 'boo'
+onlyPrintOnce(); // does nothing
 
 // random property is retained!
-assert.equal(onlyPrintOnce.iAmBooPrinter, true)
+assert.equal(onlyPrintOnce.iAmBooPrinter, true);
 ```
-
-
-
-
 
 </details><details> <summary>fixtures/node_modules/xtend/</summary>
 
 ### [fixtures/node_modules/xtend/README.md](fixtures/node_modules/xtend/README.md)
+
 # xtend
 
 [![browser support][3]][4]
@@ -12653,33 +12496,32 @@ xtend is a basic utility library which allows you to extend an object by appendi
 ## Examples
 
 ```js
-var extend = require("xtend")
+var extend = require("xtend");
 
 // extend returns a new object. Does not mutate arguments
-var combination = extend({
+var combination = extend(
+  {
     a: "a",
-    b: "c"
-}, {
-    b: "b"
-})
+    b: "c",
+  },
+  {
+    b: "b",
+  }
+);
 // { a: "a", b: "b" }
 ```
 
 ## Stability status: Locked
 
-## MIT Licensed 
+## MIT Licensed
 
-
-  [3]: http://ci.testling.com/Raynos/xtend.png
-  [4]: http://ci.testling.com/Raynos/xtend
-
-
-
-
+[3]: http://ci.testling.com/Raynos/xtend.png
+[4]: http://ci.testling.com/Raynos/xtend
 
 </details><details> <summary>fixtures/node_modules/zwitch/</summary>
 
 ### [fixtures/node_modules/zwitch/readme.md](fixtures/node_modules/zwitch/readme.md)
+
 # zwitch
 
 [![Build][build-badge]][build]
@@ -12700,40 +12542,40 @@ npm install zwitch
 ## Use
 
 ```js
-var zwitch = require('zwitch')
+var zwitch = require("zwitch");
 
-var handle = zwitch('type')
+var handle = zwitch("type");
 
-handle.invalid = invalid
-handle.unknown = unknown
-handle.handlers.alpha = handle
+handle.invalid = invalid;
+handle.unknown = unknown;
+handle.handlers.alpha = handle;
 
-handle({type: 'alpha'})
+handle({ type: "alpha" });
 ```
 
 Or, with a `switch` statement:
 
 ```javascript
 function handle(value) {
-  var fn
+  var fn;
 
-  if (!value || typeof value !== 'object' || !('type' in value)) {
-    fn = invalid
+  if (!value || typeof value !== "object" || !("type" in value)) {
+    fn = invalid;
   } else {
     switch (value.type) {
-      case 'alpha':
-        fn = handle
-        break
+      case "alpha":
+        fn = handle;
+        break;
       default:
-        fn = unknown
-        break
+        fn = unknown;
+        break;
     }
   }
 
-  return fn.apply(this, arguments)
+  return fn.apply(this, arguments);
 }
 
-handle({type: 'alpha'})
+handle({ type: "alpha" });
 ```
 
 ## API
@@ -12746,12 +12588,12 @@ Create a functional switch, based on a `key` (`string`).
 
 Options can be omitted and added later to `one`.
 
-*   `handlers` (`Object.<Function>`, optional)
-    — Object mapping values to handle, stored on `one.handlers`
-*   `invalid` (`Function`, optional)
-    — Handle values without `key`, stored on `one.invalid`
-*   `unknown` (`Function`, optional)
-    — Handle values with an unhandled `key`, stored on `one.unknown`
+- `handlers` (`Object.<Function>`, optional)
+  — Object mapping values to handle, stored on `one.handlers`
+- `invalid` (`Function`, optional)
+  — Handle values without `key`, stored on `one.invalid`
+- `unknown` (`Function`, optional)
+  — Handle values with an unhandled `key`, stored on `one.unknown`
 
 ###### Returns
 
@@ -12759,7 +12601,7 @@ Options can be omitted and added later to `one`.
 
 #### `one(value[, rest...])`
 
-Handle one value.  Based on the bound `key`, a respective handler will be
+Handle one value. Based on the bound `key`, a respective handler will be
 invoked.
 If `value` is not an object, or doesn’t have a `key` property, the special
 “invalid” handler will be invoked.
@@ -12789,8 +12631,8 @@ Handle one value.
 
 ## Related
 
-*   [`mapz`](https://github.com/wooorm/mapz)
-    — Functional map
+- [`mapz`](https://github.com/wooorm/mapz)
+  — Functional map
 
 ## License
 
@@ -12799,43 +12641,24 @@ Handle one value.
 <!-- Definitions -->
 
 [build-badge]: https://img.shields.io/travis/wooorm/zwitch.svg
-
 [build]: https://travis-ci.org/wooorm/zwitch
-
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/zwitch.svg
-
 [coverage]: https://codecov.io/github/wooorm/zwitch
-
 [downloads-badge]: https://img.shields.io/npm/dm/zwitch.svg
-
 [downloads]: https://www.npmjs.com/package/zwitch
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/zwitch.svg
-
 [size]: https://bundlephobia.com/result?p=zwitch
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [one]: #onevalue-rest
-
 [handler]: #function-handlervalue-rest
-
-
-
-
 
 </details><details> <summary>fixtures/publishDir/</summary>
 
 ### [fixtures/publishDir/README.md](fixtures/publishDir/README.md)
+
 ## netlify-plugin-search fixture
 
 Here is an example of a typical publish folder of a news website.
 Articles are generated some time to time thanks to [News API](https://newsapi.org/).
-
-
-
-
